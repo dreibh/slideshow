@@ -1,50 +1,51 @@
 #!/bin/bash
+shopt -s extglob
 ./slideshow ict2003-index.html $@ \
 --maintitle="Thomas Dreibholz's Travel to the ICT2003" --maindescription=ict2003-maintitle.html \
 --stylesheet=stylesheet.css \
 \
 --subdir=ict2003-block1 \
 --title="Day 1 - Travel to Tahiti" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 01"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 01"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=ict2003-block2 \
 --title="Day 2 - At the Conference Hotel" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 02"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 02"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=ict2003-block3 \
 --title="Day 3 - At the Conference Hotel" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 03"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 03"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=ict2003-block4 \
 --title="Day 4 - Environment of the Conference Hotel" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 04"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 04"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=ict2003-block5 \
 --title="Day 5 - The Day of my Conference Talk and the Gala Dinner" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 05"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 05"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=ict2003-block6 \
 --title="Day 6 - Snorkeling Tour" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 06"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 06"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=ict2003-block7 \
 --title="Day 7 - Daytrip to Bora Bora" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 07"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 07"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=ict2003-block8 \
 --title="Day 8 - Environment of the Conference Hotel" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 08"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 08"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=ict2003-block9 \
 --title="Day 9 - Tamaaraa (Traditional Polynesian Lunch)" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 09"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 09"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=ict2003-block10 \
 --title="Day 10 - At the University of French Polynesia" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 10"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 10"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=ict2003-block11 \
 --title="Day 11 - Return Travel" \
-"/tmp/photo-archive/ict2003/Tahiti, Tag 11"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 11"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --

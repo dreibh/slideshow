@@ -1,4 +1,5 @@
 #!/bin/bash
+shopt -s extglob
 ./slideshow lcn2002-index.html $@ \
 --maintitle="Thomas Dreibholz's Travel to the LCN2002" --maindescription=lcn2002-maintitle.html \
 --stylesheet=stylesheet.css \
@@ -6,13 +7,13 @@
 \
 --subdir=lcn2002-block1 \
 --title="Part 1" \
-"/tmp/photo-archive/lcn2002/Bilderserie 1"/*.jpg \
+"/tmp/photo-archive/lcn2002/Bilderserie 1"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=lcn2002-block2 \
 --title="Part 2" \
-"/tmp/photo-archive/lcn2002/Bilderserie 2"/*.jpg \
+"/tmp/photo-archive/lcn2002/Bilderserie 2"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=lcn2002-block3 \
 --title="Part 3" \
-"/tmp/photo-archive/lcn2002/Bilderserie 3"/*.jpg \
+"/tmp/photo-archive/lcn2002/Bilderserie 3"/*.@(jpg|JPG|jpeg|JPEG) \
 --

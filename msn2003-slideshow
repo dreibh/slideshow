@@ -1,4 +1,5 @@
 #!/bin/bash
+shopt -s extglob
 ./slideshow msn2003-index.html $@ \
 --maintitle="Thomas Dreibholz's Travel to the MSN2003" --maindescription=msn2003-maintitle.html \
 --stylesheet=stylesheet.css \
@@ -6,21 +7,21 @@
 \
 --subdir=msn2003-block1 \
 --title="Part 1 - July 02, 2003" \
-"/tmp/photo-archive/msn2003/2003_07_02/*.JPG \
+"/tmp/photo-archive/msn2003/2003_07_02"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=msn2003-block2 \
 --title="Part 2 - July 03, 2003" \
-"/tmp/photo-archive/msn2003/2003_07_03/*.JPG \
+"/tmp/photo-archive/msn2003/2003_07_03"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=msn2003-block1 \
 --title="Part 3 - July 04, 2003" \
-"/tmp/photo-archive/msn2003/2003_07_04/*.JPG \
+"/tmp/photo-archive/msn2003/2003_07_04"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=msn2003-block1 \
 --title="Part 4 - July 05, 2003" \
-"/tmp/photo-archive/msn2003/2003_07_05/*.JPG \
+"/tmp/photo-archive/msn2003/2003_07_05"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --subdir=msn2003-block1 \
 --title="Part 5 - July 06, 2003" \
-"/tmp/photo-archive/msn2003/2003_07_06/*.JPG \
+"/tmp/photo-archive/msn2003/2003_07_06"/*.@(jpg|JPG|jpeg|JPEG) \
 --
