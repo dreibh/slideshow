@@ -4,9 +4,12 @@ all:	slideshow2
 converter.o:   converter.cc converter.h
 	g++ converter.cc -c -o converter.o -Wall -g -O0 `Magick-config --cflags --cppflags`
 
+tools.o:   tools.cc tools.h
+	g++ tools.cc -c -o tools.o -Wall -g -O0 `Magick-config --cflags --cppflags`
 
-slideshow2:	slideshow2.cc converter.o
-	g++ slideshow2.cc -o slideshow2 converter.o -Wall -g -O0 `Magick-config --cflags --cppflags --ldflags --libs`
+
+slideshow2:	slideshow2.cc converter.o tools.o
+	g++ slideshow2.cc -o slideshow2 converter.o tools.o -Wall -g -O0 `Magick-config --cflags --cppflags --ldflags --libs`
 
 slideshow:	slideshow.cc
 	g++ slideshow.cc -o slideshow -Wall -O2

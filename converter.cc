@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "tools.h"
 #include <magick/api.h>
 
 
@@ -10,11 +9,15 @@ int imageConverter(const char*   originalImageName,
                    unsigned int& originalHeight,
                    unsigned int& previewWidth,
                    unsigned int& previewHeight,
+                   unsigned int  previewQuality,
                    unsigned int& fullsizeWidth,
-                   unsigned int& fullsizeHeight)
+                   unsigned int& fullsizeHeight,
+                   unsigned int  fullsizeQuality)
 {
    ExceptionInfo exception;
    ImageInfo*    originalImageInfo;
+   ImageInfo*    previewImageInfo;
+   ImageInfo*    fullsizeImageInfo;
    Image*        originalImage;
    Image*        previewImage;
    Image*        fullsizeImage;
@@ -34,35 +37,64 @@ int imageConverter(const char*   originalImageName,
       CatchException(&exception);
    }
    if(originalImage == NULL) {
+      DestroyImageInfo(originalImageInfo);
       return(0);
    }
    originalWidth  = originalImage->columns;
    originalHeight = originalImage->rows;
-printf("W=%u H=%u\n",originalWidth,originalHeight);
-
-/*
-   // ====== Create preview image ===========================================
-   previewImage = CloneImage(originalImage);
-   if(previewImage == NULL) {
-      return(0);
-   }
-
-
 
 
    // ====== Create fullsize image ==========================================
-         preview.interlaceType(Magick::LineInterlace);
-         preview.quality(OwnerBlock->OwnerPresentation->PreviewQuality);
-         preview.sample(Magick::Geometry(OwnerBlock->OwnerPresentation->PreviewWidth, OwnerBlock->OwnerPresentation->PreviewHeight));
-         PreviewWidth  = preview.size().width();
-         PreviewHeight = preview.size().height();
+   fullsizeImage = SampleImage(originalImage, fullsizeWidth, fullsizeHeight, &exception);
+   if(fullsizeImage == NULL) {
+      DestroyImage(originalImage);
+      DestroyImageInfo(originalImageInfo);
+      return(0);
+   }
+   fullsizeImageInfo = CloneImageInfo(originalImageInfo);
+   if(fullsizeImageInfo == NULL) {
+      DestroyImage(originalImage);
+      DestroyImageInfo(originalImageInfo);
+      DestroyImage(fullsizeImage);
+      return(0);
+   }
+
+   safestrcpy(fullsizeImage->filename, fullsizeImageName, sizeof(fullsizeImage->filename));
+   fullsizeImageInfo->interlace = LineInterlace;
+   fullsizeImageInfo->quality   = fullsizeQuality;
+   WriteImage(fullsizeImageInfo, fullsizeImage);
+
+   DestroyImage(fullsizeImage);
+   DestroyImageInfo(fullsizeImageInfo);
 
 
+   // ====== Create preview image ===========================================
+   previewImage = SampleImage(originalImage, previewWidth, previewHeight, &exception);
+   if(previewImage == NULL) {
+      DestroyImage(originalImage);
+      DestroyImageInfo(originalImageInfo);
+      return(0);
+   }
+   previewImageInfo = CloneImageInfo(originalImageInfo);
+   if(previewImageInfo == NULL) {
+      DestroyImage(originalImage);
+      DestroyImageInfo(originalImageInfo);
+      DestroyImage(previewImage);
+      return(0);
+   }
 
+   safestrcpy(previewImage->filename, previewImageName, sizeof(previewImage->filename));
+   previewImageInfo->interlace = LineInterlace;
+   previewImageInfo->quality   = previewQuality;
+   WriteImage(previewImageInfo, previewImage);
+
+   DestroyImage(previewImage);
+   DestroyImageInfo(previewImageInfo);
+
+
+   // ====== Create fullsize image ==========================================
    DestroyImage(originalImage);
-   */
-
-
+   DestroyImageInfo(originalImageInfo);
    DestroyMagick();
    return(1);
 }
