@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.cc,v 1.2 2003/07/21 12:14:50 dreibh Exp $
+ *  $Id: slideshow.cc,v 1.3 2003/07/21 12:26:05 dreibh Exp $
  *
  * HTML 4.01 image presentation and JavaScript-based slideshow generator
  *
@@ -660,6 +660,13 @@ int main(int argc, char** argv)
                      << "   </object>" << endl
                      << "</object>" << endl
                      << "</a>" << endl
+                     << "<a href=\"http://jigsaw.w3.org/css-validator/\">" << endl
+                     << "<object type=\"image/png\" data=\"vcss.png\" height=\"31\" width=\"88\">" << endl
+                     << "   <object data=\"http://jigsaw.w3.org/css-validator/images/vcss\" height=\"31\" width=\"88\">" << endl
+                     << "      Valid CSS!" << endl
+                     << "   </object>" << endl
+                     << "</object>" << endl
+                     << "</a>" << endl
                      << "</p>" << endl;
             viewhtml << "</body>" << endl;
             viewhtml << "</html>" << endl;
@@ -682,6 +689,13 @@ int main(int argc, char** argv)
         << "<object type=\"image/png\" data=\"valid-html401.png\" height=\"31\" width=\"88\">" << endl
         << "   <object data=\"http://www.w3.org/Icons/valid-html401\" height=\"31\" width=\"88\">" << endl
         << "      Valid HTML 4.01!" << endl
+        << "   </object>" << endl
+        << "</object>" << endl
+        << "</a>" << endl
+        << "<a href=\"http://jigsaw.w3.org/css-validator/\">" << endl
+        << "<object type=\"image/png\" data=\"vcss.png\" height=\"31\" width=\"88\">" << endl
+        << "   <object data=\"http://jigsaw.w3.org/css-validator/images/vcss\" height=\"31\" width=\"88\">" << endl
+        << "      Valid CSS!" << endl
         << "   </object>" << endl
         << "</object>" << endl
         << "</a>" << endl

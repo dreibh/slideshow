@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.js,v 1.3 2003/07/21 12:14:50 dreibh Exp $
+ *  $Id: slideshow.js,v 1.4 2003/07/21 12:26:05 dreibh Exp $
  *
  * JavaScript Slideshow
  *
@@ -274,14 +274,12 @@ function onLoad() {
    inputObjects = document.getElementsByTagName("INPUT");
    changeDelay = getCookie("CurrentChangeDelay-" + presentationName);
    if(changeDelay == null) {
-alert("CD=null");
       changeDelay = 30;
    }
    inputObjects[0].value = changeDelay;
 
    randomMode = getCookie("RandomImageView-" + presentationName);
    if(randomMode == null) {
-alert("Rand=null");
       randomMode = false;
    }
    if(randomMode) {
