@@ -1,40 +1,40 @@
 <body onload="onLoad()">
 
 <table>
-<tr>
-<td class="sscontrol">
-<img name="goup" src="controls/1uparrow.png" alt="Up" onclick="up()">
-</td>
-<td class="sscontrol">
-<img name="play" src="controls/player_play.png" alt="Play/Pause" onclick="playpause()">
-</td>
-<td class="sscontrol">
-<img name="goprev" src="controls/1leftarrow.png" alt="Prev" onclick="prev()">
-</td>
-<td class="sscontrol">
-<img name="gonext" src="controls/1rightarrow.png" alt="Next" onclick="next()">
-</td>
-<td class="sscontrol">
-<label for="delay">Delay:</label>
-<input type="text" name="changedelay" onblur="newChangeDelay()" size="10" value="30"> seconds
-<button name="ok">OK</button>
-</td>
-<td class="sscontrol">
-<img name="randommode" src="controls/rotate.png" alt="Random Mode" onclick="toggleRandomMode()">
-</td>
-<!--
-<td class="sscontrol">
-// ###### Insert banners etc. here! ##########################################
-<img src="rsplib.png" height="32">
-// ###########################################################################
-</td>
--->
-<!--
-<td>
-<input type="text" size="3" readonly>
-</td>
--->
-</tr>
+   <tr>
+      <td class="sscontrol">
+         <img id="goup" src="controls/1uparrow.png" alt="Up" onclick="up()" />
+      </td>
+      <td class="sscontrol">
+         <img id="play" src="controls/player_play.png" alt="Play/Pause" onclick="playpause()" />
+      </td>
+      <td class="sscontrol">
+         <img id="goprev" src="controls/1leftarrow.png" alt="Prev" onclick="prev()" />
+      </td>
+      <td class="sscontrol">
+         <img id="gonext" src="controls/1rightarrow.png" alt="Next" onclick="next()" />
+      </td>
+      <td class="sscontrol">
+         <label for="changedelay">Delay:</label>
+         <input type="text" id="changedelay" onblur="newChangeDelay()" size="10" value="30" /> seconds
+         <button id="ok">OK</button>
+      </td>
+      <td class="sscontrol">
+         <img id="randommode" src="controls/rotate.png" alt="Random Mode" onclick="toggleRandomMode()" />
+      </td>
+      <!--
+      <td class="sscontrol">
+         // ###### Insert banners etc. here! ##########################################
+         <img src="rsplib.png" height="32" />
+         // ###########################################################################
+      </td>
+      -->
+      <!--
+      <td>
+         <input type="text" size="3" readonly />
+      </td>
+      -->
+   </tr>
 </table>
 
 </body>

@@ -1,5 +1,5 @@
 /*
- *  $Id: imageviewer.js,v 1.1 2003/07/17 09:45:09 dreibh Exp $
+ *  $Id: imageviewer.js,v 1.2 2004/01/29 10:34:21 dreibh Exp $
  *
  * JavaScript Image Viewer
  *
@@ -26,17 +26,23 @@ function resizeEvent()
 function show(fullname, originalname, w, h) {
    window.onresize = resizeEvent;
 
-   nw = document.body.clientWidth;
+   nw = document.width;
    nh = document.body.clientHeight;
-   sw = nw * 0.90 / w;
-   sh = nh * 0.80 / h;
-   if(sw <= sh) scale = sw; else scale = sh;
-   if(scale > 1) scale = 1;
-   nw=w * scale;
-   nh=h * scale;
+   if((nw > 0) && (nh > 0)) {
+      sw = nw * 0.90 / w;
+      sh = nh * 0.80 / h;
+      if(sw <= sh) scale = sw; else scale = sh;
+      if(scale > 1) scale = 1;
+      nw=w * scale;
+      nh=h * scale;
+   }
+   else {
+      nw="90%";
+      nh="90%";
+   }
    document.write( "<p class=\"center\">" );
-   document.write( "<object width=" + nw + " height=" + nh + " type=\"image/pjpeg\" data=\"" + fullname + "\">" );
-   document.write( "   <object width=" + nw + " height=" + nh + " data=\"" + originalname + "\">" );
+   document.write( "<object width=\"" + nw + "\" height=\"" + nh + "\" type=\"image/pjpeg\" data=\"" + fullname + "\">" );
+   document.write( "   <object width=\"" + nw + "\" height=\"" + nh + "\" data=\"" + originalname + "\">" );
    document.write( "      <strong>Your browser has been unable to load or display image!</strong>" );
    document.write( "   </object>" );
    document.write( "</object>" );

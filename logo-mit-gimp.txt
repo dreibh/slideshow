@@ -1,0 +1,4 @@
+Xtns -> Script-Fu -> Logo -> (z.B. Chrom)
+Bild Ebenen -> Sichtbare Ebenen vereinigen
+Bild -> Filter -> Farben -> Farbe zu Transparenz
+-> PNG abspeichern

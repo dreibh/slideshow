@@ -1,7 +1,7 @@
 /*
- *  $Id: slideshow.cc,v 1.3 2003/07/21 12:26:05 dreibh Exp $
+ *  $Id: slideshow.cc,v 1.4 2004/01/29 10:34:21 dreibh Exp $
  *
- * HTML 4.01 image presentation and JavaScript-based slideshow generator
+ * XHTML 1.1 image presentation and JavaScript-based slideshow generator
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -181,6 +181,7 @@ bool createSlideshow(const char* ssmainname,
                      const char* presentationName,
                      const char* subdirName,
                      const char* stylesheet,
+                     const char* icon,
                      const char* maintitle,
                      passwd*     pw)
 {
@@ -198,46 +199,49 @@ bool createSlideshow(const char* ssmainname,
    ssfiles << "mainPage = \"" << mainPageName << "\";" << endl;
    ssfiles << "presentationName = \"" << presentationName << "-" << subdirName << "\";" << endl;
 
-   ssmain << "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Frameset//EN\">" << endl
-          << "<html lang=\"en\">"  << endl
+   ssmain << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\">" << endl
+          << "<html>"  << endl
           << "<head>"  << endl;
    ssmain << "<title>" << maintitle << "</title>" << endl;
-   ssmain << "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-15\">" << endl;
+   ssmain << "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-15\" />" << endl;
    if(pw) {
-      ssmain  << "<meta name=\"Author\" content=\"" << pw->pw_gecos << "\">" << endl;
+      ssmain  << "<meta name=\"Author\" content=\"" << pw->pw_gecos << "\" />" << endl;
    }
-   ssmain << "<meta name=\"Description\" content=\"" << maintitle << "\">" << endl;
+   ssmain << "<meta name=\"Description\" content=\"" << maintitle << "\" />" << endl;
    ssmain << "<meta name=\"Keywords\" content=\"Slideshow, " << maintitle;
    if(pw) {
       ssmain << ", " << pw->pw_gecos;
    }
-   ssmain << "\">" << endl;
-   ssmain << "<meta name=\"Classification\" content=\"Slideshow\">" << endl;
+   ssmain << "\" />" << endl;
+   ssmain << "<meta name=\"Classification\" content=\"Slideshow\" />" << endl;
    ssmain << "</head>" << endl;
    ssmain << "<frameset rows=\"50px, 80%\">" << endl
-          << "   <frame src=\"" << sscontrolname << "\" frameborder=\"1\" noresize scrolling=\"no\">" << endl
-          << "   <frame frameborder=\"1\">" << endl
+          << "   <frame src=\"" << sscontrolname << "\" frameborder=\"1\" noresize=\"noresize\" scrolling=\"no\" />" << endl
+          << "   <frame frameborder=\"1\" />" << endl
           << "</frameset>" << endl;
    ssmain << "</html>" << endl;
 
-   sscontrol << "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\">" << endl
-             << "<html lang=\"en\">"  << endl
+   sscontrol << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">" << endl
+             << "<html>"  << endl
              << "<head>"  << endl;
    if(stylesheet) {
-      sscontrol << "<link rel=\"stylesheet\" href=\"" << stylesheet << "\" type=\"text/css\">" << endl;
+      sscontrol << "<link rel=\"stylesheet\" href=\"" << stylesheet << "\" type=\"text/css\" />" << endl;
+   }
+   if(icon) {
+      sscontrol << "<link rel=\"shortcut icon\" href=\"" << icon << "\" type=\"image/png\" />" << endl;
    }
    sscontrol << "<title>" << maintitle << "</title>" << endl;
-   sscontrol << "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-15\">" << endl;
+   sscontrol << "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-15\" />" << endl;
    if(pw) {
-      sscontrol  << "<meta name=\"Author\" content=\"" << pw->pw_gecos << "\">" << endl;
+      sscontrol  << "<meta name=\"Author\" content=\"" << pw->pw_gecos << "\" />" << endl;
    }
-   sscontrol << "<meta name=\"Description\" content=\"" << maintitle << "\">" << endl;
+   sscontrol << "<meta name=\"Description\" content=\"" << maintitle << "\" />" << endl;
    sscontrol << "<meta name=\"Keywords\" content=\"Slideshow, " << maintitle;
    if(pw) {
       sscontrol << ", " << pw->pw_gecos;
    }
-   sscontrol << "\">" << endl;
-   sscontrol << "<meta name=\"Classification\" content=\"Slideshow\">" << endl;
+   sscontrol << "\" />" << endl;
+   sscontrol << "<meta name=\"Classification\" content=\"Slideshow\" />" << endl;
    sscontrol << "<script type=\"text/javascript\" src=\"slideshow.js\"></script>" << endl;
    sscontrol << "<script type=\"text/javascript\" src=\"" << ssfilesname << "\"></script>" << endl;
    sscontrol << "</head>" << endl << endl;
@@ -283,6 +287,9 @@ int main(int argc, char** argv)
    char*        maintitle       = "My Photo Archive";
    char*        title           = "Photo Archive";
    char*        stylesheet      = "stylesheet.css";
+   char*        icon            = "icon-default.png";
+   char*        headFile        = "head.html";
+   char*        tailFile        = "tail.html";
    char*        description     = NULL;
    char*        maindescription = NULL;
    bool         enumerate       = false;
@@ -295,7 +302,7 @@ int main(int argc, char** argv)
    ofstream     sscontrol;
 
    if(argc < 2) {
-      cerr << "Usage: " << argv[0] << " [Output file] {--htmlonly} {--enumerate} {--cols=Columns} {--width=Width} {-height=Height} {-stylesheet=CSS file} {--maintitle=Title} {--maindescription=HTML file} {--title=Title} {--subdir} {--description=File} {JPEG file 1} ..." << endl;
+      cerr << "Usage: " << argv[0] << " [Output file] {--htmlonly} {--enumerate} {--cols=Columns} {--width=Width} {-height=Height} {-stylesheet=CSS file} {-icon=Icon PNG} {--maintitle=Title} {--maindescription=HTML file} {--title=Title} {--subdir} {--description=File} {JPEG file 1} ..." << endl;
       exit(1);
    }
    if(argv[1][0] == '-') {
@@ -356,6 +363,11 @@ int main(int argc, char** argv)
             stylesheet = (char*)&argv[i][13];
          }
       }
+      else if(!(strncmp(argv[i], "--icon=", 7))) {
+         if(count == 0) {
+            icon = (char*)&argv[i][7];
+         }
+      }
       else if(!(strncmp(argv[i], "--height=", 9))) {
          if(count == 0) {
             height = atol((char*)&argv[i][9]);
@@ -382,6 +394,12 @@ int main(int argc, char** argv)
       }
       else if(!(strncmp(argv[i], "--title=", 8))) {
          title = (char*)&argv[i][8];
+      }
+      else if(!(strncmp(argv[i], "--head=", 7))) {
+         headFile = (char*)&argv[i][7];
+      }
+      else if(!(strncmp(argv[i], "--tail=", 7))) {
+         tailFile = (char*)&argv[i][7];
       }
       else if(!(strncmp(argv[i], "--maintitle=", 12))) {
          maintitle = (char*)&argv[i][12];
@@ -456,45 +474,47 @@ int main(int argc, char** argv)
                   if(!createSlideshow(ssmainname, sscontrolname, ssfiles,
                                       ssfilesname, argv[1],
                                       presentationname, "main",
-                                      stylesheet, maintitle, pw)) {
+                                      stylesheet, icon, maintitle, pw)) {
                      exit(1);
                   }
                   sscreated = true;
                }
-               html << "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\">" << endl
-                    << "<html lang=\"en\">"  << endl
+
+               html << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">" << endl
+                    << "<html>"  << endl
                     << "<head>"  << endl;
                if(stylesheet) {
-                  html << "<link rel=\"stylesheet\" href=\"" << stylesheet << "\" type=\"text/css\">" << endl;
+                  html << "<link rel=\"stylesheet\" href=\"" << stylesheet << "\" type=\"text/css\" />" << endl;
+               }
+               if(icon) {
+                  html << "<link rel=\"shortcut icon\" href=\"" << icon << "\" type=\"image/png\" />" << endl;
                }
                html << "<title>" << maintitle << "</title>" << endl;
-               html << "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-15\">" << endl;
+               html << "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-15\" />" << endl;
                if(pw) {
-                  html  << "<meta name=\"Author\" content=\"" << pw->pw_gecos << "\">" << endl;
+                  html  << "<meta name=\"Author\" content=\"" << pw->pw_gecos << "\" />" << endl;
                }
-               html << "<meta name=\"Description\" content=\"" << title << "\">" << endl;
+               html << "<meta name=\"Description\" content=\"" << title << "\" />" << endl;
                html << "<meta name=\"Keywords\" content=\"Slideshow, " << title;
                if(pw) {
                   html << ", " << pw->pw_gecos;
                }
-               html << "\">" << endl;
-               html << "<meta name=\"Classification\" content=\"Slideshow\">" << endl;
+               html << "\" />" << endl;
+               html << "<meta name=\"Classification\" content=\"Slideshow\" />" << endl;
                html << "</head>" << endl << endl;
                html << "<body>" << endl;
-               cat(html, "head.html");
-               if(createidx) {
-                  html << "<h1>" << maintitle << "</h1>" << endl;
-                  if((maindescription) && (maindescription[0] != 0x00)) {
-                     html << "<p class=\"description\">" << endl;
-                     if(!cat(html, maindescription)) {
-                        cerr << "ERROR: Unable to copy main description from file \"" << maindescription << "\"!" << endl;
-                        exit(1);
-                     }
-                     html << "</p>" << endl;
+               cat(html, headFile);
+               html << "<h1>" << maintitle << "</h1>" << endl;
+               if((maindescription) && (maindescription[0] != 0x00)) {
+                  if(!cat(html, maindescription)) {
+                     cerr << "ERROR: Unable to copy main description from file \"" << maindescription << "\"!" << endl;
+                     exit(1);
                   }
-                  html << "<h2><a name=\"index\"></a>Index</h2>" << endl
+               }
+               if(createidx) {
+                  html << "<h2 id=\"index\">Index</h2>" << endl
                        << "<ul>" << endl
-                       << "<li><strong><a href=\"" << ssmainname << "\">View slideshow</a></strong>" << endl;
+                       << "<li><strong><a href=\"" << ssmainname << "\">View slideshow</a></strong></li>" << endl;
                   char*        btitle = title;
                   bool         change = false;
                   char         bsubdir[1536];
@@ -516,7 +536,7 @@ int main(int argc, char** argv)
                      }
                   }
                   html << "</ul>" << endl
-                       << "<hr>"  << endl;
+                       << "<hr />"  << endl;
                }
                html << endl;
             }
@@ -528,17 +548,15 @@ int main(int argc, char** argv)
                snprintf((char*)&subsscontrolname, sizeof(subsscontrolname), "%s-slideshow-control.html", subdir);
                snprintf((char*)&subssmainname, sizeof(subssmainname), "%s-slideshow.html", subdir);
 
-               html << "<h1><a name=\"" << subdir << "\"></a>" << title << "</h1>" << endl;
+               html << "<h1 id=\"" << subdir << "\">" << title << "</h1>" << endl;
                html << "<p class=\"center\">" << endl
                     << "<strong><a href=\"" << subssmainname << "\">View slideshow</a></strong>" << endl
                     << "</p>" << endl;
                if((description) && (description[0] != 0x00)) {
-                  html << "<p class=\"description\">" << endl;
                   if(!cat(html, description)) {
                      cerr << "ERROR: Unable to copy description from file \"" << description << "\"!" << endl;
                      exit(1);
                   }
-                  html << "</p>" << endl;
                   description = NULL;
                }
                html << "<table class=\"previewtable\">" << endl;
@@ -552,7 +570,7 @@ int main(int argc, char** argv)
                if(!createSlideshow(subssmainname, subsscontrolname, subssfiles,
                                    subssfilesname, tmp,
                                    presentationname, subdir,
-                                   stylesheet, title, pw)) {
+                                   stylesheet, icon, title, pw)) {
                   exit(1);
                }
                c++;
@@ -573,8 +591,8 @@ int main(int argc, char** argv)
                  << "height=\"" << previewHeight << "\" "
                  << "alt=\""  << name          << "\" "
                  << "src=\""  << preview       << "\""
-                 << ">"
-                 << "<br>" << name
+                 << " />"
+                 << "<br />" << name
                  << "</a>"
                  << "</td>"
                  << endl;
@@ -587,23 +605,26 @@ int main(int argc, char** argv)
                cerr << "ERROR: Unable to create file \"" << fullhtml << "\"!" << endl;
                exit(1);
             }
-            viewhtml << "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\">" << endl
-                     << "<html lang=\"en\">"  << endl
+            viewhtml << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">" << endl
+                     << "<html>"  << endl
                      << "<head>"  << endl;
-            viewhtml << "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-15\">" << endl;
+            viewhtml << "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-15\" />" << endl;
             if(pw) {
-               viewhtml << "<meta name=\"Author\" content=\"" << pw->pw_gecos << "\">" << endl;
+               viewhtml << "<meta name=\"Author\" content=\"" << pw->pw_gecos << "\" />" << endl;
             }
-            viewhtml << "<meta name=\"Description\" content=\"" << title << "\">" << endl;
+            viewhtml << "<meta name=\"Description\" content=\"" << title << "\" />" << endl;
             viewhtml << "<meta name=\"Keywords\" content=\"Image, " << name << ", " << title;
             if(pw) {
                viewhtml << ", " << pw->pw_gecos;
             }
-            viewhtml << "\">" << endl;
-            viewhtml << "<meta name=\"Classification\" content=\"Image, " << name << "\">" << endl;
+            viewhtml << "\" />" << endl;
+            viewhtml << "<meta name=\"Classification\" content=\"Image, " << name << "\" />" << endl;
             viewhtml << "<title>Full view of " << name << "</title>" << endl;
             if(stylesheet) {
-               viewhtml << "<link rel=\"stylesheet\" href=\"../" << stylesheet << "\" type=\"text/css\">" << endl;
+               viewhtml << "<link rel=\"stylesheet\" href=\"../" << stylesheet << "\" type=\"text/css\" />" << endl;
+            }
+            if(icon) {
+               viewhtml << "<link rel=\"shortcut icon\" href=\"../" << icon << "\" type=\"image/png\" />" << endl;
             }
             viewhtml << "<script type=\"text/javascript\" src=\"../imageviewer.js\"></script>" << endl;
             viewhtml << "</head>" << endl << endl;
@@ -616,22 +637,6 @@ int main(int argc, char** argv)
                originalRef = "";
             }
             viewhtml << "<script type=\"text/javascript\">" << endl
-                     /*
-                     << "   w=" << fullWidth << "; h=" << fullHeight << ";" << endl
-                     << "   nw = document.body.clientWidth;" << endl
-                     << "   nh = document.body.clientHeight;" << endl
-                     << "   sw = nw * 0.90 / w;" << endl
-                     << "   sh = nh * 0.80 / h;" << endl
-                     << "   if(sw <= sh) scale = sw; else scale = sh;" << endl
-                     << "   if(scale > 1) scale = 1;" << endl
-                     << "   nw=w * scale;" << endl
-                     << "   nh=h * scale;" << endl
-                     << "   document.write( \"<object width=\" + nw + \" height=\" + nh + \" type=\\\"image/pjpeg\\\" data=\\\"" << (char*)&full[strlen(subdir) + 1] << "\\\" alt=\\\"" << name << "\\\">\" );" << endl
-                     << "   document.write( \"   <object width=\" + nw + \" height=\" + nh + \" data=\\\"" << (char*)&original[strlen(subdir) + 1] << "\\\" alt=\\\"" << name << "\\\">\" );" << endl
-                     << "   document.write( \"      <strong>Your browser has been unable to load or display the image!</strong>\" );" << endl
-                     << "   document.write( \"   </object>\" );" << endl
-                     << "   document.write( \"</object>\" );" << endl
-                     */
                      << "<!--" << endl
                      << "   show( \"" << (char*)&full[strlen(subdir) + 1] << "\", \"" << (char*)&original[strlen(subdir) + 1] << "\", " << fullWidth << ", " << fullHeight << ");" << endl
                      << "-->" << endl
@@ -648,26 +653,10 @@ int main(int argc, char** argv)
                      << "</noscript>" << endl;
 
             viewhtml << "<p class=\"center\">" << endl
-                     << "<br>Full view of <em>" << name << "</em>" << endl
-                     << "<br><a href=\"" << originalRef << "\">Get the original file</a>" << endl
+                     << "<br />Full view of <em>" << name << "</em>" << endl
+                     << "<br /><a href=\"" << originalRef << "\">Get the original file</a>" << endl
                      << "</p>" << endl;
-            cat(viewhtml, "tail.html");
-            viewhtml << "<p class=\"description\">" << endl
-                     << "<a href=\"http://validator.w3.org/check/referer\">" << endl
-                     << "<object type=\"image/png\" data=\"../valid-html401.png\" height=\"31\" width=\"88\">" << endl
-                     << "   <object data=\"http://www.w3.org/Icons/valid-html401\" height=\"31\" width=\"88\">" << endl
-                     << "      Valid HTML 4.01!" << endl
-                     << "   </object>" << endl
-                     << "</object>" << endl
-                     << "</a>" << endl
-                     << "<a href=\"http://jigsaw.w3.org/css-validator/\">" << endl
-                     << "<object type=\"image/png\" data=\"vcss.png\" height=\"31\" width=\"88\">" << endl
-                     << "   <object data=\"http://jigsaw.w3.org/css-validator/images/vcss\" height=\"31\" width=\"88\">" << endl
-                     << "      Valid CSS!" << endl
-                     << "   </object>" << endl
-                     << "</object>" << endl
-                     << "</a>" << endl
-                     << "</p>" << endl;
+            cat(viewhtml, tailFile);
             viewhtml << "</body>" << endl;
             viewhtml << "</html>" << endl;
             r++;
@@ -683,23 +672,7 @@ int main(int argc, char** argv)
       html << "   </tr>" << endl
            << "</table>" << endl << endl;
    }
-   cat(html, "tail.html");
-   html << "<p class=\"description\">" << endl
-        << "<a href=\"http://validator.w3.org/check/referer\">" << endl
-        << "<object type=\"image/png\" data=\"valid-html401.png\" height=\"31\" width=\"88\">" << endl
-        << "   <object data=\"http://www.w3.org/Icons/valid-html401\" height=\"31\" width=\"88\">" << endl
-        << "      Valid HTML 4.01!" << endl
-        << "   </object>" << endl
-        << "</object>" << endl
-        << "</a>" << endl
-        << "<a href=\"http://jigsaw.w3.org/css-validator/\">" << endl
-        << "<object type=\"image/png\" data=\"vcss.png\" height=\"31\" width=\"88\">" << endl
-        << "   <object data=\"http://jigsaw.w3.org/css-validator/images/vcss\" height=\"31\" width=\"88\">" << endl
-        << "      Valid CSS!" << endl
-        << "   </object>" << endl
-        << "</object>" << endl
-        << "</a>" << endl
-        << "</p>" << endl;
+   cat(html, tailFile);
    html << "</body>" << endl;
    html << "</html>" << endl;
 
