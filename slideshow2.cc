@@ -1305,7 +1305,6 @@ void Image::createImage()
          fullsize.write(str);
       } catch(Magick::Exception& exception) {
          cerr << "ERROR: Image prepararion failed: " << exception.what() << endl;
-         exit(1);
       }
    }
    else {
