@@ -2,11 +2,13 @@
 ./slideshow test-index.html $@ \
 --maintitle="Test-Titel" --maindescription=test-maintitle.html \
 --stylesheet=stylesheet.css \
+--fullwidth=640 \
+--fullheight=480 \
 --enumerate \
 --subdir \
 --title="Some Tests" \
-/tmp/*.jpg \
+/home/dreibh/tmp/test-jpeg/*.jpg \
 --subdir \
 --title="Photo Gallery" \
-Tux.jpeg \
+/home/dreibh/tmp/test-jpeg/*.jpeg \
 --

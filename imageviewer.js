@@ -1,5 +1,5 @@
 /*
- *  $Id: imageviewer.js,v 1.4 2004/01/30 16:29:17 dreibh Exp $
+ *  $Id: imageviewer.js,v 1.5 2004/02/03 10:51:24 dreibh Exp $
  *
  * JavaScript Image Viewer
  *
@@ -41,14 +41,10 @@ function show(fullname, originalname, w, h) {
       nh=h * scale;
    }
    else {
-      nw = "90%";
-      nh = "90%";
+      nw = w;
+      nh = h;
    }
    document.write( "<p class=\"center\">" );
-   document.write( "<object width=\"" + nw + "\" height=\"" + nh + "\" type=\"image/pjpeg\" data=\"" + fullname + "\">" );
-   document.write( "   <object width=\"" + nw + "\" height=\"" + nh + "\" data=\"" + originalname + "\">" );
-   document.write( "      <strong>Your browser has been unable to load or display image!</strong>" );
-   document.write( "   </object>" );
-   document.write( "</object>" );
+   document.write( "<img width=\"" + nw + "\" height=\"" + nh + "\" alt=\"Image " + fullname + "\" src=\"" + fullname + "\" />" );
    document.write( "</p>" );
 }
