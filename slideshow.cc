@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.cc,v 1.9 2004/02/03 10:51:24 dreibh Exp $
+ *  $Id: slideshow.cc,v 1.10 2004/02/03 12:20:37 dreibh Exp $
  *
  * XHTML 1.1 image presentation and JavaScript-based slideshow generator
  *
@@ -242,6 +242,8 @@ int main(int argc, char** argv)
    char         fullhtml[1048];
    char         prevhtml[1048];
    char         nexthtml[1048];
+   char         previmage[1048];
+   char         nextimage[1048];
    char         preview[1024];
    char         sizes[1024];
    char         webname[1024];
@@ -415,7 +417,7 @@ int main(int argc, char** argv)
                  << "</table>" << endl << endl;
             html.flush();
             c = 0; r = 0; s++;
-            snprintf((char*)&subdir, sizeof(subdir), "%s-block%03d", presentationname, s + 1);
+            snprintf((char*)&subdir, sizeof(subdir), "%s-block%03u", presentationname, s + 1);
             number = 0;
          }
       }
@@ -436,8 +438,8 @@ int main(int argc, char** argv)
          else {
             number++;
             name = (char*)&numstr;
-            snprintf(name, sizeof(numstr), "Image #%d", number);
-            snprintf(webname, sizeof(webname), "image-%04d", number);
+            snprintf(name, sizeof(numstr), "Image #%u", number);
+            snprintf(webname, sizeof(webname), "image-%04u", number);
          }
          if((useFullWidth  < 1) || (useFullWidth  > 8192) ||
             (useFullHeight < 1) || (useFullHeight > 8192)) {
@@ -529,7 +531,7 @@ int main(int argc, char** argv)
                         btitle = (char*)&argv[j][8];
                      }
                      else if(!(strncmp(argv[j], "--subdir", 8))) {
-                        snprintf((char*)&bsubdir, sizeof(bsubdir), "%s-block%03d", presentationname, bs + 1);
+                        snprintf((char*)&bsubdir, sizeof(bsubdir), "%s-block%03u", presentationname, bs + 1);
                         change = true;
                         bs++;
                      }
@@ -594,8 +596,8 @@ int main(int argc, char** argv)
                  << "<img "
                  << "width=\""  << previewWidth  << "\" "
                  << "height=\"" << previewHeight << "\" "
-                 << "alt=\""  << name          << "\" "
-                 << "src=\""  << preview       << "\""
+                 << "alt=\""    << name          << "\" "
+                 << "src=\""    << preview       << "\""
                  << " />"
                  << "<br />" << name
                  << "</a>"
@@ -605,17 +607,21 @@ int main(int argc, char** argv)
 
             prevhtml[0] = 0x00;
             nexthtml[0] = 0x00;
+            previmage[0] = 0x00;
+            nextimage[0] = 0x00;
             for(int j = i + 1;j < argc;j++) {
                if(!(strncmp(argv[j], "--subdir", 8))) {
                   break;
                }
                else if(strncmp(argv[j], "--", 2)) {
-                  snprintf((char*)&nexthtml, sizeof(nexthtml), "show-image-%04d.html", number +1);
+                  snprintf((char*)&nexthtml, sizeof(nexthtml), "show-image-%04u.html", number + 1);
+                  snprintf((char*)&nextimage, sizeof(nextimage), "full/image-%04u.jpeg", number + 1);
                   break;
                }
             }
             if(number > 1) {
-               snprintf((char*)&prevhtml, sizeof(prevhtml), "show-image-%04d.html", number - 1);
+               snprintf((char*)&prevhtml, sizeof(prevhtml), "show-image-%04u.html", number - 1);
+               snprintf((char*)&previmage, sizeof(previmage), "full/image-%04u.jpeg", number - 1);
             }
 
             ssfiles << "imageArray[images++]=\"" << fullhtml << "\";" << endl;
@@ -650,9 +656,11 @@ int main(int argc, char** argv)
             viewhtml << "<script type=\"text/javascript\" src=\"../imageviewer.js\"></script>" << endl;
             if(nexthtml[0] != 0x00) {
                viewhtml << "<link rel=\"next\" href=\"" << nexthtml << "\" />" << endl;
+               viewhtml << "<link rel=\"next\" href=\"" << nextimage << "\" />" << endl;
             }
             if(prevhtml[0] != 0x00) {
                viewhtml << "<link rel=\"next\" href=\"" << prevhtml << "\" />" << endl;
+               viewhtml << "<link rel=\"next\" href=\"" << previmage << "\" />" << endl;
             }
             viewhtml << "</head>" << endl << endl;
             viewhtml << "<body>" << endl;
