@@ -66,5 +66,5 @@ shopt -s extglob
 \
 --subdir \
 --title="Part 16 - Back at Home" \
-"/tmp/photo-archive/lca2003/P - Bilderserie - Ankunft Zuhause"/*.@(jpg|JPG|jpeg|JPEG) \
+"/tmp/photo-archive/lca2003/P - Bilderserie - Ankunft Zuhause"/A*.@(jpg|JPG|jpeg|JPEG) \
 --
