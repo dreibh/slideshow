@@ -10,8 +10,8 @@ shopt -s extglob
 --slideshow \
 --head=head.html \
 --tail=tail.html \
---fullwidth=1024 \
---fullheight=768 \
+--fullwidth=1280 \
+--fullheight=960 \
 --enumerate \
 \
 --block="Part 1 - July 02, 2003" \

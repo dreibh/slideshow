@@ -8,8 +8,8 @@
 --slideshow \
 --head=a93-head.html \
 --tail=a93-tail.html \
---fullwidth=1024 \
---fullheight=768 \
+--fullwidth=1280 \
+--fullheight=960 \
 --enumerate \
 --noindex \
 --block="Bilder vom Treffen am 27.12.2003" \
