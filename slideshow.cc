@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.cc,v 1.10 2004/02/03 12:20:37 dreibh Exp $
+ *  $Id: slideshow.cc,v 1.11 2004/02/06 11:08:14 dreibh Exp $
  *
  * XHTML 1.1 image presentation and JavaScript-based slideshow generator
  *
@@ -259,8 +259,8 @@ int main(int argc, char** argv)
    unsigned int cols             = 5;
    unsigned int usePreviewWidth  = 128;
    unsigned int usePreviewHeight = 96;
-   unsigned int useFullWidth     = 0;
-   unsigned int useFullHeight    = 0;
+   unsigned int useFullWidth     = 1024;
+   unsigned int useFullHeight    = 768;
    unsigned int previewWidth;
    unsigned int previewHeight;
    unsigned int fullWidth;
