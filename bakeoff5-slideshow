@@ -1,35 +1,38 @@
 #!/bin/bash
 shopt -s extglob
-./slideshow bakeoff5-index.html $@ \
+
+./slideshow2 \
+--directory=bakeoff5 \
 --maintitle="The 5th SCTP Interop" --maindescription=bakeoff5-maintitle.html \
 --stylesheet=stylesheet.css \
+--background=background.png \
+--shortcuticon=icon-default.png \
+--slideshow \
+--head=head.html \
+--tail=tail.html \
+--fullwidth=1024 \
+--fullheight=768 \
 --enumerate \
 \
---subdir \
---title="Part 1" \
+--block="Part 1" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff1/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 2" \
+--block="Part 2" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff2/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 3" \
+--block="Part 3" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff3/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 4" \
+--block="Part 4" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff4/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 5" \
+--block="Part 5" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff5/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 6" \
+--block="Part 6" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff5/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 7" \
+--block="Part 7" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff7/"*.@(jpg|JPG|jpeg|JPEG) \
+$@ \
 --

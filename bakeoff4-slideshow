@@ -1,14 +1,20 @@
 #!/bin/bash
 shopt -s extglob
-./slideshow bakeoff4-index.html $@ \
---maintitle="The 4th SCTP Interop" \
+
+./slideshow2 \
+--directory=bakeoff4 \
+--title="The 4th SCTP Interop" --maindescription=bakeoff4-maintitle.html \
 --stylesheet=stylesheet.css \
+--background=background.png \
+--shortcuticon=icon-default.png \
+--slideshow \
+--head=head.html \
+--tail=tail.html \
+--fullwidth=1024 \
+--fullheight=768 \
 --enumerate \
 --noindex \
---cols=4 \
-\
---subdir \
---title="The 4th SCTP Interop" \
---description=bakeoff4-maintitle.html \
+--columns=4 \
 "/tmp/photo-archive/connectathon2002"/*.@(jpg|JPG|jpeg|JPEG) \
+$@ \
 --

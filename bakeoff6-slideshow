@@ -1,39 +1,41 @@
 #!/bin/bash
 shopt -s extglob
-./slideshow bakeoff6-index.html $@ \
+
+./slideshow2 \
+--directory=bakeoff6 \
 --maintitle="The 6th SCTP Interop" --maindescription=bakeoff6-maintitle.html \
 --stylesheet=stylesheet.css \
+--background=background.png \
+--shortcuticon=icon-default.png \
+--slideshow \
+--head=head.html \
+--tail=tail.html \
+--fullwidth=1024 \
+--fullheight=768 \
 --enumerate \
 \
---subdir \
---title="Part 1" \
+--block="Part 1" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_05_31"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 2" \
+--block="Part 2" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_03"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 3" \
+--block="Part 3" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_04"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 4" \
+--block="Part 4" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_05"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 5" \
+--block="Part 5" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_07"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 6" \
+--block="Part 6" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_08"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 7" \
+--block="Part 7" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_09"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir \
---title="Part 8" \
+--block="Part 8" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_10"/*.@(jpg|JPG|jpeg|JPEG) \
+$@ \
 --
