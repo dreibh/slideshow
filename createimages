@@ -40,7 +40,7 @@ anytopnm "$1" >$ORIGINAL 2>/dev/null
 if [ $5 -gt 0 -a $6 -gt 0 ] ; then
    pnmscale -xysize "$5" "$6" $ORIGINAL >$FULL
 else
-   pnmtojpeg --progressive --optimize --quality=75 $ORIGINAL >$FULL
+   cat $ORIGINAL >$FULL
 fi
 pnmtojpeg --progressive --optimize --quality=75 $FULL >"$2"
 

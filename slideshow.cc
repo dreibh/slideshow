@@ -1,15 +1,15 @@
 /*
- *  $Id: slideshow.cc,v 1.6 2004/01/30 15:08:09 dreibh Exp $
+ *  $Id: slideshow.cc,v 1.7 2004/01/30 15:33:43 dreibh Exp $
  *
  * XHTML 1.1 image presentation and JavaScript-based slideshow generator
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
  *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
+ * You should have received a copy of the GNU General Public
+ * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  */
@@ -240,6 +240,8 @@ int main(int argc, char** argv)
    char         full[1024];
    char         original[1024];
    char         fullhtml[1048];
+   char         prevhtml[1048];
+   char         nexthtml[1048];
    char         preview[1024];
    char         sizes[1024];
    char         webname[1024];
@@ -252,11 +254,11 @@ int main(int argc, char** argv)
    char         presentationname[1536];
    char         subdir[1536];
    char         tmp[1536];
-   unsigned int cols   = 5;
+   unsigned int cols             = 5;
    unsigned int usePreviewWidth  = 128;
    unsigned int usePreviewHeight = 96;
-   unsigned int useFullWidth     = 640;
-   unsigned int useFullHeight    = 480;
+   unsigned int useFullWidth     = 0;
+   unsigned int useFullHeight    = 0;
    unsigned int previewWidth;
    unsigned int previewHeight;
    unsigned int fullWidth;
@@ -283,6 +285,10 @@ int main(int argc, char** argv)
    ofstream     ssfiles;
    ofstream     subssfiles;
    ofstream     sscontrol;
+
+   cout << "SlideShow - Version 2.0 - Copyright 2003-2004 Thomas Dreibholz" << endl
+        << "==============================================================" << endl
+        << endl;
 
    if(argc < 2) {
       cerr << "Usage: " << argv[0] << " [Output file] {--htmlonly} {--enumerate} {--cols=Columns} {--usefullwidth=Width} {-usefullheight=Height} {--usepreviewwidth=Width} {-usepreviewheight=Height} {-stylesheet=CSS file} {-icon=Icon PNG} {--maintitle=Title} {--maindescription=HTML file} {--title=Title} {--subdir} {--description=File} {JPEG file 1} ..." << endl;
@@ -653,25 +659,29 @@ int main(int argc, char** argv)
 
             viewhtml << "<p class=\"center\">" << endl
                      << "<br />Full view of <em>" << name << "</em>" << endl
-                     << "<br /><a href=\"" << originalRef << "\">Get the original file</a>" << endl
-                     << "</p>" << endl;
-/*
-for(int j = i - 1;j >= 2;j--) {
-   if(strncmp(argv[j], "--", 2)) {
-      printf("prev=%s\n",argv[j]);
-      break;
-   }
-}
-for(int j = i + 1;j < argc;j++) {
-   if(strncmp(argv[j], "--subdir", 8)) {
-      break;
-   }
-   else if(strncmp(argv[j], "--", 2)) {
-      printf("next=%s\n",argv[j]);
-      break;
-   }
-}
-*/
+                     << "<br /><a href=\"" << originalRef << "\">Get the original file</a><br />" << endl;
+
+            viewhtml << "[To Preview] ";
+            prevhtml[0] = 0x00;
+            if(number > 1) {
+               snprintf((char*)&prevhtml, sizeof(prevhtml), "show-image-%04d.html", number - 1);
+               viewhtml << "<a href=\"" << prevhtml << "\">Previous Slide</a> " << endl;
+            }
+            nexthtml[0] = 0x00;
+            for(int j = i + 1;j < argc;j++) {
+               if(!(strncmp(argv[j], "--subdir", 8))) {
+                  break;
+               }
+               else if(strncmp(argv[j], "--", 2)) {
+                  printf("next=%s\n",argv[j]);
+                  snprintf((char*)&nexthtml, sizeof(nexthtml), "show-image-%04d.html", number +1);
+                  viewhtml << "<a href=\"" << nexthtml << "\">Next Slide</a>" << endl;
+                  break;
+               }
+            }
+
+            viewhtml << "</p>" << endl;
+
             cat(viewhtml, tailFile);
             viewhtml << "</body>" << endl;
             viewhtml << "</html>" << endl;
