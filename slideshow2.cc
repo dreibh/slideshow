@@ -24,7 +24,7 @@
 #include <fstream>
 #include <set>
 
-#include <Magick++.h>
+#include "converter.h"
 
 
 using namespace std;
@@ -1270,42 +1270,34 @@ void createImageTable(Presentation* presentation, int argc, char** argv)
 
 void Image::createImage()
 {
-   char str[1024];
+   char originalImageName[1024];
+   char previewImageName[1024];
+   char fullsizeImageName[1024];
+
    cout << "Preparing image \"" << SourceName << "..." << endl;
+   snprintf((char*)&originalImageName, sizeof(originalImageName), "%s/%s/%s",
+            OwnerBlock->OwnerPresentation->DirectoryName,
+            OwnerBlock->DirectoryName,
+            OriginalName);
+   snprintf((char*)&previewImageName, sizeof(previewImageName), "%s/%s/%s",
+            OwnerBlock->OwnerPresentation->DirectoryName,
+            OwnerBlock->DirectoryName,
+            PreviewName);
+   snprintf((char*)&fullsizeImageName, sizeof(fullsizeImageName), "%s/%s/%s",
+            OwnerBlock->OwnerPresentation->DirectoryName,
+            OwnerBlock->DirectoryName,
+            FullsizeName);
 
    if(!OwnerBlock->OwnerPresentation->SkipImageConversion) {
-      Magick::Image original;
-      try {
-         original.read(SourceName);
-         OriginalWidth  = original.size().width();
-         OriginalHeight = original.size().height();
+      // ====== Copy original file ==========================================
+      copy(SourceName, originalImageName);
 
-         Magick::Image preview = original;
-         preview.interlaceType(Magick::LineInterlace);
-         preview.quality(OwnerBlock->OwnerPresentation->PreviewQuality);
-         preview.sample(Magick::Geometry(OwnerBlock->OwnerPresentation->PreviewWidth, OwnerBlock->OwnerPresentation->PreviewHeight));
-         PreviewWidth  = preview.size().width();
-         PreviewHeight = preview.size().height();
-         snprintf((char*)&str, sizeof(str), "%s/%s/%s",
-                  OwnerBlock->OwnerPresentation->DirectoryName,
-                  OwnerBlock->DirectoryName,
-                  PreviewName);
-         preview.write(str);
 
-         Magick::Image fullsize = original;
-         fullsize.interlaceType(Magick::LineInterlace);
-         fullsize.quality(OwnerBlock->OwnerPresentation->FullsizeQuality);
-         fullsize.sample(Magick::Geometry(OwnerBlock->OwnerPresentation->FullsizeWidth, OwnerBlock->OwnerPresentation->FullsizeHeight));
-         FullsizeWidth  = fullsize.size().width();
-         FullsizeHeight = fullsize.size().height();
-         snprintf((char*)&str, sizeof(str), "%s/%s/%s",
-                  OwnerBlock->OwnerPresentation->DirectoryName,
-                  OwnerBlock->DirectoryName,
-                  FullsizeName);
-         fullsize.write(str);
-      } catch(Magick::Exception& exception) {
-         cerr << "ERROR: Image prepararion failed: " << exception.what() << endl;
-      }
+      // ====== Create preview and fullsize images ==========================
+      imageConverter(SourceName, previewImageName, fullsizeImageName,
+                     OriginalWidth, OriginalHeight,
+                     PreviewWidth, PreviewHeight,
+                     FullsizeWidth, FullsizeHeight);
    }
    else {
       OriginalWidth  = OwnerBlock->OwnerPresentation->FullsizeWidth;
@@ -1314,40 +1306,10 @@ void Image::createImage()
       PreviewHeight  = OwnerBlock->OwnerPresentation->PreviewHeight;
       FullsizeWidth  = OwnerBlock->OwnerPresentation->FullsizeWidth;
       FullsizeHeight = OwnerBlock->OwnerPresentation->FullsizeHeight;
-      try {
-         Magick::Image original;
-         original.ping(SourceName);
-         OriginalWidth  = original.size().width();
-         OriginalHeight = original.size().height();
-      } catch(Magick::Exception& exception) {
-         cerr << "WARNING: Image check failed: " << exception.what() << endl;
-      }
-
-      try {
-         Magick::Image preview;
-         snprintf((char*)&str, sizeof(str), "%s/%s/%s",
-                  OwnerBlock->OwnerPresentation->DirectoryName,
-                  OwnerBlock->DirectoryName,
-                  PreviewName);
-         preview.ping(str);
-         PreviewWidth  = preview.size().width();
-         PreviewHeight = preview.size().height();
-      } catch(Magick::Exception& exception) {
-         cerr << "WARNING: Image check failed: " << exception.what() << endl;
-      }
-
-      try {
-         Magick::Image fullsize;
-         snprintf((char*)&str, sizeof(str), "%s/%s/%s",
-                  OwnerBlock->OwnerPresentation->DirectoryName,
-                  OwnerBlock->DirectoryName,
-                  FullsizeName);
-         fullsize.ping(str);
-         FullsizeWidth  = fullsize.size().width();
-         FullsizeHeight = fullsize.size().height();
-      } catch(Magick::Exception& exception) {
-         cerr << "WARNING: Image check failed: " << exception.what() << endl;
-      }
+      imageTester(SourceName, previewImageName, fullsizeImageName,
+                  OriginalWidth, OriginalHeight,
+                  PreviewWidth, PreviewHeight,
+                  FullsizeWidth, FullsizeHeight);
    }
 }
 
