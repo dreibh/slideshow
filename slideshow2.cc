@@ -24,11 +24,10 @@
 #include <fstream>
 #include <set>
 
-// #include <Magick++.h>
+#include <Magick++.h>
 
 
 using namespace std;
-//using namespace Magick;
 
 
 #define CHECK(cond) if(!(cond)) { std::cerr << "ERROR in " << __FILE__ << ", line " << __LINE__ << ": condition " << #cond << " is not satisfied!" << std::endl; exit(1); }
@@ -322,8 +321,15 @@ class Presentation
    bool         Enumerate;
    bool         Index;
    bool         Slideshow;
+   bool         IncludeOriginal;
 
    unsigned int Columns;
+   unsigned int PreviewWidth;
+   unsigned int PreviewHeight;
+   unsigned int PreviewQuality;
+   unsigned int FullsizeWidth;
+   unsigned int FullsizeHeight;
+   unsigned int FullsizeQuality;
 
    char         MainTitle[1024];
    char         MainDescription[1024];
@@ -423,10 +429,16 @@ class Image
 
 Presentation::Presentation()
 {
-   Enumerate   = true;
-   Index       = true;
-   Columns     = 5;
-   LastBlockID = 0;
+   Enumerate       = true;
+   Index           = true;
+   Columns         = 5;
+   LastBlockID     = 0;
+   PreviewWidth    = 128;
+   PreviewHeight   = 96;
+   PreviewQuality  = 50;
+   FullsizeWidth   = 1200;
+   FullsizeHeight  = 960;
+   FullsizeQuality = 75;
 
    safestrcpy((char*)&MainTitle, "My Photo Archive", sizeof(MainTitle));
    safestrcpy((char*)&MainDescription, "", sizeof(MainDescription));
@@ -469,7 +481,13 @@ void Presentation::dump()
         << "      + ShortcutIcon=" << ShortcutIcon << endl
         << "      + SlideshowFilelist=" << SlideshowFilelist << endl
         << "      + SlideshowFrameset=" << SlideshowFrameset << endl
-        << "      + SlideshowControl=" << SlideshowControl << endl;
+        << "      + SlideshowControl=" << SlideshowControl << endl
+        << "      + PreviewWidth=" << PreviewWidth << endl
+        << "      + PreviewHeight=" << PreviewHeight << endl
+        << "      + PreviewQuality=" << PreviewQuality << " [%%]" << endl
+        << "      + FullsizeWidth=" << FullsizeWidth << endl
+        << "      + FullsizeHeight=" << FullsizeHeight << endl
+        << "      + FullsizeQuality=" << FullsizeQuality << " [%%]" << endl;
    set<Block*>::iterator blockIterator = BlockSet.begin();
    while(blockIterator != BlockSet.end()) {
       (*blockIterator)->dump();
@@ -769,7 +787,7 @@ void Presentation::createMainPage()
                << "width=\""  << image->PreviewWidth  << "\" "
                << "height=\"" << image->PreviewHeight << "\" "
                << "alt=\""    << image->Title         << "\" "
-               << "src=\""    << image->PreviewName   << "\""
+               << "src=\""    << image->OwnerBlock->DirectoryName << "/" << image->PreviewName   << "\""
                << " /><br />"
                << image->Title
                << "</a>"
@@ -990,11 +1008,11 @@ void Image::createViewPage(const Block* prevBlock, const Block* nextBlock,
          << "<script type=\"text/javascript\" src=\"imageviewer.js\"></script>" << endl;
       if(prevImage) {
          os << "<link rel=\"next\" href=\"" << ((forSlideshow == true) ? prevImage->SlideshowName : prevImage->ViewName) << "\" />" << endl
-            << "<link rel=\"next\" href=\"" << prevImage->FullsizeName << "\" />" << endl;
+            << "<link rel=\"next\" href=\"" << prevImage->OwnerBlock->DirectoryName << "/" << prevImage->FullsizeName << "\" />" << endl;
       }
       if(nextImage) {
          os << "<link rel=\"next\" href=\"" << ((forSlideshow == true) ? nextImage->SlideshowName : nextImage->ViewName) << "\" />" << endl
-            << "<link rel=\"next\" href=\"" << nextImage->FullsizeName << "\" />" << endl;
+            << "<link rel=\"next\" href=\"" << nextImage->OwnerBlock->DirectoryName << "/" << nextImage->FullsizeName << "\" />" << endl;
       }
       os << "</head>" << endl << endl;
 
@@ -1013,12 +1031,12 @@ void Image::createViewPage(const Block* prevBlock, const Block* nextBlock,
 
       os << "<script type=\"text/javascript\">" << endl
          << "<!--" << endl
-         << "   show( \"" << FullsizeName << "\", " << FullsizeWidth << ", " << FullsizeHeight << ");" << endl
+         << "   show( \"" << OwnerBlock->DirectoryName << "/" << FullsizeName << "\", " << FullsizeWidth << ", " << FullsizeHeight << ");" << endl
          << "-->" << endl
          << "</script>" << endl;
       os << "<noscript>" << endl
          << "   <p class=\"center\">" << endl
-         << "   <img width=\"" << FullsizeWidth << "\" height=\"" << FullsizeHeight << "\" alt=\"" << Title << "\" src=\"" << FullsizeName << "\" />" << endl
+         << "   <img width=\"" << FullsizeWidth << "\" height=\"" << FullsizeHeight << "\" alt=\"" << Title << "\" src=\"" << OwnerBlock->DirectoryName << "/" << FullsizeName << "\" />" << endl
          << "   </p>" << endl
          << "</noscript>" << endl;
 
@@ -1180,12 +1198,95 @@ void createImageTable(Presentation* presentation, int argc, char** argv)
             columns = 1;
          }
       }
+      else if(!(strncmp(argv[i], "--previewdith=", 14))) {
+         presentation->PreviewWidth = atol((char*)&argv[i][14]);
+         if(presentation->PreviewWidth < 16) {
+            presentation->PreviewWidth = 16;
+         }
+      }
+      else if(!(strncmp(argv[i], "--previewheight=", 15))) {
+         presentation->PreviewHeight = atol((char*)&argv[i][15]);
+         if(presentation->PreviewHeight < 16) {
+            presentation->PreviewHeight = 16;
+         }
+      }
+      else if(!(strncmp(argv[i], "--previewquality=", 16))) {
+         presentation->PreviewQuality = atol((char*)&argv[i][16]);
+         if(presentation->PreviewQuality < 1) {
+            presentation->PreviewQuality = 1;
+         }
+         else if(presentation->PreviewQuality > 100) {
+            presentation->PreviewQuality = 100;
+         }
+      }
+      else if(!(strncmp(argv[i], "--fullsizedith=", 15))) {
+         presentation->FullsizeWidth = atol((char*)&argv[i][15]);
+         if(presentation->FullsizeWidth < 16) {
+            presentation->FullsizeWidth = 16;
+         }
+      }
+      else if(!(strncmp(argv[i], "--fullsizeheight=", 16))) {
+         presentation->FullsizeHeight = atol((char*)&argv[i][16]);
+         if(presentation->FullsizeHeight < 16) {
+            presentation->FullsizeHeight = 16;
+         }
+      }
+      else if(!(strncmp(argv[i], "--fullsizequality=", 17))) {
+         presentation->FullsizeQuality = atol((char*)&argv[i][17]);
+         if(presentation->FullsizeQuality < 1) {
+            presentation->FullsizeQuality = 1;
+         }
+         else if(presentation->FullsizeQuality > 100) {
+            presentation->FullsizeQuality = 100;
+         }
+      }
    }
 }
 
 
 void Image::createImage()
 {
+   char str[1024];
+   cout << "Preparing image \"" << SourceName << "..." << endl;
+
+   Magick::Image original;
+   try {
+      original.read(SourceName);
+      OriginalWidth  = original.size().width();
+      OriginalHeight = original.size().height();
+
+      Magick::Image preview  = original;
+      preview.interlaceType(Magick::LineInterlace);
+      preview.quality(OwnerBlock->OwnerPresentation->PreviewQuality);
+//      preview.sample(Magick::Geometry(0, 0, OwnerBlock->OwnerPresentation->PreviewWidth, OwnerBlock->OwnerPresentation->PreviewHeight));
+// ??????
+preview.sample("96x64");
+
+      PreviewWidth  = preview.size().width();
+      PreviewHeight = preview.size().height();
+      snprintf((char*)&str, sizeof(str), "%s/%s/%s",
+               OwnerBlock->OwnerPresentation->DirectoryName,
+               OwnerBlock->DirectoryName,
+               PreviewName);
+      preview.write(str);
+
+      Magick::Image fullsize = original;
+      fullsize.interlaceType(Magick::LineInterlace);
+      fullsize.quality(OwnerBlock->OwnerPresentation->FullsizeQuality);
+      fullsize.scale(Magick::Geometry(0, 0, OwnerBlock->OwnerPresentation->FullsizeWidth, OwnerBlock->OwnerPresentation->FullsizeHeight));
+      FullsizeWidth  = fullsize.size().width();
+      FullsizeHeight = fullsize.size().height();
+      snprintf((char*)&str, sizeof(str), "%s/%s/%s",
+               OwnerBlock->OwnerPresentation->DirectoryName,
+               OwnerBlock->DirectoryName,
+               FullsizeName);
+      fullsize.write(str);
+
+      dump();
+   } catch(Magick::Exception& exception) {
+      cerr << "ERROR: Image prepararion failed: " << exception.what() << endl;
+      exit(1);
+   }
 }
 
 
