@@ -2,7 +2,8 @@
 ./slideshow a93-27dez2003-index.html $@ \
 --maintitle="" \
 --maindescription="" \
---stylesheet=stylesheet.css \
+--stylesheet=../stylesheet.css \
+--icon=../graphics/icons/icon-abschluss93.png \
 --head=a93-head.html \
 --tail=a93-tail.html \
 --enumerate \
