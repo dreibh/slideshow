@@ -1,0 +1,11 @@
+#!/bin/bash
+bakeoff4-slideshow $@
+bakeoff5-slideshow $@
+bakeoff6-slideshow $@
+bakeoff7-slideshow $@
+ict2003-slideshow $@
+lca2003-slideshow $@
+lcn2002-slideshow $@
+msn2003-slideshow $@
+msn2004-slideshow $@
+a93-27dez2003-slideshow $@

@@ -330,7 +330,7 @@ void Presentation::createSlideshowFrameset(const char* filelistName,
           << "<html>"  << endl
           << "<head>"  << endl;
    ssframeset << "<title>" << MainTitle << "</title>" << endl;
-   ssframeset << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-15\" />" << endl;
+   ssframeset << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />" << endl;
    if(Author[0] != 0x00) {
       ssframeset  << "<meta name=\"author\" content=\"" << Author << "\" />" << endl;
    }
@@ -365,7 +365,7 @@ void Presentation::createSlideshowFrameset(const char* filelistName,
       sscontrol << "<link rel=\"shortcut icon\" href=\"" << ShortcutIcon << "\" type=\"image/png\" />" << endl;
    }
    sscontrol << "<title>" << MainTitle << "</title>" << endl;
-   sscontrol << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-15\" />" << endl;
+   sscontrol << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />" << endl;
    if(Author[0] != 0x00) {
       sscontrol  << "<meta name=\"author\" content=\"" << Author << "\" />" << endl;
    }
@@ -508,7 +508,7 @@ void Presentation::createRedirectPage()
          os << "<link rel=\"shortcut icon\" href=\"" << ShortcutIcon << "\" type=\"image/png\" />" << endl;
       }
       os << "<title>" << MainTitle << "</title>" << endl;
-      os << "<meta http-equiv=\"content-type\" content=\"text/os; charset=ISO-8859-15\" />" << endl;
+      os << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />" << endl;
       os << "<meta http-equiv=\"refresh\" content=\"0; url=" << DirectoryName << "/index.html\" />" << endl;
       os << "</head>" << endl << endl;
 
@@ -544,7 +544,7 @@ void Presentation::createMainPage()
          os << "<link rel=\"shortcut icon\" href=\"" << ShortcutIcon << "\" type=\"image/png\" />" << endl;
       }
       os << "<title>" << MainTitle << "</title>" << endl;
-      os << "<meta http-equiv=\"content-type\" content=\"text/os; charset=ISO-8859-15\" />" << endl;
+      os << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />" << endl;
       os  << "<meta name=\"author\" content=\"" << Author << "\" />" << endl;
       os << "<meta name=\"description\" content=\"" << MainTitle << "\" />" << endl;
       os << "<meta name=\"keywords\" content=\"Slideshow" << MainTitle;
@@ -857,7 +857,7 @@ void Image::createViewPage(const Block* prevBlock, const Block* nextBlock,
          os << "<link rel=\"shortcut icon\" href=\"" << OwnerBlock->OwnerPresentation->ShortcutIcon << "\" type=\"image/png\" />" << endl;
       }
       os << "<title>" << OwnerBlock->OwnerPresentation->MainTitle << " - " << Title << "</title>" << endl
-         << "<meta http-equiv=\"content-type\" content=\"text/os; charset=ISO-8859-15\" />" << endl
+         << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />" << endl
          << "<meta name=\"author\" content=\"" << OwnerBlock->OwnerPresentation->Author << "\" />" << endl
          << "<meta name=\"description\" content=\"" << OwnerBlock->OwnerPresentation->MainTitle << ", " << Title << "\" />" << endl
          << "<meta name=\"keywords\" content=\"Slideshow" << OwnerBlock->OwnerPresentation->MainTitle << ", " << Title;
