@@ -5,65 +5,65 @@
 \
 --subdir=lca2003-block1 \
 --title="Part 1 - Arrival in Sydney" \
-"photo-archive/lca2003/A - Bilderserie - Ankunft in Sydney"/*.jpg \
+"/tmp/photo-archive/lca2003/A - Bilderserie - Ankunft in Sydney"/*.jpg \
 \
 --subdir=lca2003-block2 \
 --title="Part 2 - Botanical Garden of Sydney" \
-"photo-archive/lca2003/B - Bilderserie - Sydney-Botanischer Garten"/*.jpg \
+"/tmp/photo-archive/lca2003/B - Bilderserie - Sydney-Botanischer Garten"/*.jpg \
 \
 --subdir=lca2003-block3 \
 --title="Part 3 - AMP Tower and Taronga Zoo" \
-"photo-archive/lca2003/C - Bilderserie - AMP-Tower und Taronga Zoo"/*.jpg \
+"/tmp/photo-archive/lca2003/C - Bilderserie - AMP-Tower und Taronga Zoo"/*.jpg \
 \
 --subdir=lca2003-block4 \
 --title="Part 4 - Taronga Zoo" \
-"photo-archive/lca2003/D - Bilderseite - Taronga Zoo"/*.jpg \
+"/tmp/photo-archive/lca2003/D - Bilderseite - Taronga Zoo"/*.jpg \
 \
 --subdir=lca2003-block5 \
 --title="Part 5 - Aquarium" \
-"photo-archive/lca2003/E - Bilderserie - Aquarium"/*.jpg \
+"/tmp/photo-archive/lca2003/E - Bilderserie - Aquarium"/*.jpg \
 \
 --subdir=lca2003-block6 \
 --title="Part 6 - Bondi Explorer" \
-"photo-archive/lca2003/F - Bilderserie - Sydney-Bondi Explorer"/*.jpg \
+"/tmp/photo-archive/lca2003/F - Bilderserie - Sydney-Bondi Explorer"/*.jpg \
 \
 --subdir=lca2003-block7 \
 --title="Part 7 - Trip to Katoomba" \
-"photo-archive/lca2003/G - Bilderserie - Sydney-Katoomba"/*.jpg \
+"/tmp/photo-archive/lca2003/G - Bilderserie - Sydney-Katoomba"/*.jpg \
 \
 --subdir=lca2003-block8 \
 --title="Part 8 - Trip to Katoomba" \
-"photo-archive/lca2003/H - Bilderserie - Katoomba"/*.jpg \
+"/tmp/photo-archive/lca2003/H - Bilderserie - Katoomba"/*.jpg \
 \
 --subdir=lca2003-block9 \
 --title="Part 9 - Travel to Perth" \
-"photo-archive/lca2003/I - Bilderserie - Sydney-Perth"/*.jpg \
+"/tmp/photo-archive/lca2003/I - Bilderserie - Sydney-Perth"/*.jpg \
 \
 --subdir=lca2003-block10 \
 --title="Part 10 - Kings Park" \
-"photo-archive/lca2003/J - Bilderserie - Kings Park"/*.jpg \
+"/tmp/photo-archive/lca2003/J - Bilderserie - Kings Park"/*.jpg \
 \
 --subdir=lca2003-block11 \
 --title="Part 11 - Kings Park and University Tour" \
-"photo-archive/lca2003/K - Bilderserie - Kings Park and University Tour"/*.jpg \
+"/tmp/photo-archive/lca2003/K - Bilderserie - Kings Park and University Tour"/*.jpg \
 \
 --subdir=lca2003-block12 \
 --title="Part 12 - At the University of Western Australia" \
-"photo-archive/lca2003/L - Bilderserie - Perth-UWA"/*.jpg \
+"/tmp/photo-archive/lca2003/L - Bilderserie - Perth-UWA"/*.jpg \
 \
 --subdir=lca2003-block13 \
 --title="Part 13 - Trip to Fremantle" \
-"photo-archive/lca2003/M - Bilderserie - Perth-Frementle"/*.jpg \
+"/tmp/photo-archive/lca2003/M - Bilderserie - Perth-Frementle"/*.jpg \
 \
 --subdir=lca2003-block14 \
 --title="Part 14 - Trip to Fremantle" \
-"photo-archive/lca2003/N - Bilderserie - Fremantle"/*.jpg \
+"/tmp/photo-archive/lca2003/N - Bilderserie - Fremantle"/*.jpg \
 \
 --subdir=lca2003-block15 \
 --title="Part 15 - Return Travel" \
-"photo-archive/lca2003/O - Bilderserie - Rueckreise"/*.jpg \
+"/tmp/photo-archive/lca2003/O - Bilderserie - Rueckreise"/*.jpg \
 \
 --subdir=lca2003-block16 \
 --title="Part 16 - Back at Home" \
-"photo-archive/lca2003/P - Bilderserie - Ankunft Zuhause"/*.JPG \
+"/tmp/photo-archive/lca2003/P - Bilderserie - Ankunft Zuhause"/*.JPG \
 --

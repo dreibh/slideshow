@@ -9,5 +9,5 @@
 --subdir=bakeoff4-block1 \
 --title="The 4th SCTP Interop" \
 --description=bakeoff4-maintitle.html \
-"photo-archive/connectathon2002/"*.jpg \
+"/tmp/photo-archive/connectathon2002/"*.jpg \
 --

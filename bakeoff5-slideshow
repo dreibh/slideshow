@@ -6,29 +6,29 @@
 \
 --subdir=bakeoff6-block1 \
 --title="Part 1" \
-"photo-archive/sctp-bakeoff-essen-2002/bakeoff1/"*.jpg \
+"/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff1/"*.jpg \
 \
 --subdir=bakeoff6-block2 \
 --title="Part 2" \
-"photo-archive/sctp-bakeoff-essen-2002/bakeoff2/"*.jpg \
+"/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff2/"*.jpg \
 \
 --subdir=bakeoff6-block3 \
 --title="Part 3" \
-"photo-archive/sctp-bakeoff-essen-2002/bakeoff3/"*.jpg \
+"/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff3/"*.jpg \
 \
 --subdir=bakeoff6-block4 \
 --title="Part 4" \
-"photo-archive/sctp-bakeoff-essen-2002/bakeoff4/"*.jpg \
+"/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff4/"*.jpg \
 \
 --subdir=bakeoff6-block5 \
 --title="Part 5" \
-"photo-archive/sctp-bakeoff-essen-2002/bakeoff5/"*.jpg \
+"/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff5/"*.jpg \
 \
 --subdir=bakeoff6-block6 \
 --title="Part 6" \
-"photo-archive/sctp-bakeoff-essen-2002/bakeoff6/"*.jpg \
+"/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff6/"*.jpg \
 \
 --subdir=bakeoff6-block7 \
 --title="Part 7" \
-"photo-archive/sctp-bakeoff-essen-2002/bakeoff7/"*.jpg \
+"/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff7/"*.jpg \
 --

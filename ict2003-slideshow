@@ -5,46 +5,46 @@
 \
 --subdir=ict2003-block1 \
 --title="Day 1 - Travel to Tahiti" \
-"photo-archive/ict2003/Tahiti, Tag 01"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 01"/*.JPG \
 \
 --subdir=ict2003-block2 \
 --title="Day 2 - At the Conference Hotel" \
-"photo-archive/ict2003/Tahiti, Tag 02"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 02"/*.JPG \
 \
 --subdir=ict2003-block3 \
 --title="Day 3 - At the Conference Hotel" \
-"photo-archive/ict2003/Tahiti, Tag 03"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 03"/*.JPG \
 \
 --subdir=ict2003-block4 \
 --title="Day 4 - Environment of the Conference Hotel" \
-"photo-archive/ict2003/Tahiti, Tag 04"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 04"/*.JPG \
 \
 --subdir=ict2003-block5 \
 --title="Day 5 - The Day of my Conference Talk and the Gala Dinner" \
-"photo-archive/ict2003/Tahiti, Tag 05"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 05"/*.JPG \
 \
 --subdir=ict2003-block6 \
 --title="Day 6 - Snorkeling Tour" \
-"photo-archive/ict2003/Tahiti, Tag 06"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 06"/*.JPG \
 \
 --subdir=ict2003-block7 \
 --title="Day 7 - Daytrip to Bora Bora" \
-"photo-archive/ict2003/Tahiti, Tag 07"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 07"/*.JPG \
 \
 --subdir=ict2003-block8 \
 --title="Day 8 - Environment of the Conference Hotel" \
-"photo-archive/ict2003/Tahiti, Tag 08"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 08"/*.JPG \
 \
 --subdir=ict2003-block9 \
 --title="Day 9 - Tamaaraa (Traditional Polynesian Lunch)" \
-"photo-archive/ict2003/Tahiti, Tag 09"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 09"/*.JPG \
 \
 --subdir=ict2003-block10 \
 --title="Day 10 - At the University of French Polynesia" \
-"photo-archive/ict2003/Tahiti, Tag 10"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 10"/*.JPG \
 \
 --subdir=ict2003-block11 \
 --title="Day 11 - Return Travel" \
-"photo-archive/ict2003/Tahiti, Tag 11"/*.JPG \
+"/tmp/photo-archive/ict2003/Tahiti, Tag 11"/*.JPG \
 \
 --

@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.js,v 1.1 2003/07/17 09:45:09 dreibh Exp $
+ *  $Id: slideshow.js,v 1.2 2003/07/17 11:37:51 dreibh Exp $
  *
  * JavaScript Slideshow
  *
@@ -85,12 +85,14 @@ function playpause() {
    if(pause) {
       pause = false;
       document["play"].src="controls/player_play.png";
+      document["play"].alt="Play";
       getNext();
       show();
    }
    else {
       pause = true;
       document["play"].src="controls/player_pause.png";
+      document["play"].alt="Pause";
    }
 }
 
@@ -208,5 +210,6 @@ function onLoad() {
    document["gonext"].onmouseout=gonextMouseOut;
    document["play"].onmouseover=playpauseMouseOver;
    document["play"].onmouseout=playpauseMouseOut;
+   document["play"].alt="Play";
    next();
 }

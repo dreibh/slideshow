@@ -1,18 +1,18 @@
 #!/bin/bash
-./slideshow lcn2002-index.html @$ \
+./slideshow lcn2002-index.html $@ \
 --maintitle="Thomas Dreibholz's Travel to the LCN2002" --maindescription=lcn2002-maintitle.html \
 --stylesheet=stylesheet.css \
 --enumerate \
 \
 --subdir=lcn2002-block1 \
 --title="Part 1" \
-"photo-archive/lcn2002/Bilderserie 1"/*.jpg \
+"/tmp/photo-archive/lcn2002/Bilderserie 1"/*.jpg \
 \
 --subdir=lcn2002-block2 \
 --title="Part 2" \
-"photo-archive/lcn2002/Bilderserie 2"/*.jpg \
+"/tmp/photo-archive/lcn2002/Bilderserie 2"/*.jpg \
 \
 --subdir=lcn2002-block3 \
 --title="Part 3" \
-"photo-archive/lcn2002/Bilderserie 3"/*.jpg \
+"/tmp/photo-archive/lcn2002/Bilderserie 3"/*.jpg \
 --
