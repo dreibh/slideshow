@@ -24,8 +24,11 @@
 #include <fstream>
 #include <set>
 
+// #include <Magick++.h>
+
 
 using namespace std;
+//using namespace Magick;
 
 
 #define CHECK(cond) if(!(cond)) { std::cerr << "ERROR in " << __FILE__ << ", line " << __LINE__ << ": condition " << #cond << " is not satisfied!" << std::endl; exit(1); }
@@ -55,12 +58,57 @@ void webify(char* name)
    }
 }
 
+
+const char* extractFileName(const char* name)
+{
+   const char* str = rindex(name, '/');
+   if(str) {
+      return((const char*)&str[1]);
+   }
+   return(name);
+}
+
+
+const char* getFileNameOneDirDown(const char* name)
+{
+   const char* str = index(name, '/');
+   if(str) {
+      return((const char*)&str[1]);
+   }
+   return(name);
+}
+
+
 /* ###### Get current timer ############################################## */
 unsigned long long getMicroTime()
 {
   struct timeval tv;
   gettimeofday(&tv,NULL);
   return(((unsigned long long)tv.tv_sec * (unsigned long long)1000000) + (unsigned long long)tv.tv_usec);
+}
+
+
+// ###### Convert timestamp to string ########################################
+string getTime(const unsigned long long microTime)
+{
+   char         str[128];
+   const time_t timeStamp = microTime / 1000000;
+   struct tm    timestruct;
+   localtime_r(&timeStamp, &timestruct);
+   strftime((char*)&str,sizeof(str), "%H:%M:%S %Z", &timestruct);
+   return(string(str));
+}
+
+
+// ###### Convert timestamp to string ########################################
+string getDate(const unsigned long long microTime)
+{
+   char         str[128];
+   const time_t timeStamp = microTime / 1000000;
+   struct tm    timestruct;
+   localtime_r(&timeStamp, &timestruct);
+   strftime((char*)&str,sizeof(str), "%d-%b-%Y", &timestruct);
+   return(string(str));
 }
 
 
@@ -165,6 +213,45 @@ void makeDir(const char* a, const char* b = NULL, const char* c = NULL)
 }
 
 
+string modifyLine(const char* line)
+{
+   bool control        = false;
+   string result       = "";
+   const size_t length = strlen(line);
+
+   static const unsigned long long now = getMicroTime();
+   for(size_t i = 0;i < length;i++) {
+      if(line[i] == '$') {
+         control = true;
+      }
+      else {
+         if(control == false) {
+            result += line[i];
+         }
+         else {
+            control = false;
+            switch(line[i]) {
+               case '$':
+                  result += string("$");
+                break;
+               case 'T':
+                  result += getTime(now);
+                break;
+               case 'D':
+                  result += getDate(now);
+                break;
+               default:
+                  cerr << "ERROR: Bad control sequence $+" << line[i] << "!" << endl;
+                  exit(1);
+                break;
+            }
+         }
+      }
+   }
+   return(result);
+}
+
+
 // ###### Dump a file to an output stream ####################################
 bool cat(ostream& os, const char* input)
 {
@@ -174,11 +261,41 @@ bool cat(ostream& os, const char* input)
    if(in.good()) {
       while(!in.eof()) {
          in.getline(str, sizeof(str), '\n');
-         os << str << endl;
+         os << modifyLine(str) << endl;
       }
       return(true);
    }
    return(false);
+}
+
+
+// ###### Copy a file to an output stream ####################################
+void copy(const char* input, const char* output)
+{
+   char  buffer[8192];
+   FILE* in  = fopen(input, "r");
+   if(in != NULL) {
+      FILE* out = fopen(output, "w");
+      if(out != NULL) {
+         size_t length = fread((char*)&buffer, 1, sizeof(buffer),  in);
+         while(length > 0) {
+            if(fwrite((char*)&buffer, 1, length, out) != length) {
+               break;
+            }
+            length = fread((char*)&buffer, 1, sizeof(buffer),  in);
+         }
+         fclose(out);
+      }
+      else {
+         cerr << "ERROR: Unable to create \"" << output << "\"" << endl;
+         exit(1);
+      }
+      fclose(in);
+   }
+   else {
+      cerr << "ERROR: Unable to read \"" << input << "\"" << endl;
+      exit(1);
+   }
 }
 
 
@@ -194,8 +311,12 @@ class Presentation
    Presentation();
    void dump();
    void createDirectories();
+   void createInfrastructureFiles();
    void createMainPage();
-   void createViewPages();
+   void createViewPages(const bool showOriginal,
+                        const bool forSlideshow);
+   void createImages();
+   void createSlideshow();
 
    public:
    bool         Enumerate;
@@ -209,13 +330,30 @@ class Presentation
    char         DirectoryName[1024];
    char         PresentationName[1024];
    char         Stylesheet[1024];
+   char         Background[1024];
    char         ShortcutIcon[1024];
    char         Author[1024];
    char         Head[1024];
    char         Tail[1024];
+   char         OneLeftArrowImage[1024];
+   char         TwoLeftArrowImage[1024];
+   char         OneRightArrowImage[1024];
+   char         TwoRightArrowImage[1024];
+   char         UpArrowImage[1024];
+   char         PauseImage[1024];
+   char         PlayImage[1024];
+   char         ShuffleImage[1024];
+   char         SlideshowFilelist[1024];
+   char         SlideshowFrameset[1024];
+   char         SlideshowControl[1024];
 
    set<Block*>  BlockSet;
    unsigned int LastBlockID;
+
+   private:
+   void createSlideshowFrameset(const char* filelistName,
+                                const char* framesetName,
+                                const char* controlName);
 };
 
 class Block
@@ -226,8 +364,12 @@ class Block
          const char*        blockDescription,
          const unsigned int columns);
    void dump();
+   void createImages();
    void createDirectories();
-   void createViewPages();
+   void createViewPages(const Block* prevBlock,
+                        const Block* nextBlock,
+                        const bool   showOriginal,
+                        const bool   forSlideshow);
 
    public:
    Presentation* OwnerPresentation;
@@ -239,6 +381,9 @@ class Block
    char          OriginalDirectory[1024];
    char          FullsizeDirectory[1024];
    char          PreviewDirectory[1024];
+   char          SlideshowFilelist[1024];
+   char          SlideshowFrameset[1024];
+   char          SlideshowControl[1024];
 
    set<Image*>   ImageSet;
    unsigned int  LastImageID;
@@ -249,7 +394,11 @@ class Image
    public:
    Image(Block* block, const char* imageTitle, const char* sourceName);
    void dump();
-   void createViewPage();
+   void createImage();
+   void createViewPage(const Block* prevBlock, const Block* nextBlock,
+                       const Image* prevImage, const Image* nextImage,
+                       const bool   showOriginal,
+                       const bool   forSlideshow);
 
    public:
    Block*       OwnerBlock;
@@ -274,17 +423,32 @@ class Image
 
 Presentation::Presentation()
 {
-   Enumerate = true;
-   Index     = true;
-   Columns   = 5;
+   Enumerate   = true;
+   Index       = true;
+   Columns     = 5;
+   LastBlockID = 0;
+
    safestrcpy((char*)&MainTitle, "My Photo Archive", sizeof(MainTitle));
    safestrcpy((char*)&MainDescription, "", sizeof(MainDescription));
    safestrcpy((char*)&DirectoryName, "test-dir", sizeof(DirectoryName));
    safestrcpy((char*)&PresentationName, "index.html", sizeof(PresentationName));
    safestrcpy((char*)&Stylesheet, "", sizeof(Stylesheet));
+   safestrcpy((char*)&Background, "", sizeof(Background));
    safestrcpy((char*)&ShortcutIcon, "", sizeof(ShortcutIcon));
    safestrcpy((char*)&Head, "", sizeof(Head));
    safestrcpy((char*)&Tail, "", sizeof(Tail));
+   safestrcpy((char*)&OneLeftArrowImage, "controls/1leftarrow.png", sizeof(OneLeftArrowImage));
+   safestrcpy((char*)&TwoLeftArrowImage, "controls/2leftarrow.png", sizeof(TwoLeftArrowImage));
+   safestrcpy((char*)&OneRightArrowImage, "controls/1rightarrow.png", sizeof(OneRightArrowImage));
+   safestrcpy((char*)&TwoRightArrowImage, "controls/2rightarrow.png", sizeof(TwoRightArrowImage));
+   safestrcpy((char*)&UpArrowImage, "controls/1uparrow.png", sizeof(UpArrowImage));
+   safestrcpy((char*)&PlayImage, "controls/player_play.png", sizeof(PlayImage));
+   safestrcpy((char*)&PauseImage, "controls/player_pause.png", sizeof(PauseImage));
+   safestrcpy((char*)&ShuffleImage, "controls/rotate.png", sizeof(ShuffleImage));
+   safestrcpy((char*)&SlideshowFilelist, "slideshow-filelist-allblocks.js", sizeof(SlideshowFilelist));
+   safestrcpy((char*)&SlideshowFrameset, "slideshow-frameset-allblocks.html", sizeof(SlideshowFrameset));
+   safestrcpy((char*)&SlideshowControl, "slideshow-control-allblocks.html", sizeof(SlideshowControl));
+
    passwd* pw = getpwuid(getuid());
    if(pw) {
       safestrcpy((char*)&Author, pw->pw_gecos, sizeof(Author));
@@ -302,7 +466,10 @@ void Presentation::dump()
         << "      + DirectoryName=" << DirectoryName << endl
         << "      + PresentationName=" << PresentationName << endl
         << "      + Stylesheet=" << Stylesheet << endl
-        << "      + ShortcutIcon=" << ShortcutIcon << endl;
+        << "      + ShortcutIcon=" << ShortcutIcon << endl
+        << "      + SlideshowFilelist=" << SlideshowFilelist << endl
+        << "      + SlideshowFrameset=" << SlideshowFrameset << endl
+        << "      + SlideshowControl=" << SlideshowControl << endl;
    set<Block*>::iterator blockIterator = BlockSet.begin();
    while(blockIterator != BlockSet.end()) {
       (*blockIterator)->dump();
@@ -319,6 +486,184 @@ void Presentation::createDirectories()
       blockIterator++;
    }
 }
+
+
+void Presentation::createImages()
+{
+   set<Block*>::iterator blockIterator = BlockSet.begin();
+   while(blockIterator != BlockSet.end()) {
+      (*blockIterator)->createImages();
+      blockIterator++;
+   }
+}
+
+
+void Presentation::createSlideshowFrameset(const char* filelistName,
+                                           const char* framesetName,
+                                           const char* controlName)
+{
+   char str[1024];
+   snprintf((char*)&str, sizeof(str), "%s/%s", DirectoryName, framesetName);
+   ofstream ssframeset(str);
+   if(!ssframeset.good()) {
+      cerr << "ERROR: Unable to create output file \"" << str << "\"!" << endl;
+      exit(1);
+   }
+
+// ???   ssfiles << "mainPage = \"" << mainPageName << "\";" << endl;
+// ???   ssfiles << "presentationName = \"" << presentationName << "-" << subdirName << "\";" << endl;
+
+   ssframeset << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\">" << endl
+          << "<html>"  << endl
+          << "<head>"  << endl;
+   ssframeset << "<title>" << MainTitle << "</title>" << endl;
+   ssframeset << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-15\" />" << endl;
+   if(Author[0] != 0x00) {
+      ssframeset  << "<meta name=\"author\" content=\"" << Author << "\" />" << endl;
+   }
+   ssframeset << "<meta name=\"description\" content=\"" << MainTitle << "\" />" << endl;
+   ssframeset << "<meta name=\"keywords\" content=\"Slideshow, " << MainTitle;
+   if(Author[0] != 0x00) {
+      ssframeset << ", " << Author;
+   }
+   ssframeset << "\" />" << endl;
+   ssframeset << "<meta name=\"classification\" content=\"Slideshow\" />" << endl;
+   ssframeset << "</head>" << endl;
+   ssframeset << "<frameset rows=\"50px, 80%\">" << endl
+          << "   <frame src=\"" << controlName << "\" frameborder=\"1\" noresize=\"noresize\" scrolling=\"no\" />" << endl
+          << "   <frame frameborder=\"1\" />" << endl
+          << "</frameset>" << endl;
+   ssframeset << "</html>" << endl;
+
+
+   snprintf((char*)&str, sizeof(str), "%s/%s", DirectoryName, controlName);
+   ofstream sscontrol(str);
+   if(!sscontrol.good()) {
+      cerr << "ERROR: Unable to create output file \"" << str << "\"!" << endl;
+      exit(1);
+   }
+   sscontrol << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">" << endl
+             << "<html>"  << endl
+             << "<head>"  << endl;
+   if(Stylesheet[0] != 0x00) {
+      sscontrol << "<link rel=\"stylesheet\" href=\"" << Stylesheet << "\" type=\"text/css\" />" << endl;
+   }
+   if(ShortcutIcon[0] != 0x00) {
+      sscontrol << "<link rel=\"shortcut icon\" href=\"" << ShortcutIcon << "\" type=\"image/png\" />" << endl;
+   }
+   sscontrol << "<title>" << MainTitle << "</title>" << endl;
+   sscontrol << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-15\" />" << endl;
+   if(Author[0] != 0x00) {
+      sscontrol  << "<meta name=\"author\" content=\"" << Author << "\" />" << endl;
+   }
+   sscontrol << "<meta name=\"description\" content=\"" << MainTitle << "\" />" << endl;
+   sscontrol << "<meta name=\"keywords\" content=\"Slideshow, " << MainTitle;
+   if(Author[0] != 0x00) {
+      sscontrol << ", " << Author;
+   }
+   sscontrol << "\" />" << endl;
+   sscontrol << "<meta name=\"classification\" content=\"Slideshow\" />" << endl;
+   sscontrol << "<script type=\"text/javascript\" src=\"slideshow.js\"></script>" << endl;
+   sscontrol << "<script type=\"text/javascript\" src=\"" << filelistName << "\"></script>" << endl;
+   sscontrol << "</head>" << endl << endl;
+   if(!cat(sscontrol, "slideshowcontrol.html")) {
+      cerr << "ERROR: Unable to copy slideshow control body from \"slideshowcontrol.html\"!" << endl;
+      exit(1);
+   }
+   sscontrol << "</html>" << endl;
+}
+
+
+void Presentation::createSlideshow()
+{
+   char str[1024];
+   snprintf((char*)&str, sizeof(str), "%s/slideshow-filelist-allblocks.js", DirectoryName);
+   ofstream ssallblocks(str);
+   if(!ssallblocks.good()) {
+      cerr << "ERROR: Unable to create file \"" << str << "\"!" << endl;
+      exit(1);
+   }
+   createSlideshowFrameset(SlideshowFilelist, SlideshowFrameset, SlideshowControl);
+
+   set<Block*>::iterator blockIterator = BlockSet.begin();
+   while(blockIterator != BlockSet.end()) {
+      const Block* block = *blockIterator;
+      snprintf((char*)&str, sizeof(str), "%s/slideshow-filelist-%s.js", DirectoryName, block->DirectoryName);
+      ofstream ssblock(str);
+      if(!ssblock.good()) {
+         cerr << "ERROR: Unable to create file \"" << str << "\"!" << endl;
+         exit(1);
+      }
+      createSlideshowFrameset(block->SlideshowFilelist, block->SlideshowFrameset, block->SlideshowControl);
+
+      set<Image*>::iterator imageIterator = block->ImageSet.begin();
+      while(imageIterator != block->ImageSet.end()) {
+         const Image* image = *imageIterator;
+         ssallblocks << "imageArray[images++]=\"" << image->SlideshowName << "\";" << endl;
+         ssblock << "imageArray[images++]=\"" << image->SlideshowName << "\";" << endl;
+         imageIterator++;
+      }
+
+      blockIterator++;
+   }
+}
+
+
+void Presentation::createInfrastructureFiles()
+{
+   char str[1024];
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure", DirectoryName);
+   makeDir(str);
+
+   if(Stylesheet[0] != 0x00) {
+      snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(Stylesheet));
+      copy(Stylesheet, str);
+      safestrcpy(Stylesheet, getFileNameOneDirDown(str), sizeof(Stylesheet));
+   }
+   if(Background[0] != 0x00) {
+      snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(Background));
+      copy(Background, str);
+      safestrcpy(Background, getFileNameOneDirDown(str), sizeof(Background));
+   }
+   if(ShortcutIcon[0] != 0x00) {
+      snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(ShortcutIcon));
+      copy(ShortcutIcon, str);
+      safestrcpy(ShortcutIcon, getFileNameOneDirDown(str), sizeof(ShortcutIcon));
+   }
+
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(OneLeftArrowImage));
+   copy(OneLeftArrowImage, str);
+   safestrcpy(OneLeftArrowImage, getFileNameOneDirDown(str), sizeof(OneLeftArrowImage));
+
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(TwoLeftArrowImage));
+   copy(TwoLeftArrowImage, str);
+   safestrcpy(TwoLeftArrowImage, getFileNameOneDirDown(str), sizeof(TwoLeftArrowImage));
+
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(OneRightArrowImage));
+   copy(OneRightArrowImage, str);
+   safestrcpy(OneRightArrowImage, getFileNameOneDirDown(str), sizeof(OneRightArrowImage));
+
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(TwoRightArrowImage));
+   copy(TwoRightArrowImage, str);
+   safestrcpy(TwoRightArrowImage, getFileNameOneDirDown(str), sizeof(TwoRightArrowImage));
+
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(UpArrowImage));
+   copy(UpArrowImage, str);
+   safestrcpy(UpArrowImage, getFileNameOneDirDown(str), sizeof(UpArrowImage));
+
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(PlayImage));
+   copy(PlayImage, str);
+   safestrcpy(PlayImage, getFileNameOneDirDown(str), sizeof(PlayImage));
+
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(PauseImage));
+   copy(PauseImage, str);
+   safestrcpy(PauseImage, getFileNameOneDirDown(str), sizeof(PauseImage));
+
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(ShuffleImage));
+   copy(ShuffleImage, str);
+   safestrcpy(ShuffleImage, getFileNameOneDirDown(str), sizeof(ShuffleImage));
+}
+
 
 void Presentation::createMainPage()
 {
@@ -369,7 +714,7 @@ void Presentation::createMainPage()
          os << "<h2 id=\"index\">Index</h2>" << endl
             << "<ul>" << endl;
          if(Slideshow) {
-// ???            os << "   <li><strong><a href=\"" << ssmainname << "\">View slideshow</a></strong></li>" << endl;
+// ???            os << "   <li><strong><a href=\"" << ssframesetname << "\">View slideshow</a></strong></li>" << endl;
          }
          set<Block*>::iterator blockIterator = BlockSet.begin();
          while(blockIterator != BlockSet.end()) {
@@ -391,7 +736,7 @@ void Presentation::createMainPage()
          os << "<h1 id=\"" << block->DirectoryName << "\">" << block->Title << "</h1>" << endl;
 /*
          html << "<p class=\"center\">" << endl
-// ???              << "<strong><a href=\"" << subssmainname << "\">View slideshow</a></strong>" << endl
+// ???              << "<strong><a href=\"" << subssframesetname << "\">View slideshow</a></strong>" << endl
               << "</p>" << endl;
 */
          if(block->Description[0] != 0x00) {
@@ -459,11 +804,23 @@ void Presentation::createMainPage()
 }
 
 
-void Presentation::createViewPages()
+void Presentation::createViewPages(const bool showOriginal,
+                                   const bool forSlideshow)
 {
    set<Block*>::iterator blockIterator = BlockSet.begin();
+   Block* prevBlock = NULL;
+   Block* nextBlock = NULL;
    while(blockIterator != BlockSet.end()) {
-      (*blockIterator)->createViewPages();
+      set<Block*>::iterator nextBlockIterator = blockIterator;
+      nextBlockIterator++;
+      if(nextBlockIterator != BlockSet.end()) {
+         nextBlock = *nextBlockIterator;
+      }
+      else {
+         nextBlock = NULL;
+      }
+      (*blockIterator)->createViewPages(prevBlock, nextBlock, showOriginal, forSlideshow);
+      prevBlock = *blockIterator;
       blockIterator++;
    }
 }
@@ -482,6 +839,9 @@ Block::Block(Presentation*      presentation,
    safestrcpy((char*)&OriginalDirectory, "original", sizeof(OriginalDirectory));
    safestrcpy((char*)&FullsizeDirectory, "fullsize", sizeof(FullsizeDirectory));
    safestrcpy((char*)&PreviewDirectory, "preview", sizeof(PreviewDirectory));
+   snprintf((char*)&SlideshowFilelist, sizeof(SlideshowFilelist), "slideshow-filelist-%s.js", DirectoryName);
+   snprintf((char*)&SlideshowFrameset, sizeof(SlideshowFrameset), "slideshow-frameset-%s.html", DirectoryName);
+   snprintf((char*)&SlideshowControl, sizeof(SlideshowControl), "slideshow-control-%s.html", DirectoryName);
    Columns     = columns;
    LastImageID = 0;
    OwnerPresentation->BlockSet.insert(this);
@@ -490,7 +850,10 @@ Block::Block(Presentation*      presentation,
 void Block::dump()
 {
    cout << "      + Block #" << ID << " \"" << Title << "\"" << endl
-        << "         % DirectoryName=" << DirectoryName << endl;
+        << "         % DirectoryName=" << DirectoryName << endl
+        << "         % SlideshowFilelist=" << SlideshowFilelist << endl
+        << "         % SlideshowFrameset=" << SlideshowFrameset << endl
+        << "         % SlideshowControl=" << SlideshowControl << endl;
    set<Image*>::iterator imageIterator = ImageSet.begin();
    while(imageIterator != ImageSet.end()) {
       (*imageIterator)->dump();
@@ -508,12 +871,36 @@ void Block::createDirectories()
 }
 
 
-void Block::createViewPages()
+void Block::createImages()
 {
-   set<Image*>::iterator imageIterator;
+   set<Image*>::iterator imageIterator = ImageSet.begin();
    while(imageIterator != ImageSet.end()) {
-      (*imageIterator)->createViewPage();
+      (*imageIterator)->createImage();
       imageIterator++;
+   }
+}
+
+
+void Block::createViewPages(const Block* prevBlock,
+                            const Block* nextBlock,
+                            const bool   showOriginal,
+                            const bool   forSlideshow)
+{
+   set<Image*>::iterator ImageIterator = ImageSet.begin();
+   Image* prevImage = NULL;
+   Image* nextImage = NULL;
+   while(ImageIterator != ImageSet.end()) {
+      set<Image*>::iterator nextImageIterator = ImageIterator;
+      nextImageIterator++;
+      if(nextImageIterator != ImageSet.end()) {
+         nextImage = *nextImageIterator;
+      }
+      else {
+         nextImage = NULL;
+      }
+      (*ImageIterator)->createViewPage(prevBlock, nextBlock, prevImage, nextImage, showOriginal, forSlideshow);
+      prevImage = *ImageIterator;
+      ImageIterator++;
    }
 }
 
@@ -533,7 +920,7 @@ Image::Image(Block* block, const char* imageTitle, const char* sourceName)
       }
       else {
       // ????? Ausschneiden...
-         safestrcpy((char*)&Title, sourceName, sizeof(Title));
+         safestrcpy((char*)&Title, extractFileName(sourceName), sizeof(Title));
       }
    }
    else {
@@ -545,8 +932,8 @@ Image::Image(Block* block, const char* imageTitle, const char* sourceName)
    snprintf((char*)&OriginalName, sizeof(OriginalName), "%s/%s", OwnerBlock->OriginalDirectory, baseName);
    snprintf((char*)&FullsizeName, sizeof(FullsizeName), "%s/%s.jpeg", OwnerBlock->FullsizeDirectory, baseName);
    snprintf((char*)&PreviewName, sizeof(PreviewName), "%s/%s.jpeg", OwnerBlock->PreviewDirectory, baseName);
-   snprintf((char*)&ViewName, sizeof(ViewName), "view%s.html", baseName);
-   snprintf((char*)&SlideshowName, sizeof(SlideshowName), "slideshow%s.html", baseName);
+   snprintf((char*)&ViewName, sizeof(ViewName), "view-block%04u-%s.html", block->ID, baseName);
+   snprintf((char*)&SlideshowName, sizeof(SlideshowName), "slideshow-block%04u-%s.html", block->ID, baseName);
    OriginalWidth  = 0;
    OriginalHeight = 0;
    FullsizeWidth  = 0;
@@ -568,51 +955,129 @@ void Image::dump()
 }
 
 
-void Image::createViewPage()
+void Image::createViewPage(const Block* prevBlock, const Block* nextBlock,
+                           const Image* prevImage, const Image* nextImage,
+                           const bool   showOriginal,
+                           const bool   forSlideshow)
 {
    char str[1024];
-   snprintf((char*)&str, sizeof(str), "%s", ViewName);
+   snprintf((char*)&str, sizeof(str), "%s/%s",
+            OwnerBlock->OwnerPresentation->DirectoryName,
+            (forSlideshow == true) ? SlideshowName : ViewName);
    ofstream os(str);
    if(os.good()) {
 
       // ====== Header =======================================================
       os << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xos11/DTD/xos11.dtd\">" << endl
-           << "<html>"  << endl
-           << "<head>"  << endl;
+         << "<html>"  << endl
+         << "<head>"  << endl;
       if(OwnerBlock->OwnerPresentation->Stylesheet[0] != 0x00) {
          os << "<link rel=\"stylesheet\" href=\"" << OwnerBlock->OwnerPresentation->Stylesheet << "\" type=\"text/css\" />" << endl;
       }
       if(OwnerBlock->OwnerPresentation->ShortcutIcon[0] != 0x00) {
          os << "<link rel=\"shortcut icon\" href=\"" << OwnerBlock->OwnerPresentation->ShortcutIcon << "\" type=\"image/png\" />" << endl;
       }
-      os << "<title>" << OwnerBlock->OwnerPresentation->MainTitle << " - " << Title << "</title>" << endl;
-      os << "<meta http-equiv=\"content-type\" content=\"text/os; charset=ISO-8859-15\" />" << endl;
-      os  << "<meta name=\"author\" content=\"" << OwnerBlock->OwnerPresentation->Author << "\" />" << endl;
-      os << "<meta name=\"description\" content=\"" << OwnerBlock->OwnerPresentation->Title << ", " << Title << "\" />" << endl;
-      os << "<meta name=\"keywords\" content=\"Slideshow" << OwnerBlock->OwnerPresentation->Title << ", " << Title;
+      os << "<title>" << OwnerBlock->OwnerPresentation->MainTitle << " - " << Title << "</title>" << endl
+         << "<meta http-equiv=\"content-type\" content=\"text/os; charset=ISO-8859-15\" />" << endl
+         << "<meta name=\"author\" content=\"" << OwnerBlock->OwnerPresentation->Author << "\" />" << endl
+         << "<meta name=\"description\" content=\"" << OwnerBlock->OwnerPresentation->MainTitle << ", " << Title << "\" />" << endl
+         << "<meta name=\"keywords\" content=\"Slideshow" << OwnerBlock->OwnerPresentation->MainTitle << ", " << Title;
       if(OwnerBlock->OwnerPresentation->Author[0] != 0x00) {
          os << ", " << OwnerBlock->OwnerPresentation->Author;
       }
-      os << "\" />" << endl;
-      os << "<meta name=\"classification\" content=\"Image, " << Title << "\" />" << endl;
+      os << "\" />" << endl
+         << "<meta name=\"classification\" content=\"Image, " << Title << "\" />" << endl
+         << "<script type=\"text/javascript\" src=\"imageviewer.js\"></script>" << endl;
+      if(prevImage) {
+         os << "<link rel=\"next\" href=\"" << ((forSlideshow == true) ? prevImage->SlideshowName : prevImage->ViewName) << "\" />" << endl
+            << "<link rel=\"next\" href=\"" << prevImage->FullsizeName << "\" />" << endl;
+      }
+      if(nextImage) {
+         os << "<link rel=\"next\" href=\"" << ((forSlideshow == true) ? nextImage->SlideshowName : nextImage->ViewName) << "\" />" << endl
+            << "<link rel=\"next\" href=\"" << nextImage->FullsizeName << "\" />" << endl;
+      }
       os << "</head>" << endl << endl;
 
 
       // ====== Body =========================================================
       os << "<body>" << endl;
-      if(Head[0] != 0x00) {
-         if(!cat(os, Head)) {
-            cerr << "ERROR: Unable to copy head from file \"" << Head << "\"!" << endl;
-            exit(1);
+      if(!forSlideshow) {
+         if(OwnerBlock->OwnerPresentation->Head[0] != 0x00) {
+            if(!cat(os, OwnerBlock->OwnerPresentation->Head)) {
+               cerr << "ERROR: Unable to copy head from file \"" << OwnerBlock->OwnerPresentation->Head << "\"!" << endl;
+               exit(1);
+            }
          }
       }
-      os << "<h1>" << MainTitle << "</h1>" << endl;
-      if(MainDescription[0] != 0x00) {
-         if(!cat(os, MainDescription)) {
-            cerr << "ERROR: Unable to copy main description from file \"" << MainDescription << "\"!" << endl;
-            exit(1);
+      os << "<h1>" << Title << "</h1>" << endl;
+
+      os << "<script type=\"text/javascript\">" << endl
+         << "<!--" << endl
+         << "   show( \"" << FullsizeName << "\", " << FullsizeWidth << ", " << FullsizeHeight << ");" << endl
+         << "-->" << endl
+         << "</script>" << endl;
+      os << "<noscript>" << endl
+         << "   <p class=\"center\">" << endl
+         << "   <img width=\"" << FullsizeWidth << "\" height=\"" << FullsizeHeight << "\" alt=\"" << Title << "\" src=\"" << FullsizeName << "\" />" << endl
+         << "   </p>" << endl
+         << "</noscript>" << endl;
+
+      os << "<p class=\"center\">" << endl;
+      if(!forSlideshow) {
+         os << "<br />Full view of <em>" << Title << "</em>" << endl
+            << "<br /><a href=\"" << OriginalName << "\">Get the original file</a><br />" << endl;
+
+         os << "<a href=\"" << OwnerBlock->OwnerPresentation->PresentationName << "#" << OwnerBlock->DirectoryName << "\"><img alt=\"Preview Page\" src=\"" << OwnerBlock->OwnerPresentation->UpArrowImage << "\" /></a> ";
+         if(prevBlock) {
+            os << "<a href=\"" << prevBlock->OwnerPresentation->PresentationName << "#" << prevBlock->DirectoryName << "\">";
+         }
+         os << "<img alt=\"Previous Block\" src=\"" << OwnerBlock->OwnerPresentation->TwoLeftArrowImage << "\" />";
+         if(prevBlock) {
+            os << "</a>";
+         }
+         os << " ";
+
+         if(prevImage) {
+            os << "<a href=\"" << prevImage->ViewName << "\">";
+         }
+         os << "<img alt=\"Previous Image\" src=\"" << OwnerBlock->OwnerPresentation->OneLeftArrowImage << "\" />";
+         if(prevImage) {
+            os << "</a>";
+         }
+         os << " ";
+
+         if(nextImage) {
+            os << "<a href=\"" << nextImage->ViewName << "\">";
+         }
+         os << "<img alt=\"Next Image\" src=\"" << OwnerBlock->OwnerPresentation->OneRightArrowImage << "\" />";
+         if(nextImage) {
+            os << "</a>";
+         }
+         os << " ";
+
+         if(nextBlock) {
+            os << "<a href=\"" << nextBlock->OwnerPresentation->PresentationName << "#" << nextBlock->DirectoryName << "\">";
+         }
+         os << "<img alt=\"Next Block\" src=\"" << OwnerBlock->OwnerPresentation->TwoRightArrowImage << "\" />";
+         if(nextBlock) {
+            os << "</a>";
+         }
+
+         os << " ";
+      }
+
+      os << "</p>" << endl;
+      if(!forSlideshow) {
+         if(OwnerBlock->OwnerPresentation->Tail[0] != 0x00) {
+            if(!cat(os, OwnerBlock->OwnerPresentation->Tail)) {
+               cerr << "ERROR: Unable to copy tail from file \"" << OwnerBlock->OwnerPresentation->Tail << "\"!" << endl;
+               exit(1);
+            }
          }
       }
+      os << "</body>" << endl
+         << "</html>" << endl;
+   }
    else {
       cerr << "ERROR: Unable to create file \"" << str << "\"!" << endl;
       exit(1);
@@ -635,8 +1100,11 @@ Presentation* createPresentation(int argc, char** argv)
       else if(!(strncmp(argv[i], "--stylesheet=", 13))) {
          safestrcpy(presentation->Stylesheet, (char*)&argv[i][13], sizeof(presentation->Stylesheet));
       }
-      else if(!(strncmp(argv[i], "--shortcuticon=", 14))) {
-         safestrcpy(presentation->ShortcutIcon, (char*)&argv[i][14], sizeof(presentation->ShortcutIcon));
+      else if(!(strncmp(argv[i], "--background=", 13))) {
+         safestrcpy(presentation->Background, (char*)&argv[i][13], sizeof(presentation->Background));
+      }
+      else if(!(strncmp(argv[i], "--shortcuticon=", 15))) {
+         safestrcpy(presentation->ShortcutIcon, (char*)&argv[i][15], sizeof(presentation->ShortcutIcon));
       }
       else if(!(strncmp(argv[i], "--directory=", 12))) {
          safestrcpy(presentation->DirectoryName, (char*)&argv[i][12], sizeof(presentation->DirectoryName));
@@ -716,6 +1184,12 @@ void createImageTable(Presentation* presentation, int argc, char** argv)
 }
 
 
+void Image::createImage()
+{
+}
+
+
+
 int main(int argc, char** argv)
 {
    cout << "- Creating Presentation..." << endl;
@@ -727,15 +1201,24 @@ int main(int argc, char** argv)
    cout << "- Overview" << endl;
    presentation->dump();
 
-
    cout << "- Creating directories..." << endl;
    presentation->createDirectories();
+
+   cout << "- Creating HTML infrastructure files..." << endl;
+   presentation->createInfrastructureFiles();
 
    cout << "- Creating main page..." << endl;
    presentation->createMainPage();
 
-   cout << "- Creating HTMLs..." << endl;
-   presentation->createViewPages();
+   cout << "- Creating View HTMLs..." << endl;
+   presentation->createViewPages(false, false);
+
+   cout << "- Creating Slideshow HTMLs..." << endl;
+   presentation->createViewPages(false, true);
+   presentation->createSlideshow();
+
+   cout << "- Converting Images..." << endl;
+   presentation->createImages();
 
    delete presentation;
 }
