@@ -2,6 +2,46 @@
 #include <magick/api.h>
 
 
+#define MIN(a,b) ((a < b) ? (a) : (b))
+#define MAX(a,b) ((a > b) ? (a) : (b))
+
+// ###### Calculate scaled image size #######################################
+void scaleImageSize(size_t  originalWidth,
+                    size_t  originalHeight,
+                    size_t& scaledWidth,
+                    size_t& scaledHeight)
+{
+   const double ratio = (double)originalWidth / (double)originalHeight;
+
+   scaledWidth   = MIN(originalWidth, scaledWidth);
+   scaledHeight  = MIN(originalHeight, scaledHeight);
+
+   size_t width  = scaledWidth;
+   size_t height = (size_t)rint(scaledWidth / ratio);
+   if(height > scaledHeight) {
+      width  = (size_t)rint(scaledHeight * ratio);
+      height = scaledHeight;
+   }
+
+   const double ratioNew = (double)width / (double)height;
+   if(fabs(ratio - ratioNew) > 0.1) {
+      std::cerr << "INTERNAL ERROR: Scaling calculation failed!" << std::endl;
+      std::cerr << "ow=" << originalWidth << std::endl
+                << "oh=" << originalHeight << std::endl
+                << "sw=" << scaledWidth << std::endl
+                << "sw=" << scaledHeight << std::endl
+                << "r1=" << ratio << std::endl
+                << "r2=" << ratioNew << std::endl;
+      exit(1);
+   }
+
+   scaledWidth  = width;
+   scaledHeight = height;
+   // printf("w=%d h=%d\n", scaledWidth, scaledHeight);
+}
+
+
+// ###### Convert image to fullsize and preview versions ####################
 int imageConverter(const char*   originalImageName,
                    const char*   previewImageName,
                    const char*   fullsizeImageName,
@@ -42,6 +82,11 @@ int imageConverter(const char*   originalImageName,
    }
    originalWidth  = originalImage->columns;
    originalHeight = originalImage->rows;
+
+
+   // ====== Calculate scaled sizes =========================================
+   scaleImageSize(originalWidth, originalHeight, previewWidth, previewHeight);
+   scaleImageSize(originalWidth, originalHeight, fullsizeWidth, fullsizeHeight);
 
 
    // ====== Create fullsize image ==========================================
@@ -100,6 +145,7 @@ int imageConverter(const char*   originalImageName,
 }
 
 
+// ###### Test original, fullsize and preview images ########################
 int imageTester(const char*   originalImageName,
                 const char*   previewImageName,
                 const char*   fullsizeImageName,

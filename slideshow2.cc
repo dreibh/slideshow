@@ -1081,14 +1081,14 @@ void createImageTable(Presentation* presentation, int argc, char** argv)
             presentation->PreviewQuality = 100;
          }
       }
-      else if(!(strncmp(argv[i], "--fullsizedith=", 15))) {
-         presentation->FullsizeWidth = atol((char*)&argv[i][15]);
+      else if(!(strncmp(argv[i], "--fullsizewidth=", 16))) {
+         presentation->FullsizeWidth = atol((char*)&argv[i][16]);
          if(presentation->FullsizeWidth < 16) {
             presentation->FullsizeWidth = 16;
          }
       }
-      else if(!(strncmp(argv[i], "--fullsizeheight=", 16))) {
-         presentation->FullsizeHeight = atol((char*)&argv[i][16]);
+      else if(!(strncmp(argv[i], "--fullsizeheight=", 17))) {
+         presentation->FullsizeHeight = atol((char*)&argv[i][17]);
          if(presentation->FullsizeHeight < 16) {
             presentation->FullsizeHeight = 16;
          }

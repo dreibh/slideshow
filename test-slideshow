@@ -6,9 +6,6 @@
 --fullheight=480 \
 --enumerate \
 --subdir \
---title="Some Tests" \
-/home/dreibh/tmp/test-jpeg/*.jpg \
---subdir \
 --title="Photo Gallery" \
 /home/dreibh/tmp/test-jpeg/*.jpeg \
 --

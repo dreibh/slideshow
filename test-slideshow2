@@ -7,11 +7,9 @@
 --shortcuticon=icon-default.png \
 --head=head.html \
 --tail=tail.html \
---fullwidth=640 \
---fullheight=480 \
+--fullsizewidth=1280 \
+--fullsizeheight=960 \
 --noenumerate \
---block="Some Tests" \
-/home/dreibh/tmp/test-jpeg/*.jpeg \
 --block="Photo Gallery" \
-/home/dreibh/tmp/test-jpeg/*.jpg \
+/home/dreibh/tmp/test-jpeg/*.jpeg \
 $@ \
