@@ -10,7 +10,5 @@
 --subdir \
 --title="Bilder vom Treffen am 27.12.2003" \
 --description=a93-27dez2003-maintitle.html \
-Tux.jpeg \
+"/home/dreibh/stufentreffen_12_03/"*.JPG \
 --
-
-# "/home/dreibh/stufentreffen_12_03/"*.JPG \
