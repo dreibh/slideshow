@@ -18,4 +18,4 @@ getsize:	getsize.cc
 	g++ getsize.cc -o getsize -Wall -O2
 
 clean:
-	rm -f slideshow slideshow2 getsize
+	rm -f slideshow slideshow2 getsize *.o

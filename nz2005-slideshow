@@ -1,0 +1,19 @@
+#!/bin/bash
+shopt -s extglob
+
+./slideshow2 \
+--directory=nz2005 \
+--maintitle="Thomas Dreibholz's Reise nach Neuseeland 2004/05" --maindescription=nz2005-maintitle.html \
+--stylesheet=stylesheet.css \
+--background=background.png \
+--shortcuticon=icon-default.png \
+--slideshow \
+--head=head.html \
+--tail=tail.html \
+--fullsizewidth=1280 \
+--fullsizeheight=960 \
+--enumerate \
+--noindex \
+/home/dreibh/NZ2004-Druck/Landschaften/*.JPG \
+$@ \
+--
