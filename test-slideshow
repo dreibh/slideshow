@@ -5,8 +5,8 @@
 --enumerate \
 --subdir \
 --title="Some Tests" \
-/home/dreibh/tmp/*.jpg \
+/tmp/*.jpg \
 --subdir \
 --title="Photo Gallery" \
-"/winnt/Dokumente und Einstellungen/Dreibholz/Eigene Dateien/Eigene Bilder/2003_05_04"/*.JPG \
+Tux.jpeg \
 --

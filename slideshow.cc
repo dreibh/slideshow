@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.cc,v 1.5 2004/01/29 15:01:55 dreibh Exp $
+ *  $Id: slideshow.cc,v 1.6 2004/01/30 15:08:09 dreibh Exp $
  *
  * XHTML 1.1 image presentation and JavaScript-based slideshow generator
  *
@@ -102,58 +102,38 @@ bool cat(ostream& os, const char* input)
 }
 
 
-// ###### Create full-size image for presentation ############################
-bool createFull(const char* input,
-                const char* output,
-                bool        htmlonly)
+// ###### Create preview-size and full-size image for presentation ###########
+bool createImages(const char*   originalName,
+                  const char*   fullName,
+                  const char*   previewName,
+                  const char*   sizesName,
+                  unsigned int& fullWidth,
+                  unsigned int& fullHeight,
+                  unsigned int& previewWidth,
+                  unsigned int& previewHeight,
+                  const bool    htmlonly)
 {
-   cerr << "Full image for \"" << input << "\"..." << endl;
+   cerr << "   - Preparing \"" << originalName << "\"..." << endl;
 
-   char  cmd[1024];
-   bool  result = false;
-   snprintf((char*)&cmd, sizeof(cmd),"createfull \"%s\" \"%s\" %s",
-            input, output,
+   unsigned int originalWidth;
+   unsigned int originalHeight;
+   char         cmd[1024];
+   bool         result = false;
+
+
+   snprintf((char*)&cmd, sizeof(cmd),"createimages \"%s\" \"%s\" \"%s\" \"%s\" %u %u %u %u %s",
+            originalName, fullName, previewName, sizesName,
+            fullWidth, fullHeight, previewWidth, previewHeight,
             (htmlonly == true) ? "--htmlonly" : "");
+   // cout << "bash# " << cmd << endl;
+
+
    if(system(cmd) == 0) {
-      result = true;
-   }
-   else {
-      cerr << "ERROR: Unable to prepare full-size view for image \"" << input << "\"!" << endl;
-   }
-
-   return(htmlonly || result);
-}
-
-
-// ###### Create preview-size image for presentation #########################
-bool createPreview(const char*   input,
-                   const char*   output,
-                   unsigned int& previewWidth,
-                   unsigned int& previewHeight,
-                   unsigned int& fullWidth,
-                   unsigned int& fullHeight,
-                   bool          htmlonly)
-{
-   cerr << "Preview for \"" << input << "\" in format "
-        << previewWidth << "x" << previewHeight << "..." << endl;
-
-   char  cmd[1024];
-   char  sizes[512];
-   bool  result = false;
-   snprintf((char*)&sizes, sizeof(sizes), "%s.sizes", output);
-   snprintf((char*)&cmd, sizeof(cmd),"createpreview \"%s\" \"%s\" %d %d %s %s",
-            input, output, previewWidth, previewHeight, sizes,
-            (htmlonly == true) ? "--htmlonly" : "");
-  // cout << "bash# " << cmd << endl;
-
-   fullWidth  = 2048;
-   fullHeight = 1536;
-   if(system(cmd) == 0) {
-      FILE* in = fopen(sizes, "r");
+      FILE* in = fopen(sizesName, "r");
       if(in != NULL) {
-         if(fscanf(in, "W=%u H=%u\nW=%u H=%u\n",
-            &fullWidth, &fullHeight, &previewWidth, &previewHeight) != 4) {
-            cerr << "ERROR: Unable to obtain image dimensions for image \"" << input << "\"! Bad sizes file!" << endl;
+         if(fscanf(in, "W=%u H=%u\nW=%u H=%u\nW=%u H=%u\n",
+            &originalWidth, &originalHeight, &fullWidth, &fullHeight, &previewWidth, &previewHeight) != 6) {
+            cerr << "ERROR: Unable to obtain image dimensions for image \"" << originalName << "\"! Bad sizes file!" << endl;
          }
          else {
             result = true;
@@ -161,11 +141,11 @@ bool createPreview(const char*   input,
          fclose(in);
       }
       else {
-         cerr << "ERROR: Unable to obtain image dimensions for image \"" << input << "\"! No sizes file found!" << endl;
+         cerr << "ERROR: Unable to obtain image dimensions for image \"" << originalName << "\"! No sizes file found!" << endl;
       }
    }
    else {
-      cerr << "ERROR: Unable to prepare preview for image \"" << input << "\"!" << endl;
+      cerr << "ERROR: Unable to prepare preview for image \"" << originalName << "\"!" << endl;
    }
 
    return(htmlonly || result);
@@ -261,6 +241,7 @@ int main(int argc, char** argv)
    char         original[1024];
    char         fullhtml[1048];
    char         preview[1024];
+   char         sizes[1024];
    char         webname[1024];
    char         ssmainname[1024];
    char         sscontrolname[1024];
@@ -272,8 +253,10 @@ int main(int argc, char** argv)
    char         subdir[1536];
    char         tmp[1536];
    unsigned int cols   = 5;
-   unsigned int width  = 128;
-   unsigned int height = 96;
+   unsigned int usePreviewWidth  = 128;
+   unsigned int usePreviewHeight = 96;
+   unsigned int useFullWidth     = 640;
+   unsigned int useFullHeight    = 480;
    unsigned int previewWidth;
    unsigned int previewHeight;
    unsigned int fullWidth;
@@ -302,7 +285,7 @@ int main(int argc, char** argv)
    ofstream     sscontrol;
 
    if(argc < 2) {
-      cerr << "Usage: " << argv[0] << " [Output file] {--htmlonly} {--enumerate} {--cols=Columns} {--width=Width} {-height=Height} {-stylesheet=CSS file} {-icon=Icon PNG} {--maintitle=Title} {--maindescription=HTML file} {--title=Title} {--subdir} {--description=File} {JPEG file 1} ..." << endl;
+      cerr << "Usage: " << argv[0] << " [Output file] {--htmlonly} {--enumerate} {--cols=Columns} {--usefullwidth=Width} {-usefullheight=Height} {--usepreviewwidth=Width} {-usepreviewheight=Height} {-stylesheet=CSS file} {-icon=Icon PNG} {--maintitle=Title} {--maindescription=HTML file} {--title=Title} {--subdir} {--description=File} {JPEG file 1} ..." << endl;
       exit(1);
    }
    if(argv[1][0] == '-') {
@@ -350,14 +333,6 @@ int main(int argc, char** argv)
             cols = atol((char*)&argv[i][7]);
          }
       }
-      else if(!(strncmp(argv[i], "--width=", 8))) {
-         if(count == 0) {
-            width = atol((char*)&argv[i][8]);
-            if(width < 32) {
-               width = 32;
-            }
-         }
-      }
       else if(!(strncmp(argv[i], "--stylesheet=", 13))) {
          if(count == 0) {
             stylesheet = (char*)&argv[i][13];
@@ -368,12 +343,30 @@ int main(int argc, char** argv)
             icon = (char*)&argv[i][7];
          }
       }
-      else if(!(strncmp(argv[i], "--height=", 9))) {
+      else if(!(strncmp(argv[i], "--usepreviewwidth=", 18))) {
          if(count == 0) {
-            height = atol((char*)&argv[i][9]);
-            if(height < 32) {
-               height = 32;
+            usePreviewWidth = atol((char*)&argv[i][18]);
+            if(usePreviewWidth < 32) {
+               usePreviewWidth = 32;
             }
+         }
+      }
+      else if(!(strncmp(argv[i], "--usepreviewheight=", 19))) {
+         if(count == 0) {
+            usePreviewHeight = atol((char*)&argv[i][19]);
+            if(usePreviewHeight < 32) {
+               usePreviewHeight = 32;
+            }
+         }
+      }
+      else if(!(strncmp(argv[i], "--usefullwidth=", 15))) {
+         if(count == 0) {
+            useFullWidth = atol((char*)&argv[i][15]);
+         }
+      }
+      else if(!(strncmp(argv[i], "--usefullheight=", 16))) {
+         if(count == 0) {
+            useFullHeight = atol((char*)&argv[i][16]);
          }
       }
       else if(!(strcmp(argv[i], "--index"))) {
@@ -440,35 +433,39 @@ int main(int argc, char** argv)
             snprintf(name, sizeof(numstr), "Image #%d", number);
             snprintf(webname, sizeof(webname), "image-%04d", number);
          }
+         if((useFullWidth  < 1) || (useFullWidth  > 8192) ||
+            (useFullHeight < 1) || (useFullHeight > 8192)) {
+            useFullWidth  = 0;
+            useFullHeight = 0;
+         }
          snprintf((char*)&original, sizeof(original), "%s/original", subdir);
          snprintf((char*)&full, sizeof(full), "%s/full", subdir);
          snprintf((char*)&preview, sizeof(preview), "%s/preview", subdir);
+         snprintf((char*)&sizes, sizeof(sizes), "%s/sizes", subdir);
          const int d1 = mkdir(subdir,S_IRWXU|S_IXGRP|S_IRGRP|S_IXOTH|S_IROTH);
          const int d2 = mkdir(original,S_IRWXU|S_IXGRP|S_IRGRP|S_IXOTH|S_IROTH);
          const int d3 = mkdir(full,S_IRWXU|S_IXGRP|S_IRGRP|S_IXOTH|S_IROTH);
          const int d4 = mkdir(preview,S_IRWXU|S_IXGRP|S_IRGRP|S_IXOTH|S_IROTH);
+         const int d5 = mkdir(sizes,S_IRWXU|S_IXGRP|S_IRGRP|S_IXOTH|S_IROTH);
          if((c == 0) && (!htmlonly) &&
-            ((d1 != 0) || (d2 != 0) || (d3 != 0) || (d4 != 0)) && (errno != EEXIST)) {
+            ((d1 != 0) || (d2 != 0) || (d3 != 0) || (d4 != 0) || (d5 != 0)) && (errno != EEXIST)) {
             cerr << "Unable to create directory \"" << subdir << "\"" << endl;
             exit(1);
          }
          snprintf((char*)&original, sizeof(original), "%s/original/%s.jpeg", subdir, webname);
          snprintf((char*)&full, sizeof(full), "%s/full/%s.jpeg", subdir, webname);
          snprintf((char*)&preview, sizeof(preview), "%s/preview/%s.jpeg", subdir, webname);
+         snprintf((char*)&sizes, sizeof(sizes), "%s/sizes/%s.sizes", subdir, webname);
          snprintf((char*)&fullhtml, sizeof(fullhtml), "%s/show-%s.html", subdir, webname);
-         if((createFull(argv[i], full, htmlonly) == false)) {
-            cerr << "Creating full image for \"" << argv[i] << "\"" << " failed!" << endl;
-            exit(1);
-         }
          if((!htmlonly) && (copy(argv[i], original) == false)) {
             cerr << "Copying original image for \"" << argv[i] << "\"" << " failed!" << endl;
             exit(1);
          }
-         previewWidth  = width;
-         previewHeight = height;
-         fullWidth     = 640;
-         fullHeight    = 480;
-         if(createPreview(argv[i], preview, previewWidth, previewHeight, fullWidth, fullHeight, htmlonly) == true) {
+         previewWidth  = usePreviewWidth;
+         previewHeight = usePreviewHeight;
+         fullWidth     = useFullWidth;
+         fullHeight    = useFullHeight;
+         if(createImages(argv[i], full, preview, sizes, fullWidth, fullHeight, previewWidth, previewHeight, htmlonly) == true) {
             if((r == 0) && (c == 0) && (s == 0)) {
                if(!sscreated) {
                   if(!createSlideshow(ssmainname, sscontrolname, ssfiles,
@@ -512,6 +509,7 @@ int main(int argc, char** argv)
                   }
                }
                if(createidx) {
+                  cout << "+ Index" << endl;
                   html << "<h2 id=\"index\">Index</h2>" << endl
                        << "<ul>" << endl
                        << "<li><strong><a href=\"" << ssmainname << "\">View slideshow</a></strong></li>" << endl;
@@ -541,6 +539,7 @@ int main(int argc, char** argv)
                html << endl;
             }
             if((r == 0) && (c == 0)) {
+               cout << "+ Block " << s + 1 << endl;
                if(s > 0) {
                   subssfiles.close();
                }
@@ -644,9 +643,9 @@ int main(int argc, char** argv)
 
             viewhtml << "<noscript>" << endl
                      << "   <p class=\"center\">" << endl
-                     << "   <object width=\"90%\" type=\"image/pjpeg\" data=\"" << (char*)&full[strlen(subdir) + 1] << "\">" << endl
-                     << "      <object width=\"90%\" type=\"image/jpeg\" data=\"" << (char*)&original[strlen(subdir) + 1] << "\">" << endl
-                     << "         <strong>Your browser has been unable to load or display image!</strong>" << endl
+                     << "   <object usePreviewWidth=\"90%\" type=\"image/pjpeg\" data=\"" << (char*)&full[strlen(subdir) + 1] << "\">" << endl
+                     << "      <object usePreviewWidth=\"90%\" type=\"image/jpeg\" data=\"" << (char*)&original[strlen(subdir) + 1] << "\">" << endl
+                     << "         <strong>Your browser has been unable to load or display this image!</strong>" << endl
                      << "      </object>" << endl
                      << "   </object>" << endl
                      << "   </p>" << endl
@@ -656,6 +655,23 @@ int main(int argc, char** argv)
                      << "<br />Full view of <em>" << name << "</em>" << endl
                      << "<br /><a href=\"" << originalRef << "\">Get the original file</a>" << endl
                      << "</p>" << endl;
+/*
+for(int j = i - 1;j >= 2;j--) {
+   if(strncmp(argv[j], "--", 2)) {
+      printf("prev=%s\n",argv[j]);
+      break;
+   }
+}
+for(int j = i + 1;j < argc;j++) {
+   if(strncmp(argv[j], "--subdir", 8)) {
+      break;
+   }
+   else if(strncmp(argv[j], "--", 2)) {
+      printf("next=%s\n",argv[j]);
+      break;
+   }
+}
+*/
             cat(viewhtml, tailFile);
             viewhtml << "</body>" << endl;
             viewhtml << "</html>" << endl;

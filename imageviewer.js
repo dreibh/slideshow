@@ -1,5 +1,5 @@
 /*
- *  $Id: imageviewer.js,v 1.2 2004/01/29 10:34:21 dreibh Exp $
+ *  $Id: imageviewer.js,v 1.3 2004/01/30 15:08:09 dreibh Exp $
  *
  * JavaScript Image Viewer
  *
@@ -26,8 +26,12 @@ function resizeEvent()
 function show(fullname, originalname, w, h) {
    window.onresize = resizeEvent;
 
-   nw = document.width;
-   nh = document.body.clientHeight;
+   nw = document.documentElement.clientWidth;
+   nh = document.documentElement.clientHeight;
+
+   document.write("w=" + w + " h=" + h + "<br />");
+   document.write("nw=" + nw + " nh=" + nh + "<br />");
+
    if((nw > 0) && (nh > 0)) {
       sw = nw * 0.90 / w;
       sh = nh * 0.80 / h;
@@ -37,8 +41,8 @@ function show(fullname, originalname, w, h) {
       nh=h * scale;
    }
    else {
-      nw="90%";
-      nh="90%";
+      nw = "90%";
+      nh = "90%";
    }
    document.write( "<p class=\"center\">" );
    document.write( "<object width=\"" + nw + "\" height=\"" + nh + "\" type=\"image/pjpeg\" data=\"" + fullname + "\">" );
