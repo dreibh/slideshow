@@ -582,9 +582,8 @@ void Presentation::createMainPage()
             blockIterator++;
          }
          if(Slideshow) {
-            os << "   <p />"
-               << "   <li><a href=\"" << SlideshowFrameset << "\">"
-               << "View Slideshow" << "</a></li>" << endl;
+            os << "   <li><strong><a href=\"" << SlideshowFrameset << "\">"
+               << "View Slideshow" << "</a></strong></li>" << endl;
          }
          os << "</ul>" << endl
             << "<hr />"  << endl

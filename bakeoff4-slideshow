@@ -10,8 +10,8 @@ shopt -s extglob
 --slideshow \
 --head=head.html \
 --tail=tail.html \
---fullwidth=1280 \
---fullheight=960 \
+--fullsizewidth=1280 \
+--fullsizeheight=960 \
 --enumerate \
 --noindex \
 --columns=4 \
