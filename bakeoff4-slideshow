@@ -1,0 +1,13 @@
+#!/bin/bash
+./slideshow bakeoff4-index.html $@ \
+--maintitle="The 4th SCTP Interop" \
+--stylesheet=stylesheet.css \
+--enumerate \
+--noindex \
+--cols=4 \
+\
+--subdir=bakeoff4-block1 \
+--title="The 4th SCTP Interop" \
+--description=bakeoff4-maintitle.html \
+"photo-archive/connectathon2002/"*.jpg \
+--

@@ -1,0 +1,45 @@
+#!/bin/bash
+
+if [ $# -lt 5 ]; then
+   echo "Usage: [Input jpeg] [Output preview jpeg] [Width] [Height] [Info file] {--htmlonly}" >&2
+   exit 1
+fi
+
+if [ ! -e "$1" ]; then
+   echo "Error: Input file $1 does not exist!"
+   exit 1
+fi
+
+if [ $# -ge 6 ]; then
+   if [ $6 == "--htmlonly" ]; then
+      echo "Test only "$1" -- Okay"
+      if [ ! -e "$2" ]; then
+         echo "   Warning: No preview file $2!"
+         exit 1
+      fi
+      if [ ! -e "$5" ]; then
+         echo "   Warning: No sizes file $5!"
+         exit 1
+      fi
+      exit 0
+   fi
+fi
+
+if [ -e "$2" ]; then
+   rm -f "$2"
+fi
+
+if [ -e "$5" ]; then
+   rm -f "$5"
+fi
+
+
+# echo "Preparing image "$1"..." >&2
+FULL=/tmp/f-$RANDOM-$RANDOM-$RANDOM
+PREVIEW=/tmp/p-$RANDOM-$RANDOM-$RANDOM
+anytopnm "$1" >$FULL
+pnmscale -xysize "$3" "$4" $FULL >$PREVIEW
+getsize $FULL >"$5"
+getsize $PREVIEW >>"$5"
+pnmtojpeg --optimize --quality=75 $PREVIEW >"$2"
+rm -f $FULL $PREVIEW

@@ -1,0 +1,38 @@
+#!/bin/bash
+./slideshow bakeoff6-index.html $@ \
+--maintitle="The 6th SCTP Interop" --maindescription=bakeoff6-maintitle.html \
+--stylesheet=stylesheet.css \
+--enumerate \
+\
+--subdir=bakeoff6-block1 \
+--title="Part 1" \
+"photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_05_31"/*.JPG \
+\
+--subdir=bakeoff6-block2 \
+--title="Part 2" \
+"photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_03"/*.JPG \
+\
+--subdir=bakeoff6-block3 \
+--title="Part 3" \
+"photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_04"/*.JPG \
+\
+--subdir=bakeoff6-block4 \
+--title="Part 4" \
+"photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_05"/*.JPG \
+\
+--subdir=bakeoff6-block5 \
+--title="Part 5" \
+"photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_07"/*.JPG \
+\
+--subdir=bakeoff6-block6 \
+--title="Part 6" \
+"photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_08"/*.JPG \
+\
+--subdir=bakeoff6-block7 \
+--title="Part 7" \
+"photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_09"/*.JPG \
+\
+--subdir=bakeoff6-block8 \
+--title="Part 8" \
+"photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_10"/*.JPG \
+--
