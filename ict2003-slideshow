@@ -12,7 +12,7 @@ shopt -s extglob
 --tail=tail.html \
 --fullwidth=1024 \
 --fullheight=768 \
---noenumerate \
+--enumerate \
 \
 --block="Day 1 - Travel to Tahiti" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 01"/*.@(jpg|JPG|jpeg|JPEG) \
