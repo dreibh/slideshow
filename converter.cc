@@ -45,7 +45,7 @@ int imageConverter(const char*   originalImageName,
 
 
    // ====== Create fullsize image ==========================================
-   fullsizeImage = SampleImage(originalImage, fullsizeWidth, fullsizeHeight, &exception);
+   fullsizeImage = ResizeImage(originalImage, fullsizeWidth, fullsizeHeight, LanczosFilter, 1.0, &exception);
    if(fullsizeImage == NULL) {
       DestroyImage(originalImage);
       DestroyImageInfo(originalImageInfo);
@@ -69,7 +69,7 @@ int imageConverter(const char*   originalImageName,
 
 
    // ====== Create preview image ===========================================
-   previewImage = SampleImage(originalImage, previewWidth, previewHeight, &exception);
+   previewImage = ResizeImage(originalImage, previewWidth, previewHeight, LanczosFilter, 1.0, &exception);
    if(previewImage == NULL) {
       DestroyImage(originalImage);
       DestroyImageInfo(originalImageInfo);
