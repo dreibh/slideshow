@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.cc,v 1.4 2004/01/29 10:34:21 dreibh Exp $
+ *  $Id: slideshow.cc,v 1.5 2004/01/29 15:01:55 dreibh Exp $
  *
  * XHTML 1.1 image presentation and JavaScript-based slideshow generator
  *
@@ -531,7 +531,7 @@ int main(int argc, char** argv)
                      }
                      else if((change) && (strncmp(argv[i], "--", 2))) {
                         html << "   <li><a href=\"#" << bsubdir << "\">"
-                             << btitle << "</a>" << endl;
+                             << btitle << "</a></li>" << endl;
                         change = false;
                      }
                   }
