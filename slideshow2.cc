@@ -238,8 +238,7 @@ Block::Block(Presentation* presentation, const char* blockTitle)
    OwnerPresentation = presentation;
    ID = ++OwnerPresentation->LastBlockID;
    snprintf((char*)&Title, sizeof(Title), "%s", blockTitle);
-   snprintf((char*)&DirectoryName, sizeof(DirectoryName), "%s-block-%04u",
-            OwnerPresentation->PresentationName, ID);
+   snprintf((char*)&DirectoryName, sizeof(DirectoryName), "block-%04u", ID);
    LastImageID = 0;
    OwnerPresentation->BlockSet.insert(this);
 }
@@ -260,20 +259,31 @@ void Block::dump()
 
 Image::Image(Block* block, const char* imageTitle, const char* sourceName)
 {
-   char baseName[1024];
-
-   safestrcpy((char*)&baseName, sourceName, sizeof(baseName));
-
    OwnerBlock = block;
    ID         = ++OwnerBlock->LastImageID;
    snprintf((char*)&Title, sizeof(Title), "%s", imageTitle);
 
+   char baseName[1024];
+   snprintf((char*)&baseName, sizeof(baseName), "image-%04u", ID);
+
+   if(Title[0] == 0x00) {
+      if(OwnerBlock->OwnerPresentation->Enumerate) {
+         snprintf((char*)&Title, sizeof(Title), "Image %u", ID);
+      }
+      else {
+      // ????? Ausschneiden...
+         safestrcpy((char*)&Title, sourceName, sizeof(Title));
+      }
+   }
+   else {
+      safestrcpy((char*)&Title, imageTitle, sizeof(Title));
+   }
    snprintf((char*)&SourceName, sizeof(SourceName), "%s", sourceName);
-   snprintf((char*)&OriginalName, sizeof(OriginalName), "original/%s", baseName);
+   snprintf((char*)&OriginalName, sizeof(OriginalName), "original/%s.jpeg", baseName);
    webify((char*)&OriginalName);
-   snprintf((char*)&FullsizeName, sizeof(FullsizeName), "fullsize/%s", baseName);
+   snprintf((char*)&FullsizeName, sizeof(FullsizeName), "fullsize/%s.jpeg", baseName);
    webify((char*)&FullsizeName);
-   snprintf((char*)&PreviewName, sizeof(PreviewName), "preview/%s", baseName);
+   snprintf((char*)&PreviewName, sizeof(PreviewName), "preview/%s.jpeg", baseName);
    webify((char*)&PreviewName);
    OriginalWidth  = 0;
    OriginalHeight = 0;
@@ -314,10 +324,10 @@ Presentation* createPresentation(int argc, char** argv)
          safestrcpy(presentation->DirectoryName, (char*)&argv[i][12], sizeof(presentation->DirectoryName));
       }
       else if(!(strcmp(argv[i], "--enumerate"))) {
-         Enumerate = true;
+         presentation->Enumerate = true;
       }
       else if(!(strcmp(argv[i], "--noenumerate"))) {
-         Enumerate = false;
+         presentation->Enumerate = false;
       }
    }
 

@@ -1,0 +1,13 @@
+#!/bin/bash
+./slideshow2 \
+--directory=dir-t0 \
+--title="Test-Titel" --maindescription=test-maintitle.html \
+--stylesheet=stylesheet.css \
+--fullwidth=640 \
+--fullheight=480 \
+--noenumerate \
+--block="Some Tests" \
+/home/dreibh/tmp/test-jpeg/*.jpg \
+--block="Photo Gallery" \
+/home/dreibh/tmp/test-jpeg/*.jpeg \
+$@ \
