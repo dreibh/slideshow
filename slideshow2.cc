@@ -30,6 +30,7 @@ using namespace std;
 
 #define CHECK(cond) if(!(cond)) { std::cerr << "ERROR in " << __FILE__ << ", line " << __LINE__ << ": condition " << #cond << " is not satisfied!" << std::endl; exit(1); }
 
+
 // ###### Convert filename to web-usable one #################################
 void webify(char* name)
 {
@@ -144,6 +145,28 @@ char* strrindex(char* string, const char character)
 }
 
 
+void makeDir(const char* a, const char* b = NULL, const char* c = NULL)
+{
+   char str[1024];
+   safestrcpy((char*)&str, a, sizeof(str));
+   if(b) {
+      safestrcat((char*)&str, "/", sizeof(str));
+      safestrcat((char*)&str, b, sizeof(str));
+   }
+   if(c) {
+      safestrcat((char*)&str, "/", sizeof(str));
+      safestrcat((char*)&str, c, sizeof(str));
+   }
+   const int result = mkdir(str, S_IRWXU|S_IXGRP|S_IRGRP|S_IXOTH|S_IROTH);
+   if((result != 0) && (errno != EEXIST)) {
+      cerr << "ERROR: Unable to create directory \"" << str << "\"!" << endl;
+      exit(1);
+   }
+}
+
+
+
+
 
 class Image;
 class Block;
@@ -155,6 +178,7 @@ class Presentation
    public:
    Presentation();
    void dump();
+   void createDirectories();
 
    public:
    bool         Enumerate;
@@ -174,12 +198,16 @@ class Block
    public:
    Block(Presentation* presentation, const char* blockTitle);
    void dump();
+   void createDirectories();
 
    public:
    Presentation* OwnerPresentation;
    char          Title[1024];
    unsigned int  ID;
    char          DirectoryName[1024];
+   char          OriginalDirectory[1024];
+   char          FullsizeDirectory[1024];
+   char          PreviewDirectory[1024];
 
    set<Image*>   ImageSet;
    unsigned int  LastImageID;
@@ -231,6 +259,15 @@ void Presentation::dump()
    }
 }
 
+void Presentation::createDirectories()
+{
+   makeDir(DirectoryName);
+   set<Block*>::iterator blockIterator = BlockSet.begin();
+   while(blockIterator != BlockSet.end()) {
+      (*blockIterator)->createDirectories();
+      blockIterator++;
+   }
+}
 
 
 Block::Block(Presentation* presentation, const char* blockTitle)
@@ -239,6 +276,9 @@ Block::Block(Presentation* presentation, const char* blockTitle)
    ID = ++OwnerPresentation->LastBlockID;
    snprintf((char*)&Title, sizeof(Title), "%s", blockTitle);
    snprintf((char*)&DirectoryName, sizeof(DirectoryName), "block-%04u", ID);
+   safestrcpy((char*)&OriginalDirectory, "original", sizeof(OriginalDirectory));
+   safestrcpy((char*)&FullsizeDirectory, "fullsize", sizeof(FullsizeDirectory));
+   safestrcpy((char*)&PreviewDirectory, "preview", sizeof(PreviewDirectory));
    LastImageID = 0;
    OwnerPresentation->BlockSet.insert(this);
 }
@@ -256,15 +296,22 @@ void Block::dump()
 
 
 
+void Block::createDirectories()
+{
+   makeDir(OwnerPresentation->DirectoryName, DirectoryName);
+   makeDir(OwnerPresentation->DirectoryName, DirectoryName, OriginalDirectory);
+   makeDir(OwnerPresentation->DirectoryName, DirectoryName, FullsizeDirectory);
+   makeDir(OwnerPresentation->DirectoryName, DirectoryName, PreviewDirectory);
+}
+
 
 Image::Image(Block* block, const char* imageTitle, const char* sourceName)
 {
    OwnerBlock = block;
    ID         = ++OwnerBlock->LastImageID;
-   snprintf((char*)&Title, sizeof(Title), "%s", imageTitle);
 
    char baseName[1024];
-   snprintf((char*)&baseName, sizeof(baseName), "image-%04u", ID);
+   snprintf((char*)&baseName, sizeof(baseName), "image-%04u.jpeg", ID);
 
    if(Title[0] == 0x00) {
       if(OwnerBlock->OwnerPresentation->Enumerate) {
@@ -279,12 +326,9 @@ Image::Image(Block* block, const char* imageTitle, const char* sourceName)
       safestrcpy((char*)&Title, imageTitle, sizeof(Title));
    }
    snprintf((char*)&SourceName, sizeof(SourceName), "%s", sourceName);
-   snprintf((char*)&OriginalName, sizeof(OriginalName), "original/%s.jpeg", baseName);
-   webify((char*)&OriginalName);
-   snprintf((char*)&FullsizeName, sizeof(FullsizeName), "fullsize/%s.jpeg", baseName);
-   webify((char*)&FullsizeName);
-   snprintf((char*)&PreviewName, sizeof(PreviewName), "preview/%s.jpeg", baseName);
-   webify((char*)&PreviewName);
+   snprintf((char*)&OriginalName, sizeof(OriginalName), "%s/%s", OwnerBlock->OriginalDirectory, baseName);
+   snprintf((char*)&FullsizeName, sizeof(FullsizeName), "%s/%s", OwnerBlock->FullsizeDirectory, baseName);
+   snprintf((char*)&PreviewName, sizeof(PreviewName), "%s/%s", OwnerBlock->PreviewDirectory, baseName);
    OriginalWidth  = 0;
    OriginalHeight = 0;
    FullsizeWidth  = 0;
@@ -298,9 +342,9 @@ void Image::dump()
 {
    cout << "         % Image #" << ID << " \"" << Title << "\"" << endl
         << "            ~ SourceName=" << SourceName << endl
-        << "            - OriginalName=" << OriginalName << " (" << OriginalWidth << "x" << OriginalHeight << ")" << endl
-        << "            - FullsizeName=" << FullsizeName << " (" << FullsizeWidth << "x" << FullsizeHeight << ")" << endl
-        << "            - PreviewName=" << PreviewName << " (" << PreviewWidth << "x" << PreviewHeight << ")" << endl;
+        << "            ~ OriginalName=" << OriginalName << " (" << OriginalWidth << "x" << OriginalHeight << ")" << endl
+        << "            ~ FullsizeName=" << FullsizeName << " (" << FullsizeWidth << "x" << FullsizeHeight << ")" << endl
+        << "            ~ PreviewName=" << PreviewName << " (" << PreviewWidth << "x" << PreviewHeight << ")" << endl;
 }
 
 
@@ -366,6 +410,8 @@ void createImageTable(Presentation* presentation, int argc, char** argv)
    }
 }
 
+
+
 int main(int argc, char** argv)
 {
    cout << "- Creating Presentation..." << endl;
@@ -376,6 +422,10 @@ int main(int argc, char** argv)
 
    cout << "- Overview" << endl;
    presentation->dump();
+
+
+   cout << "- Creating directories..." << endl;
+   presentation->createDirectories();
 
    cout << "- Creating HTMLs..." << endl;
 
