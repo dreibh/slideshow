@@ -3,7 +3,7 @@ shopt -s extglob
 
 ./slideshow2 \
 --directory=bakeoff4 \
---title="The 4th SCTP Interop" --maindescription=bakeoff4-maintitle.html \
+--maintitle="The 4th SCTP Interop" --maindescription=bakeoff4-maintitle.html \
 --stylesheet=stylesheet.css \
 --background=background.png \
 --shortcuticon=icon-default.png \
