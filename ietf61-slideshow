@@ -15,37 +15,37 @@ shopt -s extglob
 --enumerate \
 \
 --block="Part 1" \
-"/home/dreibh/ietf-washington-2004/2004_11_06/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_06"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Part 2" \
-"/home/dreibh/ietf-washington-2004/2004_11_07/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_07"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Part 3" \
-"/home/dreibh/ietf-washington-2004/2004_11_08/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_08"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Part 4" \
-"/home/dreibh/ietf-washington-2004/2004_11_09/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_09"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Part 5" \
-"/home/dreibh/ietf-washington-2004/2004_11_10/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_10"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Part 6" \
-"/home/dreibh/ietf-washington-2004/2004_11_11/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_11"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Part 7" \
-"/home/dreibh/ietf-washington-2004/2004_11_12/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_12"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Part 8" \
-"/home/dreibh/ietf-washington-2004/2004_11_13/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_13"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Part 9" \
-"/home/dreibh/ietf-washington-2004/2004_11_14/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_14"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Part 10" \
-"/home/dreibh/ietf-washington-2004/2004_11_15/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_15"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Part 11" \
-"/home/dreibh/ietf-washington-2004/2004_11_16/"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/ietf-washington-2004/2004_11_16"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 $@ \
 --
