@@ -322,6 +322,7 @@ class Presentation
    bool         Index;
    bool         Slideshow;
    bool         IncludeOriginal;
+   bool         SkipImageConversion;
 
    unsigned int Columns;
    unsigned int PreviewWidth;
@@ -352,6 +353,8 @@ class Presentation
    char         SlideshowFilelist[1024];
    char         SlideshowFrameset[1024];
    char         SlideshowControl[1024];
+   char         ImageViewerScript[1024];
+   char         SlideshowScript[1024];
 
    set<Block*>  BlockSet;
    unsigned int LastBlockID;
@@ -429,16 +432,17 @@ class Image
 
 Presentation::Presentation()
 {
-   Enumerate       = true;
-   Index           = true;
-   Columns         = 5;
-   LastBlockID     = 0;
-   PreviewWidth    = 128;
-   PreviewHeight   = 96;
-   PreviewQuality  = 50;
-   FullsizeWidth   = 1200;
-   FullsizeHeight  = 960;
-   FullsizeQuality = 75;
+   Enumerate           = true;
+   Index               = true;
+   Columns             = 5;
+   LastBlockID         = 0;
+   PreviewWidth        = 128;
+   PreviewHeight       = 96;
+   PreviewQuality      = 50;
+   FullsizeWidth       = 640;
+   FullsizeHeight      = 480;
+   FullsizeQuality     = 75;
+   SkipImageConversion = false;
 
    safestrcpy((char*)&MainTitle, "My Photo Archive", sizeof(MainTitle));
    safestrcpy((char*)&MainDescription, "", sizeof(MainDescription));
@@ -460,6 +464,8 @@ Presentation::Presentation()
    safestrcpy((char*)&SlideshowFilelist, "slideshow-filelist-allblocks.js", sizeof(SlideshowFilelist));
    safestrcpy((char*)&SlideshowFrameset, "slideshow-frameset-allblocks.html", sizeof(SlideshowFrameset));
    safestrcpy((char*)&SlideshowControl, "slideshow-control-allblocks.html", sizeof(SlideshowControl));
+   safestrcpy((char*)&ImageViewerScript, "imageviewer.js", sizeof(ImageViewerScript));
+   safestrcpy((char*)&SlideshowScript, "slideshow.js", sizeof(SlideshowScript));
 
    passwd* pw = getpwuid(getuid());
    if(pw) {
@@ -473,6 +479,7 @@ Presentation::Presentation()
 void Presentation::dump()
 {
    cout << "   - Presentation \"" << MainTitle << "\"" << endl
+        << "      + SkipImageConversion=" << ((SkipImageConversion == true) ? "yes" : "no") << endl
         << "      + MainTitle=" << MainTitle << endl
         << "      + MainDescription=" << MainDescription << endl
         << "      + DirectoryName=" << DirectoryName << endl
@@ -487,7 +494,9 @@ void Presentation::dump()
         << "      + PreviewQuality=" << PreviewQuality << " [%%]" << endl
         << "      + FullsizeWidth=" << FullsizeWidth << endl
         << "      + FullsizeHeight=" << FullsizeHeight << endl
-        << "      + FullsizeQuality=" << FullsizeQuality << " [%%]" << endl;
+        << "      + FullsizeQuality=" << FullsizeQuality << " [%%]" << endl
+        << "      + ImageViewerScript=" << ImageViewerScript << endl
+        << "      + SlideshowScript=" << SlideshowScript << endl;
    set<Block*>::iterator blockIterator = BlockSet.begin();
    while(blockIterator != BlockSet.end()) {
       (*blockIterator)->dump();
@@ -581,7 +590,7 @@ void Presentation::createSlideshowFrameset(const char* filelistName,
    }
    sscontrol << "\" />" << endl;
    sscontrol << "<meta name=\"classification\" content=\"Slideshow\" />" << endl;
-   sscontrol << "<script type=\"text/javascript\" src=\"slideshow.js\"></script>" << endl;
+   sscontrol << "<script type=\"text/javascript\" src=\"" << SlideshowScript << "\"></script>" << endl;
    sscontrol << "<script type=\"text/javascript\" src=\"" << filelistName << "\"></script>" << endl;
    sscontrol << "</head>" << endl << endl;
    if(!cat(sscontrol, "slideshowcontrol.html")) {
@@ -680,6 +689,14 @@ void Presentation::createInfrastructureFiles()
    snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(ShuffleImage));
    copy(ShuffleImage, str);
    safestrcpy(ShuffleImage, getFileNameOneDirDown(str), sizeof(ShuffleImage));
+
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(ImageViewerScript));
+   copy(ImageViewerScript, str);
+   safestrcpy(ImageViewerScript, getFileNameOneDirDown(str), sizeof(ImageViewerScript));
+
+   snprintf((char*)&str, sizeof(str), "%s/infrastructure/%s", DirectoryName, extractFileName(SlideshowScript));
+   copy(SlideshowScript, str);
+   safestrcpy(SlideshowScript, getFileNameOneDirDown(str), sizeof(SlideshowScript));
 }
 
 
@@ -1005,7 +1022,7 @@ void Image::createViewPage(const Block* prevBlock, const Block* nextBlock,
       }
       os << "\" />" << endl
          << "<meta name=\"classification\" content=\"Image, " << Title << "\" />" << endl
-         << "<script type=\"text/javascript\" src=\"imageviewer.js\"></script>" << endl;
+         << "<script type=\"text/javascript\" src=\"" << OwnerBlock->OwnerPresentation->ImageViewerScript << "\"></script>" << endl;
       if(prevImage) {
          os << "<link rel=\"next\" href=\"" << ((forSlideshow == true) ? prevImage->SlideshowName : prevImage->ViewName) << "\" />" << endl
             << "<link rel=\"next\" href=\"" << prevImage->OwnerBlock->DirectoryName << "/" << prevImage->FullsizeName << "\" />" << endl;
@@ -1043,7 +1060,7 @@ void Image::createViewPage(const Block* prevBlock, const Block* nextBlock,
       os << "<p class=\"center\">" << endl;
       if(!forSlideshow) {
          os << "<br />Full view of <em>" << Title << "</em>" << endl
-            << "<br /><a href=\"" << OriginalName << "\">Get the original file</a><br />" << endl;
+            << "<br /><a href=\"" << OwnerBlock->DirectoryName << "/" << OriginalName << "\">Get the original file</a><br />" << endl;
 
          os << "<a href=\"" << OwnerBlock->OwnerPresentation->PresentationName << "#" << OwnerBlock->DirectoryName << "\"><img alt=\"Preview Page\" src=\"" << OwnerBlock->OwnerPresentation->UpArrowImage << "\" /></a> ";
          if(prevBlock) {
@@ -1240,6 +1257,9 @@ void createImageTable(Presentation* presentation, int argc, char** argv)
             presentation->FullsizeQuality = 100;
          }
       }
+      else if(!(strcmp(argv[i], "--htmlonly"))) {
+         presentation->SkipImageConversion = true;
+      }
    }
 }
 
@@ -1249,43 +1269,82 @@ void Image::createImage()
    char str[1024];
    cout << "Preparing image \"" << SourceName << "..." << endl;
 
-   Magick::Image original;
-   try {
-      original.read(SourceName);
-      OriginalWidth  = original.size().width();
-      OriginalHeight = original.size().height();
+   if(!OwnerBlock->OwnerPresentation->SkipImageConversion) {
+      Magick::Image original;
+      try {
+         original.read(SourceName);
+         OriginalWidth  = original.size().width();
+         OriginalHeight = original.size().height();
 
-      Magick::Image preview  = original;
-      preview.interlaceType(Magick::LineInterlace);
-      preview.quality(OwnerBlock->OwnerPresentation->PreviewQuality);
-//      preview.sample(Magick::Geometry(0, 0, OwnerBlock->OwnerPresentation->PreviewWidth, OwnerBlock->OwnerPresentation->PreviewHeight));
-// ??????
-preview.sample("96x64");
+         Magick::Image preview = original;
+         preview.interlaceType(Magick::LineInterlace);
+         preview.quality(OwnerBlock->OwnerPresentation->PreviewQuality);
+         preview.sample(Magick::Geometry(OwnerBlock->OwnerPresentation->PreviewWidth, OwnerBlock->OwnerPresentation->PreviewHeight));
+         PreviewWidth  = preview.size().width();
+         PreviewHeight = preview.size().height();
+         snprintf((char*)&str, sizeof(str), "%s/%s/%s",
+                  OwnerBlock->OwnerPresentation->DirectoryName,
+                  OwnerBlock->DirectoryName,
+                  PreviewName);
+         preview.write(str);
 
-      PreviewWidth  = preview.size().width();
-      PreviewHeight = preview.size().height();
-      snprintf((char*)&str, sizeof(str), "%s/%s/%s",
-               OwnerBlock->OwnerPresentation->DirectoryName,
-               OwnerBlock->DirectoryName,
-               PreviewName);
-      preview.write(str);
+         Magick::Image fullsize = original;
+         fullsize.interlaceType(Magick::LineInterlace);
+         fullsize.quality(OwnerBlock->OwnerPresentation->FullsizeQuality);
+         fullsize.sample(Magick::Geometry(OwnerBlock->OwnerPresentation->FullsizeWidth, OwnerBlock->OwnerPresentation->FullsizeHeight));
+         FullsizeWidth  = fullsize.size().width();
+         FullsizeHeight = fullsize.size().height();
+         snprintf((char*)&str, sizeof(str), "%s/%s/%s",
+                  OwnerBlock->OwnerPresentation->DirectoryName,
+                  OwnerBlock->DirectoryName,
+                  FullsizeName);
+         fullsize.write(str);
+      } catch(Magick::Exception& exception) {
+         cerr << "ERROR: Image prepararion failed: " << exception.what() << endl;
+         exit(1);
+      }
+   }
+   else {
+      OriginalWidth  = OwnerBlock->OwnerPresentation->FullsizeWidth;
+      OriginalHeight = OwnerBlock->OwnerPresentation->FullsizeHeight;
+      PreviewWidth   = OwnerBlock->OwnerPresentation->PreviewWidth;
+      PreviewHeight  = OwnerBlock->OwnerPresentation->PreviewHeight;
+      FullsizeWidth  = OwnerBlock->OwnerPresentation->FullsizeWidth;
+      FullsizeHeight = OwnerBlock->OwnerPresentation->FullsizeHeight;
+      try {
+         Magick::Image original;
+         original.ping(SourceName);
+         OriginalWidth  = original.size().width();
+         OriginalHeight = original.size().height();
+      } catch(Magick::Exception& exception) {
+         cerr << "WARNING: Image check failed: " << exception.what() << endl;
+      }
 
-      Magick::Image fullsize = original;
-      fullsize.interlaceType(Magick::LineInterlace);
-      fullsize.quality(OwnerBlock->OwnerPresentation->FullsizeQuality);
-      fullsize.scale(Magick::Geometry(0, 0, OwnerBlock->OwnerPresentation->FullsizeWidth, OwnerBlock->OwnerPresentation->FullsizeHeight));
-      FullsizeWidth  = fullsize.size().width();
-      FullsizeHeight = fullsize.size().height();
-      snprintf((char*)&str, sizeof(str), "%s/%s/%s",
-               OwnerBlock->OwnerPresentation->DirectoryName,
-               OwnerBlock->DirectoryName,
-               FullsizeName);
-      fullsize.write(str);
+      try {
+         Magick::Image preview;
+         snprintf((char*)&str, sizeof(str), "%s/%s/%s",
+                  OwnerBlock->OwnerPresentation->DirectoryName,
+                  OwnerBlock->DirectoryName,
+                  PreviewName);
+         preview.ping(str);
+         PreviewWidth  = preview.size().width();
+         PreviewHeight = preview.size().height();
+      } catch(Magick::Exception& exception) {
+         cerr << "WARNING: Image check failed: " << exception.what() << endl;
+      }
 
-      dump();
-   } catch(Magick::Exception& exception) {
-      cerr << "ERROR: Image prepararion failed: " << exception.what() << endl;
-      exit(1);
+      try {
+         Magick::Image fullsize;
+         snprintf((char*)&str, sizeof(str), "%s/%s/%s",
+                  OwnerBlock->OwnerPresentation->DirectoryName,
+                  OwnerBlock->DirectoryName,
+                  FullsizeName);
+         fullsize.ping(str);
+         FullsizeWidth  = fullsize.size().width();
+         FullsizeHeight = fullsize.size().height();
+      } catch(Magick::Exception& exception) {
+         cerr << "WARNING: Image check failed: " << exception.what() << endl;
+      }
    }
 }
 
@@ -1299,14 +1358,17 @@ int main(int argc, char** argv)
    cout << "- Creating Image Table..." << endl;
    createImageTable(presentation, argc, argv);
 
-   cout << "- Overview" << endl;
-   presentation->dump();
-
    cout << "- Creating directories..." << endl;
    presentation->createDirectories();
 
    cout << "- Creating HTML infrastructure files..." << endl;
    presentation->createInfrastructureFiles();
+
+   cout << "- Converting Images..." << endl;
+   presentation->createImages();
+
+   cout << "- Overview" << endl;
+   presentation->dump();
 
    cout << "- Creating main page..." << endl;
    presentation->createMainPage();
@@ -1317,9 +1379,6 @@ int main(int argc, char** argv)
    cout << "- Creating Slideshow HTMLs..." << endl;
    presentation->createViewPages(false, true);
    presentation->createSlideshow();
-
-   cout << "- Converting Images..." << endl;
-   presentation->createImages();
 
    delete presentation;
 }

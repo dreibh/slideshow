@@ -11,7 +11,7 @@
 --fullheight=480 \
 --noenumerate \
 --block="Some Tests" \
-/home/dreibh/tmp/test-jpeg/*.jpg \
---block="Photo Gallery" \
 /home/dreibh/tmp/test-jpeg/*.jpeg \
+--block="Photo Gallery" \
+/home/dreibh/tmp/test-jpeg/*.jpg \
 $@ \
