@@ -3,10 +3,10 @@
 --maintitle="Test-Titel" --maindescription=test-maintitle.html \
 --stylesheet=stylesheet.css \
 --enumerate \
---subdir=t1-block1 \
+--subdir \
 --title="Some Tests" \
 /home/dreibh/tmp/*.jpg \
---subdir=t1-block2 \
+--subdir \
 --title="Photo Gallery" \
 "/winnt/Dokumente und Einstellungen/Dreibholz/Eigene Dateien/Eigene Bilder/2003_05_04"/*.JPG \
 --

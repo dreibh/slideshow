@@ -5,31 +5,31 @@ shopt -s extglob
 --stylesheet=stylesheet.css \
 --enumerate \
 \
---subdir=bakeoff5-block1 \
+--subdir \
 --title="Part 1" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff1/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff5-block2 \
+--subdir \
 --title="Part 2" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff2/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff5-block3 \
+--subdir \
 --title="Part 3" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff3/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff5-block4 \
+--subdir \
 --title="Part 4" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff4/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff5-block5 \
+--subdir \
 --title="Part 5" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff5/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff5-block6 \
+--subdir \
 --title="Part 6" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff5/"*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff5-block7 \
+--subdir \
 --title="Part 7" \
 "/tmp/photo-archive/sctp-bakeoff-essen-2002/bakeoff7/"*.@(jpg|JPG|jpeg|JPEG) \
 --

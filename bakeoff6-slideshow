@@ -5,35 +5,35 @@ shopt -s extglob
 --stylesheet=stylesheet.css \
 --enumerate \
 \
---subdir=bakeoff6-block1 \
+--subdir \
 --title="Part 1" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_05_31"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff6-block2 \
+--subdir \
 --title="Part 2" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_03"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff6-block3 \
+--subdir \
 --title="Part 3" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_04"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff6-block4 \
+--subdir \
 --title="Part 4" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_05"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff6-block5 \
+--subdir \
 --title="Part 5" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_07"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff6-block6 \
+--subdir \
 --title="Part 6" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_08"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff6-block7 \
+--subdir \
 --title="Part 7" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_09"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=bakeoff6-block8 \
+--subdir \
 --title="Part 8" \
 "/tmp/photo-archive/sctp-bakeoff-newark-2003/thomas.dreibholz.photos/2003_06_10"/*.@(jpg|JPG|jpeg|JPEG) \
 --

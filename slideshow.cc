@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.cc,v 1.1 2003/07/17 09:45:09 dreibh Exp $
+ *  $Id: slideshow.cc,v 1.2 2003/07/21 12:14:50 dreibh Exp $
  *
  * HTML 4.01 image presentation and JavaScript-based slideshow generator
  *
@@ -178,6 +178,8 @@ bool createSlideshow(const char* ssmainname,
                      ostream&    ssfiles,
                      const char* ssfilesname,
                      const char* mainPageName,
+                     const char* presentationName,
+                     const char* subdirName,
                      const char* stylesheet,
                      const char* maintitle,
                      passwd*     pw)
@@ -194,6 +196,7 @@ bool createSlideshow(const char* ssmainname,
    }
 
    ssfiles << "mainPage = \"" << mainPageName << "\";" << endl;
+   ssfiles << "presentationName = \"" << presentationName << "-" << subdirName << "\";" << endl;
 
    ssmain << "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Frameset//EN\">" << endl
           << "<html lang=\"en\">"  << endl
@@ -261,6 +264,8 @@ int main(int argc, char** argv)
    char         subsscontrolname[1024];
    char         subssmainname[1024];
    char         subssfilesname[1024];
+   char         presentationname[1536];
+   char         subdir[1536];
    char         tmp[1536];
    unsigned int cols   = 5;
    unsigned int width  = 128;
@@ -277,7 +282,6 @@ int main(int argc, char** argv)
    bool         createidx       = false;
    char*        maintitle       = "My Photo Archive";
    char*        title           = "Photo Archive";
-   char*        subdir          = "block1";
    char*        stylesheet      = "stylesheet.css";
    char*        description     = NULL;
    char*        maindescription = NULL;
@@ -291,7 +295,7 @@ int main(int argc, char** argv)
    ofstream     sscontrol;
 
    if(argc < 2) {
-      cerr << "Usage: " << argv[0] << " [Output file] {--htmlonly} {--enumerate} {--cols=Columns} {--width=Width} {-height=Height} {-stylesheet=CSS file} {--maintitle=Title} {--maindescription=HTML file} {--title=Title} {--subdir=Directory} {--description=File} {JPEG file 1} ..." << endl;
+      cerr << "Usage: " << argv[0] << " [Output file] {--htmlonly} {--enumerate} {--cols=Columns} {--width=Width} {-height=Height} {-stylesheet=CSS file} {--maintitle=Title} {--maindescription=HTML file} {--title=Title} {--subdir} {--description=File} {JPEG file 1} ..." << endl;
       exit(1);
    }
    if(argv[1][0] == '-') {
@@ -305,23 +309,24 @@ int main(int argc, char** argv)
       cerr << "ERROR: Unable to create output file \"" << argv[1] << "\"!" << endl;
       exit(1);
    }
-   snprintf((char*)&tmp, sizeof(tmp), "%s", argv[1]);
-   webify(tmp);
-   char* a = rindex(tmp, '/');
-   char* b = rindex(tmp, '.');
+   snprintf((char*)&presentationname, sizeof(presentationname), "%s", argv[1]);
+   webify(presentationname);
+   char* a = rindex(presentationname, '/');
+   char* b = rindex(presentationname, '.');
    if(a < b) {
       *b = 0x00;
    }
-   snprintf((char*)&ssmainname, sizeof(ssmainname), "%s-slideshow.html", tmp);
-   snprintf((char*)&sscontrolname, sizeof(sscontrolname), "%s-sscontrol.html", tmp);
-   snprintf((char*)&ssfilesname, sizeof(ssfilesname), "%s-ssfiles.js", tmp);
+   snprintf((char*)&ssmainname, sizeof(ssmainname), "%s-slideshow.html", presentationname);
+   snprintf((char*)&sscontrolname, sizeof(sscontrolname), "%s-sscontrol.html", presentationname);
+   snprintf((char*)&ssfilesname, sizeof(ssfilesname), "%s-ssfiles.js", presentationname);
+   ssfiles.open(ssfilesname);
    if(!ssfiles.good()) {
       cerr << "ERROR: Unable to create output file \"" << ssfilesname << "\"!" << endl;
       exit(1);
    }
 
    for(int i = 2;i < argc;i++) {
-      if(!(strncmp(argv[i], "--subdir=", 9))) {
+      if(!(strncmp(argv[i], "--subdir", 8))) {
          s++;
          if(s > 1) {
             createidx = true;
@@ -330,8 +335,8 @@ int main(int argc, char** argv)
       }
    }
 
-
    s = 0;
+   snprintf((char*)&subdir, sizeof(subdir), "%s-block001", presentationname);
    for(int i = 2;i < argc;i++) {
       if(!(strncmp(argv[i], "--cols=", 7))) {
          if(count == 0) {
@@ -387,14 +392,13 @@ int main(int argc, char** argv)
       else if(!(strncmp(argv[i], "--maindescription=", 18))) {
          maindescription = (char*)&argv[i][18];
       }
-      else if(!(strncmp(argv[i], "--subdir=", 9))) {
-         subdir = (char*)&argv[i][9];
-         webify(subdir);
+      else if(!(strncmp(argv[i], "--subdir", 8))) {
          if(c > 0) {
             html << "</tr>" << endl
                  << "</table>" << endl << endl;
             html.flush();
             c = 0; r = 0; s++;
+            snprintf((char*)&subdir, sizeof(subdir), "%s-block%03d", presentationname, s + 1);
             number = 0;
          }
       }
@@ -450,7 +454,8 @@ int main(int argc, char** argv)
             if((r == 0) && (c == 0) && (s == 0)) {
                if(!sscreated) {
                   if(!createSlideshow(ssmainname, sscontrolname, ssfiles,
-                                      ssfilesname, argv[i],
+                                      ssfilesname, argv[1],
+                                      presentationname, "main",
                                       stylesheet, maintitle, pw)) {
                      exit(1);
                   }
@@ -490,17 +495,19 @@ int main(int argc, char** argv)
                   html << "<h2><a name=\"index\"></a>Index</h2>" << endl
                        << "<ul>" << endl
                        << "<li><strong><a href=\"" << ssmainname << "\">View slideshow</a></strong>" << endl;
-                  char* btitle  = title;
-                  char* bsubdir = subdir;
-                  bool  change = false;
+                  char*        btitle = title;
+                  bool         change = false;
+                  char         bsubdir[1536];
+                  unsigned int bs = 0;
+                  strcpy((char*)&bsubdir, subdir);
                   for(int j = 2;j < argc;j++) {
                      if(!(strncmp(argv[j], "--title=", 8))) {
                         btitle = (char*)&argv[j][8];
                      }
-                     else if(!(strncmp(argv[j], "--subdir=", 9))) {
-                        bsubdir = (char*)&argv[j][9];
-                        webify(bsubdir);
+                     else if(!(strncmp(argv[j], "--subdir", 8))) {
+                        snprintf((char*)&bsubdir, sizeof(bsubdir), "%s-block%03d", presentationname, bs + 1);
                         change = true;
+                        bs++;
                      }
                      else if((change) && (strncmp(argv[i], "--", 2))) {
                         html << "   <li><a href=\"#" << bsubdir << "\">"
@@ -544,6 +551,7 @@ int main(int argc, char** argv)
                snprintf((char*)&tmp, sizeof(tmp), "%s#%s", argv[1], subdir);
                if(!createSlideshow(subssmainname, subsscontrolname, subssfiles,
                                    subssfilesname, tmp,
+                                   presentationname, subdir,
                                    stylesheet, title, pw)) {
                   exit(1);
                }
@@ -620,7 +628,7 @@ int main(int argc, char** argv)
                      << "   nh=h * scale;" << endl
                      << "   document.write( \"<object width=\" + nw + \" height=\" + nh + \" type=\\\"image/pjpeg\\\" data=\\\"" << (char*)&full[strlen(subdir) + 1] << "\\\" alt=\\\"" << name << "\\\">\" );" << endl
                      << "   document.write( \"   <object width=\" + nw + \" height=\" + nh + \" data=\\\"" << (char*)&original[strlen(subdir) + 1] << "\\\" alt=\\\"" << name << "\\\">\" );" << endl
-                     << "   document.write( \"      <strong>Your browser has been unable to load or display image!</strong>\" );" << endl
+                     << "   document.write( \"      <strong>Your browser has been unable to load or display the image!</strong>\" );" << endl
                      << "   document.write( \"   </object>\" );" << endl
                      << "   document.write( \"</object>\" );" << endl
                      */

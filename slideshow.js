@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.js,v 1.2 2003/07/17 11:37:51 dreibh Exp $
+ *  $Id: slideshow.js,v 1.3 2003/07/21 12:14:50 dreibh Exp $
  *
  * JavaScript Slideshow
  *
@@ -15,23 +15,57 @@
  */
 
 
-images      = 0;
-current     = -1;
-imageArray  = new Array();
-pause       = false;
-showTimer   = 0;
-changeDelay = 30;
+var images      = 0;
+var current     = -1;
+var imageArray  = new Array();
+var pause       = false;
+var showTimer   = 0;
+
 
 
 // To use slideshow, "imageArray" has to be filled with URLs to display and
 // "images" has to be set to the amount of its entries!
 // mainPage has to be set to the URL of the page for the "Up" button.
+// presentationName has to be set to this presentation's name (cookie-string capable!)
+var mainPage         = "Unknown"
+var presentationName = "Unknown"
+var changeDelay      = 999;
+var randomMode       = false;
+
+
+
+// ##### Get cookie ##########################################################
+function getCookie (name) {
+   myentry = name + "=";
+   i = 0;
+   while(i < document.cookie.length) {
+      j = i + myentry.length;
+      if(document.cookie.substring(i, j) == myentry) {
+         end = document.cookie.indexOf(";", j);
+         if(end == -1) {
+            end = document.cookie.length;
+         }
+         return(unescape(document.cookie.substring(j, end)));
+      }
+      i = document.cookie.indexOf(" ", i) + 1;
+      if(i == 0) {
+         break;
+      }
+   }
+   return(null);
+}
+
+
+// ##### Set cookie ##########################################################
+function setCookie (name, value, expires) {
+   document.cookie = name + "=" + escape(value) + "; " +
+                     "expires=" + expires.toGMTString();
+}
 
 
 // ##### Get previous URL ####################################################
 function getPrev() {
-   inputObjects = document.getElementsByTagName("INPUT");
-   if(inputObjects[1].checked) {
+   if(randomMode) {
       current = Math.floor(Math.random() * images);
    }
    else {
@@ -46,8 +80,7 @@ function getPrev() {
 
 // ##### Get next URL ########################################################
 function getNext() {
-   inputObjects = document.getElementsByTagName("INPUT");
-   if(inputObjects[1].checked) {
+   if(randomMode) {
       current = Math.floor(Math.random() * images);
    }
    else {
@@ -65,8 +98,11 @@ function show() {
    clearTimeout(showTimer);
    try {
       inputObjects = document.getElementsByTagName("INPUT");
-      inputObjects[2].value = current;
+      inputObjects[1].value = current;
    } catch(e) { }
+   if(current >= images) {
+      current = 0;
+   }
    if(current < images) {
       top.frames[1].location = imageArray[current];
    }
@@ -76,6 +112,10 @@ function show() {
    if(!pause) {
       showTimer = setTimeout("next()", 1000 * changeDelay);
    }
+   inputObjects = document.getElementsByTagName("INPUT");
+   expires = new Date();
+   expires.setDate(expires.getTime() + 7 * 24 * 60 * 60 * 1000);
+   setCookie("CurrentImageNumber-" + presentationName, current, expires);
 }
 
 
@@ -119,6 +159,22 @@ function up() {
 }
 
 
+// ###### Toggle random mode #################################################
+function toggleRandomMode() {
+   randomMode = !randomMode;
+   if(randomMode) {
+      document["randommode"].style.backgroundColor="#aaaaaa";
+      document["randommode"].alt = "Random Mode ON";
+   }
+   else {
+      document["randommode"].style.backgroundColor="";
+      document["randommode"].alt = "Random Mode OFF";
+   }
+   expires.setDate(expires.getTime() + 7 * 24 * 60 * 60 * 1000);
+   setCookie("RandomImageView-" + presentationName, randomMode, expires);
+}
+
+
 // ###### Handle changes of the delay ########################################
 function newChangeDelay() {
    inputObjects = document.getElementsByTagName("INPUT");
@@ -149,6 +205,9 @@ function newChangeDelay() {
       clearTimeout(showTimer);
       showTimer = setTimeout("next()", 1000 * changeDelay);
    }
+
+   expires.setDate(expires.getTime() + 7 * 24 * 60 * 60 * 1000);
+   setCookie("CurrentChangeDelay-" + presentationName, changeDelay, expires);
 }
 
 
@@ -211,5 +270,32 @@ function onLoad() {
    document["play"].onmouseover=playpauseMouseOver;
    document["play"].onmouseout=playpauseMouseOut;
    document["play"].alt="Play";
-   next();
+
+   inputObjects = document.getElementsByTagName("INPUT");
+   changeDelay = getCookie("CurrentChangeDelay-" + presentationName);
+   if(changeDelay == null) {
+alert("CD=null");
+      changeDelay = 30;
+   }
+   inputObjects[0].value = changeDelay;
+
+   randomMode = getCookie("RandomImageView-" + presentationName);
+   if(randomMode == null) {
+alert("Rand=null");
+      randomMode = false;
+   }
+   if(randomMode) {
+      document["randommode"].style.backgroundColor="#aaaaaa";
+      document["randommode"].alt = "Random Mode ON";
+   }
+   else {
+      document["randommode"].style.backgroundColor="";
+      document["randommode"].alt = "Random Mode OFF";
+   }
+
+   current = getCookie("CurrentImageNumber-" + presentationName);
+   if(current == null) {
+      next();
+   }
+   show();
 }

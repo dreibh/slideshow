@@ -7,7 +7,7 @@ shopt -s extglob
 --noindex \
 --cols=4 \
 \
---subdir=bakeoff4-block1 \
+--subdir \
 --title="The 4th SCTP Interop" \
 --description=bakeoff4-maintitle.html \
 "/tmp/photo-archive/connectathon2002/"@(jpg|JPG|jpeg|JPEG) \

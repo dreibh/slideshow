@@ -5,23 +5,23 @@ shopt -s extglob
 --stylesheet=stylesheet.css \
 --enumerate \
 \
---subdir=msn2003-block1 \
+--subdir \
 --title="Part 1 - July 02, 2003" \
 "/tmp/photo-archive/msn2003/2003_07_02"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=msn2003-block2 \
+--subdir \
 --title="Part 2 - July 03, 2003" \
 "/tmp/photo-archive/msn2003/2003_07_03"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=msn2003-block3 \
+--subdir \
 --title="Part 3 - July 04, 2003" \
 "/tmp/photo-archive/msn2003/2003_07_04"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=msn2003-block4 \
+--subdir \
 --title="Part 4 - July 05, 2003" \
 "/tmp/photo-archive/msn2003/2003_07_05"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=msn2003-block5 \
+--subdir \
 --title="Part 5 - July 06, 2003" \
 "/tmp/photo-archive/msn2003/2003_07_06"/*.@(jpg|JPG|jpeg|JPEG) \
 --

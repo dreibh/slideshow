@@ -4,47 +4,47 @@ shopt -s extglob
 --maintitle="Thomas Dreibholz's Travel to the ICT2003" --maindescription=ict2003-maintitle.html \
 --stylesheet=stylesheet.css \
 \
---subdir=ict2003-block1 \
+--subdir \
 --title="Day 1 - Travel to Tahiti" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 01"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=ict2003-block2 \
+--subdir \
 --title="Day 2 - At the Conference Hotel" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 02"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=ict2003-block3 \
+--subdir \
 --title="Day 3 - At the Conference Hotel" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 03"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=ict2003-block4 \
+--subdir \
 --title="Day 4 - Environment of the Conference Hotel" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 04"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=ict2003-block5 \
+--subdir \
 --title="Day 5 - The Day of my Conference Talk and the Gala Dinner" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 05"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=ict2003-block6 \
+--subdir \
 --title="Day 6 - Snorkeling Tour" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 06"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=ict2003-block7 \
+--subdir \
 --title="Day 7 - Daytrip to Bora Bora" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 07"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=ict2003-block8 \
+--subdir \
 --title="Day 8 - Environment of the Conference Hotel" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 08"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=ict2003-block9 \
+--subdir \
 --title="Day 9 - Tamaaraa (Traditional Polynesian Lunch)" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 09"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=ict2003-block10 \
+--subdir \
 --title="Day 10 - At the University of French Polynesia" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 10"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---subdir=ict2003-block11 \
+--subdir \
 --title="Day 11 - Return Travel" \
 "/tmp/photo-archive/ict2003/Tahiti, Tag 11"/*.@(jpg|JPG|jpeg|JPEG) \
 \
