@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.cc,v 1.7 2004/01/30 15:33:43 dreibh Exp $
+ *  $Id: slideshow.cc,v 1.8 2004/01/30 16:29:17 dreibh Exp $
  *
  * XHTML 1.1 image presentation and JavaScript-based slideshow generator
  *
@@ -603,8 +603,24 @@ int main(int argc, char** argv)
                  << endl;
             html.flush();
 
+            prevhtml[0] = 0x00;
+            nexthtml[0] = 0x00;
+            for(int j = i + 1;j < argc;j++) {
+               if(!(strncmp(argv[j], "--subdir", 8))) {
+                  break;
+               }
+               else if(strncmp(argv[j], "--", 2)) {
+                  snprintf((char*)&nexthtml, sizeof(nexthtml), "show-image-%04d.html", number +1);
+                  break;
+               }
+            }
+            if(number > 1) {
+               snprintf((char*)&prevhtml, sizeof(prevhtml), "show-image-%04d.html", number - 1);
+            }
+
             ssfiles << "imageArray[images++]=\"" << fullhtml << "\";" << endl;
             subssfiles << "imageArray[images++]=\"" << fullhtml << "\";" << endl;
+
             ofstream viewhtml(fullhtml);
             if(!viewhtml.good()) {
                cerr << "ERROR: Unable to create file \"" << fullhtml << "\"!" << endl;
@@ -634,6 +650,7 @@ int main(int argc, char** argv)
             viewhtml << "<script type=\"text/javascript\" src=\"../imageviewer.js\"></script>" << endl;
             viewhtml << "</head>" << endl << endl;
             viewhtml << "<body>" << endl;
+
             char* originalRef = index(original, '/');
             if(originalRef) {
                originalRef++;
@@ -649,8 +666,8 @@ int main(int argc, char** argv)
 
             viewhtml << "<noscript>" << endl
                      << "   <p class=\"center\">" << endl
-                     << "   <object usePreviewWidth=\"90%\" type=\"image/pjpeg\" data=\"" << (char*)&full[strlen(subdir) + 1] << "\">" << endl
-                     << "      <object usePreviewWidth=\"90%\" type=\"image/jpeg\" data=\"" << (char*)&original[strlen(subdir) + 1] << "\">" << endl
+                     << "   <object width=\"90%\" type=\"image/pjpeg\" data=\"" << (char*)&full[strlen(subdir) + 1] << "\">" << endl
+                     << "      <object width=\"90%\" type=\"image/jpeg\" data=\"" << (char*)&original[strlen(subdir) + 1] << "\">" << endl
                      << "         <strong>Your browser has been unable to load or display this image!</strong>" << endl
                      << "      </object>" << endl
                      << "   </object>" << endl
@@ -661,23 +678,20 @@ int main(int argc, char** argv)
                      << "<br />Full view of <em>" << name << "</em>" << endl
                      << "<br /><a href=\"" << originalRef << "\">Get the original file</a><br />" << endl;
 
-            viewhtml << "[To Preview] ";
-            prevhtml[0] = 0x00;
-            if(number > 1) {
-               snprintf((char*)&prevhtml, sizeof(prevhtml), "show-image-%04d.html", number - 1);
-               viewhtml << "<a href=\"" << prevhtml << "\">Previous Slide</a> " << endl;
+            viewhtml << "<a href=\"../" << argv[1] << "#" << subdir << "\"><img alt=\"Preview Page\" src=\"../controls/1uparrow.png\" /></a> ";
+            if(prevhtml[0] != 0x00) {
+               viewhtml << "<a href=\"" << prevhtml << "\">" << endl;
             }
-            nexthtml[0] = 0x00;
-            for(int j = i + 1;j < argc;j++) {
-               if(!(strncmp(argv[j], "--subdir", 8))) {
-                  break;
-               }
-               else if(strncmp(argv[j], "--", 2)) {
-                  printf("next=%s\n",argv[j]);
-                  snprintf((char*)&nexthtml, sizeof(nexthtml), "show-image-%04d.html", number +1);
-                  viewhtml << "<a href=\"" << nexthtml << "\">Next Slide</a>" << endl;
-                  break;
-               }
+            viewhtml << "<img alt=\"Previous Slide\" src=\"../controls/1leftarrow.png\" />";
+            if(prevhtml[0] != 0x00) {
+               viewhtml << "</a> ";
+            }
+            if(nexthtml[0] != 0x00) {
+               viewhtml << "<a href=\"" << nexthtml << "\">" << endl;
+            }
+            viewhtml << "<img alt=\"Next Slide\" src=\"../controls/1rightarrow.png\" />";
+            if(nexthtml[0] != 0x00) {
+               viewhtml << "</a> ";
             }
 
             viewhtml << "</p>" << endl;

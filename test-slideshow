@@ -1,5 +1,5 @@
 #!/bin/bash
-./slideshow t1.html $@ \
+./slideshow test-index.html $@ \
 --maintitle="Test-Titel" --maindescription=test-maintitle.html \
 --stylesheet=stylesheet.css \
 --enumerate \

@@ -1,5 +1,5 @@
 /*
- *  $Id: imageviewer.js,v 1.3 2004/01/30 15:08:09 dreibh Exp $
+ *  $Id: imageviewer.js,v 1.4 2004/01/30 16:29:17 dreibh Exp $
  *
  * JavaScript Image Viewer
  *
@@ -29,8 +29,8 @@ function show(fullname, originalname, w, h) {
    nw = document.documentElement.clientWidth;
    nh = document.documentElement.clientHeight;
 
-   document.write("w=" + w + " h=" + h + "<br />");
-   document.write("nw=" + nw + " nh=" + nh + "<br />");
+   // document.write("w=" + w + " h=" + h + "<br />");
+   // document.write("nw=" + nw + " nh=" + nh + "<br />");
 
    if((nw > 0) && (nh > 0)) {
       sw = nw * 0.90 / w;
