@@ -1,0 +1,55 @@
+img.borderless {
+   border-style: hidden;
+}
+
+h1 { text-align: center }
+h2 { text-align: left }
+h3 { text-align: left }
+
+p.description {
+   text-align: justify
+}
+
+p.center {
+   text-align: center
+}
+
+body {
+   background-image: url(graphics/backgrounds/background-essen.png)
+}
+
+table.center {
+   text-align: left;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table.previewtable {
+   text-align: left;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+td.previewtable {
+   text-align: center;
+   vertical-align: middle;
+   background-color: rgb(255,255,75);
+   font-size: small;
+}
+
+td.sscontrol {
+   text-align: center;
+   vertical-align: middle;
+   background-color: rgb(255,255,100);
+   font-size: small;
+}
+
+td.cvfield1 {
+   width: 150px;
+   vertical-align: top;
+}
+
+td.cvfield2 {
+   width: 450px;
+   vertical-align: middle;
+}

@@ -1,0 +1,16 @@
+#!/bin/bash
+./slideshow a93-27dez2003-index.html $@ \
+--maintitle="" \
+--maindescription="" \
+--stylesheet=stylesheet.css \
+--head=a93-head.html \
+--tail=a93-tail.html \
+--enumerate \
+--noindex \
+--subdir \
+--title="Bilder vom Treffen am 27.12.2003" \
+--description=a93-27dez2003-maintitle.html \
+Tux.jpeg \
+--
+
+# "/home/dreibh/stufentreffen_12_03/"*.JPG \
