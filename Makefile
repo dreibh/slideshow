@@ -1,7 +1,7 @@
-all:	slideshow getsize slideshow2
+all:	slideshow2
 
 slideshow2:	slideshow2.cc
-	g++ slideshow2.cc -o slideshow2 -Wall -g -O0 -lMagick++
+	g++ slideshow2.cc -o slideshow2 -Wall -g -O0 -lMagick++ -lxml2
 
 slideshow:	slideshow.cc
 	g++ slideshow.cc -o slideshow -Wall -O2
