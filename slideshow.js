@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.js,v 1.4 2003/07/21 12:26:05 dreibh Exp $
+ *  $Id: slideshow.js,v 1.5 2004/07/01 08:31:07 dreibh Exp $
  *
  * JavaScript Slideshow
  *
@@ -124,14 +124,14 @@ function playpause() {
    clearTimeout(showTimer);
    if(pause) {
       pause = false;
-      document["play"].src="controls/player_play.png";
+      document["play"].src="infrastructure/player_play.png";
       document["play"].alt="Play";
       getNext();
       show();
    }
    else {
       pause = true;
-      document["play"].src="controls/player_pause.png";
+      document["play"].src="infrastructure/player_pause.png";
       document["play"].alt="Pause";
    }
 }
@@ -142,7 +142,7 @@ function prev() {
    document["goprev"].style.backgroundColor="#aaaaaa";
    getPrev();
    show();
-   document["goprev"].src="controls/1leftarrow.png";
+   document["goprev"].src="infrastructure/1leftarrow.png";
 }
 
 

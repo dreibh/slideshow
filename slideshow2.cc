@@ -453,14 +453,14 @@ Presentation::Presentation()
    safestrcpy((char*)&ShortcutIcon, "", sizeof(ShortcutIcon));
    safestrcpy((char*)&Head, "", sizeof(Head));
    safestrcpy((char*)&Tail, "", sizeof(Tail));
-   safestrcpy((char*)&OneLeftArrowImage, "controls/1leftarrow.png", sizeof(OneLeftArrowImage));
-   safestrcpy((char*)&TwoLeftArrowImage, "controls/2leftarrow.png", sizeof(TwoLeftArrowImage));
-   safestrcpy((char*)&OneRightArrowImage, "controls/1rightarrow.png", sizeof(OneRightArrowImage));
-   safestrcpy((char*)&TwoRightArrowImage, "controls/2rightarrow.png", sizeof(TwoRightArrowImage));
-   safestrcpy((char*)&UpArrowImage, "controls/1uparrow.png", sizeof(UpArrowImage));
-   safestrcpy((char*)&PlayImage, "controls/player_play.png", sizeof(PlayImage));
-   safestrcpy((char*)&PauseImage, "controls/player_pause.png", sizeof(PauseImage));
-   safestrcpy((char*)&ShuffleImage, "controls/rotate.png", sizeof(ShuffleImage));
+   safestrcpy((char*)&OneLeftArrowImage, "infrastructure/1leftarrow.png", sizeof(OneLeftArrowImage));
+   safestrcpy((char*)&TwoLeftArrowImage, "infrastructure/2leftarrow.png", sizeof(TwoLeftArrowImage));
+   safestrcpy((char*)&OneRightArrowImage, "infrastructure/1rightarrow.png", sizeof(OneRightArrowImage));
+   safestrcpy((char*)&TwoRightArrowImage, "infrastructure/2rightarrow.png", sizeof(TwoRightArrowImage));
+   safestrcpy((char*)&UpArrowImage, "infrastructure/1uparrow.png", sizeof(UpArrowImage));
+   safestrcpy((char*)&PlayImage, "infrastructure/player_play.png", sizeof(PlayImage));
+   safestrcpy((char*)&PauseImage, "infrastructure/player_pause.png", sizeof(PauseImage));
+   safestrcpy((char*)&ShuffleImage, "infrastructure/rotate.png", sizeof(ShuffleImage));
    safestrcpy((char*)&SlideshowFilelist, "slideshow-filelist-allblocks.js", sizeof(SlideshowFilelist));
    safestrcpy((char*)&SlideshowFrameset, "slideshow-frameset-allblocks.html", sizeof(SlideshowFrameset));
    safestrcpy((char*)&SlideshowControl, "slideshow-control-allblocks.html", sizeof(SlideshowControl));
@@ -537,9 +537,6 @@ void Presentation::createSlideshowFrameset(const char* filelistName,
       exit(1);
    }
 
-// ???   ssfiles << "mainPage = \"" << mainPageName << "\";" << endl;
-// ???   ssfiles << "presentationName = \"" << presentationName << "-" << subdirName << "\";" << endl;
-
    ssframeset << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\">" << endl
           << "<html>"  << endl
           << "<head>"  << endl;
@@ -610,6 +607,8 @@ void Presentation::createSlideshow()
       cerr << "ERROR: Unable to create file \"" << str << "\"!" << endl;
       exit(1);
    }
+   ssallblocks << "mainPage = \"" << PresentationName << "\";" << endl;
+   ssallblocks << "presentationName = \"" << PresentationName << "\";" << endl;
    createSlideshowFrameset(SlideshowFilelist, SlideshowFrameset, SlideshowControl);
 
    set<Block*>::iterator blockIterator = BlockSet.begin();
@@ -621,6 +620,8 @@ void Presentation::createSlideshow()
          cerr << "ERROR: Unable to create file \"" << str << "\"!" << endl;
          exit(1);
       }
+      ssblock << "mainPage = \"" << PresentationName << "\";" << endl;
+      ssblock << "presentationName = \"" << PresentationName << "\";" << endl;
       createSlideshowFrameset(block->SlideshowFilelist, block->SlideshowFrameset, block->SlideshowControl);
 
       set<Image*>::iterator imageIterator = block->ImageSet.begin();
@@ -748,15 +749,17 @@ void Presentation::createMainPage()
       if(Index) {
          os << "<h2 id=\"index\">Index</h2>" << endl
             << "<ul>" << endl;
-         if(Slideshow) {
-// ???            os << "   <li><strong><a href=\"" << ssframesetname << "\">View slideshow</a></strong></li>" << endl;
-         }
          set<Block*>::iterator blockIterator = BlockSet.begin();
          while(blockIterator != BlockSet.end()) {
             Block* block = *blockIterator;
             os << "   <li><a href=\"#" << block->DirectoryName << "\">"
                << block->Title << "</a></li>" << endl;
             blockIterator++;
+         }
+         if(Slideshow) {
+            os << "   <p />"
+               << "   <li><a href=\"" << SlideshowFrameset << "\">"
+               << "View Slideshow" << "</a></li>" << endl;
          }
          os << "</ul>" << endl
             << "<hr />"  << endl
@@ -769,11 +772,12 @@ void Presentation::createMainPage()
       while(blockIterator != BlockSet.end()) {
          Block* block = *blockIterator;
          os << "<h1 id=\"" << block->DirectoryName << "\">" << block->Title << "</h1>" << endl;
-/*
-         html << "<p class=\"center\">" << endl
-// ???              << "<strong><a href=\"" << subssframesetname << "\">View slideshow</a></strong>" << endl
-              << "</p>" << endl;
-*/
+         if(Slideshow) {
+            os << "<p class=\"center\">" << endl
+               << "<strong><a href=\"" << block->SlideshowFrameset << "\">"
+               << "View Slideshow" << "</a></strong>" << endl
+               << "</p>" << endl;
+         }
          if(block->Description[0] != 0x00) {
             if(!cat(os, block->Description)) {
                cerr << "ERROR: Unable to copy description from file \"" << block->Description << "\"!" << endl;
