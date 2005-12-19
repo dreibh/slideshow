@@ -1,0 +1,19 @@
+#!/bin/bash
+shopt -s extglob
+
+./slideshow2 \
+--directory=aus2005 \
+--maintitle="Thomas Dreibholz's Reise nach Australien 2005" --maindescription=aus2005-maintitle.html \
+--stylesheet=stylesheet.css \
+--background=background.png \
+--shortcuticon=icon-default.png \
+--slideshow \
+--head=head.html \
+--tail=tail.html \
+--fullsizewidth=1280 \
+--fullsizeheight=960 \
+--enumerate \
+--noindex \
+"/mnt/win_c/Dokumente und Einstellungen/Dreibholz/Desktop/AU2005-Auswahl/Landschaften"/*.@(jpg|JPG|jpeg|JPEG) \
+$@ \
+--
