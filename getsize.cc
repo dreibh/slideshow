@@ -1,5 +1,5 @@
 /*
- *  $Id: getsize.cc,v 1.1 2003/07/17 09:45:09 dreibh Exp $
+ *  $Id$
  *
  * Get size of a PNM file.
  *

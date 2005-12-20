@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.cc,v 1.11 2004/02/06 11:08:14 dreibh Exp $
+ *  $Id$
  *
  * XHTML 1.1 image presentation and JavaScript-based slideshow generator
  *

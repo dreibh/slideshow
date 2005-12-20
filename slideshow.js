@@ -1,5 +1,5 @@
 /*
- *  $Id: slideshow.js,v 1.5 2004/07/01 08:31:07 dreibh Exp $
+ *  $Id$
  *
  * JavaScript Slideshow
  *

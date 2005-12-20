@@ -1,5 +1,5 @@
 /*
- *  $Id: imageviewer.js,v 1.7 2004/07/01 08:31:07 dreibh Exp $
+ *  $Id$
  *
  * JavaScript Image Viewer
  *
