@@ -10,6 +10,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
+ * $Id$
  */
 
 #include <stdio.h>
@@ -379,7 +380,7 @@ void Presentation::createSlideshowFrameset(const char* filelistName,
    sscontrol << "<script type=\"text/javascript\" src=\"" << SlideshowScript << "\"></script>" << endl;
    sscontrol << "<script type=\"text/javascript\" src=\"" << filelistName << "\"></script>" << endl;
    sscontrol << "</head>" << endl << endl;
-   if(!cat(sscontrol, "slideshowcontrol.html")) {
+   if(!cat(sscontrol, "infrastructure/slideshowcontrol.html")) {
       cerr << "ERROR: Unable to copy slideshow control body from \"slideshowcontrol.html\"!" << endl;
       exit(1);
    }
