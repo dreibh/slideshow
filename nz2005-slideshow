@@ -14,6 +14,6 @@ shopt -s extglob
 --fullsizeheight=960 \
 --enumerate \
 --noindex \
-"/ablage2/Fotoalbum/2005-Neuseeland/Landschaften/"*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/NZ2004-Druck/Landschaften/"*.@(jpg|JPG|jpeg|JPEG) \
 $@ \
 --
