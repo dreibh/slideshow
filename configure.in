@@ -1,0 +1,50 @@
+AC_INIT(src/slideshow2.cc)
+AC_CONFIG_AUX_DIR(admin)
+AC_CANONICAL_HOST
+AM_INIT_AUTOMAKE(slideshow, 1.9.0)
+
+
+AC_PREFIX_DEFAULT(/usr/local)
+if test "x$prefix" = "xNONE"; then
+  prefix=$ac_default_prefix
+  ac_configure_args="$ac_configure_args --prefix $prefix"
+fi
+
+AM_CONFIG_HEADER(config.h)
+
+
+# ImageMagick
+AC_MSG_CHECKING(Checking for ImageMagick header files)
+AC_CHECK_HEADERS(magick/api.h)
+MAGICK_CONFIG="Magick-config"
+MAGICK_CFLAGS=`$MAGICK_CONFIG --cflags`
+MAGICK_CXXFLAGS="$MAGICK_CFLAGS `$MAGICK_CONFIG --cppflags`"
+MAGICK_LIBS=`$MAGICK_CONFIG --libs`
+AC_SUBST(MAGICK_CFLAGS)
+AC_SUBST(MAGICK_CXXFLAGS)
+AC_SUBST(MAGICK_LIBS)
+
+
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_CXX
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_LIBTOOL
+
+
+# add here all your Makefiles. These will be created by configure
+AC_OUTPUT(Makefile src/Makefile )
+
+
+echo ""
+echo "The slideshow package has been configured with the following options:"
+echo ""
+echo "   CFLAGS                  : $CFLAGS"
+echo "   CXXFLAGS                : $CXXFLAGS"
+echo "   LDFLAGS                 : $LDFLAGS"
+echo ""
+echo "   MAGICK_CFLAGS           : $MAGICK_CFLAGS"
+echo "   MAGICK_CXXFLAGS         : $MAGICK_CXXFLAGS"
+echo "   MAGICK_LIBS             : $MAGICK_LIBS"
