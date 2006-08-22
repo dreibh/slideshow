@@ -2,17 +2,19 @@
 
 ../slideshow2 \
 --directory=demo \
---title="A Slideshow Demo" --maindescription=demo-maintitle.html \
+--maintitle="A Slideshow Demo" \
+--maindescription=demo-maintitle.html \
 --stylesheet=demo-stylesheet.css \
 --background=demo-background.png \
 --shortcuticon=demo-icon.png \
+--slideshow \
 --head=demo-head.html \
 --tail=demo-tail.html \
 --fullsizewidth=800 \
 --fullsizeheight=600 \
 --noenumerate \
---block="1st Block of Fractal Image Gallery" \
+--block="1st Block of a Fractal Image Gallery" \
 demo-images/alpha0[1-4]*.png \
---block="2nd Block of Fractal Image Gallery" \
+--block="2nd Block of a Fractal Image Gallery" \
 demo-images/alpha0[5-8]*.png \
 $@ \
