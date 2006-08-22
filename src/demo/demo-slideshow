@@ -1,0 +1,18 @@
+#!/bin/bash
+
+../slideshow2 \
+--directory=demo \
+--title="A Slideshow Demo" --maindescription=demo-maintitle.html \
+--stylesheet=demo-stylesheet.css \
+--background=demo-background.png \
+--shortcuticon=demo-icon.png \
+--head=demo-head.html \
+--tail=demo-tail.html \
+--fullsizewidth=800 \
+--fullsizeheight=600 \
+--noenumerate \
+--block="1st Block of Fractal Image Gallery" \
+demo-images/alpha0[1-4]*.png \
+--block="2nd Block of Fractal Image Gallery" \
+demo-images/alpha0[5-8]*.png \
+$@ \

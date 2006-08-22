@@ -253,8 +253,8 @@ Presentation::Presentation()
    safestrcpy((char*)&SlideshowFilelist, "slideshow-filelist-allblocks.js", sizeof(SlideshowFilelist));
    safestrcpy((char*)&SlideshowFrameset, "slideshow-frameset-allblocks.html", sizeof(SlideshowFrameset));
    safestrcpy((char*)&SlideshowControl, "slideshow-control-allblocks.html", sizeof(SlideshowControl));
-   safestrcpy((char*)&ImageViewerScript, "imageviewer.js", sizeof(ImageViewerScript));
-   safestrcpy((char*)&SlideshowScript, "slideshow.js", sizeof(SlideshowScript));
+   safestrcpy((char*)&ImageViewerScript, "infrastructure/imageviewer.js", sizeof(ImageViewerScript));
+   safestrcpy((char*)&SlideshowScript, "infrastructure/slideshow.js", sizeof(SlideshowScript));
 
    passwd* pw = getpwuid(getuid());
    if(pw) {

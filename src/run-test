@@ -1,0 +1,15 @@
+#!/bin/bash
+./slideshow2 \
+--directory=test \
+--title="Test-Titel" --maindescription=demo-maintitle.html \
+--stylesheet=demo-stylesheet.css \
+--background=demo-background.png \
+--shortcuticon=demo-icon.png \
+--head=demo-head.html \
+--tail=demo-tail.html \
+--fullsizewidth=1280 \
+--fullsizeheight=960 \
+--noenumerate \
+--block="A Fractal Image Gallery" \
+/home/dreibh/tmp/test-jpeg/*.jpeg \
+$@ \
