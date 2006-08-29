@@ -1,3 +1,5 @@
+SUBDIRS = demo
+
 noinst_PROGRAMS = slideshow2 getsize
 
 EXTRA_DIST =
