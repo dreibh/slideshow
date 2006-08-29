@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ../slideshow2 \
+--infrastructure=../infrastructure \
 --directory=demo \
 --maintitle="A Slideshow Demo" \
 --maindescription=demo-maintitle.html \

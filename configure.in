@@ -35,7 +35,7 @@ AC_PROG_LIBTOOL
 
 
 # add here all your Makefiles. These will be created by configure
-AC_OUTPUT(Makefile src/Makefile src/demo/Makefile src/demo/demo-images/Makefile )
+AC_OUTPUT(Makefile src/Makefile src/infrastructure/Makefile src/demo/Makefile src/demo/demo-images/Makefile )
 
 
 echo ""

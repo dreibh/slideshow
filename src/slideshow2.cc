@@ -122,6 +122,7 @@ class Presentation
    unsigned int FullsizeHeight;
    unsigned int FullsizeQuality;
 
+   char         InfrastructureDirectory[1024];
    char         MainTitle[1024];
    char         MainDescription[1024];
    char         DirectoryName[1024];
@@ -143,6 +144,7 @@ class Presentation
    char         SlideshowFilelist[1024];
    char         SlideshowFrameset[1024];
    char         SlideshowControl[1024];
+   char         SlideshowControlBody[1024];
    char         ImageViewerScript[1024];
    char         SlideshowScript[1024];
 
@@ -234,7 +236,8 @@ Presentation::Presentation()
    FullsizeQuality     = 75;
    SkipImageConversion = false;
 
-   safestrcpy((char*)&MainTitle, "My Photo Archive", sizeof(MainTitle));
+   safestrcpy((char*)&InfrastructureDirectory, "infrastructure/", sizeof(InfrastructureDirectory));
+   safestrcpy((char*)&MainTitle, "Slideshow Image Archive", sizeof(MainTitle));
    safestrcpy((char*)&MainDescription, "", sizeof(MainDescription));
    safestrcpy((char*)&DirectoryName, "test-dir", sizeof(DirectoryName));
    safestrcpy((char*)&PresentationName, "index.html", sizeof(PresentationName));
@@ -243,19 +246,6 @@ Presentation::Presentation()
    safestrcpy((char*)&ShortcutIcon, "", sizeof(ShortcutIcon));
    safestrcpy((char*)&Head, "", sizeof(Head));
    safestrcpy((char*)&Tail, "", sizeof(Tail));
-   safestrcpy((char*)&OneLeftArrowImage, "infrastructure/1leftarrow.png", sizeof(OneLeftArrowImage));
-   safestrcpy((char*)&TwoLeftArrowImage, "infrastructure/2leftarrow.png", sizeof(TwoLeftArrowImage));
-   safestrcpy((char*)&OneRightArrowImage, "infrastructure/1rightarrow.png", sizeof(OneRightArrowImage));
-   safestrcpy((char*)&TwoRightArrowImage, "infrastructure/2rightarrow.png", sizeof(TwoRightArrowImage));
-   safestrcpy((char*)&UpArrowImage, "infrastructure/1uparrow.png", sizeof(UpArrowImage));
-   safestrcpy((char*)&PlayImage, "infrastructure/player_play.png", sizeof(PlayImage));
-   safestrcpy((char*)&PauseImage, "infrastructure/player_pause.png", sizeof(PauseImage));
-   safestrcpy((char*)&ShuffleImage, "infrastructure/rotate.png", sizeof(ShuffleImage));
-   safestrcpy((char*)&SlideshowFilelist, "slideshow-filelist-allblocks.js", sizeof(SlideshowFilelist));
-   safestrcpy((char*)&SlideshowFrameset, "slideshow-frameset-allblocks.html", sizeof(SlideshowFrameset));
-   safestrcpy((char*)&SlideshowControl, "slideshow-control-allblocks.html", sizeof(SlideshowControl));
-   safestrcpy((char*)&ImageViewerScript, "infrastructure/imageviewer.js", sizeof(ImageViewerScript));
-   safestrcpy((char*)&SlideshowScript, "infrastructure/slideshow.js", sizeof(SlideshowScript));
 
    passwd* pw = getpwuid(getuid());
    if(pw) {
@@ -269,6 +259,7 @@ Presentation::Presentation()
 void Presentation::dump()
 {
    cout << "   - Presentation \"" << MainTitle << "\"" << endl
+        << "      + InfrastructureDirectory=" << InfrastructureDirectory << endl
         << "      + SkipImageConversion=" << ((SkipImageConversion == true) ? "yes" : "no") << endl
         << "      + MainTitle=" << MainTitle << endl
         << "      + MainDescription=" << MainDescription << endl
@@ -286,7 +277,8 @@ void Presentation::dump()
         << "      + FullsizeHeight=" << FullsizeHeight << endl
         << "      + FullsizeQuality=" << FullsizeQuality << " [%]" << endl
         << "      + ImageViewerScript=" << ImageViewerScript << endl
-        << "      + SlideshowScript=" << SlideshowScript << endl;
+        << "      + SlideshowScript=" << SlideshowScript << endl
+        << "      + SlideshowControlBody=" << SlideshowControlBody << endl;
    set<Block*>::iterator blockIterator = BlockSet.begin();
    while(blockIterator != BlockSet.end()) {
       (*blockIterator)->dump();
@@ -380,8 +372,8 @@ void Presentation::createSlideshowFrameset(const char* filelistName,
    sscontrol << "<script type=\"text/javascript\" src=\"" << SlideshowScript << "\"></script>" << endl;
    sscontrol << "<script type=\"text/javascript\" src=\"" << filelistName << "\"></script>" << endl;
    sscontrol << "</head>" << endl << endl;
-   if(!cat(sscontrol, "infrastructure/slideshowcontrol.html")) {
-      cerr << "ERROR: Unable to copy slideshow control body from \"slideshowcontrol.html\"!" << endl;
+   if(!cat(sscontrol, SlideshowControlBody)) {
+      cerr << "ERROR: Unable to copy slideshow control body from \"" << SlideshowControlBody << "\"!" << endl;
       exit(1);
    }
    sscontrol << "</html>" << endl;
@@ -429,6 +421,32 @@ void Presentation::createSlideshow()
 
 void Presentation::createInfrastructureFiles()
 {
+   int i = strlen(InfrastructureDirectory);
+   while(--i >= 0) {
+      if(InfrastructureDirectory[i] == '/') {
+         InfrastructureDirectory[i] = 0x00;
+      }
+      else {
+         break;
+      }
+   }
+   snprintf((char*)&OneLeftArrowImage, sizeof(OneLeftArrowImage), "%s/%s", InfrastructureDirectory, "1leftarrow.png");
+   snprintf((char*)&TwoLeftArrowImage, sizeof(TwoLeftArrowImage), "%s/%s", InfrastructureDirectory, "2leftarrow.png");
+   snprintf((char*)&OneRightArrowImage, sizeof(OneRightArrowImage), "%s/%s", InfrastructureDirectory, "1rightarrow.png");
+   snprintf((char*)&TwoRightArrowImage, sizeof(TwoRightArrowImage), "%s/%s", InfrastructureDirectory, "2rightarrow.png");
+   snprintf((char*)&UpArrowImage, sizeof(UpArrowImage), "%s/%s", InfrastructureDirectory, "1uparrow.png");
+   snprintf((char*)&PlayImage, sizeof(PlayImage), "%s/%s", InfrastructureDirectory, "player_play.png");
+   snprintf((char*)&PauseImage, sizeof(PauseImage), "%s/%s", InfrastructureDirectory, "player_pause.png");
+   snprintf((char*)&ShuffleImage, sizeof(ShuffleImage), "%s/%s", InfrastructureDirectory, "rotate.png");
+
+   snprintf((char*)&ImageViewerScript, sizeof(ImageViewerScript), "%s/%s", InfrastructureDirectory, "imageviewer.js");
+   snprintf((char*)&SlideshowScript, sizeof(SlideshowScript), "%s/%s", InfrastructureDirectory, "slideshow.js");
+   snprintf((char*)&SlideshowControlBody, sizeof(SlideshowControlBody), "%s/%s", InfrastructureDirectory, "slideshowcontrol.html");
+
+   safestrcpy((char*)&SlideshowFilelist, "slideshow-filelist-allblocks.js", sizeof(SlideshowFilelist));
+   safestrcpy((char*)&SlideshowFrameset, "slideshow-frameset-allblocks.html", sizeof(SlideshowFrameset));
+   safestrcpy((char*)&SlideshowControl, "slideshow-control-allblocks.html", sizeof(SlideshowControl));
+
    char str[1024];
    snprintf((char*)&str, sizeof(str), "%s/infrastructure", DirectoryName);
    makeDir(str);
@@ -783,7 +801,6 @@ Image::Image(Block* block, const char* imageTitle, const char* sourceName)
          snprintf((char*)&Title, sizeof(Title), "Image %u", ID);
       }
       else {
-      // ????? Ausschneiden...
          safestrcpy((char*)&Title, extractFileName(sourceName), sizeof(Title));
       }
    }
@@ -971,10 +988,13 @@ Presentation* createPresentation(int argc, char** argv)
    CHECK(presentation);
 
    for(int i = 1;i < argc;i++) {
-      if(!(strncmp(argv[i], "--maintitle=", 12))) {
+      if(!(strncmp(argv[i], "--infrastructure=", 17))) {
+         safestrcpy(presentation->InfrastructureDirectory, (char*)&argv[i][17], sizeof(presentation->InfrastructureDirectory));
+      }
+      else if(!(strncmp(argv[i], "--maintitle=", 12))) {
          safestrcpy(presentation->MainTitle, (char*)&argv[i][12], sizeof(presentation->MainTitle));
       }
-      if(!(strncmp(argv[i], "--maindescription=", 18))) {
+      else if(!(strncmp(argv[i], "--maindescription=", 18))) {
          safestrcpy(presentation->MainDescription, (char*)&argv[i][18], sizeof(presentation->MainDescription));
       }
       else if(!(strncmp(argv[i], "--stylesheet=", 13))) {

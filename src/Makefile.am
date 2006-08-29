@@ -1,4 +1,4 @@
-SUBDIRS = demo
+SUBDIRS = demo infrastructure
 
 noinst_PROGRAMS = slideshow2 getsize
 
