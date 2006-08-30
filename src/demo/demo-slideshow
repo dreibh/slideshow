@@ -11,11 +11,17 @@
 --slideshow \
 --head=demo-head.html \
 --tail=demo-tail.html \
---fullsizewidth=800 \
---fullsizeheight=600 \
+--fullsizewidth=1024 \
+--fullsizeheight=768 \
+--fullsizequality=90 \
+--previewquality=80 \
+--previewwidth=128 \
+--previewheight=96 \
 --noenumerate \
 --block="1st Block of a Fractal Image Gallery" \
+--blockdescription=demo-section1.html \
 demo-images/alpha0[1-4]*.png \
 --block="2nd Block of a Fractal Image Gallery" \
+--blockdescription=demo-section2.html \
 demo-images/alpha0[5-8]*.png \
 $@ \
