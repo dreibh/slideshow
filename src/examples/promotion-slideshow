@@ -15,15 +15,15 @@ shopt -s extglob
 --enumerate \
 \
 --block="Disputation 07. März 2007- Bilder Rathgeb" \
-"/winxp/Dokumente und Einstellungen/root3/Eigene Dateien/Eigene Bilder/Bilder Promotion/Rathgeb"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/Bilder Promotion/Rathgeb"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Disputation 07. März 2007- Bilder Zhou" \
-"/winxp/Dokumente und Einstellungen/root3/Eigene Dateien/Eigene Bilder/Bilder Promotion/Zhou"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/Bilder Promotion/Zhou"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Disputation 07. März 2007 - Bilder Dreibholz" \
-"/winxp/Dokumente und Einstellungen/root3/Eigene Dateien/Eigene Bilder/Bilder Promotion/Dreibholz"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/Bilder Promotion/Dreibholz"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Absolventenfeier 11. Mai 2007" \
-"/winxp/Dokumente und Einstellungen/root3/Eigene Dateien/Eigene Bilder/Bilder Promotion/Absolventenfeier"/*.@(jpg|JPG|jpeg|JPEG) \
+"/home/dreibh/Bilder Promotion/Absolventenfeier"/*.@(jpg|JPG|jpeg|JPEG) \
 $@ \
 --
