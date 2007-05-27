@@ -717,7 +717,7 @@ Block::Block(Presentation*      presentation,
    ID = ++OwnerPresentation->LastBlockID;
    snprintf((char*)&Title, sizeof(Title), "%s", blockTitle);
    safestrcpy((char*)&Description, blockDescription, sizeof(Description));
-   snprintf((char*)&DirectoryName, sizeof(DirectoryName), "block-%04u", ID);
+   snprintf((char*)&DirectoryName, sizeof(DirectoryName), "block-%04u", (unsigned int)ID);
    safestrcpy((char*)&OriginalDirectory, "original", sizeof(OriginalDirectory));
    safestrcpy((char*)&FullsizeDirectory, "fullsize", sizeof(FullsizeDirectory));
    safestrcpy((char*)&PreviewDirectory, "preview", sizeof(PreviewDirectory));
@@ -794,11 +794,11 @@ Image::Image(Block* block, const char* imageTitle, const char* sourceName)
    ID         = ++OwnerBlock->LastImageID;
 
    char baseName[1024];
-   snprintf((char*)&baseName, sizeof(baseName), "image-%04u", ID);
+   snprintf((char*)&baseName, sizeof(baseName), "image-%04u", (unsigned int)ID);
 
    if(Title[0] == 0x00) {
       if(OwnerBlock->OwnerPresentation->Enumerate) {
-         snprintf((char*)&Title, sizeof(Title), "Image %u", ID);
+         snprintf((char*)&Title, sizeof(Title), "Image %u", (unsigned int)ID);
       }
       else {
          safestrcpy((char*)&Title, extractFileName(sourceName), sizeof(Title));
@@ -829,8 +829,8 @@ Image::Image(Block* block, const char* imageTitle, const char* sourceName)
    snprintf((char*)&OriginalName, sizeof(OriginalName), "%s/%s%s", OwnerBlock->OriginalDirectory, baseName, extension);
    snprintf((char*)&FullsizeName, sizeof(FullsizeName), "%s/%s.jpeg", OwnerBlock->FullsizeDirectory, baseName);
    snprintf((char*)&PreviewName, sizeof(PreviewName), "%s/%s.jpeg", OwnerBlock->PreviewDirectory, baseName);
-   snprintf((char*)&ViewName, sizeof(ViewName), "view-block%04u-%s.html", block->ID, baseName);
-   snprintf((char*)&SlideshowName, sizeof(SlideshowName), "slideshow-block%04u-%s.html", block->ID, baseName);
+   snprintf((char*)&ViewName, sizeof(ViewName), "view-block%04u-%s.html", (unsigned int)block->ID, baseName);
+   snprintf((char*)&SlideshowName, sizeof(SlideshowName), "slideshow-block%04u-%s.html", (unsigned int)block->ID, baseName);
    OriginalWidth  = 0;
    OriginalHeight = 0;
    FullsizeWidth  = 0;
