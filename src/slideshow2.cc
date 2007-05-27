@@ -114,13 +114,13 @@ class Presentation
    bool         IncludeOriginal;
    bool         SkipImageConversion;
 
-   unsigned int Columns;
-   unsigned int PreviewWidth;
-   unsigned int PreviewHeight;
-   unsigned int PreviewQuality;
-   unsigned int FullsizeWidth;
-   unsigned int FullsizeHeight;
-   unsigned int FullsizeQuality;
+   size_t       Columns;
+   size_t       PreviewWidth;
+   size_t       PreviewHeight;
+   size_t       PreviewQuality;
+   size_t       FullsizeWidth;
+   size_t       FullsizeHeight;
+   size_t       FullsizeQuality;
 
    char         InfrastructureDirectory[1024];
    char         MainTitle[1024];
@@ -149,7 +149,7 @@ class Presentation
    char         SlideshowScript[1024];
 
    set<Block*>  BlockSet;
-   unsigned int LastBlockID;
+   size_t       LastBlockID;
 
    private:
    void createSlideshowFrameset(const char* filelistName,
@@ -163,7 +163,7 @@ class Block
    Block(Presentation*      presentation,
          const char*        blockTitle,
          const char*        blockDescription,
-         const unsigned int columns);
+         const size_t           columns);
    void dump();
    void createImages();
    void createDirectories();
@@ -175,8 +175,8 @@ class Block
    public:
    Presentation* OwnerPresentation;
    char          Title[1024];
-   unsigned int  ID;
-   unsigned int  Columns;
+   size_t        ID;
+   size_t        Columns;
    char          Description[1024];
    char          DirectoryName[1024];
    char          OriginalDirectory[1024];
@@ -187,7 +187,7 @@ class Block
    char          SlideshowControl[1024];
 
    set<Image*>   ImageSet;
-   unsigned int  LastImageID;
+   size_t        LastImageID;
 };
 
 class Image
@@ -204,19 +204,19 @@ class Image
    public:
    Block*       OwnerBlock;
    char         Title[1024];
-   unsigned int ID;
+   size_t       ID;
    char         SourceName[1024];
    char         OriginalName[1024];
    char         FullsizeName[1024];
    char         PreviewName[1024];
    char         ViewName[1024];
    char         SlideshowName[1024];
-   unsigned int OriginalWidth;
-   unsigned int OriginalHeight;
-   unsigned int FullsizeWidth;
-   unsigned int FullsizeHeight;
-   unsigned int PreviewWidth;
-   unsigned int PreviewHeight;
+   size_t       OriginalWidth;
+   size_t       OriginalHeight;
+   size_t       FullsizeWidth;
+   size_t       FullsizeHeight;
+   size_t       PreviewWidth;
+   size_t       PreviewHeight;
 };
 
 
@@ -629,8 +629,8 @@ void Presentation::createMainPage()
          }
          os << "<table class=\"previewtable\">" << endl;
 
-         unsigned int row       = 0;
-         unsigned int column    = ~0;
+         size_t           row       = 0;
+         size_t           column    = ~0;
          bool         rowOpened = false;
          set<Image*>::iterator imageIterator = block->ImageSet.begin();
          while(imageIterator != block->ImageSet.end()) {
@@ -711,7 +711,7 @@ void Presentation::createViewPages(const bool showOriginal,
 Block::Block(Presentation*      presentation,
              const char*        blockTitle,
              const char*        blockDescription,
-             const unsigned int columns)
+             const size_t           columns)
 {
    OwnerPresentation = presentation;
    ID = ++OwnerPresentation->LastBlockID;
@@ -1046,7 +1046,7 @@ void createImageTable(Presentation* presentation, int argc, char** argv)
    char*        blockTitle       = "";
    char*        blockDescription = "";
    char*        imageTitle       = "";
-   unsigned int columns          = presentation->Columns;
+   size_t           columns          = presentation->Columns;
 
    for(int i = 1;i < argc;i++) {
       if(strncmp(argv[i], "--", 2)) {
