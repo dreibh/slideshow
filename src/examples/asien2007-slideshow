@@ -1,0 +1,19 @@
+#!/bin/bash
+shopt -s extglob
+
+../slideshow2 \
+--directory=asien2007 \
+--maintitle="Thomas Dreibholz's Reise nach Asien 2007" --maindescription=asien2007-maintitle.html \
+--stylesheet=stylesheet.css \
+--background=background.png \
+--shortcuticon=icon-default.png \
+--slideshow \
+--head=head.html \
+--tail=tail.html \
+--fullsizewidth=1280 \
+--fullsizeheight=960 \
+--enumerate \
+--noindex \
+"/home/dreibh/Desktop/Fotos2007-Druck/Landschaften/Asien"/*.@(jpg|JPG|jpeg|JPEG) \
+$@ \
+--

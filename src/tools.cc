@@ -15,6 +15,7 @@
 
 #include "tools.h"
 
+#include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/time.h>
@@ -107,7 +108,7 @@ void printTimeStamp(FILE* fd)
    const struct tm *timeptr = localtime(&timeStamp);
 
    strftime((char*)&str,sizeof(str),"%d-%b-%Y %H:%M:%S",timeptr);
-   fprintf(fd,str);
+   fputs(str, fd);
    fprintf(fd,".%04d: ",(unsigned int)(microTime % 1000000) / 100);
 }
 

@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/time.h>
@@ -810,8 +811,8 @@ Image::Image(Block* block, const char* imageTitle, const char* sourceName)
 
    snprintf((char*)&SourceName, sizeof(SourceName), "%s", sourceName);
 
-   char extension[1024];
-   char* extPtr = rindex(SourceName, '.');
+   char        extension[1024];
+   const char* extPtr = rindex(SourceName, '.');
    if(extPtr) {
       if(index(extPtr, '/')) {
          extPtr = "";
@@ -1042,11 +1043,11 @@ Presentation* createPresentation(int argc, char** argv)
 
 void createImageTable(Presentation* presentation, int argc, char** argv)
 {
-   Block*       currentBlock     = NULL;
-   char*        blockTitle       = "";
-   char*        blockDescription = "";
-   char*        imageTitle       = "";
-   size_t           columns          = presentation->Columns;
+   Block*      currentBlock     = NULL;
+   const char* blockTitle       = "";
+   const char* blockDescription = "";
+   const char* imageTitle       = "";
+   size_t      columns          = presentation->Columns;
 
    for(int i = 1;i < argc;i++) {
       if(strncmp(argv[i], "--", 2)) {
