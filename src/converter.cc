@@ -22,7 +22,7 @@
  */
 
 #include "tools.h"
-#include <magick/MagickCore.h>
+#include <magick/api.h>
 
 
 #define MIN(a,b) ((a < b) ? (a) : (b))
