@@ -1,0 +1,6 @@
+debian/tmp/usr/share/slideshow/example/demo-slideshow
+debian/tmp/usr/share/slideshow/example/*.html
+debian/tmp/usr/share/slideshow/example/*.css
+debian/tmp/usr/share/slideshow/example/*.png
+debian/tmp/usr/share/slideshow/example/demo-images/*.png
+debian/tmp/usr/share/slideshow/example/demo-images/*.fsf

@@ -1,4 +1,2 @@
 debian/tmp/usr/bin/createslideshow
-debian/tmp/usr/share/slideshow/infrastructure/*.html
-debian/tmp/usr/share/slideshow/infrastructure/*.png
-debian/tmp/usr/share/slideshow/infrastructure/*.js
+debian/tmp/usr/share/man/man8/createslideshow.8
