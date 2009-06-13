@@ -1,4 +1,4 @@
-slideshow (2.1.0-1ubuntu1) karmic; urgency=low
+slideshow (2.1.0-2ubuntu1) karmic; urgency=low
 
   * Initial Debian release (Closes: #xxxxxx).
   * Initial Ubuntu release (LP: #xxxxxx).
