@@ -41,6 +41,10 @@
 using namespace std;
 
 
+#define DEFAULT_SLIDESHOW_INFRASTRUCTURE1 "/usr/local/share/slideshow/infrastructure"
+#define DEFAULT_SLIDESHOW_INFRASTRUCTURE2 "/usr/share/slideshow/infrastructure"
+
+
 // ###### Replace special patterns in string ################################
 string modifyLine(const char* line)
 {
@@ -230,7 +234,7 @@ class Image
 
 
 
-
+// ###### Constructor #######################################################
 Presentation::Presentation()
 {
    Enumerate           = true;
@@ -245,7 +249,23 @@ Presentation::Presentation()
    FullsizeQuality     = 75;
    SkipImageConversion = false;
 
-   safestrcpy((char*)&InfrastructureDirectory, "infrastructure/", sizeof(InfrastructureDirectory));
+   struct stat iStatus;
+   if( (stat("infrastructure", &iStatus) == 0) && (S_ISDIR(iStatus.st_mode)) ) {
+      safestrcpy((char*)&InfrastructureDirectory, "infrastructure/", sizeof(InfrastructureDirectory));
+      puts("local!");
+   }
+   else if( (stat(DEFAULT_SLIDESHOW_INFRASTRUCTURE1, &iStatus) == 0) && (S_ISDIR(iStatus.st_mode)) ) {
+      safestrcpy((char*)&InfrastructureDirectory, DEFAULT_SLIDESHOW_INFRASTRUCTURE1, sizeof(InfrastructureDirectory));
+      puts("DEFAULT!");
+   }
+   else if( (stat(DEFAULT_SLIDESHOW_INFRASTRUCTURE2, &iStatus) == 0) && (S_ISDIR(iStatus.st_mode)) ) {
+      safestrcpy((char*)&InfrastructureDirectory, DEFAULT_SLIDESHOW_INFRASTRUCTURE2, sizeof(InfrastructureDirectory));
+      puts("DEFAULT-2!");
+   }
+   else {
+      puts("----nichts!");
+      safestrcpy((char*)&InfrastructureDirectory, "./", sizeof(InfrastructureDirectory));
+   }
    safestrcpy((char*)&MainTitle, "Slideshow Image Archive", sizeof(MainTitle));
    safestrcpy((char*)&MainDescription, "", sizeof(MainDescription));
    safestrcpy((char*)&DirectoryName, "test-dir", sizeof(DirectoryName));
@@ -265,6 +285,8 @@ Presentation::Presentation()
    }
 }
 
+
+// ###### Dump information ##################################################
 void Presentation::dump()
 {
    cout << "   - Presentation \"" << MainTitle << "\"" << endl
@@ -295,6 +317,8 @@ void Presentation::dump()
    }
 }
 
+
+// ###### Create directories ################################################
 void Presentation::createDirectories()
 {
    makeDir(DirectoryName);
@@ -306,6 +330,7 @@ void Presentation::createDirectories()
 }
 
 
+// ###### Create images #####################################################
 void Presentation::createImages()
 {
    set<Block*>::iterator blockIterator = BlockSet.begin();
@@ -316,6 +341,7 @@ void Presentation::createImages()
 }
 
 
+// ###### Create frameset ###################################################
 void Presentation::createSlideshowFrameset(const char* filelistName,
                                            const char* framesetName,
                                            const char* controlName)
@@ -389,6 +415,7 @@ void Presentation::createSlideshowFrameset(const char* filelistName,
 }
 
 
+// ###### Create slideshow ##################################################
 void Presentation::createSlideshow()
 {
    char str[1024];
@@ -428,6 +455,7 @@ void Presentation::createSlideshow()
 }
 
 
+// ###### Create infrastructure files #######################################
 void Presentation::createInfrastructureFiles()
 {
    int i = strlen(InfrastructureDirectory);
@@ -518,6 +546,7 @@ void Presentation::createInfrastructureFiles()
 }
 
 
+// ###### Create redirect page ##############################################
 void Presentation::createRedirectPage()
 {
    char str[1024];
@@ -554,6 +583,7 @@ void Presentation::createRedirectPage()
 }
 
 
+// ###### Create main page ##################################################
 void Presentation::createMainPage()
 {
    char str[1024];
@@ -695,6 +725,7 @@ void Presentation::createMainPage()
 }
 
 
+// ###### Create views pages ################################################
 void Presentation::createViewPages(const bool showOriginal,
                                    const bool forSlideshow)
 {
@@ -717,6 +748,8 @@ void Presentation::createViewPages(const bool showOriginal,
 }
 
 
+
+// ###### Constructor #######################################################
 Block::Block(Presentation*      presentation,
              const char*        blockTitle,
              const char*        blockDescription,
@@ -738,6 +771,8 @@ Block::Block(Presentation*      presentation,
    OwnerPresentation->BlockSet.insert(this);
 }
 
+
+// ###### Dump block information ############################################
 void Block::dump()
 {
    cout << "      + Block #" << ID << " \"" << Title << "\"" << endl
@@ -753,6 +788,7 @@ void Block::dump()
 }
 
 
+// ###### Create block directories ##########################################
 void Block::createDirectories()
 {
    makeDir(OwnerPresentation->DirectoryName, DirectoryName);
@@ -762,6 +798,7 @@ void Block::createDirectories()
 }
 
 
+// ###### Create block images ###############################################
 void Block::createImages()
 {
    set<Image*>::iterator imageIterator = ImageSet.begin();
@@ -772,6 +809,7 @@ void Block::createImages()
 }
 
 
+// ###### Create block view pages ###########################################
 void Block::createViewPages(const Block* prevBlock,
                             const Block* nextBlock,
                             const bool   showOriginal,
@@ -797,6 +835,7 @@ void Block::createViewPages(const Block* prevBlock,
 
 
 
+// ###### Constructor #######################################################
 Image::Image(Block* block, const char* imageTitle, const char* sourceName)
 {
    OwnerBlock = block;
@@ -849,6 +888,8 @@ Image::Image(Block* block, const char* imageTitle, const char* sourceName)
    OwnerBlock->ImageSet.insert(this);
 }
 
+
+// ###### Dump image information ############################################
 void Image::dump()
 {
    cout << "         % Image #" << ID << " \"" << Title << "\"" << endl
@@ -861,6 +902,7 @@ void Image::dump()
 }
 
 
+// ###### Dump image view page ##############################################
 void Image::createViewPage(const Block* prevBlock, const Block* nextBlock,
                            const Image* prevImage, const Image* nextImage,
                            const bool   showOriginal,
@@ -991,6 +1033,8 @@ void Image::createViewPage(const Block* prevBlock, const Block* nextBlock,
 }
 
 
+
+// ###### Create presentation ###############################################
 Presentation* createPresentation(int argc, char** argv)
 {
    Presentation* presentation = new Presentation;
@@ -1049,6 +1093,7 @@ Presentation* createPresentation(int argc, char** argv)
 }
 
 
+// ###### Create image table ################################################
 void createImageTable(Presentation* presentation, int argc, char** argv)
 {
    Block*      currentBlock     = NULL;
@@ -1138,6 +1183,7 @@ void createImageTable(Presentation* presentation, int argc, char** argv)
 }
 
 
+// ###### Create image ######################################################
 void Image::createImage()
 {
    char originalImageName[1024];
@@ -1188,6 +1234,7 @@ void Image::createImage()
 
 
 
+// ###### Main program ######################################################
 int main(int argc, char** argv)
 {
    cout << "- Creating Presentation..." << endl;
