@@ -2,6 +2,8 @@ SUBDIRS = infrastructure example
 
 bin_PROGRAMS = createslideshow
 
+dist_man_MANS = createslideshow.8
+
 EXTRA_DIST =
 
 

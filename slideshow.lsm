@@ -1,0 +1,19 @@
+Begin4
+Title:          slideshow
+Version:        2.1.0
+Entered-date:   2009-06-13
+Description:    SlideShow is a command-line tool to generate
+                standards-compliant XHTML-1.1 presentations from a set of
+                image files. It can be used to easily generate online photo
+                albums, including JavaScript-based slideshows. Particularly,
+                this program is intended to be also used in scripts, which
+                automatically create or update slideshows.
+Keywords:       Slideshow, HTML, XHTML, JavaScript
+Author:         dreibh@iem.uni-due.de (Thomas Dreibholz)
+Maintained-by:  dreibh@iem.uni-due.de (Thomas Dreibholz)
+Primary-site:   http://www.iem.uni-due.de/~dreibh/slideshow
+                316 kB download/subnetcalc-2.1.0.tar.gz
+Original-site:  http://www.iem.uni-due.de/~dreibh/slideshow
+Platforms:      Linux, FreeBSD, MacOS, Solaris
+Copying-policy: GPL
+End
