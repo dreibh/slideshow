@@ -10,3 +10,6 @@ player_play.png \
 rotate.png \
 slideshowcontrol.html \
 slideshow.js
+
+infrastructuredir = $(pkgdatadir)/infrastructure
+infrastructure_DATA = $(EXTRA_DIST)

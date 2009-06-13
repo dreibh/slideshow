@@ -10,3 +10,7 @@ demo-slideshow \
 demo-tail.html \
 demo-head.html \
 demo-stylesheet.css
+
+
+exampledir = $(pkgdatadir)/example
+example_DATA = $(EXTRA_DIST)

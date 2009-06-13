@@ -14,3 +14,7 @@ alpha07.fsf \
 alpha07.png \
 alpha08.fsf \
 alpha08.png
+
+
+exampleimagesdir = $(pkgdatadir)/example/demo-images
+exampleimages_DATA = $(EXTRA_DIST)

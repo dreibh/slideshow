@@ -1,14 +1,10 @@
-SUBDIRS = demo infrastructure
+SUBDIRS = infrastructure example
 
-noinst_PROGRAMS = slideshow2 getsize
+bin_PROGRAMS = createslideshow
 
 EXTRA_DIST =
 
 
-slideshow2_SOURCES  = slideshow2.cc tools.cc tools.h converter.cc converter.h
-slideshow2_CXXFLAGS = $(MAGICK_CXXFLAGS)
-slideshow2_LDADD    = $(MAGICK_LIBS)
-
-getsize_SOURCES  = getsize.cc
-getsize_CXXFLAGS = $(MAGICK_CXXFLAGS)
-getsize_LDADD    = $(MAGICK_LIBS)
+createslideshow_SOURCES  = createslideshow.cc tools.cc tools.h converter.cc converter.h
+createslideshow_CXXFLAGS = $(MAGICK_CXXFLAGS)
+createslideshow_LDADD    = $(MAGICK_LIBS)
