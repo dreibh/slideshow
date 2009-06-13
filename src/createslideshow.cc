@@ -252,18 +252,14 @@ Presentation::Presentation()
    struct stat iStatus;
    if( (stat("infrastructure", &iStatus) == 0) && (S_ISDIR(iStatus.st_mode)) ) {
       safestrcpy((char*)&InfrastructureDirectory, "infrastructure/", sizeof(InfrastructureDirectory));
-      puts("local!");
    }
    else if( (stat(DEFAULT_SLIDESHOW_INFRASTRUCTURE1, &iStatus) == 0) && (S_ISDIR(iStatus.st_mode)) ) {
       safestrcpy((char*)&InfrastructureDirectory, DEFAULT_SLIDESHOW_INFRASTRUCTURE1, sizeof(InfrastructureDirectory));
-      puts("DEFAULT!");
    }
    else if( (stat(DEFAULT_SLIDESHOW_INFRASTRUCTURE2, &iStatus) == 0) && (S_ISDIR(iStatus.st_mode)) ) {
       safestrcpy((char*)&InfrastructureDirectory, DEFAULT_SLIDESHOW_INFRASTRUCTURE2, sizeof(InfrastructureDirectory));
-      puts("DEFAULT-2!");
    }
    else {
-      puts("----nichts!");
       safestrcpy((char*)&InfrastructureDirectory, "./", sizeof(InfrastructureDirectory));
    }
    safestrcpy((char*)&MainTitle, "Slideshow Image Archive", sizeof(MainTitle));
