@@ -1,6 +1,6 @@
-slideshow (2.1.0-4ubuntu1) karmic; urgency=low
+slideshow (2.1.0-5ubuntu1) karmic; urgency=low
 
   * Initial Debian release (Closes: #xxxxxx).
   * Initial Ubuntu release (LP: #xxxxxx).
 
- -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Sat, 20 Jun 2009 12:23:32 +0200
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Sat, 20 Jun 2009 19:23:32 +0200
