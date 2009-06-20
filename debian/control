@@ -6,7 +6,7 @@ Homepage: http://www.iem.uni-due.de/~dreibh/slideshow/
 Build-Depends: debhelper (>= 5), autotools-dev, libmagick++-dev
 Standards-Version: 3.8.1
 
-Package: slideshow-infrastructure
+Package: slideshow-core
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends:
@@ -17,7 +17,7 @@ Description: SlideShow infrastructure files
 
 Package: slideshow
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends} slideshow-infrastructure
+Depends: ${shlibs:Depends}, ${misc:Depends} slideshow-core
 Recommends:
 Description: XHTML/JavaScript Slideshow Generator
  SlideShow is a command-line tool to generate
