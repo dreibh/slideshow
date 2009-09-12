@@ -1,0 +1,1030 @@
+------------------------------------------------------------------------
+r315 | dreibh | 2009-06-20 19:23:58 +0200 (Sat, 20 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian/rules
+
+
+------------------------------------------------------------------------
+r314 | dreibh | 2009-06-20 12:27:17 +0200 (Sat, 20 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian/control
+
+
+------------------------------------------------------------------------
+r300 | dreibh | 2009-06-13 19:20:59 +0200 (Sat, 13 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/slideshow/make-ppa
+
+
+------------------------------------------------------------------------
+r298 | dreibh | 2009-06-13 19:09:56 +0200 (Sat, 13 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/slideshow/debian/changelog
+
+
+------------------------------------------------------------------------
+r296 | dreibh | 2009-06-13 19:02:07 +0200 (Sat, 13 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/slideshow/src/converter.cc
+
+
+------------------------------------------------------------------------
+r293 | dreibh | 2009-06-13 16:50:31 +0200 (Sat, 13 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/slideshow/src/createslideshow.cc
+
+
+------------------------------------------------------------------------
+r292 | dreibh | 2009-06-13 16:05:24 +0200 (Sat, 13 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian/control
+
+
+------------------------------------------------------------------------
+r291 | dreibh | 2009-06-13 15:34:30 +0200 (Sat, 13 Jun 2009) | 3 lines
+Changed paths:
+   M /trunk/slideshow/src/converter.cc
+   M /trunk/slideshow/src/createslideshow.cc
+   M /trunk/slideshow/src/example/demo-background.png
+   M /trunk/slideshow/src/example/demo-head.html
+   M /trunk/slideshow/src/example/demo-icon.png
+   M /trunk/slideshow/src/example/demo-slideshow
+   M /trunk/slideshow/src/example/demo-tail.html
+
+- Updated example.
+- Updated include for ImageMagick.
+
+------------------------------------------------------------------------
+r288 | dreibh | 2009-06-13 14:11:01 +0200 (Sat, 13 Jun 2009) | 1 line
+Changed paths:
+   D /trunk/slideshow/Makefile
+
+
+------------------------------------------------------------------------
+r287 | dreibh | 2009-06-13 14:10:01 +0200 (Sat, 13 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/slideshow/Makefile
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/debian/control
+   A /trunk/slideshow/debian/slideshow-example.install
+   A /trunk/slideshow/debian/slideshow-infrastructure.install (from /trunk/slideshow/debian/slideshow.install:286)
+   M /trunk/slideshow/debian/slideshow.install
+
+Updated Debian/Ubuntu files.
+
+------------------------------------------------------------------------
+r286 | dreibh | 2009-06-13 13:37:08 +0200 (Sat, 13 Jun 2009) | 2 lines
+Changed paths:
+   A /trunk/slideshow/clean-deb (from /trunk/subnetcalc/clean-deb:278)
+   A /trunk/slideshow/debian (from /trunk/subnetcalc/debian:278)
+   R /trunk/slideshow/debian/changelog (from /trunk/subnetcalc/debian/changelog:280)
+   R /trunk/slideshow/debian/control (from /trunk/subnetcalc/debian/control:279)
+   M /trunk/slideshow/debian/copyright
+   R /trunk/slideshow/debian/rules (from /trunk/subnetcalc/debian/rules:280)
+   A /trunk/slideshow/debian/slideshow.install (from /trunk/subnetcalc/debian/subnetcalc.install:278)
+   A /trunk/slideshow/debian/slideshow.manpages (from /trunk/subnetcalc/debian/subnetcalc.manpages:278)
+   D /trunk/slideshow/debian/subnetcalc.install
+   D /trunk/slideshow/debian/subnetcalc.manpages
+   M /trunk/slideshow/debian/watch
+   A /trunk/slideshow/debian.conf (from /trunk/subnetcalc/debian.conf:278)
+   A /trunk/slideshow/make-deb (from /trunk/subnetcalc/make-deb:278)
+   A /trunk/slideshow/make-ppa (from /trunk/subnetcalc/make-ppa:278)
+   A /trunk/slideshow/slideshow.lsm
+   M /trunk/slideshow/src/Makefile.am
+   M /trunk/slideshow/src/converter.cc
+   M /trunk/slideshow/src/converter.h
+   A /trunk/slideshow/src/createslideshow.8
+   M /trunk/slideshow/src/createslideshow.cc
+   M /trunk/slideshow/src/tools.cc
+   M /trunk/slideshow/src/tools.h
+
+Initial version of Debian/Ubuntu files.
+
+------------------------------------------------------------------------
+r285 | dreibh | 2009-06-13 13:14:07 +0200 (Sat, 13 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/slideshow/AUTHORS
+   M /trunk/slideshow/COPYING
+   M /trunk/slideshow/Makefile
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/src/Makefile.am
+   M /trunk/slideshow/src/converter.cc
+   M /trunk/slideshow/src/converter.h
+   A /trunk/slideshow/src/createslideshow.cc (from /trunk/slideshow/src/slideshow2.cc:278)
+   D /trunk/slideshow/src/demo
+   A /trunk/slideshow/src/example (from /trunk/slideshow/src/demo:278)
+   M /trunk/slideshow/src/example/Makefile.am
+   M /trunk/slideshow/src/example/demo-images/Makefile.am
+   D /trunk/slideshow/src/examples
+   D /trunk/slideshow/src/getsize.cc
+   M /trunk/slideshow/src/infrastructure/Makefile.am
+   D /trunk/slideshow/src/slideshow2.cc
+   A /trunk/slideshow/src/tests (from /trunk/slideshow/src/examples:278)
+   M /trunk/slideshow/src/tools.cc
+   M /trunk/slideshow/src/tools.h
+
+Updated Automake files and cleaned up the directory.
+
+------------------------------------------------------------------------
+r188 | dreibh | 2009-05-12 11:59:03 +0200 (Tue, 12 May 2009) | 1 line
+Changed paths:
+   M /trunk/slideshow/Makefile
+
+
+------------------------------------------------------------------------
+r150 | dreibh | 2009-01-31 10:37:46 +0100 (Sat, 31 Jan 2009) | 1 line
+Changed paths:
+   A /trunk/slideshow/src/examples/asien2007-maintitle.html
+   A /trunk/slideshow/src/examples/asien2007-slideshow
+   M /trunk/slideshow/src/slideshow2.cc
+   M /trunk/slideshow/src/tools.cc
+
+
+------------------------------------------------------------------------
+r130 | dreibh | 2007-05-27 21:36:26 +0200 (Sun, 27 May 2007) | 1 line
+Changed paths:
+   M /trunk/slideshow/src/examples/promotion-slideshow
+
+
+------------------------------------------------------------------------
+r129 | dreibh | 2007-05-27 21:32:59 +0200 (Sun, 27 May 2007) | 1 line
+Changed paths:
+   M /trunk/slideshow/src/slideshow2.cc
+
+
+------------------------------------------------------------------------
+r128 | dreibh | 2007-05-27 21:31:45 +0200 (Sun, 27 May 2007) | 1 line
+Changed paths:
+   M /trunk/slideshow/src/converter.cc
+   M /trunk/slideshow/src/converter.h
+   M /trunk/slideshow/src/slideshow2.cc
+
+
+------------------------------------------------------------------------
+r127 | dreibh | 2007-05-27 21:21:09 +0200 (Sun, 27 May 2007) | 1 line
+Changed paths:
+   M /trunk/slideshow/src/examples/promotion-slideshow
+
+
+------------------------------------------------------------------------
+r126 | dreibh | 2007-05-27 20:57:14 +0200 (Sun, 27 May 2007) | 1 line
+Changed paths:
+   M /trunk/slideshow/src/examples/head.html
+   A /trunk/slideshow/src/examples/promotion-maintitle.html
+   A /trunk/slideshow/src/examples/promotion-slideshow
+   M /trunk/slideshow/src/examples/tail.html
+
+
+------------------------------------------------------------------------
+r118 | dreibh | 2006-09-01 10:12:16 +0200 (Fri, 01 Sep 2006) | 1 line
+Changed paths:
+   M /trunk/slideshow/Makefile
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/src/demo/Makefile.am
+
+
+------------------------------------------------------------------------
+r117 | dreibh | 2006-08-30 10:12:35 +0200 (Wed, 30 Aug 2006) | 1 line
+Changed paths:
+   A /trunk/slideshow/src/demo/demo-section1.html
+   A /trunk/slideshow/src/demo/demo-section2.html
+   M /trunk/slideshow/src/demo/demo-slideshow
+   M /trunk/slideshow/src/slideshow2.cc
+
+
+------------------------------------------------------------------------
+r116 | dreibh | 2006-08-29 19:45:44 +0200 (Tue, 29 Aug 2006) | 1 line
+Changed paths:
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/src/Makefile.am
+   M /trunk/slideshow/src/demo/Makefile.am
+   A /trunk/slideshow/src/demo/demo-icon.png
+   M /trunk/slideshow/src/demo/demo-slideshow
+   A /trunk/slideshow/src/infrastructure/Makefile.am
+   M /trunk/slideshow/src/slideshow2.cc
+
+
+------------------------------------------------------------------------
+r115 | dreibh | 2006-08-29 11:03:32 +0200 (Tue, 29 Aug 2006) | 1 line
+Changed paths:
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/src/Makefile.am
+   M /trunk/slideshow/src/demo/Makefile.am
+   A /trunk/slideshow/src/demo/demo-images/Makefile.am
+
+
+------------------------------------------------------------------------
+r114 | dreibh | 2006-08-22 14:41:26 +0200 (Tue, 22 Aug 2006) | 1 line
+Changed paths:
+   M /trunk/slideshow/src/converter.cc
+   M /trunk/slideshow/src/converter.h
+   M /trunk/slideshow/src/demo/demo-maintitle.html
+   M /trunk/slideshow/src/demo/demo-slideshow
+   M /trunk/slideshow/src/demo/demo-stylesheet.css
+   M /trunk/slideshow/src/getsize.cc
+   D /trunk/slideshow/src/slideshow.cc
+   M /trunk/slideshow/src/tools.cc
+   M /trunk/slideshow/src/tools.h
+
+
+------------------------------------------------------------------------
+r113 | dreibh | 2006-08-22 14:12:19 +0200 (Tue, 22 Aug 2006) | 1 line
+Changed paths:
+   M /trunk/slideshow/src/converter.cc
+   M /trunk/slideshow/src/converter.h
+   D /trunk/slideshow/src/examples/slideshowcontrol.html
+   M /trunk/slideshow/src/getsize.cc
+   A /trunk/slideshow/src/infrastructure/slideshowcontrol.html (from /trunk/slideshow/src/examples/slideshowcontrol.html:112)
+   M /trunk/slideshow/src/slideshow.cc
+   M /trunk/slideshow/src/slideshow2.cc
+   M /trunk/slideshow/src/tools.cc
+   M /trunk/slideshow/src/tools.h
+
+
+------------------------------------------------------------------------
+r112 | dreibh | 2006-08-22 14:07:05 +0200 (Tue, 22 Aug 2006) | 1 line
+Changed paths:
+   D /trunk/slideshow/Tux.jpeg
+   D /trunk/slideshow/a93-27dez2003-maintitle.html
+   D /trunk/slideshow/a93-27dez2003-slideshow
+   D /trunk/slideshow/a93-head.html
+   D /trunk/slideshow/a93-tail.html
+   D /trunk/slideshow/aus2005-maintitle.html
+   D /trunk/slideshow/aus2005-slideshow
+   D /trunk/slideshow/background.png
+   D /trunk/slideshow/background_white.png
+   D /trunk/slideshow/bakeoff4-maintitle.html
+   D /trunk/slideshow/bakeoff4-slideshow
+   D /trunk/slideshow/bakeoff5-maintitle.html
+   D /trunk/slideshow/bakeoff5-slideshow
+   D /trunk/slideshow/bakeoff6-maintitle.html
+   D /trunk/slideshow/bakeoff6-slideshow
+   D /trunk/slideshow/bakeoff7-maintitle.html
+   D /trunk/slideshow/bakeoff7-slideshow
+   D /trunk/slideshow/bonn.css
+   D /trunk/slideshow/convert-to-display
+   D /trunk/slideshow/essen.css
+   D /trunk/slideshow/head.html
+   D /trunk/slideshow/icon-abschluss93.png
+   D /trunk/slideshow/icon-default.png
+   D /trunk/slideshow/ict2003-maintitle.html
+   D /trunk/slideshow/ict2003-slideshow
+   D /trunk/slideshow/ietf61-maintitle.html
+   D /trunk/slideshow/ietf61-slideshow
+   D /trunk/slideshow/imageviewer.js
+   D /trunk/slideshow/infrastructure
+   D /trunk/slideshow/lca2003-maintitle.html
+   D /trunk/slideshow/lca2003-slideshow
+   D /trunk/slideshow/lcn2002-maintitle.html
+   D /trunk/slideshow/lcn2002-slideshow
+   D /trunk/slideshow/logo-mit-gimp.txt
+   D /trunk/slideshow/msn2003-maintitle.html
+   D /trunk/slideshow/msn2003-slideshow
+   D /trunk/slideshow/msn2004-maintitle.html
+   D /trunk/slideshow/msn2004-slideshow
+   D /trunk/slideshow/nz2005-maintitle.html
+   D /trunk/slideshow/nz2005-slideshow
+   D /trunk/slideshow/regenerate-all-slideshows
+   D /trunk/slideshow/slideshow.js
+   D /trunk/slideshow/slideshowcontrol.html
+   A /trunk/slideshow/src/demo
+   A /trunk/slideshow/src/demo/Makefile.am
+   A /trunk/slideshow/src/demo/demo-background.png
+   A /trunk/slideshow/src/demo/demo-head.html
+   A /trunk/slideshow/src/demo/demo-images
+   A /trunk/slideshow/src/demo/demo-images/alpha01.fsf
+   A /trunk/slideshow/src/demo/demo-images/alpha01.png
+   A /trunk/slideshow/src/demo/demo-images/alpha02.fsf
+   A /trunk/slideshow/src/demo/demo-images/alpha02.png
+   A /trunk/slideshow/src/demo/demo-images/alpha03.fsf
+   A /trunk/slideshow/src/demo/demo-images/alpha03.png
+   A /trunk/slideshow/src/demo/demo-images/alpha04.fsf
+   A /trunk/slideshow/src/demo/demo-images/alpha04.png
+   A /trunk/slideshow/src/demo/demo-images/alpha05.fsf
+   A /trunk/slideshow/src/demo/demo-images/alpha05.png
+   A /trunk/slideshow/src/demo/demo-images/alpha06.fsf
+   A /trunk/slideshow/src/demo/demo-images/alpha06.png
+   A /trunk/slideshow/src/demo/demo-images/alpha07.fsf
+   A /trunk/slideshow/src/demo/demo-images/alpha07.png
+   A /trunk/slideshow/src/demo/demo-images/alpha08.fsf
+   A /trunk/slideshow/src/demo/demo-images/alpha08.png
+   A /trunk/slideshow/src/demo/demo-maintitle.html
+   A /trunk/slideshow/src/demo/demo-slideshow
+   A /trunk/slideshow/src/demo/demo-stylesheet.css
+   A /trunk/slideshow/src/demo/demo-tail.html
+   A /trunk/slideshow/src/examples
+   A /trunk/slideshow/src/examples/Tux.jpeg (from /trunk/slideshow/Tux.jpeg:110)
+   A /trunk/slideshow/src/examples/a93-27dez2003-maintitle.html (from /trunk/slideshow/a93-27dez2003-maintitle.html:110)
+   A /trunk/slideshow/src/examples/a93-27dez2003-slideshow (from /trunk/slideshow/a93-27dez2003-slideshow:110)
+   A /trunk/slideshow/src/examples/a93-head.html (from /trunk/slideshow/a93-head.html:110)
+   A /trunk/slideshow/src/examples/a93-tail.html (from /trunk/slideshow/a93-tail.html:110)
+   A /trunk/slideshow/src/examples/aus2005-maintitle.html (from /trunk/slideshow/aus2005-maintitle.html:110)
+   A /trunk/slideshow/src/examples/aus2005-slideshow (from /trunk/slideshow/aus2005-slideshow:110)
+   A /trunk/slideshow/src/examples/background.png (from /trunk/slideshow/background.png:110)
+   A /trunk/slideshow/src/examples/background_white.png (from /trunk/slideshow/background_white.png:110)
+   A /trunk/slideshow/src/examples/bakeoff4-maintitle.html (from /trunk/slideshow/bakeoff4-maintitle.html:110)
+   A /trunk/slideshow/src/examples/bakeoff4-slideshow (from /trunk/slideshow/bakeoff4-slideshow:110)
+   A /trunk/slideshow/src/examples/bakeoff5-maintitle.html (from /trunk/slideshow/bakeoff5-maintitle.html:110)
+   A /trunk/slideshow/src/examples/bakeoff5-slideshow (from /trunk/slideshow/bakeoff5-slideshow:110)
+   A /trunk/slideshow/src/examples/bakeoff6-maintitle.html (from /trunk/slideshow/bakeoff6-maintitle.html:110)
+   A /trunk/slideshow/src/examples/bakeoff6-slideshow (from /trunk/slideshow/bakeoff6-slideshow:110)
+   A /trunk/slideshow/src/examples/bakeoff7-maintitle.html (from /trunk/slideshow/bakeoff7-maintitle.html:110)
+   A /trunk/slideshow/src/examples/bakeoff7-slideshow (from /trunk/slideshow/bakeoff7-slideshow:110)
+   A /trunk/slideshow/src/examples/bonn.css (from /trunk/slideshow/bonn.css:110)
+   A /trunk/slideshow/src/examples/convert-to-display (from /trunk/slideshow/convert-to-display:110)
+   A /trunk/slideshow/src/examples/essen.css (from /trunk/slideshow/essen.css:110)
+   A /trunk/slideshow/src/examples/head.html (from /trunk/slideshow/head.html:110)
+   A /trunk/slideshow/src/examples/icon-abschluss93.png (from /trunk/slideshow/icon-abschluss93.png:110)
+   A /trunk/slideshow/src/examples/icon-default.png (from /trunk/slideshow/icon-default.png:110)
+   A /trunk/slideshow/src/examples/ict2003-maintitle.html (from /trunk/slideshow/ict2003-maintitle.html:110)
+   A /trunk/slideshow/src/examples/ict2003-slideshow (from /trunk/slideshow/ict2003-slideshow:110)
+   A /trunk/slideshow/src/examples/ietf61-maintitle.html (from /trunk/slideshow/ietf61-maintitle.html:110)
+   A /trunk/slideshow/src/examples/ietf61-slideshow (from /trunk/slideshow/ietf61-slideshow:110)
+   A /trunk/slideshow/src/examples/lca2003-maintitle.html (from /trunk/slideshow/lca2003-maintitle.html:110)
+   A /trunk/slideshow/src/examples/lca2003-slideshow (from /trunk/slideshow/lca2003-slideshow:110)
+   A /trunk/slideshow/src/examples/lcn2002-maintitle.html (from /trunk/slideshow/lcn2002-maintitle.html:110)
+   A /trunk/slideshow/src/examples/lcn2002-slideshow (from /trunk/slideshow/lcn2002-slideshow:110)
+   A /trunk/slideshow/src/examples/logo-mit-gimp.txt (from /trunk/slideshow/logo-mit-gimp.txt:110)
+   A /trunk/slideshow/src/examples/msn2003-maintitle.html (from /trunk/slideshow/msn2003-maintitle.html:110)
+   A /trunk/slideshow/src/examples/msn2003-slideshow (from /trunk/slideshow/msn2003-slideshow:110)
+   A /trunk/slideshow/src/examples/msn2004-maintitle.html (from /trunk/slideshow/msn2004-maintitle.html:110)
+   A /trunk/slideshow/src/examples/msn2004-slideshow (from /trunk/slideshow/msn2004-slideshow:110)
+   A /trunk/slideshow/src/examples/nz2005-maintitle.html (from /trunk/slideshow/nz2005-maintitle.html:110)
+   A /trunk/slideshow/src/examples/nz2005-slideshow (from /trunk/slideshow/nz2005-slideshow:110)
+   A /trunk/slideshow/src/examples/regenerate-all-slideshows (from /trunk/slideshow/regenerate-all-slideshows:110)
+   A /trunk/slideshow/src/examples/slideshowcontrol.html (from /trunk/slideshow/slideshowcontrol.html:110)
+   A /trunk/slideshow/src/examples/stylesheet.css (from /trunk/slideshow/stylesheet.css:110)
+   A /trunk/slideshow/src/examples/tail.html (from /trunk/slideshow/tail.html:110)
+   A /trunk/slideshow/src/examples/test-maintitle.html (from /trunk/slideshow/test-maintitle.html:110)
+   A /trunk/slideshow/src/examples/test-slideshow (from /trunk/slideshow/test-slideshow:110)
+   A /trunk/slideshow/src/examples/test.html (from /trunk/slideshow/test.html:110)
+   A /trunk/slideshow/src/examples/valid-html401.png (from /trunk/slideshow/valid-html401.png:110)
+   A /trunk/slideshow/src/examples/valid-xhtml11.png (from /trunk/slideshow/valid-xhtml11.png:110)
+   A /trunk/slideshow/src/examples/vcss.png (from /trunk/slideshow/vcss.png:110)
+   A /trunk/slideshow/src/examples/wiehl.css (from /trunk/slideshow/wiehl.css:110)
+   A /trunk/slideshow/src/infrastructure (from /trunk/slideshow/infrastructure:110)
+   A /trunk/slideshow/src/infrastructure/imageviewer.js (from /trunk/slideshow/imageviewer.js:110)
+   A /trunk/slideshow/src/infrastructure/slideshow.js (from /trunk/slideshow/slideshow.js:110)
+   A /trunk/slideshow/src/run-test (from /trunk/slideshow/test-slideshow2:110)
+   M /trunk/slideshow/src/slideshow2.cc
+   D /trunk/slideshow/stylesheet.css
+   D /trunk/slideshow/tail.html
+   D /trunk/slideshow/test-maintitle.html
+   D /trunk/slideshow/test-slideshow
+   D /trunk/slideshow/test-slideshow2
+   D /trunk/slideshow/test.html
+   D /trunk/slideshow/valid-html401.png
+   D /trunk/slideshow/valid-xhtml11.png
+   D /trunk/slideshow/vcss.png
+   D /trunk/slideshow/wiehl.css
+
+
+------------------------------------------------------------------------
+r111 | dreibh | 2006-08-22 13:37:43 +0200 (Tue, 22 Aug 2006) | 1 line
+Changed paths:
+   A /trunk/slideshow/AUTHORS
+   A /trunk/slideshow/COPYING
+   A /trunk/slideshow/ChangeLog
+   A /trunk/slideshow/INSTALL
+   M /trunk/slideshow/Makefile
+   A /trunk/slideshow/Makefile.am
+   A /trunk/slideshow/NEWS
+   A /trunk/slideshow/README
+   A /trunk/slideshow/autogen.sh
+   A /trunk/slideshow/bootstrap
+   A /trunk/slideshow/configure.in
+   D /trunk/slideshow/converter.cc
+   D /trunk/slideshow/converter.h
+   D /trunk/slideshow/getsize.cc
+   D /trunk/slideshow/slideshow.cc
+   D /trunk/slideshow/slideshow2.cc
+   A /trunk/slideshow/src
+   A /trunk/slideshow/src/Makefile.am
+   A /trunk/slideshow/src/converter.cc (from /trunk/slideshow/converter.cc:110)
+   A /trunk/slideshow/src/converter.h (from /trunk/slideshow/converter.h:110)
+   A /trunk/slideshow/src/getsize.cc (from /trunk/slideshow/getsize.cc:110)
+   A /trunk/slideshow/src/slideshow.cc (from /trunk/slideshow/slideshow.cc:110)
+   A /trunk/slideshow/src/slideshow2.cc (from /trunk/slideshow/slideshow2.cc:110)
+   A /trunk/slideshow/src/tools.cc (from /trunk/slideshow/tools.cc:110)
+   A /trunk/slideshow/src/tools.h (from /trunk/slideshow/tools.h:110)
+   D /trunk/slideshow/tools.cc
+   D /trunk/slideshow/tools.h
+
+
+------------------------------------------------------------------------
+r110 | dreibh | 2006-08-22 12:23:29 +0200 (Tue, 22 Aug 2006) | 1 line
+Changed paths:
+   M /trunk/slideshow/nz2005-slideshow
+
+
+------------------------------------------------------------------------
+r108 | dreibh | 2005-12-20 14:53:41 +0100 (Tue, 20 Dec 2005) | 1 line
+Changed paths:
+   R /trunk/slideshow/Tux.jpeg
+
+
+------------------------------------------------------------------------
+r107 | dreibh | 2005-12-20 14:49:31 +0100 (Tue, 20 Dec 2005) | 1 line
+Changed paths:
+   M /trunk/slideshow/Tux.jpeg
+   M /trunk/slideshow/getsize.cc
+   M /trunk/slideshow/imageviewer.js
+   M /trunk/slideshow/nz2005-slideshow
+   M /trunk/slideshow/slideshow.cc
+   M /trunk/slideshow/slideshow.js
+
+
+------------------------------------------------------------------------
+r106 | dreibh | 2005-12-19 12:36:59 +0100 (Mon, 19 Dec 2005) | 1 line
+Changed paths:
+   R /trunk/slideshow/background.png
+   R /trunk/slideshow/background_white.png
+   R /trunk/slideshow/icon-abschluss93.png
+   R /trunk/slideshow/icon-default.png
+   R /trunk/slideshow/valid-html401.png
+   R /trunk/slideshow/valid-xhtml11.png
+   R /trunk/slideshow/vcss.png
+
+
+------------------------------------------------------------------------
+r105 | dreibh | 2005-12-19 12:16:29 +0100 (Mon, 19 Dec 2005) | 1 line
+Changed paths:
+   R /trunk/slideshow/infrastructure/1leftarrow.png
+   R /trunk/slideshow/infrastructure/1rightarrow.png
+   R /trunk/slideshow/infrastructure/1uparrow.png
+   R /trunk/slideshow/infrastructure/2leftarrow.png
+   R /trunk/slideshow/infrastructure/2rightarrow.png
+   R /trunk/slideshow/infrastructure/player_pause.png
+   R /trunk/slideshow/infrastructure/player_play.png
+   R /trunk/slideshow/infrastructure/rotate.png
+
+
+------------------------------------------------------------------------
+r104 | dreibh | 2005-12-19 12:15:07 +0100 (Mon, 19 Dec 2005) | 1 line
+Changed paths:
+   M /trunk/slideshow/infrastructure/1leftarrow.png
+   M /trunk/slideshow/infrastructure/1rightarrow.png
+   M /trunk/slideshow/infrastructure/1uparrow.png
+   M /trunk/slideshow/infrastructure/2leftarrow.png
+   M /trunk/slideshow/infrastructure/2rightarrow.png
+   M /trunk/slideshow/infrastructure/player_pause.png
+   M /trunk/slideshow/infrastructure/player_play.png
+   M /trunk/slideshow/infrastructure/rotate.png
+
+
+------------------------------------------------------------------------
+r103 | dreibh | 2005-12-19 09:41:13 +0100 (Mon, 19 Dec 2005) | 1 line
+Changed paths:
+   A /trunk/slideshow/aus2005-maintitle.html
+   A /trunk/slideshow/aus2005-slideshow
+
+
+------------------------------------------------------------------------
+r99 | dreibh | 2005-02-11 11:25:32 +0100 (Fri, 11 Feb 2005) | 2 lines
+Changed paths:
+   M /trunk/slideshow/nz2005-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r98 | dreibh | 2005-02-11 10:51:29 +0100 (Fri, 11 Feb 2005) | 2 lines
+Changed paths:
+   M /trunk/slideshow/Makefile
+   A /trunk/slideshow/nz2005-maintitle.html
+   A /trunk/slideshow/nz2005-slideshow
+   M /trunk/slideshow/tools.h
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r97 | dreibh | 2004-11-16 05:19:44 +0100 (Tue, 16 Nov 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/ietf61-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r96 | dreibh | 2004-11-16 04:26:52 +0100 (Tue, 16 Nov 2004) | 2 lines
+Changed paths:
+   A /trunk/slideshow/ietf61-maintitle.html
+   A /trunk/slideshow/ietf61-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r95 | dreibh | 2004-09-01 12:25:04 +0200 (Wed, 01 Sep 2004) | 2 lines
+Changed paths:
+   A /trunk/slideshow/regenerate-all-slideshows
+   M /trunk/slideshow/slideshow2.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r94 | dreibh | 2004-09-01 10:52:57 +0200 (Wed, 01 Sep 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/a93-27dez2003-slideshow
+   M /trunk/slideshow/bakeoff4-slideshow
+   M /trunk/slideshow/bakeoff6-slideshow
+   M /trunk/slideshow/bakeoff7-slideshow
+   M /trunk/slideshow/ict2003-slideshow
+   M /trunk/slideshow/lca2003-slideshow
+   M /trunk/slideshow/lcn2002-slideshow
+   M /trunk/slideshow/msn2003-slideshow
+   M /trunk/slideshow/msn2004-slideshow
+   M /trunk/slideshow/slideshow2.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r93 | dreibh | 2004-08-31 13:23:16 +0200 (Tue, 31 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/converter.cc
+   M /trunk/slideshow/slideshow2.cc
+   M /trunk/slideshow/test-slideshow
+   M /trunk/slideshow/test-slideshow2
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r92 | dreibh | 2004-08-30 18:13:07 +0200 (Mon, 30 Aug 2004) | 2 lines
+Changed paths:
+   A /trunk/slideshow/bakeoff7-maintitle.html
+   A /trunk/slideshow/bakeoff7-slideshow
+   M /trunk/slideshow/msn2004-maintitle.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r91 | dreibh | 2004-08-30 16:16:42 +0200 (Mon, 30 Aug 2004) | 2 lines
+Changed paths:
+   A /trunk/slideshow/msn2004-maintitle.html
+   A /trunk/slideshow/msn2004-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r90 | dreibh | 2004-08-30 10:06:32 +0200 (Mon, 30 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/a93-27dez2003-slideshow
+   M /trunk/slideshow/bakeoff4-slideshow
+   M /trunk/slideshow/bakeoff5-slideshow
+   M /trunk/slideshow/bakeoff6-slideshow
+   M /trunk/slideshow/ict2003-slideshow
+   M /trunk/slideshow/lca2003-slideshow
+   M /trunk/slideshow/lcn2002-slideshow
+   M /trunk/slideshow/msn2003-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r89 | dreibh | 2004-08-27 15:24:18 +0200 (Fri, 27 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/ict2003-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r88 | dreibh | 2004-08-27 14:48:15 +0200 (Fri, 27 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/converter.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r87 | dreibh | 2004-08-27 13:49:18 +0200 (Fri, 27 Aug 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/Makefile
+   M /trunk/slideshow/converter.cc
+   M /trunk/slideshow/converter.h
+   M /trunk/slideshow/slideshow2.cc
+   A /trunk/slideshow/tools.cc
+   A /trunk/slideshow/tools.h
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r86 | dreibh | 2004-08-27 12:12:20 +0200 (Fri, 27 Aug 2004) | 2 lines
+Changed paths:
+   A /trunk/slideshow/converter.cc
+   A /trunk/slideshow/converter.h
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r85 | dreibh | 2004-07-13 11:10:10 +0200 (Tue, 13 Jul 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/Makefile
+   M /trunk/slideshow/slideshow2.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r84 | dreibh | 2004-07-01 15:53:33 +0200 (Thu, 01 Jul 2004) | 2 lines
+Changed paths:
+   A /trunk/slideshow/icon-abschluss93.png
+   M /trunk/slideshow/slideshow2.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r83 | dreibh | 2004-07-01 12:03:17 +0200 (Thu, 01 Jul 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/bakeoff4-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r82 | dreibh | 2004-07-01 11:56:45 +0200 (Thu, 01 Jul 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/Makefile
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r81 | dreibh | 2004-07-01 11:17:55 +0200 (Thu, 01 Jul 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/a93-27dez2003-slideshow
+   M /trunk/slideshow/bakeoff4-slideshow
+   M /trunk/slideshow/bakeoff5-slideshow
+   M /trunk/slideshow/bakeoff6-slideshow
+   A /trunk/slideshow/convert-to-display
+   M /trunk/slideshow/ict2003-slideshow
+   M /trunk/slideshow/lca2003-slideshow
+   M /trunk/slideshow/lcn2002-slideshow
+   M /trunk/slideshow/msn2003-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r80 | dreibh | 2004-07-01 10:34:41 +0200 (Thu, 01 Jul 2004) | 2 lines
+Changed paths:
+   D /trunk/slideshow/controls
+   M /trunk/slideshow/imageviewer.js
+   A /trunk/slideshow/infrastructure
+   A /trunk/slideshow/infrastructure/1leftarrow.png
+   A /trunk/slideshow/infrastructure/1rightarrow.png
+   A /trunk/slideshow/infrastructure/1uparrow.png
+   A /trunk/slideshow/infrastructure/2leftarrow.png
+   A /trunk/slideshow/infrastructure/2rightarrow.png
+   A /trunk/slideshow/infrastructure/player_pause.png
+   A /trunk/slideshow/infrastructure/player_play.png
+   A /trunk/slideshow/infrastructure/rotate.png
+   M /trunk/slideshow/slideshow.js
+   M /trunk/slideshow/slideshow2.cc
+   M /trunk/slideshow/slideshowcontrol.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r79 | dreibh | 2004-03-12 13:35:34 +0100 (Fri, 12 Mar 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/imageviewer.js
+   M /trunk/slideshow/slideshow2.cc
+   M /trunk/slideshow/test-slideshow2
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r78 | dreibh | 2004-03-11 11:09:46 +0100 (Thu, 11 Mar 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/Makefile
+   M /trunk/slideshow/slideshow2.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r77 | dreibh | 2004-03-08 10:30:59 +0100 (Mon, 08 Mar 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/Makefile
+   A /trunk/slideshow/controls/2leftarrow.png
+   A /trunk/slideshow/controls/2rightarrow.png
+   M /trunk/slideshow/slideshow2.cc
+   M /trunk/slideshow/tail.html
+   M /trunk/slideshow/test-slideshow2
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r76 | dreibh | 2004-02-17 10:54:05 +0100 (Tue, 17 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/slideshow2.cc
+   M /trunk/slideshow/test-maintitle.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r75 | dreibh | 2004-02-06 15:55:35 +0100 (Fri, 06 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/slideshow2.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r74 | dreibh | 2004-02-06 15:00:17 +0100 (Fri, 06 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/slideshow2.cc
+   A /trunk/slideshow/test-slideshow2
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r73 | dreibh | 2004-02-06 13:43:58 +0100 (Fri, 06 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/Makefile
+   M /trunk/slideshow/slideshow2.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r72 | dreibh | 2004-02-06 12:08:14 +0100 (Fri, 06 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/slideshow.cc
+   A /trunk/slideshow/slideshow2.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r66 | dreibh | 2004-02-03 13:20:37 +0100 (Tue, 03 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/slideshow.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r65 | dreibh | 2004-02-03 12:48:42 +0100 (Tue, 03 Feb 2004) | 2 lines
+Changed paths:
+   A /trunk/slideshow/valid-xhtml11.png
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r64 | dreibh | 2004-02-03 11:51:24 +0100 (Tue, 03 Feb 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/a93-27dez2003-slideshow
+   M /trunk/slideshow/imageviewer.js
+   M /trunk/slideshow/slideshow.cc
+   M /trunk/slideshow/test-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r63 | dreibh | 2004-01-30 17:29:17 +0100 (Fri, 30 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/imageviewer.js
+   M /trunk/slideshow/slideshow.cc
+   M /trunk/slideshow/test-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r62 | dreibh | 2004-01-30 16:33:43 +0100 (Fri, 30 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/a93-27dez2003-slideshow
+   M /trunk/slideshow/createimages
+   M /trunk/slideshow/slideshow.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r61 | dreibh | 2004-01-30 16:08:36 +0100 (Fri, 30 Jan 2004) | 2 lines
+Changed paths:
+   D /trunk/slideshow/createfull
+   A /trunk/slideshow/createimages
+   D /trunk/slideshow/createpreview
+   M /trunk/slideshow/imageviewer.js
+   M /trunk/slideshow/slideshow.cc
+   M /trunk/slideshow/test-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r60 | dreibh | 2004-01-29 17:24:34 +0100 (Thu, 29 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/a93-27dez2003-maintitle.html
+   M /trunk/slideshow/a93-27dez2003-slideshow
+   M /trunk/slideshow/a93-tail.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r59 | dreibh | 2004-01-29 16:43:01 +0100 (Thu, 29 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/lca2003-maintitle.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r58 | dreibh | 2004-01-29 16:37:35 +0100 (Thu, 29 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/lca2003-maintitle.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r57 | dreibh | 2004-01-29 16:32:54 +0100 (Thu, 29 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/lca2003-maintitle.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r56 | dreibh | 2004-01-29 16:28:18 +0100 (Thu, 29 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/lca2003-maintitle.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r55 | dreibh | 2004-01-29 16:02:49 +0100 (Thu, 29 Jan 2004) | 2 lines
+Changed paths:
+   A /trunk/slideshow/icon-default.png
+   M /trunk/slideshow/slideshow.cc
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r54 | dreibh | 2004-01-29 14:39:01 +0100 (Thu, 29 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/slideshow/a93-27dez2003-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r53 | dreibh | 2004-01-29 13:08:50 +0100 (Thu, 29 Jan 2004) | 2 lines
+Changed paths:
+   A /trunk/slideshow/Tux.jpeg
+   A /trunk/slideshow/a93-27dez2003-slideshow
+   A /trunk/slideshow/a93-head.html
+   A /trunk/slideshow/essen.css
+   A /trunk/slideshow/wiehl.css
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r52 | dreibh | 2004-01-29 11:36:13 +0100 (Thu, 29 Jan 2004) | 2 lines
+Changed paths:
+   M /trunk/progtest/Bild3.jpeg
+   A /trunk/progtest/Bild4.jpeg
+   A /trunk/progtest/Bild5.jpeg
+   M /trunk/progtest/Makefile
+   A /trunk/progtest/README
+   M /trunk/progtest/Test1.list
+   A /trunk/progtest/Tux.jpeg
+   D /trunk/progtest/convert
+   A /trunk/progtest/konvertiere
+   A /trunk/progtest/loglevel.h
+   A /trunk/progtest/progclient.cc
+   M /trunk/progtest/progpacket.h
+   M /trunk/progtest/progserver.cc
+   A /trunk/progtest/progserver.h
+   D /trunk/progtest/progtest.cc
+   M /trunk/progtest/progviewer.cc
+   M /trunk/progtest/progviewer.h
+   A /trunk/progtest/tools.cc
+   A /trunk/progtest/tools.h
+   M /trunk/progtest/x1.jpeg
+   M /trunk/progtest/x2.jpeg
+   A /trunk/progtest/x3.jpeg
+   A /trunk/progtest/x4.jpeg
+   A /trunk/progtest/x5.jpeg
+   A /trunk/slideshow/a93-27dez2003-maintitle.html
+   A /trunk/slideshow/a93-tail.html
+   M /trunk/slideshow/bakeoff4-maintitle.html
+   M /trunk/slideshow/bakeoff5-maintitle.html
+   M /trunk/slideshow/bakeoff6-maintitle.html
+   M /trunk/slideshow/bonn.css
+   M /trunk/slideshow/head.html
+   M /trunk/slideshow/ict2003-maintitle.html
+   M /trunk/slideshow/imageviewer.js
+   M /trunk/slideshow/lca2003-maintitle.html
+   M /trunk/slideshow/lcn2002-maintitle.html
+   A /trunk/slideshow/logo-mit-gimp.txt
+   M /trunk/slideshow/msn2003-maintitle.html
+   M /trunk/slideshow/slideshow.cc
+   M /trunk/slideshow/slideshowcontrol.html
+   M /trunk/slideshow/stylesheet.css
+   M /trunk/slideshow/tail.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r11 | dreibh | 2003-07-21 15:34:41 +0200 (Mon, 21 Jul 2003) | 2 lines
+Changed paths:
+   M /trunk/slideshow/lca2003-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r10 | dreibh | 2003-07-21 14:33:36 +0200 (Mon, 21 Jul 2003) | 2 lines
+Changed paths:
+   M /trunk/slideshow/bakeoff4-slideshow
+   M /trunk/slideshow/slideshow.cc
+   M /trunk/slideshow/slideshow.js
+   M /trunk/slideshow/slideshowcontrol.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r9 | dreibh | 2003-07-21 14:14:50 +0200 (Mon, 21 Jul 2003) | 2 lines
+Changed paths:
+   M /trunk/slideshow/bakeoff4-slideshow
+   M /trunk/slideshow/bakeoff5-slideshow
+   M /trunk/slideshow/bakeoff6-slideshow
+   A /trunk/slideshow/controls/rotate.png
+   M /trunk/slideshow/ict2003-slideshow
+   M /trunk/slideshow/lca2003-slideshow
+   M /trunk/slideshow/lcn2002-slideshow
+   M /trunk/slideshow/msn2003-slideshow
+   M /trunk/slideshow/slideshow.cc
+   M /trunk/slideshow/slideshow.js
+   M /trunk/slideshow/slideshowcontrol.html
+   M /trunk/slideshow/test-slideshow
+   A /trunk/slideshow/vcss.png
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r8 | dreibh | 2003-07-18 14:22:52 +0200 (Fri, 18 Jul 2003) | 2 lines
+Changed paths:
+   M /trunk/slideshow/msn2003-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r7 | dreibh | 2003-07-18 12:30:24 +0200 (Fri, 18 Jul 2003) | 2 lines
+Changed paths:
+   M /trunk/slideshow/bakeoff4-slideshow
+   M /trunk/slideshow/bakeoff5-slideshow
+   M /trunk/slideshow/bakeoff6-slideshow
+   M /trunk/slideshow/ict2003-slideshow
+   M /trunk/slideshow/lca2003-maintitle.html
+   M /trunk/slideshow/lca2003-slideshow
+   M /trunk/slideshow/lcn2002-slideshow
+   M /trunk/slideshow/msn2003-slideshow
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r6 | dreibh | 2003-07-17 13:37:51 +0200 (Thu, 17 Jul 2003) | 2 lines
+Changed paths:
+   M /trunk/slideshow/bakeoff4-slideshow
+   M /trunk/slideshow/bakeoff5-slideshow
+   M /trunk/slideshow/bakeoff6-slideshow
+   A /trunk/slideshow/controls
+   A /trunk/slideshow/controls/1leftarrow.png
+   A /trunk/slideshow/controls/1rightarrow.png
+   A /trunk/slideshow/controls/1uparrow.png
+   A /trunk/slideshow/controls/player_pause.png
+   A /trunk/slideshow/controls/player_play.png
+   M /trunk/slideshow/ict2003-slideshow
+   M /trunk/slideshow/lca2003-slideshow
+   M /trunk/slideshow/lcn2002-slideshow
+   M /trunk/slideshow/msn2003-slideshow
+   M /trunk/slideshow/slideshow.js
+   M /trunk/slideshow/slideshowcontrol.html
+
+*** empty log message ***
+
+------------------------------------------------------------------------
+r2 | dreibh | 2003-07-17 11:45:08 +0200 (Thu, 17 Jul 2003) | 2 lines
+Changed paths:
+   A /trunk/slideshow
+   A /trunk/slideshow/Makefile
+   A /trunk/slideshow/background.png
+   A /trunk/slideshow/background_white.png
+   A /trunk/slideshow/bakeoff4-maintitle.html
+   A /trunk/slideshow/bakeoff4-slideshow
+   A /trunk/slideshow/bakeoff5-maintitle.html
+   A /trunk/slideshow/bakeoff5-slideshow
+   A /trunk/slideshow/bakeoff6-maintitle.html
+   A /trunk/slideshow/bakeoff6-slideshow
+   A /trunk/slideshow/bonn.css
+   A /trunk/slideshow/createfull
+   A /trunk/slideshow/createpreview
+   A /trunk/slideshow/getsize.cc
+   A /trunk/slideshow/head.html
+   A /trunk/slideshow/ict2003-maintitle.html
+   A /trunk/slideshow/ict2003-slideshow
+   A /trunk/slideshow/imageviewer.js
+   A /trunk/slideshow/lca2003-maintitle.html
+   A /trunk/slideshow/lca2003-slideshow
+   A /trunk/slideshow/lcn2002-maintitle.html
+   A /trunk/slideshow/lcn2002-slideshow
+   A /trunk/slideshow/msn2003-maintitle.html
+   A /trunk/slideshow/msn2003-slideshow
+   A /trunk/slideshow/slideshow.cc
+   A /trunk/slideshow/slideshow.js
+   A /trunk/slideshow/slideshowcontrol.html
+   A /trunk/slideshow/stylesheet.css
+   A /trunk/slideshow/tail.html
+   A /trunk/slideshow/test-maintitle.html
+   A /trunk/slideshow/test-slideshow
+   A /trunk/slideshow/test.html
+   A /trunk/slideshow/valid-html401.png
+
+Initial revision
+
+------------------------------------------------------------------------
