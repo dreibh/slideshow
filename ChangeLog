@@ -1,4 +1,13 @@
 ------------------------------------------------------------------------
+r466 | dreibh | 2009-09-12 11:03:33 +0200 (Sat, 12 Sep 2009) | 1 line
+Changed paths:
+   M /trunk/slideshow/ChangeLog
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/make-ppa
+
+
+------------------------------------------------------------------------
 r315 | dreibh | 2009-06-20 19:23:58 +0200 (Sat, 20 Jun 2009) | 1 line
 Changed paths:
    M /trunk/slideshow/debian/changelog
