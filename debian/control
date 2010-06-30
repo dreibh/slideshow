@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Thomas Dreibholz <dreibh@iem.uni-due.de>
 Homepage: http://www.iem.uni-due.de/~dreibh/slideshow/
 Build-Depends: debhelper (>= 5), autotools-dev, libmagick++-dev
-Standards-Version: 3.8.1
+Standards-Version: 3.8.4
 
 Package: slideshow-core
 Architecture: all
@@ -17,7 +17,7 @@ Description: SlideShow infrastructure files
 
 Package: slideshow
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends} slideshow-core
+Depends: ${shlibs:Depends}, ${misc:Depends}, slideshow-core
 Recommends:
 Description: XHTML/JavaScript Slideshow Generator
  SlideShow is a command-line tool to generate
@@ -29,7 +29,7 @@ Description: XHTML/JavaScript Slideshow Generator
 
 Package: slideshow-example
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends} slideshow
+Depends: ${shlibs:Depends}, ${misc:Depends}, slideshow
 Recommends: fractgen (>= 2.0.6)
 Description: SlideShow example
  An example presentation setup for SlideShow.
