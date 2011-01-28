@@ -1,17 +1,24 @@
-/*
- *  $Id$
+/* $Id$
+ * --------------------------------------------------------------------------
+ * - XHTML 1.1 image presentation and JavaScript-based slideshow generator  -
+ * --------------------------------------------------------------------------
  *
- * JavaScript Slideshow
+ * Copyright (C) 2003-2011 by Thomas Dreibholz
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
+ * Contact: dreibh@iem.uni-due.de
  */
 
 
@@ -30,11 +37,11 @@ var showTimer   = 0;
 var mainPage         = "Unknown"
 var presentationName = "Unknown"
 var changeDelay      = 999;
-var randomMode       = false;
+var randomMode       = 0;
 
 
 
-// ##### Get cookie ##########################################################
+// ##### Get cookie #########################################################
 function getCookie (name) {
    myentry = name + "=";
    i = 0;
@@ -56,17 +63,29 @@ function getCookie (name) {
 }
 
 
-// ##### Set cookie ##########################################################
+// ##### Set cookie #########################################################
 function setCookie (name, value, expires) {
    document.cookie = name + "=" + escape(value) + "; " +
                      "expires=" + expires.toGMTString();
 }
 
 
-// ##### Get previous URL ####################################################
+// ##### Get random but different image #####################################
+function chooseRandomImage() {
+   old = current
+   if(images > 1) {   // Otherwise, there is not much to select ...
+      while(current == old) {
+         current = Math.floor(Math.random() * images);
+      }
+   }
+   return(current);
+}
+
+
+// ##### Get previous URL ###################################################
 function getPrev() {
-   if(randomMode) {
-      current = Math.floor(Math.random() * images);
+   if(randomMode == 1) {
+      current = chooseRandomImage();
    }
    else {
       current--;
@@ -78,10 +97,10 @@ function getPrev() {
 }
 
 
-// ##### Get next URL ########################################################
+// ##### Get next URL #######################################################
 function getNext() {
-   if(randomMode) {
-      current = Math.floor(Math.random() * images);
+   if(randomMode == 1) {
+      current = chooseRandomImage();
    }
    else {
       current++;
@@ -93,7 +112,7 @@ function getNext() {
 }
 
 
-// ##### Show current URL ####################################################
+// ##### Show current URL ###################################################
 function show() {
    clearTimeout(showTimer);
    try {
@@ -119,7 +138,7 @@ function show() {
 }
 
 
-// ##### Handle play/pause button  ###########################################
+// ##### Handle play/pause button  ##########################################
 function playpause() {
    clearTimeout(showTimer);
    if(pause) {
@@ -137,7 +156,7 @@ function playpause() {
 }
 
 
-// ##### Handle prev button  #################################################
+// ##### Handle prev button  ################################################
 function prev() {
    document["goprev"].style.backgroundColor="#aaaaaa";
    getPrev();
@@ -146,23 +165,28 @@ function prev() {
 }
 
 
-// ##### Handle next button  #################################################
+// ##### Handle next button  ################################################
 function next() {
    getNext();
    show();
 }
 
 
-// ##### Handle up button  ###################################################
+// ##### Handle up button  ##################################################
 function up() {
    top.location = mainPage;
 }
 
 
-// ###### Toggle random mode #################################################
+// ###### Toggle random mode ################################################
 function toggleRandomMode() {
-   randomMode = !randomMode;
-   if(randomMode) {
+   if(randomMode == 1) {
+      randomMode = 0;
+   }
+   else {
+      randomMode = 1;
+   }
+   if(randomMode == 1) {
       document["randommode"].style.backgroundColor="#aaaaaa";
       document["randommode"].alt = "Random Mode ON";
    }
@@ -175,7 +199,7 @@ function toggleRandomMode() {
 }
 
 
-// ###### Handle changes of the delay ########################################
+// ###### Handle changes of the delay #######################################
 function newChangeDelay() {
    inputObjects = document.getElementsByTagName("INPUT");
    input  = inputObjects[0];
@@ -211,55 +235,55 @@ function newChangeDelay() {
 }
 
 
-// ######## Mouse over/out effect ############################################
+// ######## Mouse over/out effect ###########################################
 function goupMouseOver(name) {
    document["goup"].style.backgroundColor="#aaaaaa";
 }
 
 
-// ######## Mouse over/out effect ############################################
+// ######## Mouse over/out effect ###########################################
 function goupMouseOut(name) {
    document["goup"].style.backgroundColor="";
 }
 
 
-// ######## Mouse over/out effect ############################################
+// ######## Mouse over/out effect ###########################################
 function goprevMouseOver(name) {
    document["goprev"].style.backgroundColor="#aaaaaa";
 }
 
 
-// ######## Mouse over/out effect ############################################
+// ######## Mouse over/out effect ###########################################
 function goprevMouseOut(name) {
    document["goprev"].style.backgroundColor="";
 }
 
 
-// ######## Mouse over/out effect ############################################
+// ######## Mouse over/out effect ###########################################
 function gonextMouseOver(name) {
    document["gonext"].style.backgroundColor="#aaaaaa";
 }
 
 
-// ######## Mouse over/out effect ############################################
+// ######## Mouse over/out effect ###########################################
 function gonextMouseOut(name) {
    document["gonext"].style.backgroundColor="";
 }
 
 
-// ######## Mouse over/out effect ############################################
+// ######## Mouse over/out effect ###########################################
 function playpauseMouseOver(name) {
    document["play"].style.backgroundColor="#ccccee";
 }
 
 
-// ######## Mouse over/out effect ############################################
+// ######## Mouse over/out effect ###########################################
 function playpauseMouseOut(name) {
    document["play"].style.backgroundColor="";
 }
 
 
-// ######## Initialization ###################################################
+// ######## Initialization ##################################################
 function onLoad() {
    document["goup"].onmouseover=goupMouseOver;
    document["goup"].onmouseout=goupMouseOut;
@@ -279,10 +303,7 @@ function onLoad() {
    inputObjects[0].value = changeDelay;
 
    randomMode = getCookie("RandomImageView-" + presentationName);
-   if(randomMode == null) {
-      randomMode = false;
-   }
-   if(randomMode) {
+   if(randomMode == 1) {
       document["randommode"].style.backgroundColor="#aaaaaa";
       document["randommode"].alt = "Random Mode ON";
    }
