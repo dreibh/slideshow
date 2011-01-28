@@ -1,12 +1,12 @@
 This package was debianized by Thomas Dreibholz <dreibh@iem.uni-due.de>
-on Sat, 29 May 2010 13:25:18 +0200.
+on Mon, 31 May 2010 08:55:18 +0200.
 
 The original source can be found at:
 http://www.iem.uni-due.de/~dreibh/slideshow/
 
-SubNetCalc is
+Slideshow is
 
-  Copyright (C) 2003-2010 Thomas Dreibholz
+  Copyright (C) 2003-2011 Thomas Dreibholz
 
 License:
 
@@ -20,7 +20,7 @@ License:
 
 The Debian/Ubuntu packaging is
 
-  Copyright (C) 2009-2010 Thomas Dreibholz
+  Copyright (C) 2009-2011 Thomas Dreibholz
 
 License:
 

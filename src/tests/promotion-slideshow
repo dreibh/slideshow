@@ -14,13 +14,13 @@ shopt -s extglob
 --fullsizeheight=960 \
 --enumerate \
 \
---block="Disputation 07. März 2007- Bilder Rathgeb" \
+--block="Disputation 07. MÃ¤rz 2007- Bilder Rathgeb" \
 "/home/dreibh/Fotoalbum/Bilder Promotion/Rathgeb"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---block="Disputation 07. März 2007- Bilder Zhou" \
+--block="Disputation 07. MÃ¤rz 2007- Bilder Zhou" \
 "/home/dreibh/Fotoalbum/Bilder Promotion/Zhou"/*.@(jpg|JPG|jpeg|JPEG) \
 \
---block="Disputation 07. März 2007 - Bilder Dreibholz" \
+--block="Disputation 07. MÃ¤rz 2007 - Bilder Dreibholz" \
 "/home/dreibh/Fotoalbum/Bilder Promotion/Dreibholz"/*.@(jpg|JPG|jpeg|JPEG) \
 \
 --block="Absolventenfeier 11. Mai 2007" \

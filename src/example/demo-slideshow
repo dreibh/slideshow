@@ -25,12 +25,15 @@
 CREATESLIDESHOW=createslideshow
 if [ -e ./$CREATESLIDESHOW ] ; then
    CREATESLIDESHOW=./createslideshow
+   INFRASTRUCTURE=./infrastructure
 elif [ -e ../$CREATESLIDESHOW ] ; then
    CREATESLIDESHOW=../createslideshow
+   INFRASTRUCTURE=../infrastructure
 fi
 
 $CREATESLIDESHOW \
 --directory=demo \
+--infrastructure=$INFRASTRUCTURE \
 --maintitle="A Slideshow Demo" \
 --maindescription=demo-maintitle.html \
 --stylesheet=demo-stylesheet.css \

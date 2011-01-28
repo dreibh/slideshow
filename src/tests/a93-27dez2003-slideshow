@@ -1,7 +1,7 @@
 #!/bin/bash
 ./slideshow2 \
 --directory=a93-27dez2003 \
---maintitle="Thomas Dreibholz's Abschluﬂ '93 Bildergalerie" --maindescription=a93-27dez2003-maintitle.html \
+--maintitle="Thomas Dreibholz's Abschlu√ü '93 Bildergalerie" --maindescription=a93-27dez2003-maintitle.html \
 --stylesheet=stylesheet.css \
 --background=background.png \
 --shortcuticon=icon-abschluss93.png \

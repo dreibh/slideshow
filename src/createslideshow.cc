@@ -350,11 +350,12 @@ void Presentation::createSlideshowFrameset(const char* filelistName,
       exit(1);
    }
 
-   ssframeset << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\">" << endl
-          << "<html>"  << endl
-          << "<head>"  << endl;
+   ssframeset << "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
+              << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\">" << endl
+              << "<html xmlns=\"http://www.w3.org/1999/xhtml\">" << endl
+              << "<head>" << endl;
    ssframeset << "<title>" << MainTitle << "</title>" << endl;
-   ssframeset << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />" << endl;
+   ssframeset << "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />" << endl;
    if(Author[0] != 0x00) {
       ssframeset  << "<meta name=\"author\" content=\"" << Author << "\" />" << endl;
    }
@@ -379,9 +380,10 @@ void Presentation::createSlideshowFrameset(const char* filelistName,
       cerr << "ERROR: Unable to create output file \"" << str << "\"!" << endl;
       exit(1);
    }
-   sscontrol << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">" << endl
-             << "<html>"  << endl
-             << "<head>"  << endl;
+   sscontrol << "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
+             << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">" << endl
+             << "<html xmlns=\"http://www.w3.org/1999/xhtml\">" << endl
+             << "<head>" << endl;
    if(Stylesheet[0] != 0x00) {
       sscontrol << "<link rel=\"stylesheet\" href=\"" << Stylesheet << "\" type=\"text/css\" />" << endl;
    }
@@ -389,7 +391,7 @@ void Presentation::createSlideshowFrameset(const char* filelistName,
       sscontrol << "<link rel=\"shortcut icon\" href=\"" << ShortcutIcon << "\" type=\"image/png\" />" << endl;
    }
    sscontrol << "<title>" << MainTitle << "</title>" << endl;
-   sscontrol << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />" << endl;
+   sscontrol << "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />" << endl;
    if(Author[0] != 0x00) {
       sscontrol  << "<meta name=\"author\" content=\"" << Author << "\" />" << endl;
    }
@@ -551,9 +553,10 @@ void Presentation::createRedirectPage()
    if(os.good()) {
 
       // ====== Header =======================================================
-      os << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xos11/DTD/xos11.dtd\">" << endl
-           << "<html>"  << endl
-           << "<head>"  << endl;
+      os << "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
+         << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">" << endl
+         << "<html xmlns=\"http://www.w3.org/1999/xhtml\">" << endl
+         << "<head>" << endl;
       if(Stylesheet[0] != 0x00) {
          os << "<link rel=\"stylesheet\" href=\"" << Stylesheet << "\" type=\"text/css\" />" << endl;
       }
@@ -561,7 +564,7 @@ void Presentation::createRedirectPage()
          os << "<link rel=\"shortcut icon\" href=\"" << ShortcutIcon << "\" type=\"image/png\" />" << endl;
       }
       os << "<title>" << MainTitle << "</title>" << endl;
-      os << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />" << endl;
+      os << "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />" << endl;
       os << "<meta http-equiv=\"refresh\" content=\"0; url=" << DirectoryName << "/index.html\" />" << endl;
       os << "</head>" << endl << endl;
 
@@ -588,9 +591,10 @@ void Presentation::createMainPage()
    if(os.good()) {
 
       // ====== Header =======================================================
-      os << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xos11/DTD/xos11.dtd\">" << endl
-           << "<html>"  << endl
-           << "<head>"  << endl;
+      os << "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
+         << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">" << endl
+         << "<html xmlns=\"http://www.w3.org/1999/xhtml\">" << endl
+         << "<head>" << endl;
       if(Stylesheet[0] != 0x00) {
          os << "<link rel=\"stylesheet\" href=\"" << Stylesheet << "\" type=\"text/css\" />" << endl;
       }
@@ -598,7 +602,7 @@ void Presentation::createMainPage()
          os << "<link rel=\"shortcut icon\" href=\"" << ShortcutIcon << "\" type=\"image/png\" />" << endl;
       }
       os << "<title>" << MainTitle << "</title>" << endl;
-      os << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />" << endl;
+      os << "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />" << endl;
       os  << "<meta name=\"author\" content=\"" << Author << "\" />" << endl;
       os << "<meta name=\"description\" content=\"" << MainTitle << "\" />" << endl;
       os << "<meta name=\"keywords\" content=\"Slideshow" << MainTitle;
@@ -912,9 +916,10 @@ void Image::createViewPage(const Block* prevBlock, const Block* nextBlock,
    if(os.good()) {
 
       // ====== Header =======================================================
-      os << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xos11/DTD/xos11.dtd\">" << endl
-         << "<html>"  << endl
-         << "<head>"  << endl;
+      os << "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"
+         << "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">" << endl
+         << "<html xmlns=\"http://www.w3.org/1999/xhtml\">" << endl
+         << "<head>" << endl;
       if(OwnerBlock->OwnerPresentation->Stylesheet[0] != 0x00) {
          os << "<link rel=\"stylesheet\" href=\"" << OwnerBlock->OwnerPresentation->Stylesheet << "\" type=\"text/css\" />" << endl;
       }
@@ -922,7 +927,7 @@ void Image::createViewPage(const Block* prevBlock, const Block* nextBlock,
          os << "<link rel=\"shortcut icon\" href=\"" << OwnerBlock->OwnerPresentation->ShortcutIcon << "\" type=\"image/png\" />" << endl;
       }
       os << "<title>" << OwnerBlock->OwnerPresentation->MainTitle << " - " << Title << "</title>" << endl
-         << "<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\" />" << endl
+         << "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />" << endl
          << "<meta name=\"author\" content=\"" << OwnerBlock->OwnerPresentation->Author << "\" />" << endl
          << "<meta name=\"description\" content=\"" << OwnerBlock->OwnerPresentation->MainTitle << ", " << Title << "\" />" << endl
          << "<meta name=\"keywords\" content=\"Slideshow" << OwnerBlock->OwnerPresentation->MainTitle << ", " << Title;
