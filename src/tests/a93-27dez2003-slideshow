@@ -1,7 +1,9 @@
 #!/bin/bash
-./slideshow2 \
+../createslideshow \
+--infrastructure=../infrastructure \
 --directory=a93-27dez2003 \
---maintitle="Thomas Dreibholz's Abschluß '93 Bildergalerie" --maindescription=a93-27dez2003-maintitle.html \
+--maintitle="Thomas Dreibholz's Abschluß '93 Bildergalerie" \
+--maindescription=a93-27dez2003-maintitle.html \
 --stylesheet=stylesheet.css \
 --background=background.png \
 --shortcuticon=icon-abschluss93.png \
@@ -13,7 +15,7 @@
 --enumerate \
 --noindex \
 --block="Bilder vom Treffen am 27.12.2003" \
---description=a93-27dez2003-maintitle.html \
-"/home/dreibh/stufentreffen_12_03/"*.JPG \
+--blockdescription=a93-27dez2003-maintitle.html \
+"/home/dreibh/Bilder/stufentreffen_12_03/"*.JPG \
 $@ \
 --

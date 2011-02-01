@@ -1,6 +1,6 @@
-slideshow (2.2.0-1ubuntu1) natty; urgency=low
+slideshow (2.2.0-2ubuntu1) natty; urgency=low
 
   * Initial Debian release (Closes: #xxxxxx).
   * Initial Ubuntu release (LP: #xxxxxx).
 
- -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Fri, 28 Jan 2011 01:01:01 +0200
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Tue, 01 Feb 2011 01:01:01 +0200
