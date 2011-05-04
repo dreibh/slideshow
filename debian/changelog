@@ -1,4 +1,4 @@
-slideshow (2.2.1-1ubuntu1) natty; urgency=low
+slideshow (2.2.1-1ubuntu1) oneiric; urgency=low
 
   * Initial Debian release (Closes: #xxxxxx).
   * Initial Ubuntu release (LP: #xxxxxx).
