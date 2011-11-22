@@ -1,2 +1,1 @@
-debian/tmp/usr/bin/createslideshow
-debian/tmp/usr/share/man/man8/createslideshow.8
+src/createslideshow  /usr/bin
