@@ -1,7 +1,7 @@
 AC_INIT(src/createslideshow.cc)
 AC_CONFIG_AUX_DIR(admin)
 AC_CANONICAL_HOST
-AM_INIT_AUTOMAKE(slideshow, 2.2.2~rc1)
+AM_INIT_AUTOMAKE(slideshow, 2.2.2)
 
 
 AC_PREFIX_DEFAULT(/usr/local)

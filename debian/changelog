@@ -1,6 +1,6 @@
-slideshow (2.2.2~rc1-2ubuntu1) precise; urgency=low
+slideshow (2.2.2-1ubuntu1) precise; urgency=low
 
-  * Initial Debian release (Closes: #xxxxxx).
-  * Initial Ubuntu release (LP: #xxxxxx).
+  * New upstream version.
+  * Initial Debian release (Closes: #669900).
 
- -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Tue, 22 Nov 2011 01:01:01 +0200
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Sat, 21 Apr 2012 01:01:01 +0200
