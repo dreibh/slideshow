@@ -1,5 +1,312 @@
 ------------------------------------------------------------------------
-r466 | dreibh | 2009-09-12 11:03:33 +0200 (Sat, 12 Sep 2009) | 1 line
+r1608 | dreibh | 2012-12-21 20:08:24 +0100 (fr., 21 des. 2012) | 2 lines
+Changed paths:
+   A /trunk/slideshow/build-deb (from /trunk/subnetcalc/build-deb:1587)
+   M /trunk/slideshow/clean-deb
+
+Script updates.
+
+------------------------------------------------------------------------
+r1525 | dreibh | 2012-10-20 23:50:30 +0200 | 1 line
+Changed paths:
+   M /trunk/bibtexconv/make-ppa
+   M /trunk/dia-experimental/make-ppa
+   M /trunk/fractgen2/make-ppa
+   M /trunk/netperfmeter/configure.in
+   M /trunk/netperfmeter/debian/changelog
+   M /trunk/netperfmeter/make-ppa
+   M /trunk/slideshow/make-ppa
+   M /trunk/subnetcalc/make-ppa
+   M /trunk/wireshark-experimental/make-ppa
+
+Build script updates.
+------------------------------------------------------------------------
+r1493 | dreibh | 2012-07-20 20:26:51 +0200 (fr., 20 juli 2012) | 2 lines
+Changed paths:
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/make-ppa
+   M /trunk/slideshow/slideshow.lsm
+   M /trunk/slideshow/src/Makefile.am
+
+Using colorgcc now.
+
+------------------------------------------------------------------------
+r1366 | dreibh | 2012-04-21 21:51:59 +0200 | 2 lines
+Changed paths:
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian/control
+   M /trunk/slideshow/slideshow.lsm
+
+Packaging updates.
+
+------------------------------------------------------------------------
+r1136 | dreibh | 2011-11-22 15:30:22 +0100 (ti., 22 nov. 2011) | 3 lines
+Changed paths:
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian/slideshow.install
+   M /trunk/slideshow/debian/slideshow.manpages
+   M /trunk/slideshow/src/Makefile.am
+   A /trunk/slideshow/src/createslideshow.1 (from /trunk/slideshow/src/createslideshow.8:1132)
+   D /trunk/slideshow/src/createslideshow.8
+
+- Changed manpage category from 8 to 1.
+- Packaging file updates.
+
+------------------------------------------------------------------------
+r1086 | dreibh | 2011-10-27 09:31:44 +0200 (to., 27 okt. 2011) | 2 lines
+Changed paths:
+   M /trunk/bibtexconv/configure.in
+   M /trunk/bibtexconv/debian/changelog
+   M /trunk/bibtexconv/src/ExampleReferences.bib
+   M /trunk/bibtexconv/src/bibtexconv.8
+   M /trunk/bibtexconv/src/bibtexconv.cc
+   M /trunk/bibtexconv/src/run-examples
+   M /trunk/slideshow/debian/control
+
+Some code clean-ups and documentation updates.
+
+------------------------------------------------------------------------
+r1081 | dreibh | 2011-10-20 21:00:02 +0200 (to., 20 okt. 2011) | 1 line
+Changed paths:
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian.conf
+   A /trunk/slideshow/filter-empty-entries (from /trunk/subnetcalc/filter-empty-entries:1077)
+   M /trunk/slideshow/make-deb
+   M /trunk/slideshow/make-ppa
+
+Script updates for Precise Pangolin.
+------------------------------------------------------------------------
+r1033 | dreibh | 2011-05-04 07:57:30 +0200 (on., 04 mai 2011) | 2 lines
+Changed paths:
+   M /trunk/bibtexconv/debian/changelog
+   M /trunk/slideshow/debian/changelog
+
+Scripts updates.
+
+------------------------------------------------------------------------
+r1029 | dreibh | 2011-05-03 19:47:13 +0200 (ti., 03 mai 2011) | 2 lines
+Changed paths:
+   M /trunk/fractgen2/make-ppa
+   M /trunk/netperfmeter/configure.in
+   M /trunk/netperfmeter/debian/changelog
+   M /trunk/netperfmeter/make-ppa
+   M /trunk/slideshow/make-ppa
+
+Updated packaging scripts.
+
+------------------------------------------------------------------------
+r989 | dreibh | 2011-02-11 23:34:41 +0100 (fr., 11 feb. 2011) | 2 lines
+Changed paths:
+   M /trunk/bibtexconv/debian/changelog
+   M /trunk/bibtexconv/make-deb
+   M /trunk/dia-experimental/make-deb
+   M /trunk/fractgen2/make-deb
+   M /trunk/slideshow/make-deb
+   M /trunk/subnetcalc/make-deb
+   M /trunk/wireshark-experimental/make-deb
+
+Updated packaging files.
+
+------------------------------------------------------------------------
+r983 | dreibh | 2011-02-02 15:18:52 +0100 (on., 02 feb. 2011) | 1 line
+Changed paths:
+   M /trunk/slideshow/make-deb
+
+make-deb update.
+------------------------------------------------------------------------
+r972 | dreibh | 2011-02-01 15:23:24 +0100 (ti., 01 feb. 2011) | 1 line
+Changed paths:
+   M /trunk/slideshow/make-deb
+   M /trunk/slideshow/make-ppa
+
+Packaging update.
+------------------------------------------------------------------------
+r971 | dreibh | 2011-02-01 13:23:03 +0100 (ti., 01 feb. 2011) | 2 lines
+Changed paths:
+   M /trunk/slideshow/make-deb
+
+Removed debug option.
+
+------------------------------------------------------------------------
+r970 | dreibh | 2011-02-01 13:21:32 +0100 (ti., 01 feb. 2011) | 2 lines
+Changed paths:
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian/control
+   M /trunk/slideshow/debian/rules
+   M /trunk/slideshow/debian/slideshow-example.install
+   A /trunk/slideshow/debian/slideshow-example.lintian-overrides
+   M /trunk/slideshow/make-deb
+
+Updated Debian packaging.
+
+------------------------------------------------------------------------
+r969 | dreibh | 2011-02-01 13:21:19 +0100 (ti., 01 feb. 2011) | 2 lines
+Changed paths:
+   M /trunk/slideshow/src/example/demo-slideshow
+
+Updated demo script.
+
+------------------------------------------------------------------------
+r964 | dreibh | 2011-02-01 08:46:59 +0100 (ti., 01 feb. 2011) | 1 line
+Changed paths:
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/src/tests/a93-27dez2003-slideshow
+
+Debian packaging update.
+------------------------------------------------------------------------
+r953 | dreibh | 2011-02-01 08:27:02 +0100 (ti., 01 feb. 2011) | 1 line
+Changed paths:
+   M /trunk/slideshow/make-deb
+
+Updated make-deb script.
+------------------------------------------------------------------------
+r951 | dreibh | 2011-02-01 08:24:54 +0100 (ti., 01 feb. 2011) | 1 line
+Changed paths:
+   M /trunk/slideshow/make-deb
+
+Updated make-deb script.
+------------------------------------------------------------------------
+r946 | dreibh | 2011-01-28 17:22:52 +0100 (fr., 28 jan. 2011) | 2 lines
+Changed paths:
+   M /trunk/slideshow/src/example/demo-head.html
+   M /trunk/slideshow/src/example/demo-tail.html
+
+Updated demo files.
+
+------------------------------------------------------------------------
+r945 | dreibh | 2011-01-28 17:12:25 +0100 (fr., 28 jan. 2011) | 3 lines
+Changed paths:
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian/copyright
+   M /trunk/slideshow/slideshow.lsm
+   M /trunk/slideshow/src/createslideshow.cc
+   M /trunk/slideshow/src/example/demo-slideshow
+   M /trunk/slideshow/src/example/demo-tail.html
+   A /trunk/slideshow/src/iso8859-to-utf8
+   M /trunk/slideshow/src/tests/a93-27dez2003-maintitle.html
+   M /trunk/slideshow/src/tests/a93-27dez2003-slideshow
+   M /trunk/slideshow/src/tests/a93-head.html
+   M /trunk/slideshow/src/tests/a93-tail.html
+   M /trunk/slideshow/src/tests/aus2005-maintitle.html
+   M /trunk/slideshow/src/tests/bakeoff7-maintitle.html
+   M /trunk/slideshow/src/tests/nz2005-maintitle.html
+   M /trunk/slideshow/src/tests/promotion-maintitle.html
+   M /trunk/slideshow/src/tests/promotion-slideshow
+
+- SlideShow now generates UTF-8 output.
+- Fixed HTML version and encoding definitions.
+
+------------------------------------------------------------------------
+r944 | dreibh | 2011-01-28 17:11:26 +0100 (fr., 28 jan. 2011) | 3 lines
+Changed paths:
+   M /trunk/slideshow/src/infrastructure/imageviewer.js
+   M /trunk/slideshow/src/infrastructure/slideshow.js
+
+- Improved preferences handling for random mode.
+- Random mode now selects a different image, if there is one.
+
+------------------------------------------------------------------------
+r931 | dreibh | 2011-01-22 16:09:13 +0100 | 2 lines
+Changed paths:
+   A /trunk/slideshow/debian/source
+   A /trunk/slideshow/debian/source/format
+
+Added format file.
+
+------------------------------------------------------------------------
+r928 | dreibh | 2011-01-22 15:30:12 +0100 | 2 lines
+Changed paths:
+   M /trunk/bibtexconv/debian/changelog
+   M /trunk/bibtexconv/make-deb
+   M /trunk/fractgen2/debian/changelog
+   M /trunk/fractgen2/make-deb
+   M /trunk/netperfmeter/debian/changelog
+   M /trunk/netperfmeter/make-deb
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/make-deb
+   M /trunk/subnetcalc/debian/changelog
+   M /trunk/subnetcalc/make-deb
+   M /trunk/wireshark-experimental/copy-to-wireshark-directory
+
+make-deb updates.
+
+------------------------------------------------------------------------
+r925 | dreibh | 2011-01-22 11:40:24 +0100 | 1 line
+Changed paths:
+   M /trunk/slideshow/make-deb
+
+Packaging script update.
+------------------------------------------------------------------------
+r919 | dreibh | 2011-01-22 11:05:02 +0100 | 2 lines
+Changed paths:
+   M /trunk/slideshow/clean-deb
+   M /trunk/slideshow/configure.in
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian/compat
+   M /trunk/slideshow/debian/control
+   M /trunk/slideshow/debian/rules
+   M /trunk/slideshow/debian.conf
+   M /trunk/slideshow/make-deb
+   M /trunk/slideshow/make-ppa
+   M /trunk/slideshow/src/converter.cc
+   M /trunk/slideshow/src/converter.h
+   M /trunk/slideshow/src/createslideshow.8
+   M /trunk/slideshow/src/createslideshow.cc
+   M /trunk/slideshow/src/tools.cc
+   M /trunk/slideshow/src/tools.h
+
+Updated packaging to format "3.0 (quilt)".
+
+------------------------------------------------------------------------
+r601 | dreibh | 2010-07-11 17:29:48 +0200 | 1 line
+Changed paths:
+   A /trunk/bibtexconv
+   A /trunk/bibtexconv/src
+   A /trunk/bibtexconv/src/grammar.y
+   A /trunk/bibtexconv/src/make-it
+   A /trunk/bibtexconv/src/scanner.l
+   M /trunk/slideshow/debian/changelog
+   M /trunk/wireshark-experimental/make-ppa
+
+
+------------------------------------------------------------------------
+r596 | dreibh | 2010-06-30 22:45:01 +0200 (on., 30 juni 2010) | 2 lines
+Changed paths:
+   M /trunk/slideshow/debian/control
+
+Fixed lintian warnings.
+
+------------------------------------------------------------------------
+r562 | dreibh | 2010-05-31 11:54:06 +0200 (ma., 31 mai 2010) | 1 line
+Changed paths:
+   M /trunk/slideshow/ChangeLog
+
+
+------------------------------------------------------------------------
+r558 | dreibh | 2010-05-31 11:49:42 +0200 (ma., 31 mai 2010) | 2 lines
+Changed paths:
+   M /trunk/slideshow/configure.in
+   D /trunk/slideshow/createimages
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian/copyright
+   M /trunk/slideshow/make-ppa
+   M /trunk/slideshow/slideshow.lsm
+   M /trunk/slideshow/src/converter.cc
+   M /trunk/slideshow/src/converter.h
+   M /trunk/slideshow/src/createslideshow.8
+   M /trunk/slideshow/src/createslideshow.cc
+   M /trunk/slideshow/src/tools.cc
+   M /trunk/slideshow/src/tools.h
+
+Version update.
+
+------------------------------------------------------------------------
+r466 | dreibh | 2009-09-12 11:03:33 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/ChangeLog
    M /trunk/slideshow/configure.in
@@ -8,52 +315,52 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r315 | dreibh | 2009-06-20 19:23:58 +0200 (Sat, 20 Jun 2009) | 1 line
+r315 | dreibh | 2009-06-20 19:23:58 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/debian/changelog
    M /trunk/slideshow/debian/rules
 
 
 ------------------------------------------------------------------------
-r314 | dreibh | 2009-06-20 12:27:17 +0200 (Sat, 20 Jun 2009) | 1 line
+r314 | dreibh | 2009-06-20 12:27:17 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/debian/changelog
    M /trunk/slideshow/debian/control
 
 
 ------------------------------------------------------------------------
-r300 | dreibh | 2009-06-13 19:20:59 +0200 (Sat, 13 Jun 2009) | 1 line
+r300 | dreibh | 2009-06-13 19:20:59 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/make-ppa
 
 
 ------------------------------------------------------------------------
-r298 | dreibh | 2009-06-13 19:09:56 +0200 (Sat, 13 Jun 2009) | 1 line
+r298 | dreibh | 2009-06-13 19:09:56 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/debian/changelog
 
 
 ------------------------------------------------------------------------
-r296 | dreibh | 2009-06-13 19:02:07 +0200 (Sat, 13 Jun 2009) | 1 line
+r296 | dreibh | 2009-06-13 19:02:07 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/src/converter.cc
 
 
 ------------------------------------------------------------------------
-r293 | dreibh | 2009-06-13 16:50:31 +0200 (Sat, 13 Jun 2009) | 1 line
+r293 | dreibh | 2009-06-13 16:50:31 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/src/createslideshow.cc
 
 
 ------------------------------------------------------------------------
-r292 | dreibh | 2009-06-13 16:05:24 +0200 (Sat, 13 Jun 2009) | 1 line
+r292 | dreibh | 2009-06-13 16:05:24 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/debian/changelog
    M /trunk/slideshow/debian/control
 
 
 ------------------------------------------------------------------------
-r291 | dreibh | 2009-06-13 15:34:30 +0200 (Sat, 13 Jun 2009) | 3 lines
+r291 | dreibh | 2009-06-13 15:34:30 +0200 | 3 lines
 Changed paths:
    M /trunk/slideshow/src/converter.cc
    M /trunk/slideshow/src/createslideshow.cc
@@ -67,13 +374,13 @@ Changed paths:
 - Updated include for ImageMagick.
 
 ------------------------------------------------------------------------
-r288 | dreibh | 2009-06-13 14:11:01 +0200 (Sat, 13 Jun 2009) | 1 line
+r288 | dreibh | 2009-06-13 14:11:01 +0200 | 1 line
 Changed paths:
    D /trunk/slideshow/Makefile
 
 
 ------------------------------------------------------------------------
-r287 | dreibh | 2009-06-13 14:10:01 +0200 (Sat, 13 Jun 2009) | 2 lines
+r287 | dreibh | 2009-06-13 14:10:01 +0200 | 2 lines
 Changed paths:
    M /trunk/slideshow/Makefile
    M /trunk/slideshow/configure.in
@@ -85,7 +392,7 @@ Changed paths:
 Updated Debian/Ubuntu files.
 
 ------------------------------------------------------------------------
-r286 | dreibh | 2009-06-13 13:37:08 +0200 (Sat, 13 Jun 2009) | 2 lines
+r286 | dreibh | 2009-06-13 13:37:08 +0200 | 2 lines
 Changed paths:
    A /trunk/slideshow/clean-deb (from /trunk/subnetcalc/clean-deb:278)
    A /trunk/slideshow/debian (from /trunk/subnetcalc/debian:278)
@@ -113,7 +420,7 @@ Changed paths:
 Initial version of Debian/Ubuntu files.
 
 ------------------------------------------------------------------------
-r285 | dreibh | 2009-06-13 13:14:07 +0200 (Sat, 13 Jun 2009) | 2 lines
+r285 | dreibh | 2009-06-13 13:14:07 +0200 | 2 lines
 Changed paths:
    M /trunk/slideshow/AUTHORS
    M /trunk/slideshow/COPYING
@@ -138,13 +445,13 @@ Changed paths:
 Updated Automake files and cleaned up the directory.
 
 ------------------------------------------------------------------------
-r188 | dreibh | 2009-05-12 11:59:03 +0200 (Tue, 12 May 2009) | 1 line
+r188 | dreibh | 2009-05-12 11:59:03 +0200 (ti., 12 mai 2009) | 1 line
 Changed paths:
    M /trunk/slideshow/Makefile
 
 
 ------------------------------------------------------------------------
-r150 | dreibh | 2009-01-31 10:37:46 +0100 (Sat, 31 Jan 2009) | 1 line
+r150 | dreibh | 2009-01-31 10:37:46 +0100 | 1 line
 Changed paths:
    A /trunk/slideshow/src/examples/asien2007-maintitle.html
    A /trunk/slideshow/src/examples/asien2007-slideshow
@@ -153,19 +460,19 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r130 | dreibh | 2007-05-27 21:36:26 +0200 (Sun, 27 May 2007) | 1 line
+r130 | dreibh | 2007-05-27 21:36:26 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/src/examples/promotion-slideshow
 
 
 ------------------------------------------------------------------------
-r129 | dreibh | 2007-05-27 21:32:59 +0200 (Sun, 27 May 2007) | 1 line
+r129 | dreibh | 2007-05-27 21:32:59 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/src/slideshow2.cc
 
 
 ------------------------------------------------------------------------
-r128 | dreibh | 2007-05-27 21:31:45 +0200 (Sun, 27 May 2007) | 1 line
+r128 | dreibh | 2007-05-27 21:31:45 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/src/converter.cc
    M /trunk/slideshow/src/converter.h
@@ -173,13 +480,13 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r127 | dreibh | 2007-05-27 21:21:09 +0200 (Sun, 27 May 2007) | 1 line
+r127 | dreibh | 2007-05-27 21:21:09 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/src/examples/promotion-slideshow
 
 
 ------------------------------------------------------------------------
-r126 | dreibh | 2007-05-27 20:57:14 +0200 (Sun, 27 May 2007) | 1 line
+r126 | dreibh | 2007-05-27 20:57:14 +0200 | 1 line
 Changed paths:
    M /trunk/slideshow/src/examples/head.html
    A /trunk/slideshow/src/examples/promotion-maintitle.html
@@ -188,7 +495,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r118 | dreibh | 2006-09-01 10:12:16 +0200 (Fri, 01 Sep 2006) | 1 line
+r118 | dreibh | 2006-09-01 10:12:16 +0200 (fr., 01 sep. 2006) | 1 line
 Changed paths:
    M /trunk/slideshow/Makefile
    M /trunk/slideshow/configure.in
@@ -196,7 +503,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r117 | dreibh | 2006-08-30 10:12:35 +0200 (Wed, 30 Aug 2006) | 1 line
+r117 | dreibh | 2006-08-30 10:12:35 +0200 (on., 30 aug. 2006) | 1 line
 Changed paths:
    A /trunk/slideshow/src/demo/demo-section1.html
    A /trunk/slideshow/src/demo/demo-section2.html
@@ -205,7 +512,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r116 | dreibh | 2006-08-29 19:45:44 +0200 (Tue, 29 Aug 2006) | 1 line
+r116 | dreibh | 2006-08-29 19:45:44 +0200 (ti., 29 aug. 2006) | 1 line
 Changed paths:
    M /trunk/slideshow/configure.in
    M /trunk/slideshow/src/Makefile.am
@@ -217,7 +524,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r115 | dreibh | 2006-08-29 11:03:32 +0200 (Tue, 29 Aug 2006) | 1 line
+r115 | dreibh | 2006-08-29 11:03:32 +0200 (ti., 29 aug. 2006) | 1 line
 Changed paths:
    M /trunk/slideshow/configure.in
    M /trunk/slideshow/src/Makefile.am
@@ -226,7 +533,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r114 | dreibh | 2006-08-22 14:41:26 +0200 (Tue, 22 Aug 2006) | 1 line
+r114 | dreibh | 2006-08-22 14:41:26 +0200 (ti., 22 aug. 2006) | 1 line
 Changed paths:
    M /trunk/slideshow/src/converter.cc
    M /trunk/slideshow/src/converter.h
@@ -240,7 +547,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r113 | dreibh | 2006-08-22 14:12:19 +0200 (Tue, 22 Aug 2006) | 1 line
+r113 | dreibh | 2006-08-22 14:12:19 +0200 (ti., 22 aug. 2006) | 1 line
 Changed paths:
    M /trunk/slideshow/src/converter.cc
    M /trunk/slideshow/src/converter.h
@@ -254,7 +561,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r112 | dreibh | 2006-08-22 14:07:05 +0200 (Tue, 22 Aug 2006) | 1 line
+r112 | dreibh | 2006-08-22 14:07:05 +0200 (ti., 22 aug. 2006) | 1 line
 Changed paths:
    D /trunk/slideshow/Tux.jpeg
    D /trunk/slideshow/a93-27dez2003-maintitle.html
@@ -392,7 +699,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r111 | dreibh | 2006-08-22 13:37:43 +0200 (Tue, 22 Aug 2006) | 1 line
+r111 | dreibh | 2006-08-22 13:37:43 +0200 (ti., 22 aug. 2006) | 1 line
 Changed paths:
    A /trunk/slideshow/AUTHORS
    A /trunk/slideshow/COPYING
@@ -424,19 +731,19 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r110 | dreibh | 2006-08-22 12:23:29 +0200 (Tue, 22 Aug 2006) | 1 line
+r110 | dreibh | 2006-08-22 12:23:29 +0200 (ti., 22 aug. 2006) | 1 line
 Changed paths:
    M /trunk/slideshow/nz2005-slideshow
 
 
 ------------------------------------------------------------------------
-r108 | dreibh | 2005-12-20 14:53:41 +0100 (Tue, 20 Dec 2005) | 1 line
+r108 | dreibh | 2005-12-20 14:53:41 +0100 (ti., 20 des. 2005) | 1 line
 Changed paths:
    R /trunk/slideshow/Tux.jpeg
 
 
 ------------------------------------------------------------------------
-r107 | dreibh | 2005-12-20 14:49:31 +0100 (Tue, 20 Dec 2005) | 1 line
+r107 | dreibh | 2005-12-20 14:49:31 +0100 (ti., 20 des. 2005) | 1 line
 Changed paths:
    M /trunk/slideshow/Tux.jpeg
    M /trunk/slideshow/getsize.cc
@@ -447,7 +754,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r106 | dreibh | 2005-12-19 12:36:59 +0100 (Mon, 19 Dec 2005) | 1 line
+r106 | dreibh | 2005-12-19 12:36:59 +0100 (ma., 19 des. 2005) | 1 line
 Changed paths:
    R /trunk/slideshow/background.png
    R /trunk/slideshow/background_white.png
@@ -459,7 +766,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r105 | dreibh | 2005-12-19 12:16:29 +0100 (Mon, 19 Dec 2005) | 1 line
+r105 | dreibh | 2005-12-19 12:16:29 +0100 (ma., 19 des. 2005) | 1 line
 Changed paths:
    R /trunk/slideshow/infrastructure/1leftarrow.png
    R /trunk/slideshow/infrastructure/1rightarrow.png
@@ -472,7 +779,7 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r104 | dreibh | 2005-12-19 12:15:07 +0100 (Mon, 19 Dec 2005) | 1 line
+r104 | dreibh | 2005-12-19 12:15:07 +0100 (ma., 19 des. 2005) | 1 line
 Changed paths:
    M /trunk/slideshow/infrastructure/1leftarrow.png
    M /trunk/slideshow/infrastructure/1rightarrow.png
@@ -485,21 +792,21 @@ Changed paths:
 
 
 ------------------------------------------------------------------------
-r103 | dreibh | 2005-12-19 09:41:13 +0100 (Mon, 19 Dec 2005) | 1 line
+r103 | dreibh | 2005-12-19 09:41:13 +0100 (ma., 19 des. 2005) | 1 line
 Changed paths:
    A /trunk/slideshow/aus2005-maintitle.html
    A /trunk/slideshow/aus2005-slideshow
 
 
 ------------------------------------------------------------------------
-r99 | dreibh | 2005-02-11 11:25:32 +0100 (Fri, 11 Feb 2005) | 2 lines
+r99 | dreibh | 2005-02-11 11:25:32 +0100 (fr., 11 feb. 2005) | 2 lines
 Changed paths:
    M /trunk/slideshow/nz2005-slideshow
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r98 | dreibh | 2005-02-11 10:51:29 +0100 (Fri, 11 Feb 2005) | 2 lines
+r98 | dreibh | 2005-02-11 10:51:29 +0100 (fr., 11 feb. 2005) | 2 lines
 Changed paths:
    M /trunk/slideshow/Makefile
    A /trunk/slideshow/nz2005-maintitle.html
@@ -509,14 +816,14 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r97 | dreibh | 2004-11-16 05:19:44 +0100 (Tue, 16 Nov 2004) | 2 lines
+r97 | dreibh | 2004-11-16 05:19:44 +0100 (ti., 16 nov. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/ietf61-slideshow
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r96 | dreibh | 2004-11-16 04:26:52 +0100 (Tue, 16 Nov 2004) | 2 lines
+r96 | dreibh | 2004-11-16 04:26:52 +0100 (ti., 16 nov. 2004) | 2 lines
 Changed paths:
    A /trunk/slideshow/ietf61-maintitle.html
    A /trunk/slideshow/ietf61-slideshow
@@ -524,7 +831,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r95 | dreibh | 2004-09-01 12:25:04 +0200 (Wed, 01 Sep 2004) | 2 lines
+r95 | dreibh | 2004-09-01 12:25:04 +0200 (on., 01 sep. 2004) | 2 lines
 Changed paths:
    A /trunk/slideshow/regenerate-all-slideshows
    M /trunk/slideshow/slideshow2.cc
@@ -532,7 +839,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r94 | dreibh | 2004-09-01 10:52:57 +0200 (Wed, 01 Sep 2004) | 2 lines
+r94 | dreibh | 2004-09-01 10:52:57 +0200 (on., 01 sep. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/a93-27dez2003-slideshow
    M /trunk/slideshow/bakeoff4-slideshow
@@ -548,7 +855,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r93 | dreibh | 2004-08-31 13:23:16 +0200 (Tue, 31 Aug 2004) | 2 lines
+r93 | dreibh | 2004-08-31 13:23:16 +0200 (ti., 31 aug. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/converter.cc
    M /trunk/slideshow/slideshow2.cc
@@ -558,7 +865,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r92 | dreibh | 2004-08-30 18:13:07 +0200 (Mon, 30 Aug 2004) | 2 lines
+r92 | dreibh | 2004-08-30 18:13:07 +0200 (ma., 30 aug. 2004) | 2 lines
 Changed paths:
    A /trunk/slideshow/bakeoff7-maintitle.html
    A /trunk/slideshow/bakeoff7-slideshow
@@ -567,7 +874,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r91 | dreibh | 2004-08-30 16:16:42 +0200 (Mon, 30 Aug 2004) | 2 lines
+r91 | dreibh | 2004-08-30 16:16:42 +0200 (ma., 30 aug. 2004) | 2 lines
 Changed paths:
    A /trunk/slideshow/msn2004-maintitle.html
    A /trunk/slideshow/msn2004-slideshow
@@ -575,7 +882,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r90 | dreibh | 2004-08-30 10:06:32 +0200 (Mon, 30 Aug 2004) | 2 lines
+r90 | dreibh | 2004-08-30 10:06:32 +0200 (ma., 30 aug. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/a93-27dez2003-slideshow
    M /trunk/slideshow/bakeoff4-slideshow
@@ -589,21 +896,21 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r89 | dreibh | 2004-08-27 15:24:18 +0200 (Fri, 27 Aug 2004) | 2 lines
+r89 | dreibh | 2004-08-27 15:24:18 +0200 (fr., 27 aug. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/ict2003-slideshow
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r88 | dreibh | 2004-08-27 14:48:15 +0200 (Fri, 27 Aug 2004) | 2 lines
+r88 | dreibh | 2004-08-27 14:48:15 +0200 (fr., 27 aug. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/converter.cc
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r87 | dreibh | 2004-08-27 13:49:18 +0200 (Fri, 27 Aug 2004) | 2 lines
+r87 | dreibh | 2004-08-27 13:49:18 +0200 (fr., 27 aug. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/Makefile
    M /trunk/slideshow/converter.cc
@@ -615,7 +922,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r86 | dreibh | 2004-08-27 12:12:20 +0200 (Fri, 27 Aug 2004) | 2 lines
+r86 | dreibh | 2004-08-27 12:12:20 +0200 (fr., 27 aug. 2004) | 2 lines
 Changed paths:
    A /trunk/slideshow/converter.cc
    A /trunk/slideshow/converter.h
@@ -623,7 +930,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r85 | dreibh | 2004-07-13 11:10:10 +0200 (Tue, 13 Jul 2004) | 2 lines
+r85 | dreibh | 2004-07-13 11:10:10 +0200 (ti., 13 juli 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/Makefile
    M /trunk/slideshow/slideshow2.cc
@@ -631,7 +938,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r84 | dreibh | 2004-07-01 15:53:33 +0200 (Thu, 01 Jul 2004) | 2 lines
+r84 | dreibh | 2004-07-01 15:53:33 +0200 (to., 01 juli 2004) | 2 lines
 Changed paths:
    A /trunk/slideshow/icon-abschluss93.png
    M /trunk/slideshow/slideshow2.cc
@@ -639,21 +946,21 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r83 | dreibh | 2004-07-01 12:03:17 +0200 (Thu, 01 Jul 2004) | 2 lines
+r83 | dreibh | 2004-07-01 12:03:17 +0200 (to., 01 juli 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/bakeoff4-slideshow
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r82 | dreibh | 2004-07-01 11:56:45 +0200 (Thu, 01 Jul 2004) | 2 lines
+r82 | dreibh | 2004-07-01 11:56:45 +0200 (to., 01 juli 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/Makefile
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r81 | dreibh | 2004-07-01 11:17:55 +0200 (Thu, 01 Jul 2004) | 2 lines
+r81 | dreibh | 2004-07-01 11:17:55 +0200 (to., 01 juli 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/a93-27dez2003-slideshow
    M /trunk/slideshow/bakeoff4-slideshow
@@ -668,7 +975,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r80 | dreibh | 2004-07-01 10:34:41 +0200 (Thu, 01 Jul 2004) | 2 lines
+r80 | dreibh | 2004-07-01 10:34:41 +0200 (to., 01 juli 2004) | 2 lines
 Changed paths:
    D /trunk/slideshow/controls
    M /trunk/slideshow/imageviewer.js
@@ -688,7 +995,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r79 | dreibh | 2004-03-12 13:35:34 +0100 (Fri, 12 Mar 2004) | 2 lines
+r79 | dreibh | 2004-03-12 13:35:34 +0100 (fr., 12 mars 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/imageviewer.js
    M /trunk/slideshow/slideshow2.cc
@@ -697,7 +1004,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r78 | dreibh | 2004-03-11 11:09:46 +0100 (Thu, 11 Mar 2004) | 2 lines
+r78 | dreibh | 2004-03-11 11:09:46 +0100 (to., 11 mars 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/Makefile
    M /trunk/slideshow/slideshow2.cc
@@ -705,7 +1012,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r77 | dreibh | 2004-03-08 10:30:59 +0100 (Mon, 08 Mar 2004) | 2 lines
+r77 | dreibh | 2004-03-08 10:30:59 +0100 (ma., 08 mars 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/Makefile
    A /trunk/slideshow/controls/2leftarrow.png
@@ -717,7 +1024,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r76 | dreibh | 2004-02-17 10:54:05 +0100 (Tue, 17 Feb 2004) | 2 lines
+r76 | dreibh | 2004-02-17 10:54:05 +0100 (ti., 17 feb. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/slideshow2.cc
    M /trunk/slideshow/test-maintitle.html
@@ -725,14 +1032,14 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r75 | dreibh | 2004-02-06 15:55:35 +0100 (Fri, 06 Feb 2004) | 2 lines
+r75 | dreibh | 2004-02-06 15:55:35 +0100 (fr., 06 feb. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/slideshow2.cc
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r74 | dreibh | 2004-02-06 15:00:17 +0100 (Fri, 06 Feb 2004) | 2 lines
+r74 | dreibh | 2004-02-06 15:00:17 +0100 (fr., 06 feb. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/slideshow2.cc
    A /trunk/slideshow/test-slideshow2
@@ -740,7 +1047,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r73 | dreibh | 2004-02-06 13:43:58 +0100 (Fri, 06 Feb 2004) | 2 lines
+r73 | dreibh | 2004-02-06 13:43:58 +0100 (fr., 06 feb. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/Makefile
    M /trunk/slideshow/slideshow2.cc
@@ -748,7 +1055,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r72 | dreibh | 2004-02-06 12:08:14 +0100 (Fri, 06 Feb 2004) | 2 lines
+r72 | dreibh | 2004-02-06 12:08:14 +0100 (fr., 06 feb. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/slideshow.cc
    A /trunk/slideshow/slideshow2.cc
@@ -756,21 +1063,21 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r66 | dreibh | 2004-02-03 13:20:37 +0100 (Tue, 03 Feb 2004) | 2 lines
+r66 | dreibh | 2004-02-03 13:20:37 +0100 (ti., 03 feb. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/slideshow.cc
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r65 | dreibh | 2004-02-03 12:48:42 +0100 (Tue, 03 Feb 2004) | 2 lines
+r65 | dreibh | 2004-02-03 12:48:42 +0100 (ti., 03 feb. 2004) | 2 lines
 Changed paths:
    A /trunk/slideshow/valid-xhtml11.png
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r64 | dreibh | 2004-02-03 11:51:24 +0100 (Tue, 03 Feb 2004) | 2 lines
+r64 | dreibh | 2004-02-03 11:51:24 +0100 (ti., 03 feb. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/a93-27dez2003-slideshow
    M /trunk/slideshow/imageviewer.js
@@ -780,7 +1087,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r63 | dreibh | 2004-01-30 17:29:17 +0100 (Fri, 30 Jan 2004) | 2 lines
+r63 | dreibh | 2004-01-30 17:29:17 +0100 (fr., 30 jan. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/imageviewer.js
    M /trunk/slideshow/slideshow.cc
@@ -789,7 +1096,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r62 | dreibh | 2004-01-30 16:33:43 +0100 (Fri, 30 Jan 2004) | 2 lines
+r62 | dreibh | 2004-01-30 16:33:43 +0100 (fr., 30 jan. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/a93-27dez2003-slideshow
    M /trunk/slideshow/createimages
@@ -798,7 +1105,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r61 | dreibh | 2004-01-30 16:08:36 +0100 (Fri, 30 Jan 2004) | 2 lines
+r61 | dreibh | 2004-01-30 16:08:36 +0100 (fr., 30 jan. 2004) | 2 lines
 Changed paths:
    D /trunk/slideshow/createfull
    A /trunk/slideshow/createimages
@@ -810,7 +1117,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r60 | dreibh | 2004-01-29 17:24:34 +0100 (Thu, 29 Jan 2004) | 2 lines
+r60 | dreibh | 2004-01-29 17:24:34 +0100 (to., 29 jan. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/a93-27dez2003-maintitle.html
    M /trunk/slideshow/a93-27dez2003-slideshow
@@ -819,35 +1126,35 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r59 | dreibh | 2004-01-29 16:43:01 +0100 (Thu, 29 Jan 2004) | 2 lines
+r59 | dreibh | 2004-01-29 16:43:01 +0100 (to., 29 jan. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/lca2003-maintitle.html
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r58 | dreibh | 2004-01-29 16:37:35 +0100 (Thu, 29 Jan 2004) | 2 lines
+r58 | dreibh | 2004-01-29 16:37:35 +0100 (to., 29 jan. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/lca2003-maintitle.html
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r57 | dreibh | 2004-01-29 16:32:54 +0100 (Thu, 29 Jan 2004) | 2 lines
+r57 | dreibh | 2004-01-29 16:32:54 +0100 (to., 29 jan. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/lca2003-maintitle.html
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r56 | dreibh | 2004-01-29 16:28:18 +0100 (Thu, 29 Jan 2004) | 2 lines
+r56 | dreibh | 2004-01-29 16:28:18 +0100 (to., 29 jan. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/lca2003-maintitle.html
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r55 | dreibh | 2004-01-29 16:02:49 +0100 (Thu, 29 Jan 2004) | 2 lines
+r55 | dreibh | 2004-01-29 16:02:49 +0100 (to., 29 jan. 2004) | 2 lines
 Changed paths:
    A /trunk/slideshow/icon-default.png
    M /trunk/slideshow/slideshow.cc
@@ -855,14 +1162,14 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r54 | dreibh | 2004-01-29 14:39:01 +0100 (Thu, 29 Jan 2004) | 2 lines
+r54 | dreibh | 2004-01-29 14:39:01 +0100 (to., 29 jan. 2004) | 2 lines
 Changed paths:
    M /trunk/slideshow/a93-27dez2003-slideshow
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r53 | dreibh | 2004-01-29 13:08:50 +0100 (Thu, 29 Jan 2004) | 2 lines
+r53 | dreibh | 2004-01-29 13:08:50 +0100 (to., 29 jan. 2004) | 2 lines
 Changed paths:
    A /trunk/slideshow/Tux.jpeg
    A /trunk/slideshow/a93-27dez2003-slideshow
@@ -873,7 +1180,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r52 | dreibh | 2004-01-29 11:36:13 +0100 (Thu, 29 Jan 2004) | 2 lines
+r52 | dreibh | 2004-01-29 11:36:13 +0100 (to., 29 jan. 2004) | 2 lines
 Changed paths:
    M /trunk/progtest/Bild3.jpeg
    A /trunk/progtest/Bild4.jpeg
@@ -920,14 +1227,14 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r11 | dreibh | 2003-07-21 15:34:41 +0200 (Mon, 21 Jul 2003) | 2 lines
+r11 | dreibh | 2003-07-21 15:34:41 +0200 (ma., 21 juli 2003) | 2 lines
 Changed paths:
    M /trunk/slideshow/lca2003-slideshow
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r10 | dreibh | 2003-07-21 14:33:36 +0200 (Mon, 21 Jul 2003) | 2 lines
+r10 | dreibh | 2003-07-21 14:33:36 +0200 (ma., 21 juli 2003) | 2 lines
 Changed paths:
    M /trunk/slideshow/bakeoff4-slideshow
    M /trunk/slideshow/slideshow.cc
@@ -937,7 +1244,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r9 | dreibh | 2003-07-21 14:14:50 +0200 (Mon, 21 Jul 2003) | 2 lines
+r9 | dreibh | 2003-07-21 14:14:50 +0200 (ma., 21 juli 2003) | 2 lines
 Changed paths:
    M /trunk/slideshow/bakeoff4-slideshow
    M /trunk/slideshow/bakeoff5-slideshow
@@ -956,14 +1263,14 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r8 | dreibh | 2003-07-18 14:22:52 +0200 (Fri, 18 Jul 2003) | 2 lines
+r8 | dreibh | 2003-07-18 14:22:52 +0200 (fr., 18 juli 2003) | 2 lines
 Changed paths:
    M /trunk/slideshow/msn2003-slideshow
 
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r7 | dreibh | 2003-07-18 12:30:24 +0200 (Fri, 18 Jul 2003) | 2 lines
+r7 | dreibh | 2003-07-18 12:30:24 +0200 (fr., 18 juli 2003) | 2 lines
 Changed paths:
    M /trunk/slideshow/bakeoff4-slideshow
    M /trunk/slideshow/bakeoff5-slideshow
@@ -977,7 +1284,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r6 | dreibh | 2003-07-17 13:37:51 +0200 (Thu, 17 Jul 2003) | 2 lines
+r6 | dreibh | 2003-07-17 13:37:51 +0200 (to., 17 juli 2003) | 2 lines
 Changed paths:
    M /trunk/slideshow/bakeoff4-slideshow
    M /trunk/slideshow/bakeoff5-slideshow
@@ -998,7 +1305,7 @@ Changed paths:
 *** empty log message ***
 
 ------------------------------------------------------------------------
-r2 | dreibh | 2003-07-17 11:45:08 +0200 (Thu, 17 Jul 2003) | 2 lines
+r2 | dreibh | 2003-07-17 11:45:08 +0200 (to., 17 juli 2003) | 2 lines
 Changed paths:
    A /trunk/slideshow
    A /trunk/slideshow/Makefile

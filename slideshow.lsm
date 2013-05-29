@@ -1,7 +1,7 @@
 Begin4
 Title:          slideshow
-Version:        2.2.3
-Entered-date:   2012-07-20
+Version:        2.2.4
+Entered-date:   2013-05-29
 Description:    SlideShow is a command-line tool to generate
                 standards-compliant XHTML-1.1 presentations from a set of
                 image files. It can be used to easily generate online photo
@@ -12,7 +12,7 @@ Keywords:       Slideshow, HTML, XHTML, JavaScript
 Author:         dreibh@iem.uni-due.de (Thomas Dreibholz)
 Maintained-by:  dreibh@iem.uni-due.de (Thomas Dreibholz)
 Primary-site:   http://www.iem.uni-due.de/~dreibh/slideshow
-                7764 kB download/slideshow-2.2.3.tar.gz
+                7764 kB download/slideshow-2.2.4.tar.gz
 Original-site:  http://www.iem.uni-due.de/~dreibh/slideshow
 Platforms:      Linux, FreeBSD, MacOS, Solaris
 Copying-policy: GPL
