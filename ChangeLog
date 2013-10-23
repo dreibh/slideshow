@@ -1,4 +1,28 @@
 ------------------------------------------------------------------------
+r1682 | dreibh | 2013-10-23 13:30:32 +0200 (Wed, 23 Oct 2013) | 1 line
+Changed paths:
+   M /trunk/slideshow/ChangeLog
+   M /trunk/slideshow/Makefile.am
+   M /trunk/slideshow/clean-deb
+   A /trunk/slideshow/configure.ac (from /trunk/slideshow/configure.in:1677)
+   D /trunk/slideshow/configure.in
+   M /trunk/slideshow/debian/changelog
+   M /trunk/slideshow/debian/copyright
+   M /trunk/slideshow/filter-empty-entries
+   M /trunk/slideshow/src/Makefile.am
+   M /trunk/slideshow/src/converter.cc
+   M /trunk/slideshow/src/converter.h
+   M /trunk/slideshow/src/createslideshow.1
+   M /trunk/slideshow/src/createslideshow.cc
+   M /trunk/slideshow/src/infrastructure/imageviewer.js
+   M /trunk/slideshow/src/infrastructure/slideshow.js
+   M /trunk/slideshow/src/run-test
+   M /trunk/slideshow/src/tools.cc
+   M /trunk/slideshow/src/tools.h
+   A /trunk/slideshow/update-changelog
+
+Packaging file updates.
+------------------------------------------------------------------------
 r1671 | dreibh | 2013-10-18 23:52:07 +0200 (Fri, 18 Oct 2013) | 2 lines
 Changed paths:
    M /trunk/bibtexconv/make-ppa
