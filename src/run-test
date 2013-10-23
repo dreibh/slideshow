@@ -1,5 +1,6 @@
 #!/bin/bash
-./slideshow2 \
+
+./createslideshow \
 --directory=test \
 --title="Test-Titel" --maindescription=demo-maintitle.html \
 --stylesheet=demo-stylesheet.css \
