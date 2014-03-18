@@ -1,9 +1,7 @@
-AC_INIT([Slideshow], [2.2.5], [dreib@iem.uni-due.de])
+AC_INIT([Slideshow], [2.2.6], [dreib@iem.uni-due.de])
 
 AM_INIT_AUTOMAKE
 AC_PREREQ(2.60)
-
-AC_CONFIG_MACRO_DIR([m4])
 
 
 AC_PREFIX_DEFAULT(/usr/local)
