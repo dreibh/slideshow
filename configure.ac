@@ -14,6 +14,12 @@ AM_CONFIG_HEADER(config.h)
 
 
 # ImageMagick
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# NOTE: Debian packaging uses GraphicsMagick,
+#       with API compatible to ImageMagick!
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 AC_MSG_CHECKING(Checking for ImageMagick header files)
 AC_CHECK_HEADERS(magick/api.h)
 MAGICK_CONFIG="Magick-config"
