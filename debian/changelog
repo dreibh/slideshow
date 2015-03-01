@@ -1,4 +1,4 @@
-slideshow (2.2.7~rc1-1ubuntu1) trusty; urgency=low
+slideshow (2.2.7-1ubuntu1) trusty; urgency=low
 
   * New upstream version.
   * Initial Debian release (Closes: #669900).
