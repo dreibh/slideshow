@@ -1,6 +1,6 @@
-slideshow (2.2.7-1ubuntu1) trusty; urgency=low
+slideshow (2.2.8-1ubuntu1) trusty; urgency=low
 
   * New upstream version.
   * Initial Debian release (Closes: #669900).
 
- -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Sun, 01 Mar 2015 01:01:01 +0200
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Wed, 06 Apr 2016 01:01:01 +0200
