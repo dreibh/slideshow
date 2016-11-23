@@ -1,3 +1,9 @@
+slideshow (2.2.9~rc1-1ubuntu1) trusty; urgency=low
+
+  * New upstream version.
+
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Wed, 24 Nov 2016 01:01:01 +0200
+
 slideshow (2.2.8-1ubuntu1) trusty; urgency=low
 
   * New upstream version.
