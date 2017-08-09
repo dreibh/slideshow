@@ -1,4 +1,4 @@
-AC_INIT([Slideshow], [2.2.9~rc1], [dreib@iem.uni-due.de])
+AC_INIT([Slideshow], [2.2.9~rc2], [dreib@iem.uni-due.de])
 
 AM_INIT_AUTOMAKE
 AC_PREREQ(2.60)
