@@ -11,9 +11,9 @@ Description:    SlideShow is a command-line tool to generate
 Keywords:       Slideshow, HTML, XHTML, JavaScript
 Author:         dreibh@iem.uni-due.de (Thomas Dreibholz)
 Maintained-by:  dreibh@iem.uni-due.de (Thomas Dreibholz)
-Primary-site:   http://www.iem.uni-due.de/~dreibh/slideshow
+Primary-site:   https://www.uni-due.de/~be0001/slideshow
                 7780 kB download/slideshow-2.2.8.tar.gz
-Original-site:  http://www.iem.uni-due.de/~dreibh/slideshow
+Original-site:  https://www.uni-due.de/~be0001/slideshow
 Platforms:      Linux, FreeBSD, MacOS, Solaris
 Copying-policy: GPL
 End

@@ -2,7 +2,7 @@ Source: slideshow
 Section: graphics
 Priority: optional
 Maintainer: Thomas Dreibholz <dreibh@iem.uni-due.de>
-Homepage: http://www.iem.uni-due.de/~dreibh/slideshow/
+Homepage: https://www.uni-due.de/~be0001/slideshow/
 Build-Depends: autotools-dev,
                debhelper (>= 9),
                dpkg-dev (>= 1.16.1~),
