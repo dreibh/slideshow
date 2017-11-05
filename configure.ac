@@ -40,21 +40,6 @@ AC_PROG_LN_S
 AC_PROG_LIBTOOL
 
 
-# colorgcc
-AC_ARG_ENABLE([colorgcc],
-              [  --enable-colorgcc       enable colorgcc support ][default=yes]],
-              enable_colorgcc=$enableval, enable_colorgcc=yes)
-if test "${enable_colorgcc}" = "yes"; then
-   AC_CHECK_PROG([COLORGCC], [colorgcc], [yes], [no])
-   if test "$COLORGCC" == "yes"
-   then
-      AC_MSG_NOTICE([Compiling using colorgcc])
-      CC=colorgcc
-      CXX=colorgcc -lstdc++
-   fi
-fi
-
-
 # add here all your Makefiles. These will be created by configure
 AC_OUTPUT(Makefile src/Makefile src/infrastructure/Makefile src/example/Makefile src/example/demo-images/Makefile )
 
