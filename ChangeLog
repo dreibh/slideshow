@@ -1,3 +1,61 @@
+commit c56b600762edaf084e76eabaa12ac3cbfcc7cd18
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 5 16:18:18 2017 +0100
+
+    Version bump.
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit b401edde86ad973db2e0eae0e42c6ff6f6ddcaf1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 5 16:16:58 2017 +0100
+
+    Build script updates.
+
+ ChangeLog            | 62 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ UpdateDoc1.sed       |  4 ++--
+ build-deb            |  5 ++---
+ clean-deb            |  3 +--
+ debian/changelog     |  4 ++--
+ filter-empty-entries |  3 +--
+ make-deb             | 11 +++++-----
+ make-ppa             | 34 +++++++++++++++++++++++-----
+ 8 files changed, 104 insertions(+), 22 deletions(-)
+
+commit 798759d9619c30591b9741489e8692b0c7875534
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 5 16:16:49 2017 +0100
+
+    Got rid of SVN Id tags.
+
+ src/converter.cc                  | 3 +--
+ src/converter.h                   | 3 +--
+ src/createslideshow.1             | 2 --
+ src/createslideshow.cc            | 3 +--
+ src/example/demo-slideshow        | 1 -
+ src/infrastructure/imageviewer.js | 3 +--
+ src/infrastructure/slideshow.js   | 3 +--
+ src/tools.cc                      | 3 +--
+ src/tools.h                       | 3 +--
+ 9 files changed, 7 insertions(+), 17 deletions(-)
+
+commit b58b55f223fe1685c06e0caad49e6bdaec7d732d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 5 16:15:13 2017 +0100
+
+    Header updates.
+
+ src/converter.cc                  | 2 +-
+ src/converter.h                   | 2 +-
+ src/createslideshow.1             | 2 +-
+ src/createslideshow.cc            | 2 +-
+ src/infrastructure/imageviewer.js | 2 +-
+ src/infrastructure/slideshow.js   | 2 +-
+ src/tools.cc                      | 2 +-
+ src/tools.h                       | 2 +-
+ 8 files changed, 8 insertions(+), 8 deletions(-)
+
 commit edcd025b07f48a5ff567473da79aead83b357d0e
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Sun Nov 5 16:15:02 2017 +0100
