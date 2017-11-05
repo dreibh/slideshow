@@ -1,8 +1,8 @@
-slideshow (2.2.9~rc2-1ubuntu1) artful; urgency=low
+slideshow (2.2.9~rc3-1ubuntu1) artful; urgency=low
 
   * New upstream version.
 
- -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Wed, 09 Aug 2017 01:01:01 +0200
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Sun, 05 Nov 2017 08:08:08 +0800
 
 slideshow (2.2.8-1ubuntu1) trusty; urgency=low
 
