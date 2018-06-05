@@ -1,4 +1,10 @@
-slideshow (2.2.9-1ubuntu1) artful; urgency=low
+slideshow (2.2.10-1ubuntu1) cosmic; urgency=low
+
+  * New upstream version.
+
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Tue, 06 Jun 2018 08:08:08 +0800
+
+ slideshow (2.2.9-1ubuntu1) artful; urgency=low
 
   * New upstream version.
 

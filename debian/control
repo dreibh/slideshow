@@ -10,7 +10,7 @@ Build-Depends: autotools-dev,
                libfile-fcntllock-perl,
                libgraphicsmagick-dev,
                libwebp-dev
-Standards-Version: 3.9.7
+Standards-Version: 4.1.1
 
 Package: slideshow-core
 Architecture: all
