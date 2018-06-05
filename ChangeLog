@@ -1,3 +1,47 @@
+commit e8febb05bcffeec32d0f1f3f41d2ce7df76aee35
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Jun 5 11:52:35 2018 +0200
+
+    Updated scripts.
+
+ build-deb        |  5 +++--
+ clean-deb        |  8 ++++++--
+ configure.ac     |  2 +-
+ debian/changelog |  8 +++++++-
+ debian/control   |  2 +-
+ make-deb         | 51 ++++++++++++++++++++++++++-------------------------
+ make-ppa         |  2 +-
+ 7 files changed, 45 insertions(+), 33 deletions(-)
+
+commit 9d5ae6ea376aa52ea89aafdfa71fb0c2e71327e0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 5 17:05:02 2017 +0100
+
+    Updated LSM entry.
+
+ slideshow.lsm | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 654926641a2d3cc5fbcabebcef89d3f4ed321030
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 5 17:00:27 2017 +0100
+
+    Added configuration file.
+
+ website.config | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 0df1889baa3f1b20bef1d9f35d9e2ce0acb1a04f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 5 16:59:35 2017 +0100
+
+    Version bump.
+
+ ChangeLog        | 58 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ configure.ac     |  2 +-
+ debian/changelog |  2 +-
+ 3 files changed, 60 insertions(+), 2 deletions(-)
+
 commit c56b600762edaf084e76eabaa12ac3cbfcc7cd18
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Sun Nov 5 16:18:18 2017 +0100
