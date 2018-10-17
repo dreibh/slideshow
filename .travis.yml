@@ -129,7 +129,7 @@ install:
           sudo docker exec -t ubuntu-test bash -c "apt-get update"
           sudo docker exec -t ubuntu-test bash -c "apt-get install -y autoconf automake libtool gcc g++ clang make graphicsmagick-libmagick-dev-compat libgraphicsmagick-dev libwebp-dev"
        elif [ "$VARIANT" = "fedora" ] ; then
-          sudo docker exec -t ubuntu-test bash -c "dnf install -y autoconf automake libtool gcc gcc-c++ clang make GraphicsMagick-c++-devel"
+          sudo docker exec -t ubuntu-test bash -c "dnf install -y autoconf automake libtool gcc gcc-c++ clang make ImageMagick ImageMagick-c++-devel"
        fi
     fi
 
