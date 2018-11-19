@@ -137,8 +137,8 @@ FIND_LIBRARY(GraphicsMagick_LIBRARY NAMES GraphicsMagick REQUIRED)
 # COMPILER FLAGS
 #############################################################################
 
-SET(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   -Wall")
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+SET(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   -Wall -Wno-format-truncation")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-format-truncation")
 
 IF (CMAKE_BUILD_TYPE MATCHES DEBUG)
     MESSAGE(STATUS "Building in DEBUG mode")
