@@ -5,13 +5,12 @@ Maintainer: Thomas Dreibholz <dreibh@iem.uni-due.de>
 Homepage: https://www.uni-due.de/~be0001/slideshow/
 Build-Depends: cmake (>= 3.0.2) | cmake3,
                debhelper (>= 9),
-               graphicsmagick-libmagick-dev-compat,
                libfile-fcntllock-perl,
                libgraphicsmagick-dev,
                libwebp-dev
 Standards-Version: 4.2.1
 
-Package: slideshow-core
+Package: slideshow-infrastructure
 Architecture: all
 Depends: ${misc:Depends},
          ${shlibs:Depends}
@@ -23,7 +22,7 @@ Description: SlideShow infrastructure files
 
 Package: slideshow
 Architecture: any
-Depends: slideshow-core,
+Depends: slideshow-infrastructure,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends:

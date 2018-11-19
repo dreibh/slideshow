@@ -3,15 +3,22 @@
 #############################################################################
 
 SET(demoimages_files
-   demo-background.png
-   demo-icon.png
-   demo-maintitle.html
-   demo-section1.html
-   demo-section2.html
-   demo-slideshow
-   demo-tail.html
-   demo-head.html
-   demo-stylesheet.css
+   alpha01.fsf
+   alpha01.png
+   alpha02.fsf
+   alpha02.png
+   alpha03.fsf
+   alpha03.png
+   alpha04.fsf
+   alpha04.png
+   alpha05.fsf
+   alpha05.png
+   alpha06.fsf
+   alpha06.png
+   alpha07.fsf
+   alpha07.png
+   alpha08.fsf
+   alpha08.png
 )
 
 INSTALL(FILES ${demoimages_files} DESTINATION ${CMAKE_INSTALL_DATADIR}/slideshow/example/demo-images)

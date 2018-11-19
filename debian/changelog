@@ -1,4 +1,4 @@
-slideshow (2.2.11~rc1.0-1ubuntu1) disco; urgency=low
+slideshow (2.3.0~rc1.0-1ubuntu1) disco; urgency=low
 
   * New upstream version.
   * debian/control: updated standards version.
