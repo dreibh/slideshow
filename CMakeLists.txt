@@ -112,8 +112,8 @@ ENDIF()
 
 # Debug build type as default
 IF (NOT CMAKE_BUILD_TYPE)
-    message(STATUS "No build type selected, using DEBUG")
-    set(CMAKE_BUILD_TYPE "DEBUG")
+    MESSAGE(STATUS "No build type selected, using DEBUG")
+    SET(CMAKE_BUILD_TYPE "DEBUG")
     # _FORTIFY_SOURCE requires compiling with optimization
     SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O")
 ENDIF()
@@ -124,11 +124,11 @@ ENDIF()
 #############################################################################
 
 # ###### GraphicsMagick #####################################################
-FIND_PATH( GraphicsMagick_INCLUDE_DIR NAMES magick/api.h REQUIRED PATHS
- 	 /usr/include/GraphicsMagick
-	  /usr/include/graphicsmagick
-	  /usr/local/include/GraphicsMagick
-	  /usr/local/include/graphicsmagick
+FIND_PATH(GraphicsMagick_INCLUDE_DIR NAMES magick/api.h REQUIRED PATHS
+   /usr/include/GraphicsMagick
+   /usr/include/graphicsmagick
+   /usr/local/include/GraphicsMagick
+   /usr/local/include/graphicsmagick
 )
 FIND_LIBRARY(GraphicsMagick_LIBRARY NAMES GraphicsMagick REQUIRED)
 
