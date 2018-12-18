@@ -23,9 +23,10 @@ Description: SlideShow infrastructure files
 
 Package: slideshow
 Architecture: any
-Depends: slideshow-infrastructure,
+Depends: slideshow-infrastructure  (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: slideshow-example (>= ${source:Version})
 Description: XHTML/JavaScript Slideshow Generator
  SlideShow is a command-line tool to generate
  standards-compliant XHTML-1.1 presentations from a set of
@@ -35,7 +36,7 @@ Description: XHTML/JavaScript Slideshow Generator
  automatically create or update slideshows.
 
 Package: slideshow-example
-Architecture: all
+Architecture: any
 Depends: slideshow,
          ${misc:Depends},
          ${shlibs:Depends}
