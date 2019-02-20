@@ -15,7 +15,6 @@ Package: slideshow-infrastructure
 Architecture: all
 Depends: ${misc:Depends},
          ${shlibs:Depends}
-Recommends:
 Description: SlideShow infrastructure files
  The default infrastructure files for SlideShow. These files contain
  the button images, the slideshow player frame HTML description and the
