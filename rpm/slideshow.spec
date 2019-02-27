@@ -41,6 +41,7 @@ make DESTDIR=%{buildroot} install
 
 %package infrastructure
 Summary: SlideShow infrastructure files
+BuildArch: noarch
 
 %description infrastructure
 The default infrastructure files for SlideShow. These files contain
@@ -54,8 +55,9 @@ the slideshow player JavaScript program.
 
 
 %package example
-Recommends: fractgen >= 2.0.6
 Summary: SlideShow example
+BuildArch: noarch
+Recommends: fractgen >= 2.0.6
 
 %description example
 An example presentation setup for SlideShow. Use the script

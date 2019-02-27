@@ -9,16 +9,7 @@ Build-Depends: cmake (>= 3.0.2) | cmake3,
                libfile-fcntllock-perl,
                libgraphicsmagick-dev,
                libwebp-dev
-Standards-Version: 4.2.1
-
-Package: slideshow-infrastructure
-Architecture: all
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
-Description: SlideShow infrastructure files
- The default infrastructure files for SlideShow. These files contain
- the button images, the slideshow player frame HTML description and the
- the slideshow player JavaScript program.
+Standards-Version: 4.3.0
 
 Package: slideshow
 Architecture: any
@@ -34,8 +25,17 @@ Description: XHTML/JavaScript Slideshow Generator
  this program is intended to be also used in scripts, which
  automatically create or update slideshows.
 
+Package: slideshow-infrastructure
+Architecture: all
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: SlideShow infrastructure files
+ The default infrastructure files for SlideShow. These files contain
+ the button images, the slideshow player frame HTML description and the
+ the slideshow player JavaScript program.
+
 Package: slideshow-example
-Architecture: any
+Architecture: all
 Depends: slideshow,
          ${misc:Depends},
          ${shlibs:Depends}
