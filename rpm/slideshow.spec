@@ -36,7 +36,7 @@ make DESTDIR=%{buildroot} install
 
 %files
 %{_bindir}/createslideshow
-%{_datadir}/man/man1/createslideshow.1.gz
+%{_mandir}/man1/createslideshow.1.gz
 
 
 %package infrastructure
