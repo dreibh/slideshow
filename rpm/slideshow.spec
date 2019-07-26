@@ -1,11 +1,11 @@
 Name: slideshow
-Version: 2.3.0~rc1.0
+Version: 2.3.0~alpha1.0
 Release: 1
 Summary: SlideShow HTML image presentation
 Group: Applications/Graphics
 License: GPLv3
 URL: https://www.uni-due.de/~be0001/slideshow/
-Source: https://www.uni-due.de/~be0001/slideshow/download/%{name}-%{version}.tar.gz
+Source: https://www.uni-due.de/~be0001/slideshow/download/%{name}-%{version}.tar.xz
 
 AutoReqProv: on
 BuildRequires: cmake
