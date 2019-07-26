@@ -1,17 +1,369 @@
+commit 748857350a3b901acfbada5bdb0d1a31aacb6eb9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Jul 26 12:44:56 2019 +0200
+
+    A fix.
+
+commit a75f6693494ad252ba6edd56e14c1188abc88802
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Jul 26 12:44:48 2019 +0200
+
+    Using Tar/XZ for archive.
+
+commit df054c3503166e8fc2d10c0c32c2480590852dfe
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jun 27 21:35:44 2019 +0200
+
+    CI script update.
+
+commit 006aebf4e8bf9e268bc9a5653423baec4f55ba7d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jun 27 21:34:54 2019 +0200
+
+    Build script update.
+
+commit 10af2d095a7645df581ad38e988ad84fbf9f8dc7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Jun 24 17:24:16 2019 +0200
+
+    Updated build scripts.
+
+commit 1547a79b5c46eaca935922595821483bc5029abe
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Jun 13 12:56:13 2019 +0200
+
+    Improved build script.
+
+commit 6a16a5cf0adb736a3db0b5d0605100ec2ac99098
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed May 15 16:24:18 2019 +0200
+
+    Updated Travis CI configuration.
+
+commit 9018cef1d3f50e5eca0bddc02a6c9691e076fb9a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon May 6 13:31:53 2019 +0200
+
+    Updated script.
+
+commit f539aedaff9a8c3b7815ffc944304b5b4fda48fb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon May 6 13:25:47 2019 +0200
+
+    Updated build script.
+
+commit a8355e8560ef9496fb5ce8b612bf62d7a33e5341
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Apr 9 13:59:07 2019 +0200
+
+    A fix.
+
+commit 5472681fb58b9ef234c8346434aa1f53afe8a6c1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Apr 9 12:53:12 2019 +0200
+
+    Improved CI scripts.
+
+commit 7a1054ab6caf0e836d7995467e580ea483f0aa69
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 8 11:03:19 2019 +0100
+
+    Updated RPM spec file.
+
+commit 8eb871e6d6698b984613ebd1ceb18191e3313972
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Mar 5 16:51:43 2019 +0100
+
+    Updated CI script.
+
+commit d972da24f151c16ecc321d9c53a09924f2befbeb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 27 15:41:48 2019 +0100
+
+    Updated packaging files.
+
+commit 3a127fa5dee735720760f49851556497fa774d6b
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Feb 22 15:57:15 2019 +0100
+
+    Improved CI script.
+
+commit 379f4820d7e2a7b53db2bc929f0453ab1d913ac5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 20 17:20:08 2019 +0100
+
+    Updated CI scripts.
+
+commit cab643af943e6cfc4cb4cc19c3b1aa4802007a2e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 20 16:46:25 2019 +0100
+
+    Build script updates.
+
+commit f907cc0f48219fdc5144c6f0b0014df6c0973854
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 20 16:23:31 2019 +0100
+
+    A fix.
+
+commit fdb8b6d168e97d1ec2a003c33d01160deacdadc0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 7 21:22:24 2019 +0100
+
+    Build script updates.
+
+commit 9f6eda29e11781d865e8408dbff499926c6154da
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 18 17:00:51 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit be8f1f4e0aaba2db1f965c1a940c37b7edb2e619
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 18 16:51:34 2018 +0100
+
+    Improved CMakeLists.txt.
+
+commit 0dc8ee74fb7220b6cde95b01c98967b5e1ee56a7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 18 16:21:31 2018 +0100
+
+    Added configuration file.
+
+commit 6892a2b19d8d0b036ae43741a7535c52fef26798
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 18 16:20:52 2018 +0100
+
+    Added RPM scripts.
+
+commit 8bc12db6d065f46310c5fa14fbe232a5e80aa3fe
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 18 16:19:28 2018 +0100
+
+    Added RPM packaging.
+
+commit c6ac4f320b881ca2cc81363103d2f9c9f20d7155
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Dec 18 16:19:18 2018 +0100
+
+    Improved Ubuntu/Debian packaging.
+
+commit b680e8957aab6600a0d5ca2a24637d87512a7c4d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Dec 17 10:01:07 2018 +0100
+
+    Improved Travis CI configuration.
+
+commit c1fcd85acb3c103e8472b4b9f363231c348e3f38
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Dec 15 12:59:26 2018 +0100
+
+    Build script fix.
+
+commit a658ccfbbcdce8c13ae0fdff987522bc170899e4
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 14 17:05:13 2018 +0100
+
+    Improved Travis CI configuration.
+
+commit 58e09aec70db94acb155edd2a2110882900e9552
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 14 16:34:33 2018 +0100
+
+    Minor update.
+
+commit b743bd509fcb572bd420d66eb32620ad76c0a2c8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 14 16:32:46 2018 +0100
+
+    A fix.
+
+commit 94be8746a6870d997f18904c1f2a15d89e5e1e85
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Dec 14 13:16:16 2018 +0100
+
+    Updated build scripts.
+
+commit 1172c6c11d47be2cd9bf670b4416f519009e568a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Dec 13 17:02:11 2018 +0100
+
+    A fix.
+
+commit 56b4eb98d9aa354431adbfb392c54cce95cf2b1a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 12 12:16:30 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit 295e28b5ea80468e467da5fa9f1c2e42d324798e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 12 12:14:04 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit 4ef700d6e32b3a3e58d8d6e15d890b5b4389b172
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 12 11:40:00 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit cba862136ada9be8aeb749e7ead12387b0a865c5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 12 11:10:36 2018 +0100
+
+    Updated Travis CI configuration.
+
+commit 5885e8fc4a428710122f004f7ae885cd05bb93f3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 12 10:42:22 2018 +0100
+
+    Updated build scripts.
+
+commit e15ad25f7d4abdd878772f03f9685df3974b7af9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Dec 3 21:12:34 2018 +0100
+
+    Updated build scripts.
+
+commit 600736963f2d5a488bdf79907f69c874296e9ff8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 28 23:16:22 2018 +0100
+
+    Build script update.
+
+commit cba68d8187d422851ec185f0f0a1d5fe5c9fa1c0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 27 21:24:55 2018 +0100
+
+    Improved build script.
+
+commit 22285aa602de9b8fb04c4341ea432b3ea6f105ae
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 27 17:22:34 2018 +0100
+
+    Updated build scripts.
+
+commit 6fcbf94250986daadcad87a75015ec70ee0d323c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 25 11:43:24 2018 +0100
+
+    Added missing script.
+
+commit b2242664a59556dbe6af5e1efeb76365fb048d85
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 24 10:30:57 2018 +0100
+
+    Updated build script.
+
+commit f7dc70beee218bc9a279ad936a84b937c2478abc
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 21 21:19:20 2018 +0100
+
+    Build script updates.
+
+commit 232dd96b3d912d93ce7fc7f7f8cbfbaeff231a13
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 18:13:42 2018 +0100
+
+    Minor update.
+
+commit 0cf9db636395316b0f79dae8fa220db1dcce0b7f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 18:05:52 2018 +0100
+
+    Minor updates.
+
+commit e92f8fc9aba57b63353e6548c9153a571a1032a1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 18:05:35 2018 +0100
+
+    Header updates.
+
+commit 05a111a7463ce59bf17f5392e18086f26fb952b0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 18:00:07 2018 +0100
+
+    Further updates.
+
+commit b47748290574211f3e6bcf91de63ac99dbfd3b2d
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 17:33:52 2018 +0100
+
+    Initial set of CMake files.
+
+commit 462fec091c5af19eed46b556f43cea6da3cbfd50
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 19 17:18:56 2018 +0100
+
+    Updated build scripts.
+
+commit a2e8656a79c2bd299bbd8bb20137a15417e17ed5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 9 13:39:11 2018 +0100
+
+    Build script updates.
+
+commit dfcb41a296793ab99f39a29842ba4a1638fbd2f5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 26 16:17:29 2018 +0200
+
+    A fix.
+
+commit 9e73d07620df96ebc06565707cd25c296a697d69
+Merge: 885d08f e7eb768
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 26 12:14:44 2018 +0200
+
+    Merge branch 'master' of github.com:dreibh/slideshow
+
+commit 885d08f7c0306f03ab14121891ab45a13100c7cd
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 26 12:14:09 2018 +0200
+
+    An update.
+
+commit e7eb7684b81b558f354c0bbc55f282cd499f8c2e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Oct 17 23:06:35 2018 +0200
+
+    Configuration update.
+
+commit 47552b3e81ccbf8571c3d567df67681955f6fe01
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 5 18:20:36 2018 +0100
+
+    A fix.
+
+commit 5765a6fd0508d3852751f6f6a07604ca4c8a6094
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Oct 5 12:48:01 2018 +0100
+
+    Added Travis CI configuration.
+
+commit d5a3d9c2216dd988b6b1ad3ead0354b93ce092c8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Jun 11 13:12:43 2018 +0200
+
+    Updated LSM entry.
+
+commit 7a96649e6965eb07461c59f734c8a3135748087e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Jun 5 12:14:29 2018 +0200
+
+    Configuration update.
+
+commit 039cba09a4ffed51cb9b8a97c13bed75d248e130
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Jun 5 11:52:50 2018 +0200
+
+    New release.
+
 commit e8febb05bcffeec32d0f1f3f41d2ce7df76aee35
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Tue Jun 5 11:52:35 2018 +0200
 
     Updated scripts.
-
- build-deb        |  5 +++--
- clean-deb        |  8 ++++++--
- configure.ac     |  2 +-
- debian/changelog |  8 +++++++-
- debian/control   |  2 +-
- make-deb         | 51 ++++++++++++++++++++++++++-------------------------
- make-ppa         |  2 +-
- 7 files changed, 45 insertions(+), 33 deletions(-)
 
 commit 9d5ae6ea376aa52ea89aafdfa71fb0c2e71327e0
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -19,17 +371,11 @@ Date:   Sun Nov 5 17:05:02 2017 +0100
 
     Updated LSM entry.
 
- slideshow.lsm | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
-
 commit 654926641a2d3cc5fbcabebcef89d3f4ed321030
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Sun Nov 5 17:00:27 2017 +0100
 
     Added configuration file.
-
- website.config | 2 ++
- 1 file changed, 2 insertions(+)
 
 commit 0df1889baa3f1b20bef1d9f35d9e2ce0acb1a04f
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -37,19 +383,11 @@ Date:   Sun Nov 5 16:59:35 2017 +0100
 
     Version bump.
 
- ChangeLog        | 58 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- configure.ac     |  2 +-
- debian/changelog |  2 +-
- 3 files changed, 60 insertions(+), 2 deletions(-)
-
 commit c56b600762edaf084e76eabaa12ac3cbfcc7cd18
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Sun Nov 5 16:18:18 2017 +0100
 
     Version bump.
-
- configure.ac | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit b401edde86ad973db2e0eae0e42c6ff6f6ddcaf1
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -57,32 +395,11 @@ Date:   Sun Nov 5 16:16:58 2017 +0100
 
     Build script updates.
 
- ChangeLog            | 62 ++++++++++++++++++++++++++++++++++++++++++++++++++++
- UpdateDoc1.sed       |  4 ++--
- build-deb            |  5 ++---
- clean-deb            |  3 +--
- debian/changelog     |  4 ++--
- filter-empty-entries |  3 +--
- make-deb             | 11 +++++-----
- make-ppa             | 34 +++++++++++++++++++++++-----
- 8 files changed, 104 insertions(+), 22 deletions(-)
-
 commit 798759d9619c30591b9741489e8692b0c7875534
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Sun Nov 5 16:16:49 2017 +0100
 
     Got rid of SVN Id tags.
-
- src/converter.cc                  | 3 +--
- src/converter.h                   | 3 +--
- src/createslideshow.1             | 2 --
- src/createslideshow.cc            | 3 +--
- src/example/demo-slideshow        | 1 -
- src/infrastructure/imageviewer.js | 3 +--
- src/infrastructure/slideshow.js   | 3 +--
- src/tools.cc                      | 3 +--
- src/tools.h                       | 3 +--
- 9 files changed, 7 insertions(+), 17 deletions(-)
 
 commit b58b55f223fe1685c06e0caad49e6bdaec7d732d
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -90,24 +407,11 @@ Date:   Sun Nov 5 16:15:13 2017 +0100
 
     Header updates.
 
- src/converter.cc                  | 2 +-
- src/converter.h                   | 2 +-
- src/createslideshow.1             | 2 +-
- src/createslideshow.cc            | 2 +-
- src/infrastructure/imageviewer.js | 2 +-
- src/infrastructure/slideshow.js   | 2 +-
- src/tools.cc                      | 2 +-
- src/tools.h                       | 2 +-
- 8 files changed, 8 insertions(+), 8 deletions(-)
-
 commit edcd025b07f48a5ff567473da79aead83b357d0e
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Sun Nov 5 16:15:02 2017 +0100
 
     A fix.
-
- configure.ac | 15 ---------------
- 1 file changed, 15 deletions(-)
 
 commit a66357b16e1bf14a4557d004d4ce7e74b79c0d23
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -115,39 +419,11 @@ Date:   Wed Aug 9 12:34:19 2017 +0200
 
     Version bump.
 
- configure.ac     | 2 +-
- debian/changelog | 4 ++--
- slideshow.lsm    | 6 +++---
- 3 files changed, 6 insertions(+), 6 deletions(-)
-
 commit 51fbf86443dc9114717c17ff9da2b3889ff13ded
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Aug 9 12:31:28 2017 +0200
 
     Header and URL updates.
-
- UpdateDoc1.sed                    |  3 +++
- UpdateDocFiles                    | 25 +++++++++++++++++++++++++
- build-deb                         |  2 +-
- clean-deb                         |  2 +-
- debian/control                    |  2 +-
- debian/copyright                  |  4 ++--
- debian/watch                      |  2 +-
- filter-empty-entries              |  2 +-
- make-deb                          |  2 +-
- make-ppa                          |  2 +-
- slideshow.lsm                     |  4 ++--
- src/converter.cc                  |  2 +-
- src/converter.h                   |  2 +-
- src/createslideshow.1             |  4 ++--
- src/createslideshow.cc            |  2 +-
- src/example/demo-head.html        |  2 +-
- src/example/demo-tail.html        |  2 +-
- src/infrastructure/imageviewer.js |  2 +-
- src/infrastructure/slideshow.js   |  2 +-
- src/tools.cc                      |  2 +-
- src/tools.h                       |  2 +-
- 21 files changed, 50 insertions(+), 22 deletions(-)
 
 commit 0b02efdc9fe07644d3098e797863597cdcfac800
 Author: Thomas Dreibholz <dreibh@simula.no>
@@ -155,38 +431,11 @@ Date:   Wed Nov 23 14:18:00 2016 +0100
 
     Updated build scripts.
 
- ChangeLog        | 3542 ++++++++++++++++++++++++++++++++----------------------
- configure.ac     |    2 +-
- debian/changelog |    6 +
- make-ppa         |    2 +-
- update-changelog |    2 +-
- 5 files changed, 2146 insertions(+), 1408 deletions(-)
-
 commit f97014a7b0b2ad741c600fc2973ba2211e6bf2dd
 Author: Priv.-Doz. Dr. Thomas Dreibholz <dreibh@iem.uni-due.de>
 Date:   Wed Apr 6 14:50:06 2016 +0200
 
     Packaging file updates.
-
- build-deb                         | 2 +-
- clean-deb                         | 2 +-
- configure.ac                      | 2 +-
- debian/changelog                  | 4 ++--
- debian/compat                     | 2 +-
- debian/control                    | 9 ++++++---
- debian/copyright                  | 2 +-
- debian/rules                      | 5 +++++
- make-deb                          | 2 +-
- slideshow.lsm                     | 6 +++---
- src/converter.cc                  | 2 +-
- src/converter.h                   | 2 +-
- src/createslideshow.1             | 2 +-
- src/createslideshow.cc            | 2 +-
- src/infrastructure/imageviewer.js | 2 +-
- src/infrastructure/slideshow.js   | 2 +-
- src/tools.cc                      | 2 +-
- src/tools.h                       | 2 +-
- 18 files changed, 30 insertions(+), 22 deletions(-)
 
 commit 63e426f65238b2ce847bc7fcb50b8bc0a6a779c9
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -197,9 +446,6 @@ Date:   Sun Mar 1 16:05:20 2015 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1989 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- slideshow.lsm | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
-
 commit 4cef723bbc077e59fc2a346aeef38efc07243218
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sun Mar 1 15:49:27 2015 +0000
@@ -208,10 +454,6 @@ Date:   Sun Mar 1 15:49:27 2015 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1988 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- configure.ac     | 2 +-
- debian/changelog | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
 
 commit e17fe1a6a5fab3c87b822b502263f6bb5fa306fa
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -222,10 +464,6 @@ Date:   Sun Mar 1 15:31:53 2015 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1987 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- configure.ac   | 6 ++++++
- debian/control | 3 ++-
- 2 files changed, 8 insertions(+), 1 deletion(-)
-
 commit 5a48e43c8cd0c52b73bacfd053369f7193b94c59
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sun Mar 1 14:44:40 2015 +0000
@@ -234,15 +472,6 @@ Date:   Sun Mar 1 14:44:40 2015 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1985 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- configure.ac                    |   2 +-
- debian/changelog                |   4 +-
- debian/control                  |   2 +-
- debian/copyright                |  56 +++---
- debian/upstream/signing-key.asc | 405 ++++++++++++++++++++++++++++++++++++++++
- debian/watch                    |   1 +
- make-ppa                        |   2 +-
- 7 files changed, 434 insertions(+), 38 deletions(-)
 
 commit d52b24984fb6d917a0dc92a2c5fc024af96a514d
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -253,10 +482,6 @@ Date:   Tue Mar 18 12:28:16 2014 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1788 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- configure.ac     | 4 +---
- debian/changelog | 4 ++--
- 2 files changed, 3 insertions(+), 5 deletions(-)
-
 commit 720ab1187c871c68f604fa01446cebcae970aa0b
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Oct 24 20:31:15 2013 +0000
@@ -265,9 +490,6 @@ Date:   Thu Oct 24 20:31:15 2013 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1701 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- slideshow.lsm | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
 
 commit 4a7ea515086c131865c553e4cb219b589f1dc195
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -278,9 +500,6 @@ Date:   Thu Oct 24 20:10:32 2013 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1698 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- make-ppa | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit d0040ba6873e82783f0801ec9414a50d919fb879
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Oct 24 20:07:50 2013 +0000
@@ -289,9 +508,6 @@ Date:   Thu Oct 24 20:07:50 2013 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1697 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- make-ppa | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit fb2d22357f02b88428b7f315aebf8a5e4d69bb0f
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -302,11 +518,6 @@ Date:   Thu Oct 24 20:03:27 2013 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1696 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- ChangeLog        | 6 ++++++
- configure.ac     | 2 +-
- debian/changelog | 2 +-
- 3 files changed, 8 insertions(+), 2 deletions(-)
-
 commit 54c3432e0b1049fd3236b4932215f980d4746f83
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Wed Oct 23 11:33:00 2013 +0000
@@ -315,9 +526,6 @@ Date:   Wed Oct 23 11:33:00 2013 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1688 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- ChangeLog | 24 ++++++++++++++++++++++++
- 1 file changed, 24 insertions(+)
-
 commit c73f97b0eeccc883f275383065b2b98fc381a0d3
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Wed Oct 23 11:30:32 2013 +0000
@@ -325,27 +533,6 @@ Date:   Wed Oct 23 11:30:32 2013 +0000
     Packaging file updates.
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1682 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- ChangeLog                         | 257 +++++++++++++++++++++-----------------
- Makefile.am                       |   2 +
- clean-deb                         |   2 +-
- configure.ac                      |  67 ++++++++++
- configure.in                      |  60 ---------
- debian/changelog                  |   4 +-
- debian/copyright                  |   4 +-
- filter-empty-entries              |   2 +-
- src/Makefile.am                   |   2 +-
- src/converter.cc                  |   2 +-
- src/converter.h                   |   2 +-
- src/createslideshow.1             |   2 +-
- src/createslideshow.cc            |   2 +-
- src/infrastructure/imageviewer.js |   2 +-
- src/infrastructure/slideshow.js   |   2 +-
- src/run-test                      |   3 +-
- src/tools.cc                      |   2 +-
- src/tools.h                       |   2 +-
- update-changelog                  |   4 +
- 19 files changed, 233 insertions(+), 190 deletions(-)
 
 commit 3962c0bb169878ce7e208a4a0a6e1462f9ac7444
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -356,9 +543,6 @@ Date:   Fri Oct 18 21:52:07 2013 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1671 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- make-ppa | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 6bfd970600daee62a6c8a4611b12bd96dbfc07eb
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Wed May 29 15:43:54 2013 +0000
@@ -367,16 +551,6 @@ Date:   Wed May 29 15:43:54 2013 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1646 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- ChangeLog        | 477 +++++++++++++++++++++++++++++++++++++++++++++----------
- build-deb        |  99 ++++++++++--
- configure.in     |   2 +-
- debian/changelog |   4 +-
- debian/control   |   2 +-
- make-deb         | 209 ++++++++++++++----------
- make-ppa         |   2 +-
- slideshow.lsm    |   6 +-
- 8 files changed, 609 insertions(+), 192 deletions(-)
 
 commit 44fa664cdc2778e0cdbc65d1bddadd24f2fcf4bd
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -387,10 +561,6 @@ Date:   Fri Dec 21 19:08:24 2012 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1608 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- build-deb | 45 +++++++++++++++++++++++++++++++++++++++++++++
- clean-deb |  2 +-
- 2 files changed, 46 insertions(+), 1 deletion(-)
-
 commit cc61a98940e1f056176232f44e8d763bfcad520e
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Oct 20 21:50:30 2012 +0000
@@ -398,9 +568,6 @@ Date:   Sat Oct 20 21:50:30 2012 +0000
     Build script updates.
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1525 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- make-ppa | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit e7ca46ec768e0bad3e6068cc8b7232261ff8d546
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -411,13 +578,6 @@ Date:   Fri Jul 20 18:26:51 2012 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1493 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- configure.in     | 12 +++++++++++-
- debian/changelog |  4 ++--
- make-ppa         |  2 +-
- slideshow.lsm    |  6 +++---
- src/Makefile.am  |  1 +
- 5 files changed, 18 insertions(+), 7 deletions(-)
-
 commit c8ac714f517ab92043be0bd0e6c57cf68e5a8578
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Apr 21 19:51:59 2012 +0000
@@ -426,12 +586,6 @@ Date:   Sat Apr 21 19:51:59 2012 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1366 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- configure.in     | 2 +-
- debian/changelog | 8 ++++----
- debian/control   | 2 +-
- slideshow.lsm    | 6 +++---
- 4 files changed, 9 insertions(+), 9 deletions(-)
 
 commit 9c2a5c141114580d12659cb6b45784dd4e745046
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -443,15 +597,6 @@ Date:   Tue Nov 22 14:30:22 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1136 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- configure.in              |  2 +-
- debian/changelog          |  4 ++--
- debian/slideshow.install  |  3 +--
- debian/slideshow.manpages |  2 +-
- src/Makefile.am           |  2 +-
- src/createslideshow.1     | 59 +++++++++++++++++++++++++++++++++++++++++++++++
- src/createslideshow.8     | 59 -----------------------------------------------
- 7 files changed, 65 insertions(+), 66 deletions(-)
-
 commit f0f039f3c5d5b9f12c3aa581eca6ad67cd8c8179
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Oct 27 07:31:44 2011 +0000
@@ -461,9 +606,6 @@ Date:   Thu Oct 27 07:31:44 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1086 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- debian/control | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 19aa5f23d09d82347738ff74e8625182c68350e4
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Oct 20 19:00:02 2011 +0000
@@ -471,13 +613,6 @@ Date:   Thu Oct 20 19:00:02 2011 +0000
     Script updates for Precise Pangolin.
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1081 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- debian.conf          |  2 ++
- debian/changelog     |  4 ++--
- filter-empty-entries | 61 ++++++++++++++++++++++++++++++++++++++++++++++++++++
- make-deb             |  4 ++--
- make-ppa             |  2 +-
- 5 files changed, 68 insertions(+), 5 deletions(-)
 
 commit e9ae1d764350dca4fc617e98b22c33ef0cb636d5
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -488,9 +623,6 @@ Date:   Wed May 4 05:57:30 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1033 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- debian/changelog | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 9c2513aced89c37250e6c92e0b87f4674fb4618e
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue May 3 17:47:13 2011 +0000
@@ -499,9 +631,6 @@ Date:   Tue May 3 17:47:13 2011 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@1029 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- make-ppa | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 8b23bea7c010cb0f17c4fdb68a5a16d30c183fa1
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -512,9 +641,6 @@ Date:   Fri Feb 11 22:34:41 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@989 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- make-deb | 14 +++++++++++++-
- 1 file changed, 13 insertions(+), 1 deletion(-)
-
 commit 01157ebcb29a2c2eb262e36281dc6e124296d369
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Wed Feb 2 14:18:52 2011 +0000
@@ -523,9 +649,6 @@ Date:   Wed Feb 2 14:18:52 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@983 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- make-deb | 28 ++++++++++++++++++++++------
- 1 file changed, 22 insertions(+), 6 deletions(-)
-
 commit c18e387e49c530716c6906be71c5894c061b7e8f
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Feb 1 14:23:24 2011 +0000
@@ -533,10 +656,6 @@ Date:   Tue Feb 1 14:23:24 2011 +0000
     Packaging update.
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@972 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- make-deb | 14 +++++++++-----
- make-ppa |  2 +-
- 2 files changed, 10 insertions(+), 6 deletions(-)
 
 commit c9d4e4e32fb5a23f1e7cf70838a3d8220fd4f898
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -547,9 +666,6 @@ Date:   Tue Feb 1 12:23:03 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@971 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- make-deb | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit dc123c415046a94412ef79f9876bdb768a61a8f8
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Feb 1 12:21:32 2011 +0000
@@ -558,15 +674,6 @@ Date:   Tue Feb 1 12:21:32 2011 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@970 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- configure.in                               |  2 +-
- debian/changelog                           |  2 +-
- debian/control                             | 19 ++++++++++++++-----
- debian/rules                               |  4 ++++
- debian/slideshow-example.install           |  6 +++---
- debian/slideshow-example.lintian-overrides |  1 +
- make-deb                                   |  2 +-
- 7 files changed, 25 insertions(+), 11 deletions(-)
 
 commit f541e0f5b26520868ca04114a4eabe0a8ae65f7c
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -577,9 +684,6 @@ Date:   Tue Feb 1 12:21:19 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@969 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- src/example/demo-slideshow | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
-
 commit 071a084b26ef14dad014b31f2bd20ecc3a67262c
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Feb 1 07:46:59 2011 +0000
@@ -587,10 +691,6 @@ Date:   Tue Feb 1 07:46:59 2011 +0000
     Debian packaging update.
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@964 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- debian/changelog                  |  4 ++--
- src/tests/a93-27dez2003-slideshow | 10 ++++++----
- 2 files changed, 8 insertions(+), 6 deletions(-)
 
 commit 98696849581e1308671a01f7e317a6545bb89a58
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -600,9 +700,6 @@ Date:   Tue Feb 1 07:27:02 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@953 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- make-deb | 1 -
- 1 file changed, 1 deletion(-)
-
 commit 74ebace59bf19ec5814158f4b76fcace604da32e
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Feb 1 07:24:54 2011 +0000
@@ -610,9 +707,6 @@ Date:   Tue Feb 1 07:24:54 2011 +0000
     Updated make-deb script.
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@951 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- make-deb | 115 ++++++++++++++++++++++++++++++++++++++++++++++++++-------------
- 1 file changed, 92 insertions(+), 23 deletions(-)
 
 commit 84fd6e9474309a315223112c0c27d35b5d1da3a3
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -622,10 +716,6 @@ Date:   Fri Jan 28 16:22:52 2011 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@946 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- src/example/demo-head.html | 2 +-
- src/example/demo-tail.html | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
 
 commit ec36f2103a26032e04f72c485075af422cbb5312
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -637,25 +727,6 @@ Date:   Fri Jan 28 16:12:25 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@945 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- configure.in                           |  2 +-
- debian/changelog                       |  4 +--
- debian/copyright                       |  8 +++---
- slideshow.lsm                          |  6 ++---
- src/createslideshow.cc                 | 45 +++++++++++++++++++---------------
- src/example/demo-slideshow             |  3 +++
- src/example/demo-tail.html             | 15 ++++++------
- src/iso8859-to-utf8                    |  3 +++
- src/tests/a93-27dez2003-maintitle.html |  2 +-
- src/tests/a93-27dez2003-slideshow      |  2 +-
- src/tests/a93-head.html                |  6 ++---
- src/tests/a93-tail.html                |  4 +--
- src/tests/aus2005-maintitle.html       |  2 +-
- src/tests/bakeoff7-maintitle.html      |  2 +-
- src/tests/nz2005-maintitle.html        |  2 +-
- src/tests/promotion-maintitle.html     |  2 +-
- src/tests/promotion-slideshow          |  6 ++---
- 17 files changed, 63 insertions(+), 51 deletions(-)
-
 commit 4b9111dcc66b8102d2511e2bf26488d99abe7129
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Fri Jan 28 16:11:26 2011 +0000
@@ -666,10 +737,6 @@ Date:   Fri Jan 28 16:11:26 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@944 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- src/infrastructure/imageviewer.js |  27 ++++++----
- src/infrastructure/slideshow.js   | 103 +++++++++++++++++++++++---------------
- 2 files changed, 79 insertions(+), 51 deletions(-)
-
 commit 06d94a302be9c6ecab5ed5abc1cc7cf26307665d
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Jan 22 15:09:13 2011 +0000
@@ -678,9 +745,6 @@ Date:   Sat Jan 22 15:09:13 2011 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@931 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- debian/source/format | 1 +
- 1 file changed, 1 insertion(+)
 
 commit 37e7ceb29f5fe9d61ac8b11ccfed2c388ddd3149
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -691,10 +755,6 @@ Date:   Sat Jan 22 14:30:12 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@928 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- debian/changelog |  2 +-
- make-deb         | 20 +++++++++++++-------
- 2 files changed, 14 insertions(+), 8 deletions(-)
-
 commit 20172ecf0c38204260f59abdeb6547b7b175d38c
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Jan 22 10:40:24 2011 +0000
@@ -702,9 +762,6 @@ Date:   Sat Jan 22 10:40:24 2011 +0000
     Packaging script update.
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@925 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- make-deb | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit cbb8a6d5df7480edb9d2ce0498990f115b3acf1e
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -715,31 +772,11 @@ Date:   Sat Jan 22 10:05:02 2011 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@919 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- clean-deb              |  5 ++-
- configure.in           |  2 +-
- debian.conf            |  3 --
- debian/changelog       |  4 +--
- debian/compat          |  2 +-
- debian/control         |  4 +--
- debian/rules           | 88 ++------------------------------------------------
- make-deb               | 79 ++++++++++++++++++++++++++++----------------
- make-ppa               |  2 +-
- src/converter.cc       |  2 +-
- src/converter.h        |  2 +-
- src/createslideshow.8  |  2 +-
- src/createslideshow.cc |  2 +-
- src/tools.cc           |  2 +-
- src/tools.h            |  2 +-
- 15 files changed, 71 insertions(+), 130 deletions(-)
-
 commit bb6931e9a3e56758d0fd93f9b5aad486ecfdc009
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sun Jul 11 15:29:48 2010 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@601 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- debian/changelog | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 3300625e2c4095bb7427ef483777b1f5e595bd32
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -750,17 +787,11 @@ Date:   Wed Jun 30 20:45:01 2010 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@596 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- debian/control | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
-
 commit b3959e0db00d1f6f1a83ab774629e8120cc71f5e
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Mon May 31 09:54:06 2010 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@562 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- ChangeLog | 9 +++++++++
- 1 file changed, 9 insertions(+)
 
 commit b8917167ff4be4dff344a0f44ad6dd72cabe5cb2
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -771,31 +802,11 @@ Date:   Mon May 31 09:49:42 2010 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@558 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- configure.in           |  2 +-
- createimages           | 60 --------------------------------------------------
- debian/changelog       |  4 ++--
- debian/copyright       |  8 +++----
- make-ppa               |  2 +-
- slideshow.lsm          |  6 ++---
- src/converter.cc       |  2 +-
- src/converter.h        |  2 +-
- src/createslideshow.8  |  2 +-
- src/createslideshow.cc |  2 +-
- src/tools.cc           |  2 +-
- src/tools.h            |  2 +-
- 12 files changed, 17 insertions(+), 77 deletions(-)
-
 commit da09275d618482eb247479a55e03a863d300fd8d
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Sep 12 09:03:33 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@466 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- ChangeLog        | 1030 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
- configure.in     |    2 +-
- debian/changelog |    4 +-
- make-ppa         |    2 +-
- 4 files changed, 1034 insertions(+), 4 deletions(-)
 
 commit 52fc3cc3c9fbdde32aaee5eeff184322a1158fbf
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -803,19 +814,11 @@ Date:   Sat Jun 20 17:23:58 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@315 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- debian/changelog | 4 ++--
- debian/rules     | 6 +++---
- 2 files changed, 5 insertions(+), 5 deletions(-)
-
 commit b024065e9e15741d28361393c13dd01d19fc8a53
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Jun 20 10:27:17 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@314 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- debian/changelog | 4 ++--
- debian/control   | 4 ++--
- 2 files changed, 4 insertions(+), 4 deletions(-)
 
 commit 62658a246e6d9284e718662a0f41fea8b68a4efa
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -823,17 +826,11 @@ Date:   Sat Jun 13 17:20:59 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@300 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- make-ppa | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 57f40c324aa13fb0e2e8dad086532456b52ba1f5
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Jun 13 17:09:56 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@298 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- debian/changelog | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 9db8909eb91b1face9df78627ecfbb19469cc893
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -841,27 +838,17 @@ Date:   Sat Jun 13 17:02:07 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@296 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- src/converter.cc | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 024cf16446d31e05853a7bdbd1ea2a88dbd2dd29
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Jun 13 14:50:31 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@293 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- src/createslideshow.cc | 4 ----
- 1 file changed, 4 deletions(-)
-
 commit 29e6aafdb287d31a1e0ae3ab7945ec3f07a43ae4
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Jun 13 14:05:24 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@292 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- debian/changelog | 2 +-
- debian/control   | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
 
 commit c0b333fc52dec1aa79584519c8531ddc61cbbdab
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -873,23 +860,11 @@ Date:   Sat Jun 13 13:34:30 2009 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@291 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- src/converter.cc                |   2 +-
- src/createslideshow.cc          |  51 ++++++++++++++++++++++++++++++++++++++--
- src/example/demo-background.png | Bin
- src/example/demo-head.html      |   5 +---
- src/example/demo-icon.png       | Bin 308 -> 2042 bytes
- src/example/demo-slideshow      |  32 +++++++++++++++++++++++--
- src/example/demo-tail.html      |   9 ++-----
- 7 files changed, 83 insertions(+), 16 deletions(-)
-
 commit d743772156cd3f5cd5a3db19878870115a376db2
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Jun 13 12:11:01 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@288 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- Makefile | 644 ---------------------------------------------------------------
- 1 file changed, 644 deletions(-)
 
 commit 152767b35183c610ec4a4f2db68dcb020242c8c0
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -900,14 +875,6 @@ Date:   Sat Jun 13 12:10:01 2009 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@287 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- Makefile                                |  2 +-
- configure.in                            |  2 +-
- debian/control                          | 22 +++++++++++++++++++---
- debian/slideshow-example.install        |  6 ++++++
- debian/slideshow-infrastructure.install |  3 +++
- debian/slideshow.install                |  4 +---
- 6 files changed, 31 insertions(+), 8 deletions(-)
-
 commit 1113733009baefc89a9aff2c2c50920bfe5bac7b
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sat Jun 13 11:37:08 2009 +0000
@@ -916,28 +883,6 @@ Date:   Sat Jun 13 11:37:08 2009 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@286 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- clean-deb                 |  25 ++++++++
- debian.conf               |  10 +++
- debian/changelog          |   6 ++
- debian/compat             |   1 +
- debian/control            |  19 ++++++
- debian/copyright          |  33 ++++++++++
- debian/rules              |  88 ++++++++++++++++++++++++++
- debian/slideshow.install  |   4 ++
- debian/slideshow.manpages |   1 +
- debian/watch              |   2 +
- make-deb                  | 157 ++++++++++++++++++++++++++++++++++++++++++++++
- make-ppa                  |   6 ++
- slideshow.lsm             |  19 ++++++
- src/Makefile.am           |   2 +
- src/converter.cc          |   2 +-
- src/converter.h           |   2 +-
- src/createslideshow.8     |  59 +++++++++++++++++
- src/createslideshow.cc    |   2 +-
- src/tools.cc              |   2 +-
- src/tools.h               |   2 +-
- 20 files changed, 437 insertions(+), 5 deletions(-)
 
 commit f99c38a502164c60f2f185d1f8f4d9f2618c2cfa
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -948,187 +893,11 @@ Date:   Sat Jun 13 11:14:07 2009 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@285 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- AUTHORS                                   |    2 +-
- COPYING                                   |  912 ++++++++++++++-------
- Makefile                                  |   10 +-
- configure.in                              |    4 +-
- src/Makefile.am                           |   14 +-
- src/converter.cc                          |   28 +-
- src/converter.h                           |   28 +-
- src/createslideshow.cc                    | 1223 +++++++++++++++++++++++++++++
- src/demo/Makefile.am                      |   12 -
- src/demo/demo-background.png              |  Bin 4405 -> 0 bytes
- src/demo/demo-head.html                   |    7 -
- src/demo/demo-icon.png                    |  Bin 308 -> 0 bytes
- src/demo/demo-images/Makefile.am          |   16 -
- src/demo/demo-images/alpha01.fsf          |   18 -
- src/demo/demo-images/alpha01.png          |  Bin 519263 -> 0 bytes
- src/demo/demo-images/alpha02.fsf          |   18 -
- src/demo/demo-images/alpha02.png          |  Bin 1047746 -> 0 bytes
- src/demo/demo-images/alpha03.fsf          |   18 -
- src/demo/demo-images/alpha03.png          |  Bin 707915 -> 0 bytes
- src/demo/demo-images/alpha04.fsf          |   18 -
- src/demo/demo-images/alpha04.png          |  Bin 526403 -> 0 bytes
- src/demo/demo-images/alpha05.fsf          |   18 -
- src/demo/demo-images/alpha05.png          |  Bin 811618 -> 0 bytes
- src/demo/demo-images/alpha06.fsf          |   18 -
- src/demo/demo-images/alpha06.png          |  Bin 1197334 -> 0 bytes
- src/demo/demo-images/alpha07.fsf          |   18 -
- src/demo/demo-images/alpha07.png          |  Bin 1329133 -> 0 bytes
- src/demo/demo-images/alpha08.fsf          |   18 -
- src/demo/demo-images/alpha08.png          |  Bin 1412352 -> 0 bytes
- src/demo/demo-maintitle.html              |    3 -
- src/demo/demo-section1.html               |    3 -
- src/demo/demo-section2.html               |    3 -
- src/demo/demo-slideshow                   |   27 -
- src/demo/demo-stylesheet.css              |   55 --
- src/demo/demo-tail.html                   |   18 -
- src/example/Makefile.am                   |   16 +
- src/example/demo-background.png           |  Bin 0 -> 4405 bytes
- src/example/demo-head.html                |    7 +
- src/example/demo-icon.png                 |  Bin 0 -> 308 bytes
- src/example/demo-images/Makefile.am       |   20 +
- src/example/demo-images/alpha01.fsf       |   18 +
- src/example/demo-images/alpha01.png       |  Bin 0 -> 519263 bytes
- src/example/demo-images/alpha02.fsf       |   18 +
- src/example/demo-images/alpha02.png       |  Bin 0 -> 1047746 bytes
- src/example/demo-images/alpha03.fsf       |   18 +
- src/example/demo-images/alpha03.png       |  Bin 0 -> 707915 bytes
- src/example/demo-images/alpha04.fsf       |   18 +
- src/example/demo-images/alpha04.png       |  Bin 0 -> 526403 bytes
- src/example/demo-images/alpha05.fsf       |   18 +
- src/example/demo-images/alpha05.png       |  Bin 0 -> 811618 bytes
- src/example/demo-images/alpha06.fsf       |   18 +
- src/example/demo-images/alpha06.png       |  Bin 0 -> 1197334 bytes
- src/example/demo-images/alpha07.fsf       |   18 +
- src/example/demo-images/alpha07.png       |  Bin 0 -> 1329133 bytes
- src/example/demo-images/alpha08.fsf       |   18 +
- src/example/demo-images/alpha08.png       |  Bin 0 -> 1412352 bytes
- src/example/demo-maintitle.html           |    3 +
- src/example/demo-section1.html            |    3 +
- src/example/demo-section2.html            |    3 +
- src/example/demo-slideshow                |   27 +
- src/example/demo-stylesheet.css           |   55 ++
- src/example/demo-tail.html                |   18 +
- src/examples/Tux.jpeg                     |  Bin 49486 -> 0 bytes
- src/examples/a93-27dez2003-maintitle.html |    3 -
- src/examples/a93-27dez2003-slideshow      |   19 -
- src/examples/a93-head.html                |    8 -
- src/examples/a93-tail.html                |   18 -
- src/examples/asien2007-maintitle.html     |    3 -
- src/examples/asien2007-slideshow          |   19 -
- src/examples/aus2005-maintitle.html       |    3 -
- src/examples/aus2005-slideshow            |   19 -
- src/examples/background.png               |  Bin 4405 -> 0 bytes
- src/examples/background_white.png         |  Bin 3036 -> 0 bytes
- src/examples/bakeoff4-maintitle.html      |    5 -
- src/examples/bakeoff4-slideshow           |   20 -
- src/examples/bakeoff5-maintitle.html      |    4 -
- src/examples/bakeoff5-slideshow           |   38 -
- src/examples/bakeoff6-maintitle.html      |    5 -
- src/examples/bakeoff6-slideshow           |   41 -
- src/examples/bakeoff7-maintitle.html      |    5 -
- src/examples/bakeoff7-slideshow           |   32 -
- src/examples/bonn.css                     |   57 --
- src/examples/convert-to-display           |   16 -
- src/examples/essen.css                    |   55 --
- src/examples/head.html                    |    7 -
- src/examples/icon-abschluss93.png         |  Bin 2494 -> 0 bytes
- src/examples/icon-default.png             |  Bin 308 -> 0 bytes
- src/examples/ict2003-maintitle.html       |    9 -
- src/examples/ict2003-slideshow            |   50 --
- src/examples/ietf61-maintitle.html        |    6 -
- src/examples/ietf61-slideshow             |   51 --
- src/examples/lca2003-maintitle.html       |   21 -
- src/examples/lca2003-slideshow            |   64 --
- src/examples/lcn2002-maintitle.html       |    7 -
- src/examples/lcn2002-slideshow            |   26 -
- src/examples/logo-mit-gimp.txt            |    4 -
- src/examples/msn2003-maintitle.html       |    6 -
- src/examples/msn2003-slideshow            |   32 -
- src/examples/msn2004-maintitle.html       |    9 -
- src/examples/msn2004-slideshow            |   32 -
- src/examples/nz2005-maintitle.html        |    3 -
- src/examples/nz2005-slideshow             |   19 -
- src/examples/promotion-maintitle.html     |    3 -
- src/examples/promotion-slideshow          |   29 -
- src/examples/regenerate-all-slideshows    |   11 -
- src/examples/stylesheet.css               |   55 --
- src/examples/tail.html                    |   18 -
- src/examples/test-maintitle.html          |    3 -
- src/examples/test-slideshow               |   11 -
- src/examples/test.html                    |   89 ---
- src/examples/valid-html401.png            |  Bin 2948 -> 0 bytes
- src/examples/valid-xhtml11.png            |  Bin 1917 -> 0 bytes
- src/examples/vcss.png                     |  Bin 1134 -> 0 bytes
- src/examples/wiehl.css                    |   55 --
- src/getsize.cc                            |   47 --
- src/infrastructure/Makefile.am            |    3 +
- src/slideshow2.cc                         | 1215 ----------------------------
- src/tests/Tux.jpeg                        |  Bin 0 -> 49486 bytes
- src/tests/a93-27dez2003-maintitle.html    |    3 +
- src/tests/a93-27dez2003-slideshow         |   19 +
- src/tests/a93-head.html                   |    8 +
- src/tests/a93-tail.html                   |   18 +
- src/tests/asien2007-maintitle.html        |    3 +
- src/tests/asien2007-slideshow             |   19 +
- src/tests/aus2005-maintitle.html          |    3 +
- src/tests/aus2005-slideshow               |   19 +
- src/tests/background.png                  |  Bin 0 -> 4405 bytes
- src/tests/background_white.png            |  Bin 0 -> 3036 bytes
- src/tests/bakeoff4-maintitle.html         |    5 +
- src/tests/bakeoff4-slideshow              |   20 +
- src/tests/bakeoff5-maintitle.html         |    4 +
- src/tests/bakeoff5-slideshow              |   38 +
- src/tests/bakeoff6-maintitle.html         |    5 +
- src/tests/bakeoff6-slideshow              |   41 +
- src/tests/bakeoff7-maintitle.html         |    5 +
- src/tests/bakeoff7-slideshow              |   32 +
- src/tests/bonn.css                        |   57 ++
- src/tests/convert-to-display              |   16 +
- src/tests/essen.css                       |   55 ++
- src/tests/head.html                       |    7 +
- src/tests/icon-abschluss93.png            |  Bin 0 -> 2494 bytes
- src/tests/icon-default.png                |  Bin 0 -> 308 bytes
- src/tests/ict2003-maintitle.html          |    9 +
- src/tests/ict2003-slideshow               |   50 ++
- src/tests/ietf61-maintitle.html           |    6 +
- src/tests/ietf61-slideshow                |   51 ++
- src/tests/lca2003-maintitle.html          |   21 +
- src/tests/lca2003-slideshow               |   64 ++
- src/tests/lcn2002-maintitle.html          |    7 +
- src/tests/lcn2002-slideshow               |   26 +
- src/tests/logo-mit-gimp.txt               |    4 +
- src/tests/msn2003-maintitle.html          |    6 +
- src/tests/msn2003-slideshow               |   32 +
- src/tests/msn2004-maintitle.html          |    9 +
- src/tests/msn2004-slideshow               |   32 +
- src/tests/nz2005-maintitle.html           |    3 +
- src/tests/nz2005-slideshow                |   19 +
- src/tests/promotion-maintitle.html        |    3 +
- src/tests/promotion-slideshow             |   29 +
- src/tests/regenerate-all-slideshows       |   11 +
- src/tests/stylesheet.css                  |   55 ++
- src/tests/tail.html                       |   18 +
- src/tests/test-maintitle.html             |    3 +
- src/tests/test-slideshow                  |   11 +
- src/tests/test.html                       |   89 +++
- src/tests/valid-html401.png               |  Bin 0 -> 2948 bytes
- src/tests/valid-xhtml11.png               |  Bin 0 -> 1917 bytes
- src/tests/vcss.png                        |  Bin 0 -> 1134 bytes
- src/tests/wiehl.css                       |   55 ++
- src/tools.cc                              |   28 +-
- src/tools.h                               |   28 +-
- 171 files changed, 3220 insertions(+), 2886 deletions(-)
-
 commit db6f3dc627774d3b229fcbdabf919211e8f47a06
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue May 12 09:59:03 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@188 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- Makefile | 229 ++++++++++++++++++++++++++++++++++++---------------------------
- 1 file changed, 130 insertions(+), 99 deletions(-)
 
 commit a91da921c1ab2ad206b012d1730550676433b07b
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1136,20 +905,11 @@ Date:   Sat Jan 31 09:37:46 2009 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@150 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- src/examples/asien2007-maintitle.html |  3 +++
- src/examples/asien2007-slideshow      | 19 +++++++++++++++++++
- src/slideshow2.cc                     | 15 ++++++++-------
- src/tools.cc                          |  3 ++-
- 4 files changed, 32 insertions(+), 8 deletions(-)
-
 commit 2e47e0f95f06ec17450bbedabf2b34cc14f111e5
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sun May 27 19:36:26 2007 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@130 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- src/examples/promotion-slideshow | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
 
 commit 5425578ca51c1f95a12217fd319fd9957b87b163
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1157,19 +917,11 @@ Date:   Sun May 27 19:32:59 2007 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@129 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- src/slideshow2.cc | 10 +++++-----
- 1 file changed, 5 insertions(+), 5 deletions(-)
-
 commit 406e104bd9fb14cc1d78109bf63b6f4500ad266b
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sun May 27 19:31:45 2007 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@128 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- src/converter.cc  | 40 ++++++++++++++++++++--------------------
- src/converter.h   | 40 ++++++++++++++++++++--------------------
- src/slideshow2.cc | 46 +++++++++++++++++++++++-----------------------
- 3 files changed, 63 insertions(+), 63 deletions(-)
 
 commit 7c9d1358da72ea020dcf601fa5dde4bf6a47b385
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1177,20 +929,11 @@ Date:   Sun May 27 19:21:09 2007 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@127 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- src/examples/promotion-slideshow | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
-
 commit 6c91cebfecb05efb113a809f1d0673daefc1bd39
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Sun May 27 18:57:14 2007 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@126 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- src/examples/head.html                |  2 +-
- src/examples/promotion-maintitle.html |  3 +++
- src/examples/promotion-slideshow      | 29 +++++++++++++++++++++++++++++
- src/examples/tail.html                |  2 +-
- 4 files changed, 34 insertions(+), 2 deletions(-)
 
 commit 6b5bbe8fe996f298bca472c29443cdbc81029d60
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1198,22 +941,11 @@ Date:   Fri Sep 1 08:12:16 2006 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@118 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- Makefile             | 2 +-
- configure.in         | 2 +-
- src/demo/Makefile.am | 2 ++
- 3 files changed, 4 insertions(+), 2 deletions(-)
-
 commit 8014de73093fb47d3c051ac55e8b25c162c45979
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Wed Aug 30 08:12:35 2006 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@117 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- src/demo/demo-section1.html |  3 +++
- src/demo/demo-section2.html |  3 +++
- src/demo/demo-slideshow     | 10 ++++++++--
- src/slideshow2.cc           | 12 ++++++------
- 4 files changed, 20 insertions(+), 8 deletions(-)
 
 commit 930be16a0c7044e20248f3f37348400b2664a0e4
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1221,26 +953,11 @@ Date:   Tue Aug 29 17:45:44 2006 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@116 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- configure.in                   |   2 +-
- src/Makefile.am                |   2 +-
- src/demo/Makefile.am           |   5 +++-
- src/demo/demo-icon.png         | Bin 0 -> 308 bytes
- src/demo/demo-slideshow        |   1 +
- src/infrastructure/Makefile.am |  12 +++++++++
- src/slideshow2.cc              |  60 +++++++++++++++++++++++++++--------------
- 7 files changed, 59 insertions(+), 23 deletions(-)
-
 commit 21449ec6686d096a773ff25bcef04ddf16cbdf1b
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Aug 29 09:03:32 2006 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@115 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- configure.in                     |  2 +-
- src/Makefile.am                  |  2 ++
- src/demo/Makefile.am             |  8 +++++++-
- src/demo/demo-images/Makefile.am | 16 ++++++++++++++++
- 4 files changed, 26 insertions(+), 2 deletions(-)
 
 commit 2a92f6a61aac5f1804a3b18deebab85e74caddf9
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1248,27 +965,11 @@ Date:   Tue Aug 22 12:41:26 2006 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@114 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- src/converter.cc             |  15 +
- src/converter.h              |  15 +
- src/demo/demo-maintitle.html |   2 +-
- src/demo/demo-slideshow      |   8 +-
- src/demo/demo-stylesheet.css |   2 +-
- src/getsize.cc               |   2 +-
- src/slideshow.cc             | 737 -------------------------------------------
- src/tools.cc                 |  15 +
- src/tools.h                  |  15 +
- 9 files changed, 68 insertions(+), 743 deletions(-)
-
 commit 680a8dff0af0037c51f7db70e8e8e617edc5220c
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Aug 22 12:12:19 2006 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@113 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- src/examples/slideshowcontrol.html       | 40 --------------------------------
- src/infrastructure/slideshowcontrol.html | 40 ++++++++++++++++++++++++++++++++
- src/slideshow2.cc                        |  3 ++-
- 3 files changed, 42 insertions(+), 41 deletions(-)
 
 commit 38d3d84e9976c76c4f71332afb339ff6d0f8730a
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1276,185 +977,11 @@ Date:   Tue Aug 22 12:07:05 2006 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@112 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- Tux.jpeg                                  | Bin 49486 -> 0 bytes
- a93-27dez2003-maintitle.html              |   3 -
- a93-27dez2003-slideshow                   |  19 --
- a93-head.html                             |   8 -
- a93-tail.html                             |  18 --
- aus2005-maintitle.html                    |   3 -
- aus2005-slideshow                         |  19 --
- background.png                            | Bin 4405 -> 0 bytes
- background_white.png                      | Bin 3036 -> 0 bytes
- bakeoff4-maintitle.html                   |   5 -
- bakeoff4-slideshow                        |  20 --
- bakeoff5-maintitle.html                   |   4 -
- bakeoff5-slideshow                        |  38 ----
- bakeoff6-maintitle.html                   |   5 -
- bakeoff6-slideshow                        |  41 ----
- bakeoff7-maintitle.html                   |   5 -
- bakeoff7-slideshow                        |  32 ----
- bonn.css                                  |  57 ------
- convert-to-display                        |  16 --
- essen.css                                 |  55 ------
- head.html                                 |   7 -
- icon-abschluss93.png                      | Bin 2494 -> 0 bytes
- icon-default.png                          | Bin 308 -> 0 bytes
- ict2003-maintitle.html                    |   9 -
- ict2003-slideshow                         |  50 -----
- ietf61-maintitle.html                     |   6 -
- ietf61-slideshow                          |  51 -----
- imageviewer.js                            |  50 -----
- infrastructure/1leftarrow.png             | Bin 659 -> 0 bytes
- infrastructure/1rightarrow.png            | Bin 698 -> 0 bytes
- infrastructure/1uparrow.png               | Bin 762 -> 0 bytes
- infrastructure/2leftarrow.png             | Bin 591 -> 0 bytes
- infrastructure/2rightarrow.png            | Bin 622 -> 0 bytes
- infrastructure/player_pause.png           | Bin 532 -> 0 bytes
- infrastructure/player_play.png            | Bin 698 -> 0 bytes
- infrastructure/rotate.png                 | Bin 487 -> 0 bytes
- lca2003-maintitle.html                    |  21 ---
- lca2003-slideshow                         |  64 -------
- lcn2002-maintitle.html                    |   7 -
- lcn2002-slideshow                         |  26 ---
- logo-mit-gimp.txt                         |   4 -
- msn2003-maintitle.html                    |   6 -
- msn2003-slideshow                         |  32 ----
- msn2004-maintitle.html                    |   9 -
- msn2004-slideshow                         |  32 ----
- nz2005-maintitle.html                     |   3 -
- nz2005-slideshow                          |  19 --
- regenerate-all-slideshows                 |  11 --
- slideshow.js                              | 299 ------------------------------
- slideshowcontrol.html                     |  40 ----
- src/demo/Makefile.am                      |   1 +
- src/demo/demo-background.png              | Bin 0 -> 4405 bytes
- src/demo/demo-head.html                   |   7 +
- src/demo/demo-images/alpha01.fsf          |  18 ++
- src/demo/demo-images/alpha01.png          | Bin 0 -> 519263 bytes
- src/demo/demo-images/alpha02.fsf          |  18 ++
- src/demo/demo-images/alpha02.png          | Bin 0 -> 1047746 bytes
- src/demo/demo-images/alpha03.fsf          |  18 ++
- src/demo/demo-images/alpha03.png          | Bin 0 -> 707915 bytes
- src/demo/demo-images/alpha04.fsf          |  18 ++
- src/demo/demo-images/alpha04.png          | Bin 0 -> 526403 bytes
- src/demo/demo-images/alpha05.fsf          |  18 ++
- src/demo/demo-images/alpha05.png          | Bin 0 -> 811618 bytes
- src/demo/demo-images/alpha06.fsf          |  18 ++
- src/demo/demo-images/alpha06.png          | Bin 0 -> 1197334 bytes
- src/demo/demo-images/alpha07.fsf          |  18 ++
- src/demo/demo-images/alpha07.png          | Bin 0 -> 1329133 bytes
- src/demo/demo-images/alpha08.fsf          |  18 ++
- src/demo/demo-images/alpha08.png          | Bin 0 -> 1412352 bytes
- src/demo/demo-maintitle.html              |   3 +
- src/demo/demo-slideshow                   |  18 ++
- src/demo/demo-stylesheet.css              |  55 ++++++
- src/demo/demo-tail.html                   |  18 ++
- src/examples/Tux.jpeg                     | Bin 0 -> 49486 bytes
- src/examples/a93-27dez2003-maintitle.html |   3 +
- src/examples/a93-27dez2003-slideshow      |  19 ++
- src/examples/a93-head.html                |   8 +
- src/examples/a93-tail.html                |  18 ++
- src/examples/aus2005-maintitle.html       |   3 +
- src/examples/aus2005-slideshow            |  19 ++
- src/examples/background.png               | Bin 0 -> 4405 bytes
- src/examples/background_white.png         | Bin 0 -> 3036 bytes
- src/examples/bakeoff4-maintitle.html      |   5 +
- src/examples/bakeoff4-slideshow           |  20 ++
- src/examples/bakeoff5-maintitle.html      |   4 +
- src/examples/bakeoff5-slideshow           |  38 ++++
- src/examples/bakeoff6-maintitle.html      |   5 +
- src/examples/bakeoff6-slideshow           |  41 ++++
- src/examples/bakeoff7-maintitle.html      |   5 +
- src/examples/bakeoff7-slideshow           |  32 ++++
- src/examples/bonn.css                     |  57 ++++++
- src/examples/convert-to-display           |  16 ++
- src/examples/essen.css                    |  55 ++++++
- src/examples/head.html                    |   7 +
- src/examples/icon-abschluss93.png         | Bin 0 -> 2494 bytes
- src/examples/icon-default.png             | Bin 0 -> 308 bytes
- src/examples/ict2003-maintitle.html       |   9 +
- src/examples/ict2003-slideshow            |  50 +++++
- src/examples/ietf61-maintitle.html        |   6 +
- src/examples/ietf61-slideshow             |  51 +++++
- src/examples/lca2003-maintitle.html       |  21 +++
- src/examples/lca2003-slideshow            |  64 +++++++
- src/examples/lcn2002-maintitle.html       |   7 +
- src/examples/lcn2002-slideshow            |  26 +++
- src/examples/logo-mit-gimp.txt            |   4 +
- src/examples/msn2003-maintitle.html       |   6 +
- src/examples/msn2003-slideshow            |  32 ++++
- src/examples/msn2004-maintitle.html       |   9 +
- src/examples/msn2004-slideshow            |  32 ++++
- src/examples/nz2005-maintitle.html        |   3 +
- src/examples/nz2005-slideshow             |  19 ++
- src/examples/regenerate-all-slideshows    |  11 ++
- src/examples/slideshowcontrol.html        |  40 ++++
- src/examples/stylesheet.css               |  55 ++++++
- src/examples/tail.html                    |  18 ++
- src/examples/test-maintitle.html          |   3 +
- src/examples/test-slideshow               |  11 ++
- src/examples/test.html                    |  89 +++++++++
- src/examples/valid-html401.png            | Bin 0 -> 2948 bytes
- src/examples/valid-xhtml11.png            | Bin 0 -> 1917 bytes
- src/examples/vcss.png                     | Bin 0 -> 1134 bytes
- src/examples/wiehl.css                    |  55 ++++++
- src/infrastructure/1leftarrow.png         | Bin 0 -> 659 bytes
- src/infrastructure/1rightarrow.png        | Bin 0 -> 698 bytes
- src/infrastructure/1uparrow.png           | Bin 0 -> 762 bytes
- src/infrastructure/2leftarrow.png         | Bin 0 -> 591 bytes
- src/infrastructure/2rightarrow.png        | Bin 0 -> 622 bytes
- src/infrastructure/imageviewer.js         |  50 +++++
- src/infrastructure/player_pause.png       | Bin 0 -> 532 bytes
- src/infrastructure/player_play.png        | Bin 0 -> 698 bytes
- src/infrastructure/rotate.png             | Bin 0 -> 487 bytes
- src/infrastructure/slideshow.js           | 299 ++++++++++++++++++++++++++++++
- src/run-test                              |  15 ++
- src/slideshow2.cc                         |   4 +-
- stylesheet.css                            |  55 ------
- tail.html                                 |  18 --
- test-maintitle.html                       |   3 -
- test-slideshow                            |  11 --
- test-slideshow2                           |  15 --
- test.html                                 |  89 ---------
- valid-html401.png                         | Bin 2948 -> 0 bytes
- valid-xhtml11.png                         | Bin 1917 -> 0 bytes
- vcss.png                                  | Bin 1134 -> 0 bytes
- wiehl.css                                 |  55 ------
- 144 files changed, 1588 insertions(+), 1342 deletions(-)
-
 commit 2e64b83cfde3180cb37c9cb58ae47309f6ea92a0
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Aug 22 11:37:43 2006 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@111 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- AUTHORS           |    1 +
- COPYING           |  340 +++++++++++++++
- ChangeLog         |    0
- INSTALL           |  236 +++++++++++
- Makefile          |  618 ++++++++++++++++++++++++++-
- Makefile.am       |    3 +
- NEWS              |    0
- README            |    0
- autogen.sh        |    3 +
- bootstrap         |   23 ++
- configure.in      |   50 +++
- converter.cc      |  227 ----------
- converter.h       |   28 --
- getsize.cc        |   47 ---
- slideshow.cc      |  737 ---------------------------------
- slideshow2.cc     | 1193 -----------------------------------------------------
- src/Makefile.am   |   12 +
- src/converter.cc  |  227 ++++++++++
- src/converter.h   |   28 ++
- src/getsize.cc    |   47 +++
- src/slideshow.cc  |  737 +++++++++++++++++++++++++++++++++
- src/slideshow2.cc | 1193 +++++++++++++++++++++++++++++++++++++++++++++++++++++
- src/tools.cc      |  214 ++++++++++
- src/tools.h       |   34 ++
- tools.cc          |  214 ----------
- tools.h           |   34 --
- 26 files changed, 3753 insertions(+), 2493 deletions(-)
 
 commit 2f930fa984a36f0e70b63af66828dfdffd0c9ba9
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1462,17 +989,11 @@ Date:   Tue Aug 22 10:23:29 2006 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@110 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- nz2005-slideshow | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 8ade79cf136afa25fe7f3824083881a555c8bfb2
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Dec 20 13:53:41 2005 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@108 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- Tux.jpeg | Bin 49484 -> 49486 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
 
 commit a40627fd714845f258dacf59fb05321c6a9782d7
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1480,27 +1001,11 @@ Date:   Tue Dec 20 13:49:31 2005 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@107 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- Tux.jpeg         | Bin 49486 -> 49484 bytes
- getsize.cc       |   2 +-
- imageviewer.js   |   2 +-
- nz2005-slideshow |   2 +-
- slideshow.cc     |   2 +-
- slideshow.js     |   2 +-
- 6 files changed, 5 insertions(+), 5 deletions(-)
-
 commit 9a7b65d6c0dcdb06efd7d0e15998db25c700b2a2
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Mon Dec 19 11:36:59 2005 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@106 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- background.png       | Bin
- background_white.png | Bin
- icon-default.png     | Bin
- valid-html401.png    | Bin
- valid-xhtml11.png    | Bin
- vcss.png             | Bin
- 6 files changed, 0 insertions(+), 0 deletions(-)
 
 commit 9e3e41f5180f398d765d264d0b1f9611aff1f9d4
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1508,22 +1013,11 @@ Date:   Mon Dec 19 11:16:29 2005 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@105 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- infrastructure/1leftarrow.png  | Bin 1381 -> 659 bytes
- infrastructure/1rightarrow.png | Bin 1398 -> 698 bytes
- infrastructure/1uparrow.png    | Bin 1355 -> 762 bytes
- infrastructure/2leftarrow.png  | Bin 1706 -> 591 bytes
- infrastructure/2rightarrow.png | Bin 1713 -> 622 bytes
- 5 files changed, 0 insertions(+), 0 deletions(-)
-
 commit 13b5778f7d7c9d82bd046afee0d6a53851f9fe57
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Mon Dec 19 08:41:13 2005 +0000
 
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@103 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- aus2005-maintitle.html |  3 +++
- aus2005-slideshow      | 19 +++++++++++++++++++
- 2 files changed, 22 insertions(+)
 
 commit 1191a56f3698ac2844871d115b3e558b134da8ee
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1534,9 +1028,6 @@ Date:   Fri Feb 11 10:25:32 2005 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@99 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- nz2005-slideshow | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit d9780017f5e23af513a2d39d693c549523d06d1e
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Fri Feb 11 09:51:29 2005 +0000
@@ -1545,12 +1036,6 @@ Date:   Fri Feb 11 09:51:29 2005 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@98 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- Makefile              |  2 +-
- nz2005-maintitle.html |  3 +++
- nz2005-slideshow      | 19 +++++++++++++++++++
- tools.h               |  2 ++
- 4 files changed, 25 insertions(+), 1 deletion(-)
 
 commit eb39c8417f197da893000a94ca756c029a91cc38
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1561,9 +1046,6 @@ Date:   Tue Nov 16 04:19:44 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@97 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- ietf61-slideshow | 22 +++++++++++-----------
- 1 file changed, 11 insertions(+), 11 deletions(-)
-
 commit dcd5cb55ec57db3123950336931224ba49850d30
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Nov 16 03:26:52 2004 +0000
@@ -1572,10 +1054,6 @@ Date:   Tue Nov 16 03:26:52 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@96 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- ietf61-maintitle.html |  6 ++++++
- ietf61-slideshow      | 51 +++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 57 insertions(+)
 
 commit 0b1c075e9ddc56bdb2cb9e15d9f2a5c636d569e1
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1586,10 +1064,6 @@ Date:   Wed Sep 1 10:25:04 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@95 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- regenerate-all-slideshows | 11 +++++++++++
- slideshow2.cc             | 10 +++++-----
- 2 files changed, 16 insertions(+), 5 deletions(-)
-
 commit bf8d195def3700f782fd59cecb9e7819c95f3c4a
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Wed Sep 1 08:52:57 2004 +0000
@@ -1598,18 +1072,6 @@ Date:   Wed Sep 1 08:52:57 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@94 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- a93-27dez2003-slideshow | 4 ++--
- bakeoff4-slideshow      | 4 ++--
- bakeoff6-slideshow      | 4 ++--
- bakeoff7-slideshow      | 4 ++--
- ict2003-slideshow       | 4 ++--
- lca2003-slideshow       | 4 ++--
- lcn2002-slideshow       | 4 ++--
- msn2003-slideshow       | 4 ++--
- msn2004-slideshow       | 4 ++--
- slideshow2.cc           | 5 ++---
- 10 files changed, 20 insertions(+), 21 deletions(-)
 
 commit d864b43ff5a30e80cc942294895bcb8e40dc92b0
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1620,12 +1082,6 @@ Date:   Tue Aug 31 11:23:16 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@93 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- converter.cc    | 46 ++++++++++++++++++++++++++++++++++++++++++++++
- slideshow2.cc   |  8 ++++----
- test-slideshow  |  3 ---
- test-slideshow2 |  8 +++-----
- 4 files changed, 53 insertions(+), 12 deletions(-)
-
 commit 443cefd08274ba98af54ec9e6fe659e4a8c91169
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Mon Aug 30 16:13:07 2004 +0000
@@ -1634,11 +1090,6 @@ Date:   Mon Aug 30 16:13:07 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@92 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- bakeoff7-maintitle.html |  5 +++++
- bakeoff7-slideshow      | 32 ++++++++++++++++++++++++++++++++
- msn2004-maintitle.html  |  5 ++++-
- 3 files changed, 41 insertions(+), 1 deletion(-)
 
 commit 2cfdcb2c13edc01a2c87c3ee19602ab16041edbd
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1649,10 +1100,6 @@ Date:   Mon Aug 30 14:16:42 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@91 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- msn2004-maintitle.html |  6 ++++++
- msn2004-slideshow      | 32 ++++++++++++++++++++++++++++++++
- 2 files changed, 38 insertions(+)
-
 commit d597fba8ce592c469f24344a851dd21d3486fa3a
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Mon Aug 30 08:06:32 2004 +0000
@@ -1661,16 +1108,6 @@ Date:   Mon Aug 30 08:06:32 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@90 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- a93-27dez2003-slideshow | 4 ++--
- bakeoff4-slideshow      | 4 ++--
- bakeoff5-slideshow      | 4 ++--
- bakeoff6-slideshow      | 4 ++--
- ict2003-slideshow       | 4 ++--
- lca2003-slideshow       | 4 ++--
- lcn2002-slideshow       | 4 ++--
- msn2003-slideshow       | 4 ++--
- 8 files changed, 16 insertions(+), 16 deletions(-)
 
 commit 2a20d984f8c0ab72bb0c35c5510d45bef6aceb14
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1681,9 +1118,6 @@ Date:   Fri Aug 27 13:24:18 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@89 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- ict2003-slideshow | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 70a97ea1c5f52ddc70186835f4121e71fd2a35e0
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Fri Aug 27 12:48:15 2004 +0000
@@ -1692,9 +1126,6 @@ Date:   Fri Aug 27 12:48:15 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@88 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- converter.cc | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit ceb70d197c1d655e3ed8423ac1df51d1afb83c7e
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1705,14 +1136,6 @@ Date:   Fri Aug 27 11:49:18 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@87 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- Makefile      |   7 +-
- converter.cc  |  66 +++++++++----
- converter.h   |   4 +-
- slideshow2.cc | 297 ++++++++++++++--------------------------------------------
- tools.cc      | 214 ++++++++++++++++++++++++++++++++++++++++++
- tools.h       |  32 +++++++
- 6 files changed, 374 insertions(+), 246 deletions(-)
-
 commit b4f301f9220f1b688376722d60c8adabf59993ce
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Fri Aug 27 10:12:20 2004 +0000
@@ -1721,10 +1144,6 @@ Date:   Fri Aug 27 10:12:20 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@86 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- converter.cc | 149 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- converter.h  |  26 +++++++++++
- 2 files changed, 175 insertions(+)
 
 commit b7d9b7a1874d4712c1e073ad5e2c4c88e53dbe43
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1735,10 +1154,6 @@ Date:   Tue Jul 13 09:10:10 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@85 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- Makefile      |  9 ++++--
- slideshow2.cc | 98 ++++++++++++++++++-----------------------------------------
- 2 files changed, 37 insertions(+), 70 deletions(-)
-
 commit b7da092ba42aa2916faddc35dbffbdd6457a93be
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Jul 1 13:53:33 2004 +0000
@@ -1747,10 +1162,6 @@ Date:   Thu Jul 1 13:53:33 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@84 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- icon-abschluss93.png | Bin 0 -> 2494 bytes
- slideshow2.cc        |   1 -
- 2 files changed, 1 deletion(-)
 
 commit 46a85c0f52c33214a93e465c05f7d36d0864cd64
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1761,9 +1172,6 @@ Date:   Thu Jul 1 10:03:17 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@83 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- bakeoff4-slideshow | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 96f119d511f53451a9f75964e233a1ce4e671f26
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Jul 1 09:56:45 2004 +0000
@@ -1772,9 +1180,6 @@ Date:   Thu Jul 1 09:56:45 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@82 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- Makefile | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit 83be329bf5dbf807a17cbe8b6bf0a18b0da290e4
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1785,17 +1190,6 @@ Date:   Thu Jul 1 09:17:55 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@81 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- a93-27dez2003-slideshow | 20 +++++++++-------
- bakeoff4-slideshow      | 20 ++++++++++------
- bakeoff5-slideshow      | 33 +++++++++++++------------
- bakeoff6-slideshow      | 36 +++++++++++++++-------------
- convert-to-display      | 16 +++++++++++++
- ict2003-slideshow       | 49 +++++++++++++++++++------------------
- lca2003-slideshow       | 64 ++++++++++++++++++++++---------------------------
- lcn2002-slideshow       | 21 ++++++++++------
- msn2003-slideshow       | 27 ++++++++++++---------
- 9 files changed, 160 insertions(+), 126 deletions(-)
-
 commit d47ed31535f1dbd360397fe292744a32f5b0cc2b
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Jul 1 08:34:41 2004 +0000
@@ -1804,28 +1198,6 @@ Date:   Thu Jul 1 08:34:41 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@80 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- controls/1leftarrow.png         | Bin 1381 -> 0 bytes
- controls/1rightarrow.png        | Bin 1398 -> 0 bytes
- controls/1uparrow.png           | Bin 1355 -> 0 bytes
- controls/2leftarrow.png         | Bin 1706 -> 0 bytes
- controls/2rightarrow.png        | Bin 1713 -> 0 bytes
- controls/player_pause.png       | Bin 532 -> 0 bytes
- controls/player_play.png        | Bin 698 -> 0 bytes
- controls/rotate.png             | Bin 487 -> 0 bytes
- imageviewer.js                  |   6 +++---
- infrastructure/1leftarrow.png   | Bin 0 -> 1381 bytes
- infrastructure/1rightarrow.png  | Bin 0 -> 1398 bytes
- infrastructure/1uparrow.png     | Bin 0 -> 1355 bytes
- infrastructure/2leftarrow.png   | Bin 0 -> 1706 bytes
- infrastructure/2rightarrow.png  | Bin 0 -> 1713 bytes
- infrastructure/player_pause.png | Bin 0 -> 532 bytes
- infrastructure/player_play.png  | Bin 0 -> 698 bytes
- infrastructure/rotate.png       | Bin 0 -> 487 bytes
- slideshow.js                    |   8 ++++----
- slideshow2.cc                   |  42 ++++++++++++++++++++++------------------
- slideshowcontrol.html           |  10 +++++-----
- 20 files changed, 35 insertions(+), 31 deletions(-)
 
 commit 2bc935c75070c30f41dde2b5ce9e112f6c3f12c0
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1836,11 +1208,6 @@ Date:   Fri Mar 12 12:35:34 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@79 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- imageviewer.js  |   8 +--
- slideshow2.cc   | 173 +++++++++++++++++++++++++++++++++++++-------------------
- test-slideshow2 |   4 +-
- 3 files changed, 122 insertions(+), 63 deletions(-)
-
 commit 2de523954484eaabebb29baaff0d186a33d0bee2
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Mar 11 10:09:46 2004 +0000
@@ -1849,10 +1216,6 @@ Date:   Thu Mar 11 10:09:46 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@78 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- Makefile      |   2 +-
- slideshow2.cc | 125 ++++++++++++++++++++++++++++++++++++++++++++++++++++------
- 2 files changed, 114 insertions(+), 13 deletions(-)
 
 commit b51cca5fa37532b13523c6d0533c779fb3a42679
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1863,14 +1226,6 @@ Date:   Mon Mar 8 09:30:59 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@77 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- Makefile                 |   2 +-
- controls/2leftarrow.png  | Bin 0 -> 1706 bytes
- controls/2rightarrow.png | Bin 0 -> 1713 bytes
- slideshow2.cc            | 571 +++++++++++++++++++++++++++++++++++++++++++----
- tail.html                |   2 +-
- test-slideshow2          |   4 +
- 6 files changed, 533 insertions(+), 46 deletions(-)
-
 commit 12e306762a194309d6b53c3a9f49586738a767b5
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Feb 17 09:54:05 2004 +0000
@@ -1879,10 +1234,6 @@ Date:   Tue Feb 17 09:54:05 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@76 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- slideshow2.cc       | 348 +++++++++++++++++++++++++++++++++++++++++++++++++---
- test-maintitle.html |   2 +
- 2 files changed, 330 insertions(+), 20 deletions(-)
 
 commit 17d3c1d0a893000607dcf37e8a110e4bd6c0659a
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1893,9 +1244,6 @@ Date:   Fri Feb 6 14:55:35 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@75 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- slideshow2.cc | 72 ++++++++++++++++++++++++++++++++++++++++++++++++++---------
- 1 file changed, 61 insertions(+), 11 deletions(-)
-
 commit d035346241dc56aa29a521b0e5486d6c9b4ea7fa
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Fri Feb 6 14:00:17 2004 +0000
@@ -1904,10 +1252,6 @@ Date:   Fri Feb 6 14:00:17 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@74 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- slideshow2.cc   | 32 +++++++++++++++++++++-----------
- test-slideshow2 | 13 +++++++++++++
- 2 files changed, 34 insertions(+), 11 deletions(-)
 
 commit 3373d89aa78013069b5183d077b99489f2387bdf
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1918,10 +1262,6 @@ Date:   Fri Feb 6 12:43:58 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@73 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- Makefile      |   6 +-
- slideshow2.cc | 277 +++++++++++++++++++++++++++++++++++++++++++++++++---------
- 2 files changed, 238 insertions(+), 45 deletions(-)
-
 commit d19fc1738f4c60b5e77054554e89131f96ad32aa
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Fri Feb 6 11:08:14 2004 +0000
@@ -1930,10 +1270,6 @@ Date:   Fri Feb 6 11:08:14 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@72 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- slideshow.cc  |   6 +-
- slideshow2.cc | 182 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 185 insertions(+), 3 deletions(-)
 
 commit d7b37aa2d15a9a743a0b58f1f9094315c93ba6da
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1944,9 +1280,6 @@ Date:   Tue Feb 3 12:20:37 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@66 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- slideshow.cc | 26 +++++++++++++++++---------
- 1 file changed, 17 insertions(+), 9 deletions(-)
-
 commit 844c09f4945fcff10c6711bd1c3d5dcca0fac049
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Tue Feb 3 11:48:42 2004 +0000
@@ -1955,9 +1288,6 @@ Date:   Tue Feb 3 11:48:42 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@65 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- valid-xhtml11.png | Bin 0 -> 1917 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
 
 commit e858a0259800b1f4568b6493a962bdffb732ffd7
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1968,12 +1298,6 @@ Date:   Tue Feb 3 10:51:24 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@64 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- a93-27dez2003-slideshow |  4 ++--
- imageviewer.js          | 12 ++++--------
- slideshow.cc            | 51 +++++++++++++++++++++++++++++--------------------
- test-slideshow          |  6 ++++--
- 4 files changed, 40 insertions(+), 33 deletions(-)
-
 commit fb22c8b410afb0f7771093f0e38c3fa37d0c5b34
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Fri Jan 30 16:29:17 2004 +0000
@@ -1982,11 +1306,6 @@ Date:   Fri Jan 30 16:29:17 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@63 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- imageviewer.js |  6 +++---
- slideshow.cc   | 52 +++++++++++++++++++++++++++++++++-------------------
- test-slideshow |  2 +-
- 3 files changed, 37 insertions(+), 23 deletions(-)
 
 commit 484860d7c0c05c4aa103ec3a38c860f2e05b7df5
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -1997,11 +1316,6 @@ Date:   Fri Jan 30 15:33:43 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@62 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- a93-27dez2003-slideshow |  2 ++
- createimages            |  2 +-
- slideshow.cc            | 64 ++++++++++++++++++++++++++++---------------------
- 3 files changed, 40 insertions(+), 28 deletions(-)
-
 commit 428ac09d0b157366a1611518de870cee16f5f9f9
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Fri Jan 30 15:08:36 2004 +0000
@@ -2010,14 +1324,6 @@ Date:   Fri Jan 30 15:08:36 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@61 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- createfull     |  30 -----------
- createimages   |  60 +++++++++++++++++++++
- createpreview  |  45 ----------------
- imageviewer.js |  14 +++--
- slideshow.cc   | 166 +++++++++++++++++++++++++++++++--------------------------
- test-slideshow |   4 +-
- 6 files changed, 162 insertions(+), 157 deletions(-)
 
 commit 95ea4d04cfec0010386fe96a7c52dcf3196335e8
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -2028,11 +1334,6 @@ Date:   Thu Jan 29 16:24:34 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@60 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- a93-27dez2003-maintitle.html | 2 +-
- a93-27dez2003-slideshow      | 3 ++-
- a93-tail.html                | 2 +-
- 3 files changed, 4 insertions(+), 3 deletions(-)
-
 commit 5d0a053a878010fe0b827b553d04f882531026a8
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Jan 29 15:43:01 2004 +0000
@@ -2041,9 +1342,6 @@ Date:   Thu Jan 29 15:43:01 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@59 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- lca2003-maintitle.html | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
 
 commit e151c41361a29b926ed979fe8b033877513fe208
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -2054,9 +1352,6 @@ Date:   Thu Jan 29 15:37:35 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@58 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- lca2003-maintitle.html | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
-
 commit 5139c45586f2d72222c37febe6b53a0fcda51104
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Jan 29 15:32:54 2004 +0000
@@ -2065,9 +1360,6 @@ Date:   Thu Jan 29 15:32:54 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@57 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- lca2003-maintitle.html | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 156dd82177cb642c84b7288efc21d9a88e4753e4
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -2078,9 +1370,6 @@ Date:   Thu Jan 29 15:28:18 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@56 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- lca2003-maintitle.html | 25 +++++++++++++------------
- 1 file changed, 13 insertions(+), 12 deletions(-)
-
 commit 4b5d3da1d4ae0132e5c298757614e1b677201102
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Jan 29 15:02:49 2004 +0000
@@ -2089,10 +1378,6 @@ Date:   Thu Jan 29 15:02:49 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@55 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- icon-default.png | Bin 0 -> 308 bytes
- slideshow.cc     |   4 ++--
- 2 files changed, 2 insertions(+), 2 deletions(-)
 
 commit 176c513d443faf5f84342c373b62ea6e3dcbfd5a
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -2103,9 +1388,6 @@ Date:   Thu Jan 29 13:39:01 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@54 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- a93-27dez2003-slideshow | 4 +---
- 1 file changed, 1 insertion(+), 3 deletions(-)
-
 commit 9e3ccc61d89cf358ef68b1fe36a88a54f37ef6df
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Jan 29 12:08:50 2004 +0000
@@ -2114,13 +1396,6 @@ Date:   Thu Jan 29 12:08:50 2004 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@53 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- Tux.jpeg                | Bin 0 -> 49486 bytes
- a93-27dez2003-slideshow |  16 ++++++++++++++
- a93-head.html           |   8 +++++++
- essen.css               |  55 ++++++++++++++++++++++++++++++++++++++++++++++++
- wiehl.css               |  55 ++++++++++++++++++++++++++++++++++++++++++++++++
- 5 files changed, 134 insertions(+)
 
 commit 9746996b8f38211614a691e2c1c85e828b072792
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -2131,25 +1406,6 @@ Date:   Thu Jan 29 10:36:13 2004 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@52 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- a93-27dez2003-maintitle.html |   3 +
- a93-tail.html                |  18 +++++
- bakeoff4-maintitle.html      |   2 +
- bakeoff5-maintitle.html      |   2 +
- bakeoff6-maintitle.html      |   2 +
- bonn.css                     |  22 ++++-
- head.html                    |   9 ++-
- ict2003-maintitle.html       |   2 +
- imageviewer.js               |  26 +++---
- lca2003-maintitle.html       |   2 +
- lcn2002-maintitle.html       |   2 +
- logo-mit-gimp.txt            |   4 +
- msn2003-maintitle.html       |   2 +
- slideshow.cc                 | 189 +++++++++++++++++++------------------------
- slideshowcontrol.html        |  68 ++++++++--------
- stylesheet.css               |  21 ++++-
- tail.html                    |  21 ++++-
- 17 files changed, 234 insertions(+), 161 deletions(-)
-
 commit bd522bcb59dc5f9cf60d8c4c3f39c521df8a4dfd
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Mon Jul 21 13:34:41 2003 +0000
@@ -2158,9 +1414,6 @@ Date:   Mon Jul 21 13:34:41 2003 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@11 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- lca2003-slideshow | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit ff08bacb753c293a64f1dba4d04c79873841ab1a
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -2171,12 +1424,6 @@ Date:   Mon Jul 21 12:33:36 2003 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@10 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- bakeoff4-slideshow    |  2 +-
- slideshow.cc          | 16 +++++++++++++++-
- slideshow.js          |  4 +---
- slideshowcontrol.html |  2 ++
- 4 files changed, 19 insertions(+), 5 deletions(-)
-
 commit 90705726e4db4b7ab8f9bd2c42bfd1a995bdc680
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Mon Jul 21 12:14:50 2003 +0000
@@ -2185,21 +1432,6 @@ Date:   Mon Jul 21 12:14:50 2003 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@9 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- bakeoff4-slideshow    |   2 +-
- bakeoff5-slideshow    |  14 +++----
- bakeoff6-slideshow    |  16 ++++----
- controls/rotate.png   | Bin 0 -> 487 bytes
- ict2003-slideshow     |  22 +++++-----
- lca2003-slideshow     |  32 +++++++--------
- lcn2002-slideshow     |   6 +--
- msn2003-slideshow     |  10 ++---
- slideshow.cc          |  54 +++++++++++++-----------
- slideshow.js          | 112 ++++++++++++++++++++++++++++++++++++++++++++------
- slideshowcontrol.html |   6 +--
- test-slideshow        |   4 +-
- vcss.png              | Bin 0 -> 1134 bytes
- 13 files changed, 186 insertions(+), 92 deletions(-)
 
 commit fedb1072c62799c8ccbae7c6d8df8f78da3634b2
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -2210,9 +1442,6 @@ Date:   Fri Jul 18 12:22:52 2003 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@8 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- msn2003-slideshow | 6 +++---
- 1 file changed, 3 insertions(+), 3 deletions(-)
-
 commit ee63b9d22ffbdfd87af14d77af8794339a43aeeb
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Fri Jul 18 10:30:24 2003 +0000
@@ -2221,16 +1450,6 @@ Date:   Fri Jul 18 10:30:24 2003 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@7 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- bakeoff4-slideshow     |  3 ++-
- bakeoff5-slideshow     | 29 +++++++++++++++--------------
- bakeoff6-slideshow     | 17 +++++++++--------
- ict2003-slideshow      | 23 ++++++++++++-----------
- lca2003-maintitle.html |  8 ++++----
- lca2003-slideshow      | 33 +++++++++++++++++----------------
- lcn2002-slideshow      |  7 ++++---
- msn2003-slideshow      | 11 ++++++-----
- 8 files changed, 69 insertions(+), 62 deletions(-)
 
 commit 5c1e1c0e59a3729d38f7847d54cce8f3cb5e6e11
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
@@ -2241,22 +1460,6 @@ Date:   Thu Jul 17 11:37:51 2003 +0000
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@6 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
 
- bakeoff4-slideshow        |   2 +-
- bakeoff5-slideshow        |  14 +++++++-------
- bakeoff6-slideshow        |  16 ++++++++--------
- controls/1leftarrow.png   | Bin 0 -> 1381 bytes
- controls/1rightarrow.png  | Bin 0 -> 1398 bytes
- controls/1uparrow.png     | Bin 0 -> 1355 bytes
- controls/player_pause.png | Bin 0 -> 532 bytes
- controls/player_play.png  | Bin 0 -> 698 bytes
- ict2003-slideshow         |  22 +++++++++++-----------
- lca2003-slideshow         |  32 ++++++++++++++++----------------
- lcn2002-slideshow         |   8 ++++----
- msn2003-slideshow         |  11 +++++------
- slideshow.js              |   5 ++++-
- slideshowcontrol.html     |   4 ++--
- 14 files changed, 58 insertions(+), 56 deletions(-)
-
 commit 16a3fc6f3fdcd9ea2a25b0c469b026fba7333be1
 Author: dreibh <dreibh@acdd8558-d4fd-0310-b0a5-8cf3c1ec824a>
 Date:   Thu Jul 17 09:45:08 2003 +0000
@@ -2265,37 +1468,3 @@ Date:   Thu Jul 17 09:45:08 2003 +0000
     
     
     git-svn-id: https://svn.tdr.iem.uni-due.de:8443/svn/sctp-misc/trunk/slideshow@2 acdd8558-d4fd-0310-b0a5-8cf3c1ec824a
-
- Makefile                |  11 +
- background.png          | Bin 0 -> 4405 bytes
- background_white.png    | Bin 0 -> 3036 bytes
- bakeoff4-maintitle.html |   3 +
- bakeoff4-slideshow      |  13 +
- bakeoff5-maintitle.html |   2 +
- bakeoff5-slideshow      |  34 +++
- bakeoff6-maintitle.html |   3 +
- bakeoff6-slideshow      |  38 +++
- bonn.css                |  37 +++
- createfull              |  30 +++
- createpreview           |  45 ++++
- getsize.cc              |  47 ++++
- head.html               |   4 +
- ict2003-maintitle.html  |   7 +
- ict2003-slideshow       |  50 ++++
- imageviewer.js          |  44 ++++
- lca2003-maintitle.html  |  18 ++
- lca2003-slideshow       |  69 +++++
- lcn2002-maintitle.html  |   5 +
- lcn2002-slideshow       |  18 ++
- msn2003-maintitle.html  |   4 +
- msn2003-slideshow       |  27 ++
- slideshow.cc            | 685 ++++++++++++++++++++++++++++++++++++++++++++++++
- slideshow.js            | 212 +++++++++++++++
- slideshowcontrol.html   |  38 +++
- stylesheet.css          |  36 +++
- tail.html               |   5 +
- test-maintitle.html     |   1 +
- test-slideshow          |  12 +
- test.html               |  89 +++++++
- valid-html401.png       | Bin 0 -> 2948 bytes
- 32 files changed, 1587 insertions(+)
