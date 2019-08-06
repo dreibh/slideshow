@@ -6,7 +6,7 @@ include /usr/share/dpkg/buildflags.mk
 
 
 %:
-	dh $@
+	dh $@ --buildsystem=cmake --parallel
 
 # Use upstream ChangeLog for installation
 override_dh_installchangelogs:
