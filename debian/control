@@ -40,7 +40,7 @@ Depends: slideshow,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: fractgen (>= 2.0.6)
-Description: SlideShow example
+Description: SlideShow example presentation
  An example presentation setup for SlideShow. Use the script
  demo-slideshow to generate the HTML presentation from the
  example files.
