@@ -3,7 +3,7 @@ Version: 2.3.1~rc1.0
 Release: 1
 Summary: SlideShow HTML image presentation
 Group: Applications/Graphics
-License: GPLv3
+License: GPL-3+
 URL: https://www.uni-due.de/~be0001/slideshow/
 Source: https://www.uni-due.de/~be0001/slideshow/download/%{name}-%{version}.tar.xz
 
