@@ -1,3 +1,117 @@
+commit 3c1455d9f49fc7c139b46e84d7139598761ba214
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 10:33:04 2019 +0200
+
+    Fixed some inconsistencies in different packaging files.
+
+commit 538ec9fd4019375b6ce288005eade1f5db97aec3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 7 10:04:34 2019 +0200
+
+    Updated build scripts.
+
+commit 94918907e1d05f58c879cf96c3a24062be3ee9af
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 23:50:00 2019 +0200
+
+    Simplified CMakeLists.txt.
+
+commit 703d02017bd56e61ce44a8721af2641c5d194baa
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 23:23:15 2019 +0200
+
+    Some clean-ups.
+
+commit a1ed3c76b33186490882e9858c7d8caa533c0e0f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 23:12:27 2019 +0200
+
+    Minor fixes.
+
+commit a842a3fc528b7195da4b779102be1e0a9cd02038
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 23:02:20 2019 +0200
+
+    Fixed spelling error.
+
+commit cc06073127c37deba6a112655fe84f5c3edb61e8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 23:01:42 2019 +0200
+
+    Removed obsolete file.
+
+commit 8ed053b33fe34c99519fe0bac2775894de9ec387
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 23:01:21 2019 +0200
+
+    Removed remaining obsolete autoconf/automake files.
+
+commit 5a7a2c3f6e5f720bd27b0d96754a2b80199825f9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 23:01:11 2019 +0200
+
+    Parallel build.
+
+commit 2abd3b3659d278c7523c343988ab42b0ba2efb37
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 22:40:53 2019 +0200
+
+    Build script updates.
+
+commit b79aa08307c65208ae3531825900be3de1de6c44
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 19:56:48 2019 +0200
+
+    Updated build script.
+
+commit ca063d2435e5ca0e726039059accb06c2898782c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 16:50:36 2019 +0200
+
+    Removed leading / from Ubuntu/Debian install files.
+
+commit fef54ef24dde4a301df1f5ab433a524ebc541daa
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Aug 6 11:35:07 2019 +0200
+
+    Updated configuration file.
+
+commit 45fb3fd1e443828d6da1214459f1a19b21932f6a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 5 22:06:50 2019 +0200
+
+    Updated CI scripts.
+
+commit 7975b06ea29d9a7fe1ba20af31d3f1c84c0d9f14
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 5 17:00:41 2019 +0200
+
+    Updated Debian Standards version.
+
+commit 6654f23bafd46cd4c26f8a003ce6e73e28f04de3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 5 15:11:17 2019 +0200
+
+    Updated Travis CI configuration.
+
+commit 3578cf1a10bd1156a1279b460e72eb0865fa263f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Aug 5 15:05:27 2019 +0200
+
+    Build script updates.
+
+commit 02f22bb27d148532e6bad01bd5e645f7b901c6c9
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Jul 26 13:00:42 2019 +0200
+
+    Updated LSM entry.
+
+commit 23a951091954a75950013dfd64bc28162e0b6267
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Jul 26 12:59:11 2019 +0200
+
+    New release slideshow-2.3.0.
+
 commit 748857350a3b901acfbada5bdb0d1a31aacb6eb9
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Jul 26 12:44:56 2019 +0200
