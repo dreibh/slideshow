@@ -1,0 +1,11 @@
+share/slideshow/example/*.css
+share/slideshow/example/*.html
+share/slideshow/example/*.png
+share/slideshow/example/demo-images/*.fsf
+share/slideshow/example/demo-images/*.png
+share/slideshow/example/demo-slideshow
+share/slideshow/infrastructure/*.html
+share/slideshow/infrastructure/*.js
+share/slideshow/infrastructure/*.png
+bin/createslideshow
+man/man1/createslideshow.1.gz
