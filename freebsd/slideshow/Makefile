@@ -12,7 +12,7 @@ COMMENT=	SlideShow HTML image presentation
 LICENSE=	GPLv3+
 LICENSE_FILE=   ${WRKSRC}/COPYING
 
-LIB_DEPENDS=
+LIB_DEPENDS=    libGraphicsMagick.so:graphics/GraphicsMagick
 
 USES=           tar:xz cmake
 
