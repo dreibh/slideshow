@@ -14,7 +14,7 @@ LICENSE_FILE=   ${WRKSRC}/COPYING
 
 LIB_DEPENDS=    libGraphicsMagick.so:graphics/GraphicsMagick
 
-USES=           tar:xz cmake
+USES=           cmake tar:xz
 
 CMAKE_ARGS+=    -DCMAKE_INSTALL_MANDIR=${PREFIX}/man
 
