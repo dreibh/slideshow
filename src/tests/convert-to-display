@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 CNV=convert
 
 # -draw 'gravity SouthEast text 20,20,"Copyright (C) 2004 by Thomas Dreibholz, http://www.exp-math.uni-essen.de/~dreibh/"'

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ../createslideshow \
 --infrastructure=../infrastructure \
 --directory=a93-27dez2003 \
