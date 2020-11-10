@@ -1,3 +1,10 @@
+slideshow (2.3.2~alpha1.0-1ubuntu1) focal; urgency=medium
+
+  * New upstream release.
+  * debian/control: Updated standards version to 4.5.0.3.
+
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Tue, 10 Nov 2020 14:20:46 +0100
+
 slideshow (2.3.2-1ubuntu1) focal; urgency=medium
 
   * New upstream release.
