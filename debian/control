@@ -9,7 +9,8 @@ Build-Depends: cmake (>= 3.0.2) | cmake3,
                libfile-fcntllock-perl,
                libgraphicsmagick-dev,
                libwebp-dev
-Standards-Version: 4.5.0.0
+Rules-Requires-Root: no
+Standards-Version: 4.5.0.3
 
 Package: slideshow
 Architecture: any
