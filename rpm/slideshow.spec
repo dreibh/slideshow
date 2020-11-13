@@ -1,5 +1,5 @@
 Name: slideshow
-Version: 2.3.2
+Version: 2.3.3
 Release: 1
 Summary: SlideShow HTML image presentation
 Group: Applications/Graphics
@@ -74,6 +74,8 @@ example files.
 
 
 %changelog
+* Fri Nov 13 2020 Thomas Dreibholz <dreibh@iem.uni-due.de> - 2.3.3
+- New upstream release.
 * Fri Nov 13 2020 Thomas Dreibholz <dreibh@iem.uni-due.de> - 2.3.2
 - New upstream release.
 * Fri Feb 07 2020 Thomas Dreibholz <dreibh@iem.uni-due.de> - 2.3.2

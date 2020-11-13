@@ -1,3 +1,9 @@
+slideshow (2.3.3-1ubuntu1) hirsute; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Fri, 13 Nov 2020 19:31:07 +0100
+
 slideshow (2.3.2-1ubuntu1) hirsute; urgency=medium
 
   * New upstream release.
