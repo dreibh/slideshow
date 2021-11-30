@@ -1,10 +1,10 @@
-slideshow (2.3.4~rc0-1ubuntu1) hirsute; urgency=medium
+slideshow (2.3.4-1ubuntu1) hirsute; urgency=medium
 
   * New upstream release.
-  * Closes: #669900 (ITP).
   * debian/control: Updated standards version to 4.6.0.1.
+  * Closes: #669900 (ITP).
 
- -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Tue, 30 Nov 2021 15:35:00 +0100
+ -- Thomas Dreibholz <dreibh@iem.uni-due.de>  Tue, 30 Nov 2021 16:30:05 +0100
 
 slideshow (2.3.3-1ubuntu1) hirsute; urgency=medium
 

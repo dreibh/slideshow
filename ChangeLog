@@ -1,3 +1,201 @@
+commit 4a841ce90dc9e5b165ff538f453370e588ae4500
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 30 16:27:17 2021 +0100
+
+    Removed obsolete files.
+
+commit 78e2861ffee3599ed923020a0eddf3552c366d3f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 30 16:25:53 2021 +0100
+
+    Fixed URL in example.
+
+commit d2d5107853e3b214a40f88d27d65f8390e132214
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 30 16:22:17 2021 +0100
+
+    Fixed path in example.
+
+commit b7133eced6f3668746a9bb57e49876b40cab9a27
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 30 15:46:21 2021 +0100
+
+    Version bump.
+
+commit 31e91ad7d8f3d15f58c446263324563a30bd84df
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 30 15:29:46 2021 +0100
+
+    Removed invalid field "Homepage" from debian/upstream/metadata
+
+commit 24038606605eaa69900bd6d23f37f1db1955fbec
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 26 21:50:56 2021 +0100
+
+    Improved CI workflows.
+
+commit 276a6770649b62507577c4fd55eaea988ca0777c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 26 21:49:30 2021 +0100
+
+    Updated build scripts
+
+commit d93fcdce68177339317d1dae07b1eeb36943d49b
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 26 15:53:26 2021 +0100
+
+    Added CI workflows.
+
+commit 2e0db0207e51e861612f5bf046fb798156fbc2e0
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 26 15:53:13 2021 +0100
+
+    Updated CI scripts
+
+commit eeb891472417a6166d36c6ad8a3c46ef7e901214
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 26 15:53:13 2021 +0100
+
+    Travis CI is dead. Removed obsolete Travis CI scripts and configuration.
+
+commit 394c45b5baba5ca8db9f1ffbe04addb4d505a7b5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 26 15:53:13 2021 +0100
+
+    Updated build scripts
+
+commit 0defd757d0adc65d352a02a2033b0d2a71acdd01
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Nov 8 10:38:19 2021 +0100
+
+    Updated build scripts
+
+commit 7e5486266e173b547794658321dac2c490232503
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 7 14:29:12 2021 +0100
+
+    Updated build script.
+
+commit 7870ac278f1ab49f321e7ab4fa9615caf7842dff
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Nov 7 14:22:52 2021 +0100
+
+    Updated build scripts
+
+commit 502a08d5bd9de876981feda22ac5808dc4d63810
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 3 18:23:14 2021 +0100
+
+    Updated build scripts
+
+commit 21ebed14eb2b4c60119e31daf772c171f3c80c9f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 3 18:19:21 2021 +0100
+
+    Updated build scripts
+
+commit 669ca75eae6e9ea85c1521953b145a42f1f67452
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Oct 19 16:11:57 2021 +0200
+
+    Updated build scripts
+
+commit dd38765c13f349324fc1b7c9faa3eee0b1aa094f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon May 3 21:23:17 2021 +0200
+
+    Updated build scripts
+
+commit 4a7cf6dff0a0022a02f3f6907ff2b42a0cbdbc25
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 5 18:52:37 2021 +0100
+
+    Updated Travis CI configuration
+
+commit 2c12ca781a8661eac47c1dd02298044a3d349ebe
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Mar 5 16:01:45 2021 +0100
+
+    Updated build scripts
+
+commit 3247c083a7cf95494cbc20e5d78b0053113d28c6
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Mar 3 19:41:47 2021 +0100
+
+    Updated script.
+
+commit 4cbb4fa89f522a72d35824b40ad83f2848215239
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Mar 1 21:20:30 2021 +0100
+
+    Updated build scripts
+
+commit 03697ad3b5a6b0330b130ac469314695475330c2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Mar 1 16:30:36 2021 +0100
+
+    Updated build scripts
+
+commit fb573045dde4354803c3b976e1f41ee6f3590677
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Mon Mar 1 16:13:22 2021 +0100
+
+    Improved autogen.sh with options for static analysis.
+
+commit c7cf2faf0877aa945073442d7b43e9bc8bb36f5f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 17 17:57:12 2021 +0100
+
+    Cleaned up CMakeLists.txt.
+
+commit 0cdbf44d8665f0a23380da3c679ab11d237947ef
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 17 15:19:07 2021 +0100
+
+    Updated build scripts
+
+commit 94fa584854540fca054d4462ff18e3f3255e4f5c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 17 15:19:06 2021 +0100
+
+    Updated build scripts
+
+commit 2f084f774ba72aafe5309c5f7cbf042789695cba
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 17 15:17:37 2021 +0100
+
+    Updated build scripts
+
+commit a5c14ccf8351b1286c7b49af1368970d6bdf3440
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 17 15:17:37 2021 +0100
+
+    Updated build scripts
+
+commit 17d7060a6e3b151d8846296a7bf89034c7d7c97e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 17 15:16:37 2021 +0100
+
+    Header updates.
+
+commit 5a29798d69c0dda95c4d22c6dd49daaaa0fb0e99
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Jan 30 07:48:39 2021 +0100
+
+    Updated Travis CI configuration
+
+commit c6572f6b37dc08af7fad39af6feaed209eeae8e2
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 13 19:47:56 2020 +0100
+
+    Updated LSM entry.
+
+commit 87a0851b1aa52eee289ca2d7d484289cd18f6bf1
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Nov 13 19:31:10 2020 +0100
+
+    New release slideshow-2.3.3.
+
 commit bbcaf9304a410c962cd8442d1a756481d701cbb8
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Fri Nov 13 19:00:43 2020 +0100
