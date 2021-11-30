@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	slideshow
-PORTVERSION=	2.3.3
+PORTVERSION=	2.3.4~rc0
 CATEGORIES=	net
 MASTER_SITES=	https://www.uni-due.de/~be0001/slideshow/download/
 
