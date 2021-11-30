@@ -22,7 +22,7 @@
 #
 
 CREATESLIDESHOW=createslideshow
-INFRASTRUCTURE=/usr/share/slideshow/example/
+INFRASTRUCTURE=/usr/share/slideshow/infrastructure/
 if [ -e ./$CREATESLIDESHOW ] ; then
    CREATESLIDESHOW=./createslideshow
    INFRASTRUCTURE=./infrastructure
