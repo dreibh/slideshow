@@ -124,7 +124,7 @@ void printTimeStamp(FILE* fd)
 bool safestrcpy(char* dest, const char* src, const size_t size)
 {
    if(size > 0) {
-      strncpy(dest,src,size);
+      strncpy(dest,src,size - 1);
       dest[size - 1] = 0x00;
       return(strlen(dest) < size);
    }
