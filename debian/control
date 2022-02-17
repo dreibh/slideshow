@@ -29,8 +29,7 @@ Description: XHTML/JavaScript Slideshow Generator
 
 Package: slideshow-infrastructure
 Architecture: all
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
+Depends: ${misc:Depends}
 Description: SlideShow infrastructure files
  The default infrastructure files for SlideShow. These files contain
  the button images, the slideshow player frame HTML description and
@@ -39,8 +38,7 @@ Description: SlideShow infrastructure files
 Package: slideshow-example
 Architecture: all
 Depends: slideshow,
-         ${misc:Depends},
-         ${shlibs:Depends}
+         ${misc:Depends}
 Recommends: fractgen (>= 2.0.6)
 Description: SlideShow example presentation
  An example presentation setup for SlideShow. Use the script
