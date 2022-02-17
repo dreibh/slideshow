@@ -1,3 +1,2 @@
-slideshow-example: script-not-executable
-slideshow-example: privacy-breach-generic
+# The example contains HTML pages, which are misinterpreted by Lintian as documentation:
 slideshow-example: package-contains-documentation-outside-usr-share-doc

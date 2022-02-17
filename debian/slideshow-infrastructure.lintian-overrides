@@ -1,1 +1,2 @@
+# The infrastructure contains HTML pages, which are misinterpreted by Lintian as documentation:
 slideshow-infrastructure: package-contains-documentation-outside-usr-share-doc
