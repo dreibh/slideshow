@@ -8,13 +8,13 @@ SET(example_files
    demo-maintitle.html
    demo-section1.html
    demo-section2.html
-   demo-slideshow
    demo-tail.html
    demo-head.html
    demo-stylesheet.css
 )
 
-INSTALL(FILES ${example_files} DESTINATION ${CMAKE_INSTALL_DATADIR}/slideshow/example)
+INSTALL(FILES    ${example_files} DESTINATION ${CMAKE_INSTALL_DATADIR}/slideshow/example)
+INSTALL(PROGRAMS demo-slideshow   DESTINATION ${CMAKE_INSTALL_DATADIR}/slideshow/example)
 
 
 #############################################################################
