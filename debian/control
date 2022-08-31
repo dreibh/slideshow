@@ -10,8 +10,6 @@ Build-Depends: cmake (>= 3.0.2) | cmake3,
                libwebp-dev
 Rules-Requires-Root: no
 Standards-Version: 4.6.0.1
-Vcs-Git: https://github.com/dreibh/slideshow.git
-Vcs-Browser: https://github.com/dreibh/slideshow
 
 Package: slideshow
 Architecture: any
