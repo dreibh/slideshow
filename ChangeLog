@@ -1,3 +1,69 @@
+commit b04f47b526a07ea2da339a4360e64992b9af438f
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 31 11:47:32 2022 +0200
+
+    Removed Vcs-* fields from debian/control.
+
+commit 7e824f5c2c7e8ceee51e244a0c46ff65ebf04022
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 31 11:19:47 2022 +0200
+
+    Updated CI scripts
+
+commit 75495a1b1f3b38c781f2bc88f90001c2a886edc3
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Aug 31 11:19:46 2022 +0200
+
+    Updated build scripts
+
+commit 5abed0b45315470b034b6b5f3838f251b3adc70e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 17 17:31:04 2022 +0100
+
+    Removed unnecessary shlibs:Depends in debian/control.
+
+commit 4ebf76fb3097d5ea7d88ac05bd242f671e1a2390
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 17 17:27:15 2022 +0100
+
+    Header updates.
+
+commit 51eb9bd6923812ce1596a82df81d47c45e523778
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 17 16:09:18 2022 +0100
+
+    Revised Lintian overrides.
+
+commit f1e832bec05e715f0d18073a005a60903feb1a59
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 17 16:08:58 2022 +0100
+
+    Removed unnecessary dependency.
+
+commit 52531e1c99990ef379b3165547f1a77f50999d1e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 17 16:08:21 2022 +0100
+
+    Bugfix: Fixed string handling error.
+
+commit 0e459bfaee61b9baa23755919ce97626d20f59be
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Thu Feb 17 15:38:27 2022 +0100
+
+    Improved example.
+
+commit b74e78d785ac106c9ff8cde3a0d26e725de331b8
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Feb 16 12:22:19 2022 +0100
+
+    Updated build scripts
+
+commit f97e353085930b057ba52f870e754dbce3b4716e
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Tue Nov 30 16:30:07 2021 +0100
+
+    New release slideshow-2.3.4.
+
 commit 4a841ce90dc9e5b165ff538f453370e588ae4500
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Tue Nov 30 16:27:17 2021 +0100
