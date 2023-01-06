@@ -1,3 +1,3 @@
 version=4
 opts=pgpsigurlmangle=s/$/.asc/ \
-https://www.uni-due.de/~be0001/slideshow/index.html    download/slideshow-(.*)\.tar\.xz
+https://www.nntb.no/~dreibh/slideshow/index.html    download/slideshow-(.*)\.tar\.xz

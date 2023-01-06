@@ -1,15 +1,15 @@
 Source: slideshow
 Section: graphics
 Priority: optional
-Maintainer: Thomas Dreibholz <dreibh@iem.uni-due.de>
-Homepage: https://www.uni-due.de/~be0001/slideshow/
+Maintainer: Thomas Dreibholz <thomas.dreibholz@gmail.com>
+Homepage: https://www.nntb.no/~dreibh/slideshow/
 Build-Depends: cmake (>= 3.0.2) | cmake3,
                debhelper (>= 9),
                libfile-fcntllock-perl,
                libgraphicsmagick-dev,
                libwebp-dev
 Rules-Requires-Root: no
-Standards-Version: 4.6.1
+Standards-Version: 4.6.2
 
 Package: slideshow
 Architecture: any

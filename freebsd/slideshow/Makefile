@@ -1,12 +1,12 @@
-# Created by: Thomas Dreibholz <dreibh@iem.uni-due.de>
+# Created by: Thomas Dreibholz <thomas.dreibholz@gmail.com>
 # $FreeBSD$
 
 PORTNAME=	slideshow
-PORTVERSION=	2.3.5
+PORTVERSION=	2.3.6~rc0
 CATEGORIES=	net
-MASTER_SITES=	https://www.uni-due.de/~be0001/slideshow/download/
+MASTER_SITES=	https://www.nntb.no/~dreibh/slideshow/download/
 
-MAINTAINER=	dreibh@iem.uni-due.de
+MAINTAINER=	thomas.dreibholz@gmail.com
 COMMENT=	SlideShow HTML image presentation
 
 LICENSE=	GPLv3+
