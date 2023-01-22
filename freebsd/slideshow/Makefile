@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	slideshow
-PORTVERSION=	2.3.6~rc0
+PORTVERSION=	2.3.6
 CATEGORIES=	net
 MASTER_SITES=	https://www.nntb.no/~dreibh/slideshow/download/
 

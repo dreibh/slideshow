@@ -1,3 +1,33 @@
+commit d7ac88eef892287160556bca30480af65d0f33d5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Jan 21 22:02:47 2023 +1100
+
+    Updated build scripts
+
+commit 6257b237a116792a861dac1b6ba2ae6c67a48f82
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Jan 6 21:38:01 2023 +1100
+
+    URL change from UDE to NNTB.
+
+commit 0fb748dac3c4713f4a67d3c013f9f42f845a2975
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Jan 6 10:21:59 2023 +1100
+
+    Updated CI scripts
+
+commit a0c78f6256b6b3819c0a2aad52038cc2bc1a9ce7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Fri Jan 6 10:21:46 2023 +1100
+
+    Updated build scripts
+
+commit 6c17c9bc8ba0c23546157a95d0838cd84b3bed4c
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Sep 11 13:46:45 2022 +0200
+
+    New release slideshow-2.3.5.
+
 commit b04f47b526a07ea2da339a4360e64992b9af438f
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Wed Aug 31 11:47:32 2022 +0200
