@@ -1,5 +1,5 @@
 Name: slideshow
-Version: 2.3.6
+Version: 2.3.7~rc1
 Release: 1
 Summary: SlideShow HTML image presentation
 Group: Applications/Graphics
