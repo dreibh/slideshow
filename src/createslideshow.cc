@@ -667,8 +667,8 @@ void Presentation::createMainPage()
          }
          os << "<table class=\"previewtable\">" << endl;
 
-         size_t           row       = 0;
-         size_t           column    = ~0;
+         // size_t    row       = 0;
+         size_t       column    = ~0;
          bool         rowOpened = false;
          set<Image*>::iterator imageIterator = block->ImageSet.begin();
          while(imageIterator != block->ImageSet.end()) {
@@ -680,7 +680,7 @@ void Presentation::createMainPage()
                os << "   <tr>" << endl;
                rowOpened = true;
                column    = 0;
-               row++;
+               // row++;
             }
 
             os << "      <td class=\"previewtable\">"
