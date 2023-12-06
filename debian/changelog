@@ -1,9 +1,9 @@
-slideshow (2.3.7~rc1-1ubuntu1) hirsute; urgency=medium
+slideshow (2.3.7-1ubuntu1) hirsute; urgency=medium
 
   * New upstream release.
   * Closes: #669900 (ITP).
 
- -- Thomas Dreibholz <thomas.dreibholz@gmail.com>  Wed, 15 Nov 2023 10:52:55 +0100
+ -- Thomas Dreibholz <thomas.dreibholz@gmail.com>  Wed, 06 Dec 2023 16:54:34 +0100
 
 slideshow (2.3.6-1ubuntu1) hirsute; urgency=medium
 

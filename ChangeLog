@@ -1,3 +1,63 @@
+commit 02be36f6ca1e4eef89f00b0779ae15da570fc008
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Dec 6 13:43:01 2023 +0100
+
+    Removed unused variable.
+
+commit d33bf591b4b0c12f336a519307fa1b730ccba052
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 15 11:42:31 2023 +0100
+
+    Dependency improvements.
+
+commit 53eca8c8887e1ec2675daf69afe8e455d8fc5421
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 15 10:53:51 2023 +0100
+
+    Packaging clean-ups.
+
+commit 41fdfa772e83e7de9e9d0fcc43bd77786baf5009
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 15 09:52:12 2023 +0100
+
+    Updated build scripts
+
+commit 3a87c340b9e780448319e220ef6d9da3f9753935
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Wed Nov 15 09:33:34 2023 +0100
+
+    Updated build scripts
+
+commit ab5c246123a56b93108e1941b79b9e8dd0dd38e7
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 11 17:50:51 2023 +0100
+
+    Workflows update.
+
+commit 775bfe3a7ad8f5e990f3ac8204ec5a47f079cda5
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 11 16:22:36 2023 +0100
+
+    Header updates.
+
+commit ee95c67077810b92ac02f1018d5af1890f84f202
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 11 16:15:59 2023 +0100
+
+    Updated CI scripts
+
+commit 5e627eb455552c76ffa03b1ab7ffb4fe1798e15a
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sat Nov 11 16:15:53 2023 +0100
+
+    Updated build scripts
+
+commit a9fc9d8ddf74782d58db9845df475c41bf7d5ffb
+Author: Thomas Dreibholz <dreibh@simula.no>
+Date:   Sun Jan 22 22:51:08 2023 +1100
+
+    New release slideshow-2.3.6.
+
 commit d7ac88eef892287160556bca30480af65d0f33d5
 Author: Thomas Dreibholz <dreibh@simula.no>
 Date:   Sat Jan 21 22:02:47 2023 +1100
