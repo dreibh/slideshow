@@ -3,7 +3,7 @@ Version: 2.3.7
 Release: 1
 Summary: SlideShow HTML image presentation
 Group: Applications/Graphics
-License: GPL-3+
+License: GPL-3.0-or-later
 URL: https://www.nntb.no/~dreibh/slideshow/
 Source: https://www.nntb.no/~dreibh/slideshow/download/%{name}-%{version}.tar.xz
 
