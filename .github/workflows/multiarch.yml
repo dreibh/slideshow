@@ -1,5 +1,5 @@
 # GitHub Actions Scripts
-# Copyright (C) 2021-2024 by Thomas Dreibholz
+# Copyright (C) 2021-2025 by Thomas Dreibholz
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -62,9 +62,9 @@ jobs:
             cxx: clang++
 
           # ====== Fedora Linux =============================================
-          - label: "Fedora 37: GCC/PPC64"
+          - label: "Fedora 41: GCC/PPC64"
             arch: ppc64le
-            distro: fedora37
+            distro: fedora41
             cc: gcc
             cxx: g++
 
