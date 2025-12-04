@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Thomas Dreibholz <thomas.dreibholz@gmail.com>
 Homepage: https://www.nntb.no/~dreibh/slideshow/
 Build-Depends: cmake,
-               debhelper (>= 12),
+               debhelper-compat (= 13),
                libgraphicsmagick-dev,
                libwebp-dev
 Rules-Requires-Root: no
