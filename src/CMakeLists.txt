@@ -1,5 +1,5 @@
 #############################################################################
-# PROGRAMS
+#### PROGRAMS                                                            ####
 #############################################################################
 
 ADD_EXECUTABLE(createslideshow createslideshow.cc tools.cc converter.cc)
@@ -10,7 +10,7 @@ INSTALL(FILES   createslideshow.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
 
 
 #############################################################################
-# SOURCE DIRECTORIES
+#### SOURCE DIRECTORIES                                                  ####
 #############################################################################
 
 ADD_SUBDIRECTORY(infrastructure)
