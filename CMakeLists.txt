@@ -76,6 +76,7 @@ ENDIF()
 FIND_PATH(GraphicsMagick_INCLUDE_DIR NAMES magick/api.h REQUIRED PATHS
    /opt/homebrew/include/GraphicsMagick
    /home/linuxbrew/.linuxbrew/include/GraphicsMagick
+   /usr/pkg/include/GraphicsMagick
    /usr/local/include/GraphicsMagick
    /usr/local/include/graphicsmagick
    /usr/include/GraphicsMagick
