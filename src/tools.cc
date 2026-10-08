@@ -23,6 +23,7 @@
 #include "tools.h"
 
 #include <string.h>
+#include <strings.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/time.h>
