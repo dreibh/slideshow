@@ -45,8 +45,9 @@ ADD_CUSTOM_TARGET(dist COMMAND ${CMAKE_MAKE_PROGRAM} clean package_source)
 #### REQUIREMENTS                                                        ####
 #############################################################################
 
-# ###### GraphicsMagick #####################################################
-FIND_PATH(GraphicsMagick_INCLUDE_DIR NAMES magick/api.h REQUIRED PATHS
+# ====== GraphicsMagick =====================================================
+FIND_LIBRARY(GraphicsMagick_LIBRARY NAMES GraphicsMagick)
+FIND_PATH(GraphicsMagick_INCLUDE_DIR NAMES magick/api.h PATHS
    /opt/homebrew/include/GraphicsMagick
    /home/linuxbrew/.linuxbrew/include/GraphicsMagick
    /usr/pkg/include/GraphicsMagick
@@ -55,7 +56,23 @@ FIND_PATH(GraphicsMagick_INCLUDE_DIR NAMES magick/api.h REQUIRED PATHS
    /usr/include/GraphicsMagick
    /usr/include/graphicsmagick
 )
-FIND_LIBRARY(GraphicsMagick_LIBRARY NAMES GraphicsMagick REQUIRED)
+IF (GraphicsMagick_LIBRARY AND GraphicsMagick_INCLUDE_DIR)
+   MESSAGE(STATUS "GraphicsMagick library found:")
+   MESSAGE(STATUS " GraphicsMagick_LIBRARY:     ${GraphicsMagick_LIBRARY}")
+   MESSAGE(STATUS " GraphicsMagick_INCLUDE_DIR: ${GraphicsMagick_INCLUDE_DIR}")
+ELSE()
+   MESSAGE(FATAL_ERROR
+          "Cannot find GraphicsMagick library! Try:\n"
+          " * Ubuntu/Debian: sudo apt install -y libgraphicsmagick1-dev\n"
+          " * Fedora:        sudo dnf install -y GraphicsMagick-devel\n"
+          " * SuSE:          sudo zypper install -y GraphicsMagick-devel\n"
+          " * Alpine:        sudo apk add graphicsmagick-dev\n"
+          " * FreeBSD:       sudo pkg install -y GraphicsMagick\n"
+          " * NetBSD:        sudo pkgin install graphicsmagick\n"
+          " * OpenBSD:       doas pkg_add graphicsmagick\n"
+          " * Solaris:       sudo pkg install image/graphicsmagick\n"
+          " * Apple:         brew install graphicsmagick")
+ENDIF()
 
 
 #############################################################################
